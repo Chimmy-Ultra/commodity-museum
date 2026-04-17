@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import cattleRanch from '@assets/images/rooms/livestock/live-cattle/cattle-ranch.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={cattleRanch} alt="Texas longhorn cattle grazing on open rangeland at golden hour" caption="德克薩斯長角牛在大平原放牧——LE 期貨的現貨基礎，美國牛肉供應鏈的起點" captionEn="Texas Longhorn cattle on open rangeland — the physical basis of LE futures and the starting point of America's beef supply chain" credit="AI-generated illustration" />
 
 1964 年，芝加哥商業交易所（CME）推出活牛期貨（Live Cattle Futures），在商品期貨史上是一個革命性的突破。在此之前，所有期貨合約都針對「可儲存商品」——穀物、金屬、咖啡，可以放在倉庫等待交割。活牛不能這樣做：牠們會吃草、生病、老化，無法無限期持倉。
 

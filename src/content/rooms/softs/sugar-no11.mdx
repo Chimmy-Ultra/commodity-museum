@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import sugarcaneField from '@assets/images/rooms/softs/sugar-no11/sugarcane-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={sugarcaneField} alt="Vast sugarcane field in Brazil ready for harvest" caption="巴西甘蔗田——全球最大的糖業生產基地，SB 期貨定價的核心" captionEn="Brazilian sugarcane plantation — the world's largest sugar producer and the anchor of SB futures pricing" credit="AI-generated illustration" />
 
 糖是人類最古老的貿易商品之一。甘蔗原產於新幾內亞，約在公元前 6,000 年被馴化。印度在公元前 500 年左右發展出製糖技術，阿拉伯商人將糖帶到了地中海世界。哥倫布在第二次航行（1493 年）時將甘蔗苗帶到了加勒比海，開啟了「新世界糖業」的時代——也開啟了大西洋奴隸貿易：加勒比海和巴西的甘蔗園是奴隸制度最殘酷的體現之一。
 

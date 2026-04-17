@@ -26,10 +26,15 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import mackayPortrait from '@assets/images/rooms/historical/tulip-bulbs/mackay-portrait.jpg';
+import semperAugustus from '@assets/images/rooms/historical/tulip-bulbs/semper-augustus.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
 
 鬱金香原產於中亞（天山山脈），由鄂圖曼帝國蘇丹花園培育普及，16 世紀中葉由荷蘭植物學家卡洛勒斯·克盧西烏斯（Carolus Clusius）引進西歐。克盧西烏斯在萊頓大學建立了荷蘭第一個鬱金香球莖種植圃，但他嚴格保守種植技術，高牆之外的人們越來越渴望這種嬌豔的花朵。
+
+<ExhibitPhoto src={semperAugustus} alt="Semper Augustus tulip" caption="「永恆的奧古斯都」——鬱金香狂熱時期最昂貴的品種，一顆球莖售價相當於一棟阿姆斯特丹豪宅" captionEn="Semper Augustus — the most expensive tulip of the tulip mania era" credit="17th century painting, public domain" />
 
 鬱金香在 17 世紀初的荷蘭共和國（United Provinces）遭遇了特殊的社會土壤：這個時代的荷蘭正處於「黃金世紀」（Gouden Eeuw）的全盛期——憑借東印度貿易和金融創新，阿姆斯特丹成為全球財富的中心。新興的商人中產階級（burghers）急需一種方式展示社會地位，而鬱金香——尤其是極為稀缺的「雜色」品種（Broken Tulips，因感染馬賽克病毒而出現的火焰紋樣花瓣）——成為了財富身份的最完美象徵。
 
@@ -108,6 +113,7 @@ import ArtifactCard from '@components/content/ArtifactCard.astro';
   nameZh="查爾斯·麥凱"
   years="1814-1889"
   nickname="讓鬱金香狂熱永垂不朽的作家"
+  portrait={mackayPortrait}
   story="嚴格說來，蘇格蘭記者兼作家麥凱並不是鬱金香的交易員，但他的著作《非凡的大眾幻想與群眾瘋狂》（Extraordinary Popular Delusions and the Madness of Crowds, 1841）讓鬱金香狂熱成為人類集體記憶中的永久符號。麥凱以生動的筆法描述了鬱金香泡沫的荒誕，雖然後世學者認為他的部分描述有誇大成分，但這本書奠定了「群體非理性」和「投機泡沫」的基本分析框架，至今仍是金融史學的必讀經典，每一輪新泡沫時都會在投資界重新熱賣。"
 />
 

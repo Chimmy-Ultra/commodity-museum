@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import cottonField from '@assets/images/rooms/softs/cotton-no2/cotton-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={cottonField} alt="Cotton field at harvest time in the American South" caption="美國南方棉田收穫季節，白色棉絮覆蓋大地——CT 期貨的現貨基礎" captionEn="Cotton field at harvest time in the American South — the physical basis of the CT futures contract" credit="AI-generated illustration" />
 
 棉花是人類最重要的天然纖維，也是工業革命的核心原料。美國南北戰爭前，「棉花是王」（Cotton is King）是美國南方的政治格言，棉花佔美國出口的一半以上，也是維繫奴隸制度的最重要經濟動力。南方各州的大型棉花種植園，完全依賴非洲奴隸的強迫勞動，使得棉花成為美國歷史上「最政治化的商品」。
 

@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import silverBars from '@assets/images/rooms/metals/silver/silver-bars.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={silverBars} alt="Stacked silver bullion bars with purity 999.9 markings" caption="標準銀條（純度 999.9）——COMEX SI 期貨的實物交割標的" captionEn="Standard silver bullion bars (999.9 fine) — the physical delivery standard for COMEX SI futures" credit="AI-generated illustration" />
 
 白銀是人類最早開採的金屬之一，其歷史幾乎與黃金一樣悠久。考古學家在安納托利亞（今土耳其）發現了西元前 3000 年前的銀製品，而古希臘的勞里昂 (Laurion) 礦山從西元前 7 世紀開始大規模開採，支撐了雅典帝國的海軍擴張——那支擊敗波斯艦隊的雅典船隊，其資金正是來自勞里昂的銀礦。
 

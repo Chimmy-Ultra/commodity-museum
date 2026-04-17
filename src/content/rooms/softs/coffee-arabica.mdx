@@ -26,10 +26,14 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import coffeePlantation from '@assets/images/rooms/softs/coffee-arabica/coffee-plantation.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
 
 咖啡起源於衣索比亞高地，傳說中牧羊人卡爾迪（Kaldi）發現他的山羊在吃了某種紅色漿果後異常活躍，從而發現了咖啡。15 世紀，咖啡傳入葉門並在阿拉伯世界廣泛傳播，「咖啡館」（Qahveh Khaneh）成為伊斯蘭世界的社交與知識中心。17 世紀，咖啡傳入歐洲，咖啡館在倫敦、巴黎、維也納蓬勃興起，成為商業交易、新聞傳播和政治討論的重要場所——倫敦勞埃德咖啡館（Lloyd's Coffee House）甚至演變成了全球最著名的保險市場。
+
+<ExhibitPhoto src={coffeePlantation} alt="Coffee plantation" caption="咖啡種植園——從衣索比亞高原到全球的旅程始於這裡" captionEn="Coffee plantation: the origin of the world's most traded soft commodity" credit="Wikimedia Commons" />
 
 阿拉比卡（Arabica）和羅布斯塔（Robusta）是全球兩大咖啡品種。阿拉比卡風味更精緻，佔全球咖啡消費量的約 60%，主要種植於高海拔地區（巴西、哥倫比亞、衣索比亞、中美洲）。ICE 的 KC 合約是全球阿拉比卡咖啡的基準定價合約，世界各地的咖啡採購都以此為參考。
 

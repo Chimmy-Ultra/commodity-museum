@@ -26,10 +26,14 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import edoScene from '@assets/images/rooms/historical/dojima-rice/edo-scene.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
 
 大米是日本德川幕府（1603-1868）時代的核心貨幣和財富計量單位。武士的俸祿以「石」（こく，koku，約 150 公斤米）計量，大名（地方諸侯）的權勢以其領地的年均米產量（「石高」）衡量。整個日本封建社會的財富體系，建立在大米的生產、存儲和流通之上。
+
+<ExhibitPhoto src={edoScene} alt="Edo period Japan artwork" caption="江戶時代的日本藝術——堂島米市所在的大阪，是德川時代商業文明的中心" captionEn="Edo period Japanese artwork — Osaka, home of the Dojima Rice Exchange" credit="Katsushika Hokusai, public domain" />
 
 正是在這個以米為錢的社會中，大阪的米商（商人階級）發明了現代期貨交易的雛形。大阪是當時日本最重要的商業中心，位於堂島的米市是大阪米業的核心，各地大名將米運到大阪的倉庫（蔵屋敷）寄售，米商在此採購並銷往全國。
 

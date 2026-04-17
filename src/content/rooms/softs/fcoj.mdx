@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import orangeGrove from '@assets/images/rooms/softs/fcoj/orange-grove.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={orangeGrove} alt="Florida orange grove at sunrise with ripe fruits" caption="佛羅里達柑橘園——OJ 期貨最重要的供應端，每次霜凍預報都在這裡掀起期貨波瀾" captionEn="Florida orange grove — the supply foundation of OJ futures, where every freeze forecast triggers market waves" credit="AI-generated illustration" />
 
 冷凍濃縮橙汁（FCOJ，Frozen Concentrated Orange Juice）是 1945 年由美國農業部科學家與佛羅里達橙汁工業共同研發的技術成果：將新鮮橙汁在低溫下蒸發濃縮至原體積的約 1/6，再急速冷凍儲存。這個技術解決了橙汁容易變質、難以遠距運輸的問題，讓佛羅里達橙汁得以在全國銷售。
 

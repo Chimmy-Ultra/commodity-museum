@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import hogFarm from '@assets/images/rooms/livestock/lean-hogs/hog-farm.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={hogFarm} alt="Modern commercial hog farm in the American Midwest" caption="美國中西部現代化豬舍——全球最大豬肉出口國的生產核心，HE 期貨的現貨基礎" captionEn="Modern hog farm in the American Midwest — the production core of the world's largest pork exporter and physical basis of HE futures" credit="AI-generated illustration" />
 
 豬肉是全球消費量最大的肉類，佔全球肉類消費約 36%，遠高於牛肉（22%）。中國是全球最大的豬肉生產國和消費國，中國每年消費的豬肉約佔全球總量的一半——這讓中國的豬業政策、疫病爆發和消費趨勢，成為影響全球豬肉期貨市場的最重要的單一因素。
 

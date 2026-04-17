@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import cattleRanch from '@assets/images/rooms/livestock/feeder-cattle/cattle-ranch.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={cattleRanch} alt="Cattle grazing on open American rangeland" caption="美國大平原放牧牛隻——在進入飼育場育肥前的自然放牧階段，GF 期貨的標的物" captionEn="Cattle on American rangeland — the free-range phase before entering feedlots, the physical basis of GF futures" credit="AI-generated illustration" />
 
 飼育牛（Feeder Cattle）是指重量在 600-900 磅之間、尚未達到屠宰標準、即將進入飼育場育肥的小牛。牠們代表牛肉供應鏈的「中間段」——從繁殖牧場（Cow-Calf Operation）出生，經過草場放牧，進入飼育場後再育肥 4-6 個月才能成為可屠宰的活牛。
 
