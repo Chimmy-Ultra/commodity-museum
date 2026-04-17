@@ -1,0 +1,166 @@
+---
+name: "燕麥"
+nameEn: "Oats"
+slug: "oats"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZO"
+status: "active"
+icon: "🌾"
+accentColor: "#8d6e63"
+roomNumber: 7
+tagline: "從馬的糧食到健康早餐的象徵——燕麥是所有穀物期貨中最寧靜的那一個，卻有著最出人意料的文化地位"
+taglineEn: "From horse feed to health food icon — oats are the quietest grain futures, with the most surprising cultural elevation"
+originRegion: "西南亞"
+firstFuturesYear: 1875
+firstFuturesExchange: "CBOT"
+greatestEventName: "2021-2022 年燕麥短缺——乾旱、早餐穀片搶購潮與期貨流動性之謎"
+greatestEventYear: 2021
+description: "燕麥展室：探索這個從軍馬飼料到全穀物健康運動的穀物如何維持一個交易量偏低但需求穩定的期貨市場，以及燕麥的β-葡聚糖如何讓它從普通糧食升格為保健食品。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+燕麥是穀物家族中一個有趣的「後來者」——在人類最早栽培的穀物（小麥、大麥）中，燕麥最初是野草雜草，混雜在小麥田裡。大約在西元前 1000-2000 年，中歐和南歐的農民開始選擇性種植燕麥，發現它比小麥更耐寒、耐貧土，特別適合氣候惡劣的北歐和斯堪地那維亞地區。
+
+長達數千年，燕麥的主要用途是**馬匹飼料**。在農業和戰爭都依賴馬力的前工業時代，燕麥是戰略性物資——拿破崙的騎兵、波蘭的輕騎兵、美國農場的挽馬，都靠燕麥提供能量。蒸汽機和內燃機的出現讓馬的用途大幅衰退，燕麥的主要市場需求也隨之萎縮。
+
+燕麥的「第二春」來自 20 世紀中葉的營養科學革命。1963 年，荷蘭科學家發現燕麥中的 β-葡聚糖 (Beta-Glucan) 纖維可以顯著降低血液膽固醇，燕麥開始從「馬的食物」轉型為「心臟健康食品」。1997 年，美國 FDA 批准燕麥的心臟健康聲稱 (Health Claim)，桂格 (Quaker Oats) 等品牌開始在包裝上印上「降低膽固醇」的宣傳。從此，早餐燕麥片 (Oatmeal) 在全球中產階級消費者中爆紅。
+
+<Timeline events={[
+  { year: "約 1000 BCE", text: "中歐農民開始有意識地栽種燕麥，主要用作馬匹飼料" },
+  { year: "中世紀", text: "燕麥成為歐洲北部（蘇格蘭、斯堪地那維亞）窮人的主食，製成粥食或燕麥餅" },
+  { year: "1875", text: "CBOT 推出燕麥期貨合約，是最早的農業期貨之一" },
+  { year: "1877", text: "桂格燕麥 (Quaker Oats) 公司成立，開始工業化燕麥食品生產" },
+  { year: "1963", text: "科學研究確認燕麥 β-葡聚糖的降膽固醇功能" },
+  { year: "1997", text: "美國 FDA 批准燕麥心臟健康聲稱，全穀物健康食品時代開始" },
+  { year: "2010s", text: "燕麥奶 (Oat Milk) 興起，瑞典品牌 Oatly 引領全球燕麥乳製品替代浪潮" },
+  { year: "2021", text: "加拿大和北美乾旱，燕麥短缺，CBOT ZO 觸及多年高峰" },
+]} />
+
+今日燕麥的最大市場是北美（美國和加拿大）和歐洲斯堪地那維亞地區。加拿大是全球最大的燕麥出口國，其薩斯喀徹溫省 (Saskatchewan) 的燕麥品質極高，蛋白質含量豐富。全球燕麥年產量約 2,500 萬公噸，遠低於玉米和小麥，但燕麥期貨市場仍然維持穩定的流動性，主要服務飼料業者（馬飼料、牛隻補充飼料）和食品加工業。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1875}
+  contractSize="5,000 蒲式耳 (約 136 公噸)"
+  deliveryPoint="芝加哥認可倉庫"
+  tickerSymbol="ZO"
+/>
+
+CBOT 燕麥期貨 (ZO) 於 1875 年推出，是 CBOT 最早的農業期貨合約之一，比玉米和小麥的標準化期貨還早兩年。這反映了 19 世紀末燕麥作為馬飼料在美國農業和運輸業中的核心地位——那個時代，城市的馬車、農場的挽馬、軍隊的騎兵，都依賴燕麥。
+
+ZO 合約規格 5,000 蒲式耳（約 136 公噸），以美分/蒲式耳報價，交割月份為 3、5、7、9、12 月。燕麥期貨的交易量在各農業期貨中偏低，日均成交量通常不足玉米的 1%，反映了燕麥市場規模相對較小。
+
+燕麥期貨的主要功能是為飼料業者（馬匹養殖、競技馬術、賽馬業）和食品加工業（麥片廠商、健康食品製造商）提供套保工具。儘管流動性有限，但 CBOT ZO 仍是北美燕麥的主要價格發現機制。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2021-2022 年：乾旱與燕麥的意外危機
+
+2021 年夏季，北美太平洋西北部和大平原地區遭遇了「熱穹效應」(Heat Dome) 引發的極端熱浪，加上持續乾旱，對加拿大薩斯喀徹溫和馬尼托巴省的燕麥作物造成了嚴重打擊。加拿大 2021 年燕麥收成估計減少了 30-40%，創下多年來最嚴重的減產。
+
+CBOT 燕麥期貨從 2021 年初的約 $4.00/蒲式耳，在 2021 年底飆升至約 $7.60/蒲式耳，漲幅超過 80%，創下十多年來最高水平。
+
+<QuoteCard
+  quote="燕麥市場流動性不足，一旦供給衝擊出現，套保者的避險成本可以急劇上升。這是小市場大波動的典型案例。"
+  author="CBOT 農業期貨分析師"
+  year="2021"
+/>
+
+更戲劇性的是，2020-2021 年全球「燕麥奶熱潮」正值頂峰——燕麥奶品牌 Oatly 在 2021 年 5 月於納斯達克 IPO，估值超過 100 億美元；星巴克等大型連鎖咖啡館全面推出燕麥奶選項，帶動消費市場對燕麥的採購需求大增。在供給減少和需求增加的雙重壓力下，燕麥期貨的漲幅超出了大多數市場分析師的預期。
+
+這次事件是農業期貨市場「長尾風險」的典型案例：一個平時交易量低、關注度不高的合約，在特定條件下可以出現驚人的價格波動，而市場深度不足使得套保成本比大市場更為昂貴。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Quaker Oats"
+  nameZh="桂格燕麥"
+  years="1877-"
+  nickname="燕麥食品的現代締造者"
+  story="桂格燕麥是全球燕麥食品工業的開創者，創立於 1877 年的俄亥俄州，以貴格會 (Quaker) 的誠信形象作為品牌標誌。桂格開創了即食燕麥片 (Instant Oatmeal)、罐裝燕麥粥等現代燕麥食品形式，將燕麥從「馬飼料」轉型為「家庭健康早餐」。今日桂格屬於百事可樂公司旗下，是 CBOT 燕麥期貨最重要的食品業套保者之一。"
+/>
+
+<TraderProfile
+  name="Oatly"
+  nameZh="Oatly 燕麥奶"
+  years="1994-"
+  nickname="燕麥飲料革命者"
+  story="瑞典品牌 Oatly 在 1994 年由盧德大學 (Lund University) 教授里卡德·埃克 (Rickard Öste) 創辦，但真正爆紅是在 2018-2021 年的植物奶熱潮中。Oatly 以其燕麥奶的細膩口感和環保主義定位，成功打入全球咖啡館市場。2021 年 IPO 時市值超過 100 億美元，讓燕麥從一個農業大宗商品暫時成為了矽谷投資者青睞的「健康食品概念股」，間接提升了 CBOT 燕麥期貨的市場關注度。"
+/>
+
+<TraderProfile
+  name="Richardson International"
+  nameZh="理查森國際"
+  years="1857-"
+  nickname="加拿大穀物之王"
+  story="加拿大最大的私人農業企業之一，在馬尼托巴、薩斯喀徹溫等省份擁有廣泛的燕麥和其他穀物的採購、儲存和出口設施。理查森是加拿大燕麥市場最重要的套保機構之一，其燕麥採購和套保時程對 CBOT ZO 的基差和持倉結構有直接影響。作為一家私人企業，理查森的市場行動比上市糧商更不透明，讓燕麥市場的信息不對稱更為明顯。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="約翰遜博士對燕麥的嘲諷"
+  year="1755"
+  description="英國文學家塞繆爾·約翰遜 (Samuel Johnson) 在 1755 年的《英語詞典》中，將燕麥定義為「一種在英格蘭通常用於餵馬，但在蘇格蘭卻養活人民的穀物」。這個著名的嘲諷折射了英格蘭與蘇格蘭的文化偏見，也準確描述了燕麥在 18 世紀北歐窮人飲食中的角色。燕麥粥 (Porridge) 在蘇格蘭文化中是民族象徵，就如同薯片之於愛爾蘭。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="燕麥奶的環保革命"
+  year="2015 至今"
+  description="燕麥奶的碳足跡比牛奶低約 70-80%，用水量減少 90%，土地使用減少 80%。這些數字讓燕麥奶成為環保意識消費者的首選植物奶。Oatly 的快速增長帶動了全球燕麥奶市場的爆炸性增長，2022 年全球燕麥奶市場規模估計超過 40 億美元，年增長率超過 20%。這個消費趨勢讓燕麥從偏僻的農業期貨板塊，進入了每天在連鎖咖啡館的菜單上接觸到數億消費者的現代飲食文化。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="賽馬業的燕麥依賴"
+  year="1700 至今"
+  description="在現代馬飼料科技出現之前，燕麥是競技馬的主要能量來源。19 世紀的賽馬業和 CBOT 燕麥期貨市場之間有著直接的商業連結：大型賽馬農場是當時最重要的燕麥買家之一，其採購行為對期貨市場產生可觀影響。今日，高端競技馬術（奧運馬術、肯塔基德比等）仍然使用大量燕麥飼料，但市場規模已遠不及 19 世紀時的馬車和農業馬力時代。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="β-葡聚糖與現代保健飲食"
+  year="1963 至今"
+  description="燕麥中的 β-葡聚糖 (Beta-Glucan) 是一種可溶性膳食纖維，科學研究證實每天攝入 3 克以上可以顯著降低血液低密度脂蛋白膽固醇 (LDL)。這個發現讓燕麥進入了「功能性食品」的殿堂。燕麥是目前極少數獲得 FDA 批准可以在食品標籤上宣稱「可降低心臟病風險」的天然食材之一，讓燕麥在數以億計的心臟健康意識消費者的早餐桌上有了不可替代的地位。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="蘇格蘭燕麥粥節 World Porridge Making Championship"
+  year="1994 至今"
+  description="每年十月在蘇格蘭高地舉行的「世界燕麥粥製作錦標賽」(Golden Spurtle World Porridge Making Championship)，吸引來自全球的燕麥粥愛好者角逐最佳燕麥粥製作冠軍。蘇格蘭傳統燕麥粥只用燕麥、鹽和水，不加牛奶和糖。這個文化節慶是北歐農業文化對燕麥作為「真正食物」的最頑固堅守，也是農業商品從「期貨標的」變為「文化認同」的罕見案例。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="格蘭諾拉的美國夢"
+  year="1863"
+  description="格蘭諾拉 (Granola) 由美國醫療改革者詹姆斯·卡雷布·傑克遜 (James Caleb Jackson) 在 1863 年發明，是烤燕麥片加堅果和蜂蜜的混合物。到 1960-70 年代，格蘭諾拉成為美國嬉皮士和自然飲食運動的象徵。今日，美國格蘭諾拉市場規模超過 20 億美元，是燕麥加工產品中增長最快的細分市場之一，也是連接燕麥期貨與現代食品零售最直接的產品鏈接之一。"
+/>
+
+</div>
+
+</SectionCard>

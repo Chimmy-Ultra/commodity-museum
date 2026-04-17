@@ -1,0 +1,167 @@
+---
+name: "彭博商品指數"
+nameEn: "Bloomberg Commodity Index"
+slug: "bloomberg-commodity-index"
+wing: "index"
+exchange: "CME/ICE"
+tickerSymbol: "BCOM"
+status: "active"
+icon: "📈"
+accentColor: "#2a4b8a"
+roomNumber: 2
+tagline: "多元化的商品基準——BCOM 以更均衡的行業配置挑戰 GSCI 的能源主導地位，代表了機構投資者對商品敞口的更謹慎哲學"
+taglineEn: "The diversified commodity benchmark — BCOM challenges GSCI's energy dominance with more balanced sector weights, representing a more prudent philosophy of commodity exposure"
+originRegion: "全球"
+firstFuturesYear: 1998
+firstFuturesExchange: "CME/ICE"
+greatestEventName: "2022 年俄烏戰爭引發商品超級漲勢，BCOM 創 1998 年以來最大年漲幅"
+greatestEventYear: 2022
+description: "彭博商品指數展室：探索BCOM從道瓊斯-AIG指數的演變，以及商品指數化投資如何改變農業和能源市場的價格機制。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+彭博商品指數（Bloomberg Commodity Index，BCOM）的前身是 1998 年由道瓊斯（Dow Jones）和美國國際集團（AIG）共同創立的「道瓊斯-AIG 商品指數」（DJ-AIG CI）。這個指數在設計理念上刻意與同期的 GSCI 形成差異：GSCI 以生產量加權，天然導致能源超重；DJ-AIG 則採用「生產量 + 流動性」雙重加權，並設置嚴格的上限——任何單一商品不超過指數的 15%，任何行業板塊不超過 33%。這讓 DJ-AIG 的能源配置通常在 30-35% 之間，遠低於 GSCI 的 65-75%，農業和金屬的比重相應提高。
+
+這個設計哲學反映了一個不同的投資理念：GSCI 認為商品指數應該最大程度地「反映現實世界的商品結構」，因此按生產量加權；DJ-AIG 則認為商品指數應該提供「分散化的商品敞口」，因此人為設置行業上限。兩種哲學代表了商品指數設計中「現實映射」vs「資產配置優化」的根本分歧。
+
+2009 年，AIG 在金融危機中接受政府救助，被迫出售多項資產，道瓊斯-AIG 商品指數改名為「道瓊斯-瑞銀商品指數」（DJ-UBS CI）。2014 年，彭博集團收購相關業務，指數再度更名為「彭博商品指數」（BCOM）。儘管名字改了三次，指數的核心方法論始終保持一致，機構投資者認可其延續性。
+
+<Timeline events={[
+  { year: "1998", text: "道瓊斯與 AIG 合作推出 DJ-AIG 商品指數，以均衡多元化設計挑戰 GSCI 的能源主導" },
+  { year: "2003-2008", text: "商品超級週期期間，DJ-AIG 因農業和金屬配置較高而表現優於 GSCI 的某些年份" },
+  { year: "2009", text: "AIG 金融危機救助，指數更名為道瓊斯-瑞銀商品指數（DJ-UBS CI）" },
+  { year: "2012", text: "iPath Bloomberg Commodity Index ETN（DJP）成為全球最大的商品指數 ETF 產品之一" },
+  { year: "2014", text: "彭博集團收購，指數更名為「彭博商品指數」（Bloomberg Commodity Index，BCOM）" },
+  { year: "2022", text: "俄烏戰爭引發能源、農業、金屬全面暴漲，BCOM 錄得約 26% 年漲幅，為 1998 年以來最高" },
+  { year: "2023-2024", text: "通脹降溫後商品價格回落，BCOM 表現跟隨主要商品市場的分化走勢" },
+]} />
+
+BCOM 目前追蹤 23 種商品（每年可調整），包括能源（WTI 原油、布蘭特原油、天然氣、低硫柴油等）、金屬（黃金、白銀、銅、鋁、鋅等）和農業（玉米、大豆、小麥、糖、棉花、咖啡、大豆油、大豆粕等）。BCOM 的廣泛農業覆蓋，讓它比 GSCI 更常被用於分析「農業通脹」對整體商品組合的影響。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME / ICE（依成分商品分佈）"
+  year={1998}
+  contractSize="通過 ETF/ETN 和期貨合約追蹤，無單一標準化合約"
+  deliveryPoint="現金結算（各成分商品期貨的加權組合）"
+  tickerSymbol="BCOM（指數）/ DJP（最大追蹤 ETN）"
+/>
+
+BCOM 的投資機制與 GSCI 類似，通過持有各成分商品的期貨近月合約、每月展期來複製指數表現。BCOM 的主要追蹤產品包括：
+
+- **iPath Bloomberg Commodity Index ETN（DJP）**：在紐約證券交易所上市，是全球最大的 BCOM 追蹤工具之一
+- **iShares Bloomberg Roll Select Commodity Strategy ETF（CMDY）**：採用「智慧展期」策略以降低展期損耗
+- **多個歐洲上市的 UCITS ETF**：面向歐洲機構和散戶投資者
+
+BCOM 相對 GSCI 的關鍵優勢是「分散化」：因為單一商品上限 15%，BCOM 的表現不會被任何一個商品的極端走勢完全主導。這讓 BCOM 在學術研究和機構配置中，通常被用於代表「商品多元化資產類別」的整體表現，而非單純的「能源暴露」。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：俄烏戰爭引發商品全面暴漲
+
+2022 年 2 月 24 日，俄羅斯入侵烏克蘭，引發了 21 世紀以來全球商品市場最全面的一次供應衝擊——涵蓋了能源、農業和金屬三大商品板塊，讓 BCOM 的多元化設計在這一年展現出其覆蓋廣泛的代表性。
+
+- **能源**：俄羅斯是全球最大的天然氣出口國（佔歐盟天然氣供應約 40%）和第二大原油出口國，戰爭開始後，西方制裁和俄羅斯報復性斷氣推動歐洲天然氣（TTF）一度突破 €340/MWh，布蘭特原油突破 $130/桶
+- **農業**：俄烏兩國合計佔全球小麥出口約 30%、葵花籽油出口約 80%，黑海出口中斷引發全球糧食安全恐慌，小麥期貨（ZW）在數週內暴漲 60%
+- **金屬**：俄羅斯是鎳、鋁、鈀金的重要生產國，制裁和物流中斷推高了多種工業金屬價格
+
+<QuoteCard
+  quote="2022 年是商品市場歷史上最罕見的一年——幾乎所有商品同步受到地緣政治衝擊，多元化幾乎沒有起到分散效果，因為每一個板塊都在同時漲。"
+  author="BlackRock 大宗商品投資部門主管，2022 年第三季度報告"
+  year="2022"
+/>
+
+BCOM 在 2022 年全年上漲約 26%，是自 1998 年指數創立以來的最大年漲幅。這一年的商品大漲同時也成為了通脹辯論的焦點：BCOM 追蹤的商品，在各國 CPI（消費者物價指數）中都有直接或間接的反映，2022 年的商品通脹推動了各主要央行的激進加息週期。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Pimco Commodity Real Return Fund"
+  nameZh="PIMCO 商品實際回報基金"
+  years="2002-"
+  nickname="最大的機構商品指數追蹤者之一"
+  story="PIMCO 的商品實際回報基金（CRRF）以 BCOM（前身 DJ-AIG）為基準，通過期貨合約和通脹保護債券（TIPS）的組合，提供商品敞口加通脹保護的「雙重對沖」策略。在 2000 年代商品超級週期期間，PIMCO CRRF 是全球最大的商品指數追蹤基金之一，資產規模一度超過 200 億美元。其投資邏輯代表了機構投資者對「商品作為通脹對沖工具」最系統化的應用，也讓 BCOM 成為固定收益機構進入商品市場的首選基準。"
+/>
+
+<TraderProfile
+  name="BlackRock / iShares"
+  nameZh="貝萊德 / iShares"
+  years="2006-"
+  nickname="最大的商品 ETF 發行商"
+  story="貝萊德（BlackRock）旗下的 iShares 平台是全球最大的 ETF 發行商，其多個商品 ETF 產品追蹤 BCOM 和 GSCI。iPath Bloomberg Commodity Index ETN（DJP）是美國市場最受歡迎的 BCOM 追蹤工具之一，也是商品指數「平民化」的最重要推手——讓任何持有普通股票帳戶的投資者都能以低費率獲得 23 種商品的多元化敞口。貝萊德在商品 ETF 市場的主導地位，也讓其成為研究商品市場資金流的最重要監測對象。"
+/>
+
+<TraderProfile
+  name="Cliff Asness / AQR Capital"
+  nameZh="克利夫·阿斯內斯 / AQR 資本"
+  years="1998-"
+  nickname="系統性商品因子研究的先驅"
+  story="AQR 資本的創始人克利夫·阿斯內斯和其研究團隊發表了一系列關於商品期貨「因子投資」（Factor Investing）的重要學術論文，探討趨勢（Momentum）、套利結構（Carry）、價值（Value）等因子在商品期貨市場的實際收益來源。AQR 的研究重新定義了商品指數投資的方法論框架，也推動了「商品因子 ETF」（追蹤特定因子組合而非被動指數）的出現，代表了商品指數投資從純粹「買入持有」向更精細的「因子配置」演進。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="商品 vs 股票 vs 債券：資產配置的三角關係"
+  year="2003 至今"
+  description="2004 年 Gorton-Rouwenhorst 研究（以及後續的大量學術文獻）確立了商品期貨作為獨立「資產類別」的地位：其與股票的低相關性（甚至負相關）和通脹對沖特性，讓商品成為傳統「股票/債券」二元組合的有效補充。標準的機構投資組合建議（如耶魯大學捐贈基金的 David Swensen 提出的「耶魯模型」）包含 5-15% 的商品配置。BCOM 作為商品配置的標準基準，在這個資產配置框架中扮演核心角色。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="「展期損耗」（Roll Yield）問題"
+  year="2008 至今"
+  description="商品期貨指數的一個固有問題是「展期損耗」（Roll Yield Drag）：在商品市場處於「正常正向市場」（Contango，遠月比近月貴）時，每次展期（賣近月、買遠月）都以高於近月的價格買入，造成隱性損耗。這在 2008-2015 年的石油 Contango 環境中特別顯著，讓 BCOM 和 GSCI 的實際投資回報遠低於現貨商品指數的表現。這個問題催生了「Roll Optimized」策略型 ETF（選擇最小 Contango 的合約月份展期），也讓投資者對「商品指數 = 商品現貨」的簡單認知提出了修正。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="指數名稱的三次變身"
+  year="1998-2014"
+  description="BCOM 的三次改名——DJ-AIG (1998) → DJ-UBS (2009) → Bloomberg (2014)——本身就是一個關於金融危機、企業重組和品牌價值的故事。AIG 在 2008 年金融危機中成為「太大倒閉」的象徵，政府以 1,800 億美元救助，但 AIG 的名字迅速變成燙手山芋，任何與 AIG 相關的品牌都面臨公關危機。商品指數更名為 DJ-UBS，僅是「洗白」品牌關聯的市場決定。五年後彭博以 350 億美元收購道瓊斯金融數據部門後，指數再度更名為 BCOM。品牌三變，但方法論和投資邏輯始終一致。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="中國因素與商品指數的地緣政治化"
+  year="2018 至今"
+  description="隨著中美貿易戰和地緣政治競爭的加劇，BCOM 中涉及中國需求的商品（銅、鐵礦石、大豆、棉花）的定價，越來越多地受到「中國政策信號」而非純粹供需的影響。當中國政府宣布收儲或拋儲銅、宣布限制某種農產品進口，BCOM 追蹤的相關成分商品就會立即反應。這讓 BCOM 從一個「全球多元化」工具，變成了一個必須密切追蹤中國政策動向的「地緣政治指數」。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="ESG 商品指數的興起"
+  year="2020 至今"
+  description="隨著機構投資者對 ESG（環境、社會、治理）原則的重視，針對商品指數的 ESG 篩選也開始出現。「BCOM ESG 版本」排除了動物性農產品（豬腩、活牛、瘦肉豬）、煤炭，並降低石油權重，增加銅、鋰、鎳等清潔能源金屬的配置。這個趨勢反映了商品市場投資邏輯的長期演化：從「買所有商品」的被動配置，向「選擇符合可持續標準的商品」的主動篩選轉型。但批評者指出，ESG 商品指數的定義仍缺乏標準化，存在「漂綠」（Greenwashing）風險。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="商品指數的「民主化」：從億萬富翁到散戶"
+  year="2006 至今"
+  description="在 BCOM 和 GSCI 的 ETF 產品出現之前，商品指數投資是大型機構和超高淨值個人的專屬領域——一個完整的 GSCI 追蹤組合的最低規模通常在 1,000 萬美元以上。ETF 的出現讓任何持有 100 美元的普通投資者都能以一筆交易獲得 20 種以上商品的多元化敞口。這個「民主化」改變了商品市場的資金構成，也引發了關於散戶投機資金是否加劇商品市場波動性的新爭議——從某種意義上，BCOM ETF 是現代金融民主化趨勢在農業和能源市場最典型的體現。"
+/>
+
+</div>
+
+</SectionCard>

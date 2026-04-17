@@ -1,0 +1,44 @@
+---
+import '@fontsource-variable/playfair-display';
+import '@fontsource-variable/source-serif-4';
+import '@fontsource/noto-serif-tc/400.css';
+import '@fontsource/noto-serif-tc/700.css';
+import '@styles/global.css';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+  accentColor?: string;
+}
+
+const {
+  title,
+  description = '大宗商品期貨博物館 — 每個商品一間展室，從起源故事到傳奇交易員',
+  accentColor,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | 大宗商品博物館</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <ClientRouter />
+    {accentColor && (
+      <style set:html={`:root { --color-wing-active: ${accentColor}; }`} />
+    )}
+  </head>
+  <body class="min-h-screen bg-museum-bg text-museum-text antialiased">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

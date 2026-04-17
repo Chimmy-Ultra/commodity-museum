@@ -1,0 +1,170 @@
+---
+name: "亨利樞紐天然氣"
+nameEn: "Henry Hub Natural Gas"
+slug: "henry-hub-natural-gas"
+wing: "energy"
+exchange: "CME/NYMEX"
+tickerSymbol: "NG"
+status: "active"
+icon: "🔥"
+accentColor: "#e8730a"
+roomNumber: 3
+tagline: "頁岩革命讓美國從天然氣進口國變為全球最大出口國——而一個路易斯安那州的管線交叉口，定義了這一切的價格"
+taglineEn: "The shale revolution turned America from gas importer to the world's largest LNG exporter — priced at a Louisiana pipeline crossroads"
+originRegion: "美國路易斯安那州"
+firstFuturesYear: 1990
+firstFuturesExchange: "NYMEX"
+greatestEventName: "2021 年冬季風暴烏里——德州電網崩潰，天然氣現貨價格飆至每百萬英熱 $1,000"
+greatestEventYear: 2021
+description: "天然氣展室：從德州第一口天然氣井到 NYMEX NG 合約，探索頁岩革命如何顛覆全球能源格局，以及 Amaranth 的 $66 億崩潰與冬季烏里的 $1,000 瘋狂。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+天然氣是地球上最古老的能源之一，它在地殼中被發現的歷史，比人類開始有意識地使用它早了數百萬年。古代波斯人稱裏海沿岸地面滲出的天然火焰為「聖火」，在那裡建造了瑣羅亞斯德教的神廟。中國四川早在西元前 500 年就開始使用竹管輸送天然氣以蒸發鹽水製鹽。但天然氣作為現代能源商品的故事，從美國的阿帕拉契山脈開始。
+
+1821 年，美國在紐約州費里多尼亞 (Fredonia) 鑽出了北美第一口商業天然氣井，當地居民開始用它照明街燈。1858 年，加拿大安大略省的石油泉 (Oil Springs) 也有類似發現。然而，天然氣真正大規模發展，必須等待管道輸送技術的成熟——天然氣不像石油可以裝桶運輸，管道是唯一經濟的輸送方式。
+
+美國天然氣管道網絡的核心節點，就是路易斯安那州的亨利樞紐 (Henry Hub)，位於路易斯安那州厄拉斯 (Erath) 附近。這個地方之所以成為全球天然氣定價基準，純粹是地理和歷史的偶然——它是美國中南部 13 條主要州際和跨州管道的交匯點，任何想要在管道網絡間傳輸天然氣的買賣方，都必須通過這個節點，形成了天然的交易中心。
+
+<Timeline events={[
+  { year: "1821", text: "美國紐約州鑽出北美第一口商業天然氣井，開始用於街燈照明" },
+  { year: "1891", text: "美國建造第一條州際天然氣管道（印第安納州至芝加哥，120 英里）" },
+  { year: "1938", text: "美國《天然氣法》通過，聯邦監管機構開始管制州際天然氣輸送" },
+  { year: "1978-1989", text: "美國逐步解除天然氣定價管制，市場化改革開始" },
+  { year: "1990", text: "NYMEX 在亨利樞紐推出天然氣期貨合約 (NG)" },
+  { year: "2000-2008", text: "頁岩氣革命萌芽，Mitchell Energy 的水力壓裂技術突破改變供給格局" },
+  { year: "2006", text: "Amaranth Advisors 天然氣押注崩潰，損失 $66 億美元，創對沖基金損失紀錄" },
+  { year: "2021", text: "冬季風暴烏里 (Winter Storm Uri) 席捲德州，電網崩潰，天然氣現貨飆至 $1,000/MMBtu" },
+]} />
+
+天然氣市場有一個獨特的季節性結構：夏季用於發電（空調需求），冬季用於暖氣（供暖需求）。「天然氣儲存週期」(Storage Cycle) 是市場的基本節奏——每年夏天注入儲氣庫，冬天提取。每週四，美國能源情報署 (EIA) 公布的天然氣儲量數字 (Natural Gas Storage Report) 是期貨交易員最重要的週度數據，往往引發 NG 合約的劇烈波動。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="NYMEX (New York Mercantile Exchange)"
+  year={1990}
+  contractSize="10,000 百萬英熱單位 (MMBtu)"
+  deliveryPoint="亨利樞紐，路易斯安那州 (Henry Hub, Louisiana)"
+  tickerSymbol="NG"
+/>
+
+NYMEX 天然氣期貨 (NG) 於 1990 年 4 月推出，以亨利樞紐作為實物交割點，合約規格為 10,000 百萬英熱單位 (MMBtu)，以美元/MMBtu 報價。最小跳動為 $0.001/MMBtu（$10/合約）。
+
+NG 合約的推出背景是美國天然氣市場的解除管制改革。1970-1980 年代，美國天然氣價格受到聯邦管制，但一系列改革法案逐步放開定價，亨利樞紐因此成為市場化天然氣自由競價的核心節點，NYMEX 在此推出期貨合約水到渠成。
+
+天然氣期貨的波動性遠超石油期貨。由於天然氣儲存困難（需要特殊的加壓設施）、運輸完全依賴管道（不同於石油可以靈活調撥），地區性供需失衡可以導致現貨價格出現極端波動。2021 年冬季風暴烏里期間，德州現貨天然氣一度達到 $1,000/MMBtu，而正常水平只有 $2-5。
+
+頁岩氣革命徹底改變了美國（也改變了全球）天然氣市場的結構：美國從 2005-2009 年間的天然氣進口國，轉變為 2016 年後的 LNG 淨出口國，並在 2023 年超越卡達，成為全球最大的 LNG 出口國。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2021 年冬季風暴烏里：德州的冰封能源危機
+
+2021 年 2 月，美國南部各州迎來了半個世紀以來最嚴寒的冬天。冬季風暴「烏里」(Winter Storm Uri) 席捲德克薩斯州、奧克拉荷馬州和路易斯安那州，氣溫跌至 -20°C 以下——遠超這些地區的基礎設施設計標準。
+
+德州的電力市場由獨立系統運營商 ERCOT (Electric Reliability Council of Texas) 管理，這是美國 48 個州中唯一一個幾乎完全孤立於全國電網之外的電力系統（為了避免聯邦監管）。當暴風雪同時凍結了天然氣管道、風力渦輪機、天然氣採掘設備，德州的電力生產能力瞬間減少了約 30,000 兆瓦——相當於一個中等歐洲國家的總用電需求。
+
+天然氣供需同時崩潰：暖氣需求暴增，天然氣輸送管道凍結，天然氣生產設備停工，出現了嚴重的實物供給短缺。
+
+<QuoteCard
+  quote="德州人在冬天用天然氣取暖，但天然氣設施沒有為冬天做準備。這是已知的設計缺陷，沒有人修復。"
+  author="美國聯邦能源監管委員會 (FERC) 報告"
+  year="2021"
+/>
+
+德克薩斯州天然氣現貨價格在幾天內從 $3/MMBtu 飆升至 **$1,000/MMBtu 以上**——是正常水平的 300 倍。ERCOT 的電力現貨價格同樣衝至上限 $9,000/兆瓦時，而正常價格不到 $50。約 420 萬戶家庭在嚴寒中斷電，最長達 5 天。
+
+這場危機造成的直接經濟損失估計超過 1,950 億美元，是德州歷史上最嚴重的自然災害。更深遠的影響是：它讓全美（甚至全球）重新檢視能源基礎設施在極端天氣下的脆弱性，並重燃了關於電力市場設計、能源基礎設施投資責任、氣候變遷適應的深刻辯論。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Brian Hunter"
+  nameZh="布萊恩·亨特"
+  years="1974-"
+  nickname="Amaranth 的隕星"
+  story="加拿大出生的天然氣交易員，2005-2006 年在對沖基金 Amaranth Advisors 工作時聲名大噪。2005 年，他在卡崔娜颶風對天然氣市場的影響上押注正確，為 Amaranth 賺取了超過 10 億美元，獲得了約 1 億美元的個人分紅。然而，2006 年他繼續押注天然氣冬季合約價差（天然氣市場的季節性套利），結果在天然氣價格下跌時遭受毀滅性損失。2006 年 9 月，Amaranth 在短短兩週內損失 **66 億美元**——成為對沖基金史上當時最大的單一損失。亨特的案例成為「過度集中押注」和「槓桿風險管理失控」的教科書案例。"
+/>
+
+<TraderProfile
+  name="John Arnold"
+  nameZh="約翰·阿諾德"
+  years="1974-"
+  nickname="天然氣之神"
+  story="前安然 (Enron) 最佳交易員，安然倒閉後以 800 萬美元自有資金成立 Centaurus Energy。他對天然氣市場的理解之深，讓他在 2006 年 Amaranth 崩潰時做對了方向——他的基金在那一年賺取了天文數字的回報，因為他基本上是 Amaranth 天然氣頭寸的對手方。他以每年超過 30% 的回報率連續多年創造驚人業績，2012 年在 38 歲時以超過 40 億美元淨資產退休，轉型為慈善家。他至今是能源商品交易史上最具傳奇色彩的人物之一。"
+/>
+
+<TraderProfile
+  name="George Mitchell"
+  nameZh="喬治·米切爾"
+  years="1919-2013"
+  nickname="頁岩氣革命之父"
+  story="德州石油人，Mitchell Energy 創辦人。1990 年代，業界普遍認為致密頁岩層中的天然氣無法商業化開採，米切爾卻花了 20 年時間，用超過 2,000 萬美元試驗，終於在 1998 年完善了水力壓裂 (Hydraulic Fracturing, Fracking) 和水平鑽井技術，讓 Barnett Shale 的天然氣得以商業開採。這個突破被《經濟學人》稱為「能源業最重要的技術創新」。米切爾的成功讓美國在 15 年內從能源短缺走向能源獨立，徹底重塑了全球天然氣市場格局。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="《應許之地》Promised Land"
+  year="2012"
+  description="麥特·戴蒙主演，格斯·范·桑特執導，以頁岩氣水力壓裂技術（Fracking）在美國農村社區引發的爭議為題材。電影呈現了頁岩氣開採公司說服農民簽署土地租約的過程，以及環保人士、農民和石油公司之間的利益角力。它是頁岩氣革命在美國社會引發廣泛倫理辯論的最直接文化呈現。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="《天然氣之戰》Gasland"
+  year="2010"
+  description="喬什·福克斯 (Josh Fox) 執導的紀錄片，記錄了賓夕法尼亞州等地農民因水力壓裂開採頁岩氣，導致地下水污染的問題。最著名的畫面是農民點燃從水龍頭流出的水——水中因甲烷污染而可燃。這部影片引發了全球關於頁岩氣環境代價的廣泛討論，激怒了天然氣產業，也推動了多個國家和州禁止水力壓裂。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="安然醜聞 Enron Scandal"
+  year="2001"
+  description="安然公司 (Enron) 曾是全球最大的天然氣和電力貿易公司，被《財富》雜誌連續六年評為「美國最具創新力企業」。2001 年，會計醜聞曝光，安然申請破產，股票從 $90 跌至接近 $0，數萬名員工失去退休金和工作。安然的倒閉是美國企業史上最大的破產案之一，直接促使《薩班斯-奧克斯利法》(Sarbanes-Oxley Act) 的立法，強化上市公司的會計透明度。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="LNG 革命：天然氣的全球化"
+  year="1964 至今"
+  description="液化天然氣 (LNG, Liquefied Natural Gas) 是將天然氣冷卻至 -162°C 使其液化，體積縮小至 1/600，得以用液化天然氣船在全球運輸。第一船 LNG 於 1964 年從阿爾及利亞運往英國，開啟了天然氣的全球化時代。如今，卡達、澳洲、美國、俄羅斯是最大的 LNG 出口國，而日本、中國、韓國是最大的進口國。LNG 打破了天然氣必須依賴管道的地理限制，讓亨利樞紐的美國天然氣得以影響亞洲的燃料市場。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="北溪管道的政治與爆炸"
+  year="2011-2022"
+  description="Nord Stream（北溪）管道是從俄羅斯穿越波羅的海底直達德國的天然氣管道系統，Nord Stream 1 於 2011 年投產，Nord Stream 2 在 2022 年俄烏戰爭前夕完工。2022 年 2 月俄烏戰爭爆發後，德國暫停認證 Nord Stream 2。2022 年 9 月，兩條管道在水下發生神秘爆炸，永久報廢。這個事件象徵著俄羅斯天然氣主導歐洲能源市場的時代終結，也是大宗商品市場與地緣政治最深度交纏的案例之一。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《能源風暴》The Smartest Guys in the Room"
+  year="2005"
+  description="記錄安然崩潰始末的紀錄片，揭示了天然氣和電力市場在解除管制後如何被安然的交易員所操縱——尤其是在加州電力危機 (2000-2001) 期間，安然交易員透過「死亡之星」等策略人為製造加州電力短缺，賺取暴利。這部紀錄片是理解能源市場解除管制後的漏洞和系統性風險的最佳入門。"
+/>
+
+</div>
+
+</SectionCard>

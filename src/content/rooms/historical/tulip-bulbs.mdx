@@ -1,0 +1,163 @@
+---
+name: "鬱金香球莖"
+nameEn: "Tulip Bulbs"
+slug: "tulip-bulbs"
+wing: "historical"
+exchange: "阿姆斯特丹非正式市場"
+tickerSymbol: "—"
+status: "historical"
+icon: "🌷"
+accentColor: "#c060a0"
+roomNumber: 1
+tagline: "史上最著名的投機泡沫——1637 年荷蘭鬱金香狂熱，一個球莖的價格相當於阿姆斯特丹運河邊的豪宅，是人類追逐稀缺性的永恆寓言"
+taglineEn: "History's most famous speculative bubble — the 1637 Dutch tulip mania, where a single bulb cost as much as a canal-side mansion in Amsterdam"
+originRegion: "荷蘭（鄂圖曼帝國引進）"
+firstFuturesYear: 1636
+firstFuturesExchange: "阿姆斯特丹非正式酒館期貨市場"
+greatestEventName: "1637 年 2 月鬱金香市場崩潰，Semper Augustus 球莖從 6,000 荷蘭盾歸零"
+greatestEventYear: 1637
+description: "鬱金香展室：探索1637年荷蘭鬱金香狂熱的起因、頂峰與崩潰，以及它對現代泡沫理論的深遠影響。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+鬱金香原產於中亞（天山山脈），由鄂圖曼帝國蘇丹花園培育普及，16 世紀中葉由荷蘭植物學家卡洛勒斯·克盧西烏斯（Carolus Clusius）引進西歐。克盧西烏斯在萊頓大學建立了荷蘭第一個鬱金香球莖種植圃，但他嚴格保守種植技術，高牆之外的人們越來越渴望這種嬌豔的花朵。
+
+鬱金香在 17 世紀初的荷蘭共和國（United Provinces）遭遇了特殊的社會土壤：這個時代的荷蘭正處於「黃金世紀」（Gouden Eeuw）的全盛期——憑借東印度貿易和金融創新，阿姆斯特丹成為全球財富的中心。新興的商人中產階級（burghers）急需一種方式展示社會地位，而鬱金香——尤其是極為稀缺的「雜色」品種（Broken Tulips，因感染馬賽克病毒而出現的火焰紋樣花瓣）——成為了財富身份的最完美象徵。
+
+17 世紀中期最著名的鬱金香品種是「Semper Augustus」（永遠的奧古斯都）——白色花瓣上有鮮紅色火焰紋，極為珍稀。1623 年時，一個 Semper Augustus 球莖的價格約為 1,000 荷蘭盾；到 1637 年泡沫頂峰，其售價超過 6,000 荷蘭盾，相當於阿姆斯特丹一棟豪宅的價格，或一名熟練工匠 20 年的工資。
+
+<Timeline events={[
+  { year: "1593", text: "植物學家克盧西烏斯將鬱金香球莖引入荷蘭，在萊頓大學建立第一個種植圃" },
+  { year: "1620s", text: "鬱金香在荷蘭富裕階層成為身份象徵，稀有雜色品種價格開始快速上漲" },
+  { year: "1634", text: "鬱金香投機狂潮擴散至普通市民，球莖交易在酒館中進行，參與者越來越廣泛" },
+  { year: "1636", text: "期貨式交易出現：在球莖仍在土中時就簽訂未來交割合約，投機性質完全顯現" },
+  { year: "1637年2月3日", text: "哈勒姆一場鬱金香拍賣會無人出價，市場突然崩潰，恐慌性拋售開始蔓延" },
+  { year: "1637年4月", text: "荷蘭政府宣布鬱金香合約可由買方以 3.5% 的費用解除，泡沫後的訴訟與糾紛席捲法庭" },
+  { year: "1841", text: "查爾斯·麥凱（Charles Mackay）在《非凡的大眾幻想與群眾瘋狂》中描述鬱金香狂熱，使其成為永久的歷史教訓" },
+]} />
+
+鬱金香狂熱之所以能在 17 世紀的荷蘭發生，需要幾個獨特的條件同時具備：首先，荷蘭是當時全球最先進的金融市場（世界第一個股票交易所在阿姆斯特丹），市民具有投機能力；其次，鬱金香的生物屬性（球莖地下越冬、只能秋種春開）讓「期貨式合約」成為自然的交易形式；第三，荷蘭黃金時代的財富積累讓普通商人也有閒錢進入投機市場。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="阿姆斯特丹酒館非正式市場（無監管）"
+  year={1636}
+  contractSize="因品種而異（以球莖為單位，或以阿斯（aas，重量單位）計）"
+  deliveryPoint="下一個採掘季（通常為次年 6-7 月）"
+  tickerSymbol="無標準化代碼"
+/>
+
+鬱金香的「期貨」並非現代意義上有交易所背書的標準化合約，而是在荷蘭各城市（阿姆斯特丹、哈勒姆、恩克海曾）的酒館中達成的非正式「遠期合約」：買方承諾在下一個採掘季支付約定價格購買特定品種的球莖，賣方承諾在球莖成熟時交付。
+
+這些合約的特殊之處在於：在 1636-1637 年的投機頂峰期間，大多數交易的球莖仍在土中（冬季），買賣雙方都知道實際交割是幾個月後的事。這讓鬱金香交易演變成純粹的投機行為——人們買入並非為了欣賞花卉，而是期待在交割前以更高價格轉手給下一個接盤者。
+
+諾貝爾經濟學獎得主羅伯特·席勒（Robert Shiller）在分析鬱金香狂熱時指出：它是人類歷史上第一個有明確文字記錄的「投機泡沫」，也是第一個展示了「更大的傻瓜理論」（Greater Fool Theory）的市場事件——只要相信還有更大的傻瓜會以更高價格買入，就可以理性地支付瘋狂的價格。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1637 年 2 月 3 日：市場崩潰的那個星期三
+
+鬱金香狂熱的崩潰幾乎是在一夜之間發生的。1637 年 2 月 3 日，在荷蘭哈勒姆（Haarlem）舉行的一場例行鬱金香拍賣會上，出現了一個前所未有的情況：沒有人出價。突然間，那個「更大的傻瓜」不見了。
+
+恐慌性拋售迅速蔓延至荷蘭各城市。數週之內，鬱金香球莖的價格跌至頂峰期的不到 1%，許多在酒館中簽下遠期合約的人面臨巨額違約賠償或無法收回已付款項的困境。荷蘭政府最終介入，宣布鬱金香合約可由買方以 3.5% 的費用單方面解除（實際上是部分宣佈合約無效），試圖降低社會動盪。
+
+<QuoteCard
+  quote="當鬱金香的球莖開始比洋蔥便宜時，人們才猛然醒悟：它從來就只是一個球莖。"
+  author="查爾斯·麥凱，《非凡的大眾幻想與群眾瘋狂》，1841 年"
+  year="1841"
+/>
+
+然而，現代歷史學家對鬱金香狂熱的規模和影響提出了不同解讀。彼得·加伯（Peter Garber）在其 1989 年的學術研究中指出，鬱金香狂熱的實際社會經濟破壞可能被後世（尤其是麥凱）大幅誇大——當時的荷蘭並未因此陷入大規模經濟危機，大多數合約的履行由私人談判解決，而非系統性崩潰。儘管如此，鬱金香狂熱作為人類投機心理的最純粹表達，其歷史意義無可置疑。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Floris Cloeck"
+  nameZh="弗羅里斯·克勒克"
+  years="17 世紀初期"
+  nickname="阿姆斯特丹最早的鬱金香投機商之一"
+  story="克勒克是阿姆斯特丹的富裕商人，史料記載他在鬱金香狂熱頂峰前不久購入了大量稀有品種球莖，隨後在價格進一步攀升時獲利出場。像克勒克這樣的「早期進場者」是鬱金香狂熱中真正的贏家——他們在球莖還未過度泡沫化時建立頭寸，並有足夠的財務判斷力在更大的傻瓜蜂擁而至時完成出場。但留下可考証記錄的早期交易者寥寥無幾，大多數鬱金香投機者的名字已湮沒在歷史長河中。"
+/>
+
+<TraderProfile
+  name="荷蘭花卉經紀人（Bloemisten）"
+  nameZh="鬱金香花商"
+  years="1630s"
+  nickname="泡沫的中間商"
+  story="在鬱金香狂熱中扮演關鍵角色的，是一批專業的花卉經紀人（Bloemisten），他們在買賣雙方之間撮合交易，收取佣金。這些經紀人在各城市的酒館中組織非正式的鬱金香「交易所」，制定行規、記錄合約，是最早的商品衍生品中間商之一。他們的存在讓鬱金香交易的參與門檻大幅降低——即使沒有農業專業知識的人，也可以通過這些中間商進入市場。這種「降低准入門檻、擴大投機群體」的結構，在此後每一個金融泡沫中都不斷重演。"
+/>
+
+<TraderProfile
+  name="Charles Mackay"
+  nameZh="查爾斯·麥凱"
+  years="1814-1889"
+  nickname="讓鬱金香狂熱永垂不朽的作家"
+  story="嚴格說來，蘇格蘭記者兼作家麥凱並不是鬱金香的交易員，但他的著作《非凡的大眾幻想與群眾瘋狂》（Extraordinary Popular Delusions and the Madness of Crowds, 1841）讓鬱金香狂熱成為人類集體記憶中的永久符號。麥凱以生動的筆法描述了鬱金香泡沫的荒誕，雖然後世學者認為他的部分描述有誇大成分，但這本書奠定了「群體非理性」和「投機泡沫」的基本分析框架，至今仍是金融史學的必讀經典，每一輪新泡沫時都會在投資界重新熱賣。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="書籍"
+  title="《非凡的大眾幻想與群眾瘋狂》"
+  year="1841"
+  description="查爾斯·麥凱的這本著作是金融泡沫理論的奠基之作，除了鬱金香狂熱，還描述了南海泡沫（South Sea Bubble, 1720）和密西西比計畫（Mississippi Scheme, 1720）。這本書在每一輪金融危機後都會大賣——1987 年股災後、2000 年科技泡沫後、2008 年金融海嘯後——因為它以歷史故事說明了一個永恆的真理：人類在群體中的非理性行為是反覆出現的系統性現象，而非偶發的個人失誤。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="「更大的傻瓜理論」（Greater Fool Theory）"
+  year="1637 年至今"
+  description="鬱金香狂熱為後世留下了「更大的傻瓜理論」（Greater Fool Theory）這個重要的金融概念：在泡沫市場中，即使你知道自己付出了非理性的高價，只要相信還有更大的傻瓜會以更高的價格從你手中購買，你的行為在短期內就是「理性的」。這個概念解釋了為什麼每一個泡沫都能吸引理智的人參與，也解釋了為什麼泡沫的最終崩潰往往突如其來——因為「最後的傻瓜」是不可預知的。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="鬱金香在荷蘭文化中的遺產"
+  year="1637 年至今"
+  description="諷刺的是，鬱金香狂熱雖然以崩潰告終，但它間接奠定了荷蘭在全球花卉產業的永恆主導地位。今日，荷蘭仍是全球最大的花卉出口國，佔全球花卉貿易量的約 65%。阿姆斯特丹的 FloraHolland 花卉拍賣市場是全球最大的花卉拍賣行，每日成交的花卉數量超過 4,000 萬支。鬱金香球莖——那個曾讓全國陷入瘋狂的東西——現在依然是荷蘭農業出口的重要商品，但以一個穩定而可持續的產業形式存在。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="馬賽克病毒：稀缺性的病態基礎"
+  year="17 世紀"
+  description="17 世紀最受追捧的「雜色鬱金香」（Broken Tulips，如 Semper Augustus）的美麗火焰花紋，實際上是由「鬱金香破碎病毒」（Tulip Breaking Virus，由蚜蟲傳播）引起的病態症狀。感染病毒的鬱金香球莖無法像健康球莖一樣正常繁殖，因此產量極為有限，稀缺性由此而來。這個「因病態而稀缺、因稀缺而珍貴」的荒誕邏輯，揭示了投機泡沫中「稀缺性崇拜」的脆弱本質。今日的「藍籌 NFT」和「限量版奢侈品」都延續著相同的稀缺性邏輯。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="鬱金香狂熱與現代泡沫的對照"
+  year="1637 年至今"
+  description="每一輪重大金融泡沫都會被拿來與鬱金香狂熱對比：1990 年代日本土地泡沫、2000 年科技泡沫、2008 年美國次貸危機、2017 年比特幣泡沫、2021 年 NFT 熱潮……在每次泡沫中，擁護者都會說「這次不一樣」，批評者則搬出鬱金香的故事作為警示。然而，鬱金香狂熱研究者 Anne Goldgar 指出：即便鬱金香泡沫真實存在，參與者也並非全是無知的瘋子——他們在一個特定的社會文化框架內做出了在當時看來可以理解的決定。泡沫的教訓，從來不如我們想象中那麼簡單。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="荷蘭東印度公司與金融創新的同一時代"
+  year="1602 年前後"
+  description="鬱金香狂熱發生在荷蘭金融最具創新力的同一個時代：1602 年，世界第一家現代股份公司荷蘭東印度公司（VOC）在阿姆斯特丹成立，並在全球第一個股票交易所公開發行股票。在這個背景下，鬱金香市場的「期貨式合約」並不是空穴來風，而是在一個已經開始理解金融衍生品概念的社會中自然萌發的投機工具。荷蘭黃金時代是人類金融創新最密集的歷史時期之一，鬱金香狂熱的瘋狂，是這個創新時代的陰暗面。"
+/>
+
+</div>
+
+</SectionCard>

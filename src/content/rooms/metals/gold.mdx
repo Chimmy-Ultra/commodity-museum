@@ -1,0 +1,199 @@
+---
+name: "黃金"
+nameEn: "Gold"
+slug: "gold"
+wing: "metals"
+exchange: "CME/COMEX"
+tickerSymbol: "GC"
+status: "active"
+icon: "🥇"
+accentColor: "#c9a96e"
+roomNumber: 1
+tagline: "人類六千年來的終極貨幣，從法老的陪葬品到中央銀行的金庫"
+taglineEn: "The ultimate currency for 6,000 years — from pharaohs' tombs to central bank vaults"
+originRegion: "中東 / 小亞細亞"
+firstFuturesYear: 1974
+firstFuturesExchange: "COMEX"
+greatestEventName: "1980 年黃金飆至 $850 — Hunt 兄弟與通膨恐慌"
+greatestEventYear: 1980
+description: "黃金展室：從美索不達米亞的第一批金飾到 COMEX 的 GC 合約，探索人類最古老、最具象徵意義的商品。"
+heroImage: "../../../assets/images/rooms/gold/hero.jpg"
+heroImageAlt: "黃金條塊在博物館燈光下展示"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+
+import varnaGold from '@assets/images/rooms/gold/varna-gold.jpg';
+import tutankhamun from '@assets/images/rooms/gold/tutankhamun.jpg';
+import sorosPortrait from '@assets/images/rooms/gold/soros-portrait.jpg';
+import livermorPortrait from '@assets/images/rooms/gold/livermore-portrait.jpg';
+import klimtKiss from '@assets/images/rooms/gold/klimt-kiss.jpg';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+黃金 (Gold) 是人類已知最早被開採和加工的金屬之一。它不會氧化、不會腐蝕、在地殼中極度稀有——這些特性讓它從一開始就被賦予了超越實用的象徵意義。
+
+在古代美索不達米亞，黃金是神的金屬。蘇美人用它打造祭祀器具，埃及法老圖坦卡蒙的黃金面具重達 11 公斤，成為人類文明最具代表性的文物之一。古希臘神話中，傑森 (Jason) 率領阿爾戈英雄遠征尋找金羊毛 (Golden Fleece)——這可能反映了古人用羊皮從河流中淘金的真實技術。
+
+黃金作為貨幣的歷史可追溯至約西元前 600 年，呂底亞 (Lydia，今土耳其西部) 國王克羅伊索斯 (Croesus) 鑄造了人類第一批標準化金幣。「富如克羅伊索斯」(as rich as Croesus) 至今仍是英語中形容巨富的慣用語。
+
+<Timeline events={[
+  { year: "約 4600 BCE", text: "保加利亞瓦爾納墓地 (Varna Necropolis) 出土世界最早的黃金製品" },
+  { year: "約 1323 BCE", text: "圖坦卡蒙法老下葬，黃金面具隨之封入墓室" },
+  { year: "約 600 BCE", text: "呂底亞王國鑄造人類第一批標準化金幣" },
+  { year: "1284", text: "威尼斯共和國鑄造 Ducat 金幣，成為中世紀歐洲的國際貿易貨幣" },
+  { year: "1848", text: "加州發現金礦，引發淘金熱 (Gold Rush)，30 萬人湧入" },
+  { year: "1944", text: "布列敦森林協定 (Bretton Woods)：1 盎司黃金 = 35 美元，美元掛鉤黃金" },
+  { year: "1971", text: "尼克森衝擊 (Nixon Shock)：美國終止美元兌黃金的固定兌換，金本位結束" },
+]} />
+
+1971 年金本位制的終結是現代黃金市場的分水嶺。從此，黃金不再是貨幣體系的錨定物，而成為了一種自由浮動的商品——這也直接催生了黃金期貨合約的需求。
+
+<ExhibitPhoto
+  src={varnaGold}
+  alt="瓦爾納墓地出土的黃金寶藏"
+  caption="瓦爾納墓地出土的黃金寶藏（約西元前 4600–4200 年）"
+  captionEn="Gold treasure from Varna Necropolis, c. 4600–4200 BCE"
+  credit="Wikimedia Commons (CC BY-SA 4.0)"
+  historical={true}
+/>
+
+<ExhibitPhoto
+  src={tutankhamun}
+  alt="圖坦卡蒙黃金面具"
+  caption="圖坦卡蒙法老的黃金面具（約西元前 1323 年），現存開羅埃及博物館"
+  captionEn="Tutankhamun's golden mask, c. 1323 BCE — Cairo Egyptian Museum"
+  credit="Wikimedia Commons (Public Domain)"
+  historical={true}
+/>
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="COMEX (Commodity Exchange Inc.)"
+  year={1974}
+  contractSize="100 金衡盎司 (troy ounces)"
+  deliveryPoint="COMEX 認可金庫 (紐約)"
+  tickerSymbol="GC"
+/>
+
+1974 年 12 月 31 日，COMEX 推出黃金期貨合約。這個時間點並非巧合——就在同一天，美國政府正式解除了自 1933 年以來禁止公民持有金條的禁令 (Executive Order 6102 的撤銷)。美國人終於可以合法買賣黃金，期貨市場應運而生。
+
+COMEX 黃金期貨合約 (GC) 的標準規格是 100 金衡盎司 (約 3.11 公斤)，以美元/盎司報價，最小跳動單位為 $0.10/盎司 ($10/合約)。交割品質要求純度不低於 995 (99.5%)。
+
+COMEX 後來於 1994 年併入 NYMEX，2008 年 NYMEX 又被 CME Group 收購。但 COMEX 的名稱保留至今，GC 合約依然是全球黃金定價的基準。2024 年，COMEX 黃金期貨的日均成交量超過 27 萬手，名義價值超過 500 億美元。
+
+值得一提的是，CME 後來推出了微型黃金期貨 (Micro Gold, MGC)，合約規格為 10 金衡盎司，讓小型交易者也能參與黃金期貨市場。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1980 年 1 月 21 日：黃金觸及 $850
+
+1970 年代末，全球陷入通貨膨脹的噩夢。石油危機推高能源成本，美元貶值，蘇聯入侵阿富汗加劇地緣政治恐慌。黃金成為所有人的避險天堂。
+
+1979 年初，金價約 $230/盎司。到了 1980 年 1 月 21 日，黃金盤中觸及 **$850/盎司**——在不到一年的時間內上漲了近 270%。以 2024 年的通膨調整計算，這個價格相當於約 $3,200/盎司。
+
+這波瘋狂中，Hunt 兄弟 (Nelson Bunker Hunt 與 William Herbert Hunt) 雖然以白銀操作聞名，但他們同時也大量持有黃金。整個貴金屬市場陷入投機狂熱。
+
+<QuoteCard
+  quote="黃金是唯一不是某人負債的資產。當你持有黃金，你不需要依賴任何對手方的承諾。"
+  author="Alan Greenspan"
+  year="1999"
+/>
+
+聯準會主席保羅．沃克 (Paul Volcker) 的回應改變了一切。他將聯邦基金利率推高至 20%，以鐵腕手段壓制通膨。金價隨之崩跌，從 $850 一路跌至 1999 年的低點 $253——長達 20 年的黃金熊市。
+
+**2020 年代的回歸：** 黃金在 2020 年 8 月首次突破 $2,000/盎司，2024 年更創下 $2,700+ 的歷史新高，主要受到各國央行大量購金、地緣政治風險和去美元化趨勢的推動。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  portrait={sorosPortrait}
+  name="George Soros"
+  nameZh="喬治．索羅斯"
+  years="1930-"
+  nickname="The Man Who Broke the Bank of England"
+  story="雖然索羅斯最著名的交易是 1992 年做空英鎊，但他在黃金市場同樣有重大布局。2010 年，他的量子基金 (Quantum Fund) 將黃金部位增加至超過 6.5 億美元，並稱黃金為「終極泡沫」(the ultimate bubble)——他的意思不是不該買，而是泡沫代表還有錢可賺。2011 年金價見頂前，他精準出場。"
+/>
+
+<TraderProfile
+  name="John Paulson"
+  nameZh="約翰．保爾森"
+  years="1955-"
+  nickname="黃金之王"
+  story="在 2007-2008 年做空次貸賺取 150 億美元後，保爾森將大量利潤投入黃金。2009-2011 年間，他的黃金基金 (Gold Fund) 成為全球最大的黃金 ETF 持有者之一。2010 年，他個人從黃金相關投資中獲利近 50 億美元。然而，2013 年金價大跌 28%，保爾森的黃金部位也遭受重大損失。"
+/>
+
+<TraderProfile
+  portrait={livermorPortrait}
+  name="Jesse Livermore"
+  nameZh="傑西．李佛摩"
+  years="1877-1940"
+  nickname="華爾街大空頭"
+  story="雖然李佛摩主要以股票交易聞名，但他在 1929 年大崩盤前精準做空的直覺同樣適用於商品市場。他的經典名言「市場永遠不會錯，只有意見會錯」至今仍是所有商品交易員的信條。他的故事記載在《股票作手回憶錄》(Reminiscences of a Stock Operator) 一書中。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="乘乘風破浪 Goldfinger"
+  year="1964"
+  description="007 系列第三部，反派金手指 (Auric Goldfinger) 計畫輻射汙染美國諾克斯堡 (Fort Knox) 的黃金儲備，讓自己持有的黃金暴漲。這是冷戰時代對黃金地緣政治角色最生動的想像。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《金蟲》The Gold-Bug"
+  year="1843"
+  description="愛倫坡 (Edgar Allan Poe) 的短篇小說，主角透過破解密碼找到海盜埋藏的黃金寶藏。這篇作品是美國文學中最早將黃金與神秘、冒險結合的經典之一。"
+/>
+
+<ArtifactCard
+  image={klimtKiss}
+  type="藝術"
+  title="《吻》Der Kuss"
+  year="1907-1908"
+  description="奧地利畫家古斯塔夫．克林姆 (Gustav Klimt) 的代表作，大量使用金箔作為繪畫媒材。克林姆的「黃金時期」作品完美展示了黃金在藝術中作為神聖、永恆、情慾象徵的多重意涵。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="黃金國度 The Gold Rush"
+  year="1925"
+  description="卓別林 (Charlie Chaplin) 的經典默片，以 1890 年代克朗代克淘金熱 (Klondike Gold Rush) 為背景，展現人類對黃金的瘋狂追逐中的喜劇與悲劇。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《魔戒》The Lord of the Rings"
+  year="1954"
+  description="托爾金 (J.R.R. Tolkien) 筆下的至尊魔戒 (One Ring) 是黃金的終極隱喻——它擁有無上的力量，但也腐蝕擁有者的靈魂。龍史矛革 (Smaug) 守護的金山更直接反映了人類對黃金的貪婪本能。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="諾克斯堡金庫 Fort Knox"
+  year="1937"
+  description="美國金條儲藏所，存放約 4,580 噸黃金，價值超過 3,000 億美元。它是全球最著名的黃金儲藏設施，由美國陸軍駐守，至今沒有任何外部人員被允許進入金庫核心區域。"
+/>
+
+</div>
+
+</SectionCard>

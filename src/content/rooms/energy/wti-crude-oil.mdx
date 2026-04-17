@@ -1,0 +1,204 @@
+---
+name: "西德州中質原油"
+nameEn: "WTI Crude Oil"
+slug: "wti-crude-oil"
+wing: "energy"
+exchange: "CME/NYMEX"
+tickerSymbol: "CL"
+status: "active"
+icon: "🛢️"
+accentColor: "#B91C35"
+roomNumber: 1
+tagline: "2020 年 4 月 20 日，期貨史上首次出現負油價——一場疫情、儲油危機與實體交割的完美風暴"
+taglineEn: "On April 20, 2020, oil futures turned negative for the first time in history — a perfect storm of pandemic, storage crisis, and physical delivery"
+originRegion: "賓夕法尼亞州 / 德克薩斯州"
+firstFuturesYear: 1983
+firstFuturesExchange: "NYMEX"
+greatestEventName: "2020 年 4 月 20 日：WTI 期貨跌至 -$37.63/桶"
+greatestEventYear: 2020
+description: "西德州中質原油展室：從 1859 年德雷克油井到 2020 年史上首次負油價，探索驅動現代世界運轉、也曾讓地緣政治翻天覆地的黑色液體。"
+heroImage: "../../../assets/images/rooms/wti-crude-oil/hero.jpg"
+heroImageAlt: "Spindletop 油田噴發，1901 年德克薩斯州"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+
+import drakeWell from '@assets/images/rooms/wti-crude-oil/drake-well.jpg';
+import spindletop from '@assets/images/rooms/wti-crude-oil/spindletop.jpg';
+import pickensPortrait from '@assets/images/rooms/wti-crude-oil/pickens-portrait.jpg';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+石油 (Petroleum) 來自拉丁文 *petra*（岩石）與 *oleum*（油）——字面意思是「岩石裡的油」。這種黑色黏稠液體，是數億年前海洋生物的有機物在地層高溫高壓下的產物。人類很早就知道它的存在：美索不達米亞人用天然滲出的瀝青 (Bitumen) 修繕船隻，中國漢代已有文獻記載鑽井取油。但真正的石油時代，從 1859 年一個叫 Titusville 的小鎮開始。
+
+1859 年 8 月 27 日，前鐵路員工埃德溫．德雷克 (Edwin Drake) 在賓夕法尼亞州 Titusville 鑽出北美洲第一口商業油井，深度僅 21 公尺，日產量約 25 桶。消息傳出，數千名淘金者蜂擁而至，賓州西部霎時成為全球第一個石油產地。這個地方生產的石油，因其產自阿帕拉契山脈的西德克薩斯斷層延伸地帶，品質輕質、含硫量低，最終確立了「西德州中質原油」(West Texas Intermediate, WTI) 這個品級標準。
+
+德雷克的油井開啟了 John D. Rockefeller 的時代。1870 年，洛克菲勒成立標準石油公司 (Standard Oil)，透過控制煉油廠和管線，壟斷了美國 90% 的石油市場。他的商業手段殘酷而有效：在各地秘密收購競爭對手，再以掠奪性定價逼垮剩餘者。1911 年，美國最高法院依反壟斷法將標準石油強制拆分為 34 家公司——其中包括後來的埃克森 (Exxon)、雪佛龍 (Chevron)、美孚 (Mobil)。
+
+1901 年，德克薩斯州博蒙特附近的 Spindletop 油田噴出了歷史性的石油噴泉，日產量高達 10 萬桶，瞬間超過當時美國全國總產量。德克薩斯州成為新的石油帝國，孤星州 (Lone Star State) 的文化基因從此與石油深度交融。
+
+<Timeline events={[
+  { year: "約 500 BCE", text: "美索不達米亞人大規模使用天然瀝青建造巴比倫城牆與修補船隻" },
+  { year: "1859", text: "德雷克在賓夕法尼亞州 Titusville 鑽出北美第一口商業油井，石油時代正式開始" },
+  { year: "1870", text: "洛克菲勒創立標準石油，逐步壟斷美國石油市場" },
+  { year: "1901", text: "德克薩斯州 Spindletop 油田噴出史詩級石油噴泉，「德州石油」神話誕生" },
+  { year: "1960", text: "OPEC（石油輸出國組織）成立，沙烏地阿拉伯、伊朗、伊拉克、科威特、委內瑞拉聯手制衡西方石油公司" },
+  { year: "1973", text: "阿拉伯石油禁運，油價四個月內從 $3 暴漲至 $12，引發第一次石油危機" },
+  { year: "1983", text: "NYMEX 推出 WTI 原油期貨合約，建立全球原油定價基準" },
+  { year: "2020", text: "COVID-19 疫情與 OPEC+ 談判破裂雙重打擊，WTI 期貨跌至史上首見的負值 -$37.63/桶" },
+]} />
+
+<ExhibitPhoto
+  src={drakeWell}
+  alt="德雷克油井，1859 年賓夕法尼亞州"
+  caption="德雷克在賓夕法尼亞州 Titusville 的第一口商業油井（1859 年）"
+  captionEn="Drake's first commercial oil well in Titusville, Pennsylvania (1859)"
+  credit="Wikimedia Commons (Public Domain)"
+  historical={true}
+/>
+
+WTI 之所以成為全球最重要的原油基準之一，原因在於它的交割地點：奧克拉荷馬州庫欣 (Cushing, Oklahoma)。這個人口不到 8,000 人的小鎮，是美國中部管線網路的樞紐，外號「世界管線十字路口」(Pipeline Crossroads of the World)。庫欣的儲油槽容量高達 8,500 萬桶，其庫存水位至今仍是全球能源分析師每週必看的關鍵數據。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="NYMEX (New York Mercantile Exchange)"
+  year={1983}
+  contractSize="1,000 桶 (約 159,000 公升)"
+  deliveryPoint="庫欣，奧克拉荷馬州 (Cushing, Oklahoma)"
+  tickerSymbol="CL"
+/>
+
+1983 年 3 月，紐約商業交易所 (NYMEX) 推出 WTI 原油期貨合約，代碼 CL。這個時機恰到好處：1970 年代的兩次石油危機讓油價劇烈波動，煉油廠、航空公司和石化企業迫切需要一種工具來鎖定成本、對沖風險。
+
+WTI 期貨的設計有幾個關鍵特點。首先，它是**實體交割合約**——合約到期時，買方必須真的接收 1,000 桶原油，賣方必須真的交出油。這與黃金期貨可用現金結算不同，也是 2020 年負油價事件的關鍵背景。其次，合約以美元計價，且美元至今仍是全球石油交易的唯一標準貨幣——「石油美元」(Petrodollar) 體系是美元霸權的重要支柱之一。
+
+合約推出後迅速成功，吸引了大量投機者和對沖需求。到 1980 年代末，NYMEX WTI 已超越英國的布蘭特 (Brent) 成為全球交易量最大的能源期貨。2008 年，CME Group 以 113 億美元收購 NYMEX，CL 合約納入 CME 旗下，但 NYMEX 名稱保留。
+
+今日，WTI 期貨的日均交易量超過 100 萬手合約，名義價值近 700 億美元，是全球流動性最高的商品期貨之一。除了標準合約，CME 後來推出了每手 100 桶的微型原油期貨 (Micro WTI Crude Oil, MCL)，以及電子盤外 24 小時連續交易，讓全球任何時區的交易者都能參與。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2020 年 4 月 20 日：油價跌入負值
+
+這一天，發生了人類期貨交易史上最匪夷所思的事。
+
+故事必須從三個月前說起。2020 年 3 月，COVID-19 疫情席捲全球，各國封鎖導致航空、陸運需求幾乎歸零。與此同時，沙烏地阿拉伯與俄羅斯在 OPEC+ 減產談判中談崩，沙國宣布將大幅增產、對歐洲客戶提供折扣——一場石油價格戰在最糟糕的時機爆發。全球石油需求蒸發了約 30%，但產量卻在增加。油往哪裡放？
+
+到了 4 月，庫欣儲油槽已達到 85% 容量。WTI 五月期貨合約 (CLK20) 將於 4 月 21 日到期，任何持有多頭部位的交易者，都必須準備好在庫欣**實際接收**石油。但儲槽快滿了，沒有空間，租用儲槽的費用暴漲，市場陷入恐慌。
+
+<ExhibitPhoto
+  src={spindletop}
+  alt="Spindletop Lucas 油井噴發，1901 年"
+  caption="Spindletop 的 Lucas 油井大噴發（1901 年），日產量超過當時美國全國總產量"
+  captionEn="The Lucas gusher at Spindletop, Texas (1901) — daily output exceeded total US production"
+  credit="Wikimedia Commons (Public Domain)"
+  historical={true}
+/>
+
+<QuoteCard
+  quote="那天早上，我接到第一通電話，說 WTI 在負值交易。我以為是系統故障。我從沒見過這種事，沒有人見過。"
+  author="一位匿名大宗商品交易員"
+  year="2020"
+/>
+
+4 月 20 日，CLK20 合約從開盤的約 $18/桶，在交易最後幾小時崩潰式下跌。交易者不惜以任何價格拋售，只求脫手。下午 2 點過後，價格跌破 $0。最終收盤價：**-$37.63/桶**。
+
+這意味著：賣方願意**付錢給買方**，只求對方帶走這些石油。
+
+這場崩潰的受害者之一是美國石油基金 (USO, United States Oil Fund ETF)——一檔讓散戶可以「買入石油」的 ETF。由於 USO 機械式地持有大量近月合約，並在到期前大規模移倉，市場提前知道 USO 的移倉時程，做空者大量佈局，加速了崩潰。事後，USO 被迫修改投資策略，分散至多個合約月份。
+
+隔天，六月合約交易如常，油價回到正值。整個事件只持續了不到 24 小時，但它永遠改變了商品市場對「實體交割」與「期貨結構」的認識。
+
+**後記：** 2022 年俄烏戰爭爆發，油價反向狂飆至 $120+/桶。市場的鐘擺，永遠在擺。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  portrait={pickensPortrait}
+  name="T. Boone Pickens"
+  nameZh="布恩．皮肯斯"
+  years="1928-2019"
+  nickname="石油牛仔"
+  story="奧克拉荷馬州出身的石油大亨，Mesa Petroleum 創辦人。皮肯斯在 1980 年代以「惡意收購」(Hostile Takeover) 手法聞名，他不直接收購石油公司，而是大量買入被低估的石油企業股票、威脅收購，再以更高價賣回給對方——這種手法讓他賺了數十億。晚年，他轉向能源政策倡議，力推天然氣車輛和風能，被稱為「皮肯斯計畫」。2008 年油價衝至 $147 時，他曾預測此後原油將長期在高位，但頁岩油革命的爆發讓他的押注錯誤，個人損失慘重。他最著名的一句話：'A fool with a plan can beat a genius with no plan.'（有計畫的蠢人，可以擊敗沒計畫的天才。）"
+/>
+
+<TraderProfile
+  name="Andy Hall"
+  nameZh="安迪．霍爾"
+  years="1954-"
+  nickname="石油之神 / 'God'"
+  story="霍爾是 Phibro Energy 旗下的傳奇交易員，以精準的長期宏觀判斷聞名。2003 年，他在油價仍約 $30/桶時，豪賭原油將在五年內突破 $100——這個押注在 2008 年應驗，讓他為雇主賺取超過 10 億美元，本人獲得 1 億美元分紅，引發全美國關於「銀行家薪酬是否合理」的大辯論。Phibro 最終被花旗集團以低價出售（為迴避政治壓力），霍爾轉至自己的 Astenbeck Capital 繼續操盤。頁岩油革命與 2014-2016 年油價崩跌讓他損失慘重，Astenbeck 於 2017 年清盤。他的故事說明了：即使是「神」，也無法對抗供給革命的結構性力量。"
+/>
+
+<TraderProfile
+  name="Harold Hamm"
+  nameZh="哈羅德．漢姆"
+  years="1945-"
+  nickname="頁岩油之父"
+  story="奧克拉荷馬州農場工人家庭出身，Continental Resources 創辦人。漢姆押注 Bakken 頁岩層——在大多數地質學家認為頁岩無法商業開採時，他反其道而行，大規模投入水平鑽井與水力壓裂 (Hydraulic Fracturing, 壓裂) 技術。2000 年代初，當 WTI 還在 $30 附近時，他就鎖定了大量土地租約。頁岩油革命讓美國從 2005 年的日產 500 萬桶，暴增至 2019 年的 1,300 萬桶，一舉超越沙烏地阿拉伯。這場革命從根本上改變了全球石油的地緣政治格局，也是 2020 年庫欣儲槽溢滿的深層原因之一。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="黑金企業 There Will Be Blood"
+  year="2007"
+  description="保羅．湯瑪斯．安德森執導，丹尼爾．戴路易斯主演。改編自辛克萊的小說《石油！》，描述一位德克薩斯石油大亨的崛起與墮落，以震撼人心的獨白「我吸你的奶昔！」(I drink your milkshake!) 比喻石油掠奪，被視為美國資本主義最深刻的電影之一。榮獲奧斯卡最佳男主角與最佳攝影。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《石油！》Oil!"
+  year="1927"
+  description="美國社會主義作家厄普頓．辛克萊 (Upton Sinclair) 的小說，以 1920 年代加州石油熱潮為背景，描繪石油大亨、工人和政客之間的權力角逐。這部小說揭示了石油產業對民主政治的腐蝕，是《黑金企業》的原著基礎。辛克萊的另一部小說《叢林》(The Jungle) 則催生了美國食品安全法規。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《石油世紀》The Prize"
+  year="1991"
+  description="丹尼爾．葉爾金 (Daniel Yergin) 的普立茲獎得獎著作，副標題「石油、金錢與權力的史詩追逐」。這本逾 800 頁的鉅作追溯了從德雷克油井到波斯灣戰爭的石油全球史，是理解現代地緣政治與能源經濟最重要的非虛構作品之一。葉爾金後來創立劍橋能源研究協會 (IHS CERA)，成為石油分析界最具影響力的聲音。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="巨人 Giant"
+  year="1956"
+  description="由伊利沙伯．泰勒、洛克．赫遜、詹姆士．狄恩主演，以德克薩斯州油田巨亨的崛起為主軸，呈現石油如何在一代人之間改變了德州的階級結構與文化認同。詹姆士．狄恩在片中飾演一個從牧場工人一躍成為石油富豪的小人物，這是他生前最後一部完整作品。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="庫欣儲油槽群 Cushing Tank Farm"
+  year="1901 至今"
+  description="奧克拉荷馬州庫欣小鎮，人口不足 8,000，卻坐擁逾 350 個巨型儲油槽，總容量 8,500 萬桶，是美國中部管線網路的核心樞紐。美國能源情報署 (EIA) 每週三公布的庫欣庫存數字，至今仍是全球能源交易者的必看指標。2020 年負油價事件，本質上就是庫欣儲槽被填滿所引發的恐慌。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="黑潮 Black Wave"
+  year="2020"
+  description="紀錄 1989 年艾克森瓦爾迪茲號 (Exxon Valdez) 油輪在阿拉斯加觸礁，洩漏 4,200 萬公升原油，造成阿拉斯加威廉王子灣史上最嚴重的環境災難。這起事件催生了美國《石油汙染法》，並讓「企業生態責任」議題首次進入大眾視野。"
+/>
+
+</div>
+
+</SectionCard>

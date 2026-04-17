@@ -1,0 +1,165 @@
+---
+name: "油菜籽"
+nameEn: "Canola / Rapeseed"
+slug: "canola-rapeseed"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "RS"
+status: "active"
+icon: "🌼"
+accentColor: "#d4b822"
+roomNumber: 6
+tagline: "加拿大草原的黃金花海——芥花籽從育種實驗室誕生到成為全球健康食用油代名詞，孟晚舟事件讓它成為中加關係的地緣政治棋子"
+taglineEn: "Golden flowers of the Canadian prairies — canola went from breeding labs to become the world's healthy cooking oil, then became a geopolitical pawn in the Sino-Canadian trade dispute"
+originRegion: "加拿大草原省份、歐洲"
+firstFuturesYear: 1963
+firstFuturesExchange: "WCE（溫尼伯商品交易所）"
+greatestEventName: "2019 年孟晚舟事件引發中加貿易戰，中國暫停進口加拿大油菜籽"
+greatestEventYear: 2019
+description: "油菜籽展室：從加拿大草原到中歐農田，探索芥花籽期貨的誕生，以及孟晚舟事件如何讓農業成為外交籌碼。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+「Canola」這個名字本身就是一個商業創新的產物：它是 1979 年由加拿大油菜協會創造的品牌名稱，由「**Can**adian **O**il, **L**ow **A**cid」縮寫而來，以區別於傳統的高芥酸菜籽油（HEAR, High Erucic Acid Rapeseed），後者因芥酸含量高而不適合人類食用。
+
+芥花籽（Canola）的誕生是育種科學的里程碑：1970 年代，加拿大薩省大學農業科學家 Baldur Stefansson 和曼省大學的 Keith Downey 通過傳統育種技術，培育出了低芥酸、低硫苷含量的雙低菜籽油品種，創造了一個全新的高附加值農業商品。今日芥花油在北美是最暢銷的植物油之一，以「心臟健康」的飽和脂肪含量低著稱。
+
+在歐洲，同樣的作物被稱為「油菜籽」（Rapeseed），歐洲的油菜籽期貨在巴黎歐洲期貨交易所（Euronext Paris）交易，代碼 ECO，是全球油菜籽的第二大定價中心。ICE 的 RS 合約（芥花籽期貨）則代表了加拿大草原的生產基準，加拿大是全球最大的芥花籽出口國。
+
+<Timeline events={[
+  { year: "1963", text: "溫尼伯商品交易所（WCE）推出菜籽期貨，加拿大農業衍生品市場的重要里程碑" },
+  { year: "1974", text: "低芥酸育種技術突破，加拿大農業部正式確立芥花籽（Canola）品種標準" },
+  { year: "1979", text: "「Canola」品牌名稱正式創立，低芥酸菜籽油開始進入消費市場" },
+  { year: "2007", text: "ICE 收購溫尼伯商品交易所（WCE），RS 合約轉至 ICE 交易" },
+  { year: "2018", text: "加拿大警方應美國引渡請求逮捕華為 CFO 孟晚舟，中加關係急劇惡化" },
+  { year: "2019", text: "中國以「含有害物質」為由暫停進口加拿大主要油菜籽企業產品，RS 期貨大幅下跌" },
+  { year: "2021", text: "孟晚舟回中國，兩名加拿大人獲釋，中加關係部分解凍，中國逐步恢復採購" },
+]} />
+
+加拿大每年的油菜籽產量約為 1,800-2,000 萬噸，約佔全球供應的 18-20%。加拿大是全球油菜籽最重要的出口國，出口量的約 40% 過去流向中國——這使得中加關係的任何政治波動，都會直接反映在 RS 期貨的風險溢價上。油菜籽和大豆是加拿大農業出口的兩大支柱，也是加拿大農業外交中最重要的議價籌碼。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（原溫尼伯商品交易所 WCE）"
+  year={1963}
+  contractSize="20 公噸芥花籽"
+  deliveryPoint="加拿大西部認可交割地點（大平原主要收購站和港口）"
+  tickerSymbol="RS（加元/公噸）"
+/>
+
+RS 期貨以加拿大元（CAD）計價、每公噸報價，是農業期貨中少數以非美元計價的主要合約之一。這讓加元/美元匯率成為 RS 期貨對沖美元資產配置者的額外考量因素，也使 RS 期貨與加元期貨之間存在一定的聯動關係。
+
+RS 合約的交割期每年分為三個主要月份（1 月、3 月、5 月、7 月、11 月），覆蓋從秋季收穫後（11 月）到下一個種植季（7 月）的完整週期。加拿大的油菜籽種植集中在艾伯塔省、薩省和曼尼托巴省，每年 5-6 月播種，8-9 月收穫，天氣風險期集中在開花期（6-7 月）的乾旱或霜凍。
+
+RS 與芝加哥的大豆油（ZL）和大豆粕（ZM）期貨有密切的替代競爭關係——因為油菜籽加工產物（菜籽油和菜籽粕）直接與大豆加工產物（豆油和豆粕）競爭，因此 RS 期貨分析師必須同時追蹤整個植物油/蛋白粕市場的供需平衡。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2019 年：孟晚舟事件與農業的地緣政治化
+
+2018 年 12 月 1 日，加拿大應美國要求在溫哥華逮捕了華為首席財務官孟晚舟。中國隨即採取報復行動：逮捕了兩名加拿大公民（「兩個麥克」——Michael Kovrig 和 Michael Spavor），並以農產品安全為由，暫停了對加拿大主要油菜籽出口商 Richardson International 和 Viterra 的進口許可（2019 年 3 月）。
+
+中國是加拿大油菜籽最大的出口市場，此前每年採購量約達 500 萬噸，佔加拿大油菜籽出口量的約 40%。中國的暫停採購措施直接導致 RS 期貨大幅下跌，加拿大大平原的農民陷入困境。
+
+<QuoteCard
+  quote="農業不應該成為外交爭端的人質。但現實是，一旦政府決定將農產品作為報復工具，農民永遠是第一批受害者。"
+  author="加拿大穀物委員會前主席，2019 年接受媒體採訪"
+  year="2019"
+/>
+
+加拿大政府一方面積極開拓替代市場（印度、歐盟、日本），另一方面繼續與中方談判。直至 2021 年 9 月孟晚舟達成緩起訴協議（DPA）返回中國、兩名加拿大人同日獲釋，中加農業貿易才逐步恢復。
+
+這起事件清晰地展示了農業期貨市場在現代地緣政治中的「抵押品」地位：農業出口既是一國的外交資產，也是最容易受到制裁打擊的經濟柔軟腹部。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Richardson International"
+  nameZh="理查森國際"
+  years="1857-"
+  nickname="加拿大草原的農業王朝"
+  story="Richardson International 是加拿大最大的私人農業企業，由理查森家族在溫尼伯經營超過 160 年。理查森的業務覆蓋油菜籽、小麥、大麥等各種草原農產品的採購、儲存、加工和出口，在加拿大西部擁有龐大的糧倉和港口設施。作為加拿大油菜籽最大的出口商之一，理查森是 RS 期貨市場最重要的套保參與者。2019 年中國暫停採購時，理查森是受影響最直接的加拿大企業之一，但同時也成為最積極尋找替代市場的先驅。"
+/>
+
+<TraderProfile
+  name="Viterra (Glencore)"
+  nameZh="維特拉（嘉能可旗下）"
+  years="2007-"
+  nickname="大宗商品巨人在草原的農業旗艦"
+  story="Viterra 是嘉能可（Glencore）旗下的農業貿易部門，主要業務在加拿大、澳洲和阿根廷。Viterra 的前身是西加拿大小麥局（Canadian Wheat Board）拆分後的商業實體，繼承了加拿大農業貿易網絡的核心基礎設施。在 RS 期貨市場，Viterra 代表了大型商品貿易商如何整合農場採購、倉儲物流、海運出口和期貨套保的全鏈條業務模式，是 RS 期貨最重要的機構參與者之一。"
+/>
+
+<TraderProfile
+  name="Louis Dreyfus / Bunge"
+  nameZh="路易達孚 / 邦吉"
+  years="2000s-"
+  nickname="ABCD 農業巨頭對草原的滲透"
+  story="路易達孚和邦吉（Bunge）是全球四大農業貿易商（ABCD）中在加拿大油菜籽市場最活躍的兩家。它們通過收購加拿大本土糧食企業、建立本地採購網絡，逐步滲透加拿大的油菜籽供應鏈。路易達孚在加拿大西部的港口設施和邦吉在加拿大的壓榨工廠，讓這兩家企業能夠在 RS 期貨市場進行從農場採購到出口全鏈條的套保操作，代表了國際農業資本對加拿大農業資產的深度滲透。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="Canola：一個品牌名改變了世界農業"
+  year="1979 至今"
+  description="「Canola」這個品牌名稱的創立是農業行銷史上最成功的案例之一。「菜籽油」（Rapeseed Oil）這個名稱在消費市場缺乏吸引力（英文 Rape 有貶義），加拿大行業協會的品牌重塑讓它搖身一變為「Canola Oil」，成功在北美建立了「心臟健康植物油」的市場定位。這個重塑不只改變了品牌，更讓加拿大從小麥單一出口國轉型為高附加值植物油出口國，深刻改變了加拿大農業的出口結構。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="草原黃花海：加拿大的農業景觀"
+  year="每年 6-7 月"
+  description="每年 6-7 月，加拿大薩省和曼省的廣袤草原盛開一望無際的油菜黃花，是加拿大最具代表性的農業景觀之一，也是無數攝影師和觀光客追逐的自然奇景。這片黃花海代表的，是加拿大每年超過 2,000 萬噸的油菜籽生產能量，以及這個國家在全球植物油市場中的核心戰略地位。草原的黃花何時開放、開花後的天氣是否適宜授粉，是 RS 期貨每年 6-7 月最重要的交易焦點。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="可持續航空燃料（SAF）：油菜籽的新命運"
+  year="2020 至今"
+  description="全球航空業的脫碳壓力，讓油菜籽進入了「可持續航空燃料」（SAF, Sustainable Aviation Fuel）的新需求藍圖。油菜籽油是生產加氫植物油（HVO）和可持續航空燃料的優質原料，歐盟的碳排放政策正在快速推動 SAF 的需求增長。RS 期貨的長期多頭邏輯，正從傳統食用油和動物飼料，逐步延伸到生物能源需求的新維度，這個轉型讓油菜籽與大豆油在可再生柴油領域的競爭日趨激烈。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="農業外交：中加油菜籽的教訓"
+  year="2019"
+  description="2019 年中加油菜籽事件提供了一個關於「農業作為外交工具」的教科書案例。這不是第一次——2010 年代中國曾多次利用農產品進口限制對挪威（諾貝爾和平獎）、澳洲（新冠溯源調查）、立陶宛（對台關係）採取類似措施。農業出口國的外交政策制定者，現在必須將農業貿易脆弱性納入其對中外交評估，而農業期貨交易員也需要將「中國政治採購風險」列為重要的持倉管理因素。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="歐盟油菜籽：氣候政策的受益者與犧牲者"
+  year="現代"
+  description="歐盟是全球最大的油菜籽生產地區，德國、法國、英國、波蘭等國大量種植油菜籽，主要用於生物柴油原料。歐盟的「可再生能源指令」（RED）長期推動了油菜籽生物柴油的需求，但同時，關於棕櫚油和食品作物能源化的「間接土地使用變更」（ILUC）爭議，也讓部分油菜籽生物柴油的碳減排資格受到質疑。歐盟的農業能源政策走向，是 Euronext 油菜籽期貨（ECO）和 ICE RS 期貨長期趨勢的最重要政策驅動因素之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="轉基因油菜籽（GMO Canola）的爭議"
+  year="1996 至今"
+  description="加拿大是全球最大的轉基因（GMO）作物種植國之一，約 90% 的加拿大油菜籽是轉基因品種（主要是孟山都/拜耳的農達耐受性品種 Roundup Ready）。轉基因油菜籽在歐盟市場面臨嚴格的標示和進口限制，這讓加拿大油菜籽的出口市場多元化受到一定制約。非轉基因油菜籽的溢價市場（主要面向歐盟和日本）是一個小眾但具有利潤吸引力的細分市場，也驅動了部分加拿大農民選擇種植非 GMO 品種並在 RS 期貨之外尋求差異化定價。"
+/>
+
+</div>
+
+</SectionCard>

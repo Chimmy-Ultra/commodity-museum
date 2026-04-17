@@ -1,0 +1,167 @@
+---
+name: "胡椒與香料"
+nameEn: "Pepper & Spices"
+slug: "pepper-spices"
+wing: "historical"
+exchange: "VOC（荷蘭東印度公司）"
+tickerSymbol: "—"
+status: "historical"
+icon: "🌶️"
+accentColor: "#8b2500"
+roomNumber: 3
+tagline: "改變世界地圖的香料貿易——胡椒、丁香和肉荳蔻曾比黃金更值錢，推動了地理大發現、殖民主義與現代股份公司的誕生"
+taglineEn: "The spice trade that changed the world map — pepper, cloves, and nutmeg were once worth more than gold, driving exploration, colonialism, and the birth of the modern corporation"
+originRegion: "印度馬拉巴爾海岸、摩鹿加群島（香料群島）"
+firstFuturesYear: 1602
+firstFuturesExchange: "VOC 阿姆斯特丹交易所（股票化香料貿易）"
+greatestEventName: "1602 年荷蘭東印度公司成立，發行史上第一支股票，壟斷香料貿易"
+greatestEventYear: 1602
+description: "胡椒與香料展室：探索香料如何推動地理大發現、催生殖民主義，以及荷蘭東印度公司如何創造現代資本市場的雛形。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+香料是人類歷史上最早的全球性貿易商品，也是塑造現代世界格局最重要的農業商品。在沒有冷藏技術的前現代世界，香料的價值在於它對食物的防腐和掩蓋腐敗氣味的功能；在醫學上，香料被認為具有治療和保健功效；在宗教儀式和貴族社交中，香料是財富和權勢的展示——胡椒、丁香、肉荳蔻、薑黃、肉桂的稀缺性，讓它們在中世紀歐洲比黃金更為珍貴。
+
+這種稀缺性是地理造成的：幾乎所有最珍貴的香料都來自遙遠的亞洲。胡椒產自印度馬拉巴爾海岸（今喀拉拉邦），丁香和肉荳蔻幾乎只生長在東印度尼西亞的摩鹿加群島（Maluku，又稱「香料群島」）——一個比西班牙小十倍的熱帶群島，卻曾是全球香料貿易的宇宙中心。
+
+香料從亞洲到歐洲的漫長旅程——穿越印度洋、紅海、阿拉伯商路，再由威尼斯商人壟斷轉銷——讓每一粒胡椒在抵達歐洲時的成本是產地的 100 倍以上。這種驚人的價差，是 15 世紀葡萄牙和西班牙贊助探險家尋找香料直接航路的最根本動機。
+
+<Timeline events={[
+  { year: "1453", text: "鄂圖曼帝國攻陷君士坦丁堡，阻斷了歐洲與東方香料貿易的傳統陸路" },
+  { year: "1498", text: "葡萄牙人達伽馬（Vasco da Gama）繞過好望角抵達印度卡利卡特，開闢香料直接海路" },
+  { year: "1511", text: "葡萄牙佔領摩六甲，控制香料貿易的轉口樞紐，建立第一個香料貿易壟斷體系" },
+  { year: "1519-1522", text: "麥哲倫-埃爾卡諾船隊完成人類首次環球航行，最初動機正是尋找香料群島的西行航路" },
+  { year: "1602", text: "荷蘭東印度公司（VOC）成立，發行世界第一支公開交易股票，壟斷香料貿易" },
+  { year: "1621", text: "荷蘭對班達群島（Banda Islands）發動大屠殺，消滅原住民並獨佔肉荳蔻生產" },
+  { year: "1799", text: "VOC 因過度擴張和腐敗宣告破產，荷蘭政府接管其資產和殖民地" },
+]} />
+
+香料的歷史意義遠超農業商品本身：它的稀缺性和利潤空間，直接驅動了人類歷史上最重要的地理發現——哥倫布發現美洲（他以為找到了香料群島的西行航路）和麥哲倫環球航行——從而永久改變了地球的政治版圖和人類文明的發展軌跡。如果沒有香料的利潤驅動，15-16 世紀的地理大發現很可能不會發生，或至少會大幅延遲。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="VOC（Vereenigde Oost-Indische Compagnie，荷蘭東印度公司）"
+  year={1602}
+  contractSize="香料以擔（pikul，約 60-70 公斤）為單位進行遠期銷售"
+  deliveryPoint="阿姆斯特丹 VOC 倉庫"
+  tickerSymbol="（VOC 股票：第一支公開交易股票）"
+/>
+
+嚴格說來，香料並沒有一個正式的「期貨交易所」——但 VOC（荷蘭東印度公司）的設計本身，就是人類歷史上最重要的「風險管理工具」之一：**股份公司制度**。
+
+在 VOC 成立之前，香料貿易採用「單次航行合夥」（Single Voyage Partnership）模式——投資者為一次出海航行募集資金，航行結束後清算分配利潤，再為下一次航行重新募集。這種模式的風險極高（海難、風暴、海盜、疾病讓超過 30% 的船隻永遠無法歸航），也無法建立長期的規模優勢。
+
+VOC 的創新在於：將多個貿易航次的風險合并，向公眾出售永久性股份（不清算、不退股，只能二級市場轉讓），從而為一個長期存在的香料貿易壟斷機構募集資本。1602 年 VOC 的首次股票發行（Inschrijving），是人類歷史上第一次面向公眾的股票公開發行（IPO 的祖先），也讓阿姆斯特丹股票交易所（Beurs van Hendrick de Keyser）成為世界第一個股票交易所。
+
+VOC 的股票之所以具有真實市場價值，根本上是因為它代表了對未來香料壟斷利潤的所有權——它是現代商品期貨「未來現金流折現」定價邏輯的最早類比。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1602 年：VOC 成立——人類第一個「上市公司」
+
+荷蘭政府意識到，各家小型貿易公司在香料群島的惡性競爭不但壓低了利潤，還讓荷蘭在與葡萄牙、西班牙的地緣競爭中處於劣勢。1602 年 3 月 20 日，荷蘭國會（Staten-Generaal）頒布特許狀，將多家競爭性貿易公司強制合並為「荷蘭東印度公司」（Vereenigde Oost-Indische Compagnie，VOC），授予其對印度洋以東所有地區貿易的 21 年壟斷特許權。
+
+VOC 向公眾發行的股票（Actien）認購者來自各個社會階層，從阿姆斯特丹的大商人到普通工匠，共募集了 650 萬荷蘭盾——相當於今日數十億美元的資本。更重要的是，VOC 的股票可以在阿姆斯特丹證券交易所自由買賣，投資者可以在不退股的情況下變現持有的股份。
+
+<QuoteCard
+  quote="VOC 是人類迄今發明過的最大膽商業工具——它用一張紙（股票）解決了香料貿易的兩大問題：如何募集巨額資本，以及如何分散生死未卜的航行風險。"
+  author="歷史學家 Fernand Braudel，《物質文明、經濟和資本主義》"
+  year="1979"
+/>
+
+在巔峰期（1637 年，恰是鬱金香泡沫的同一年），VOC 的市值估計相當於今日的 7.9 兆美元，超越了今日全球任何一家企業。VOC 同時是第一家發行債券、設立分支機構、建立企業治理結構的現代公司，它是世界金融體系的真正源頭之一。
+
+然而，VOC 維持香料壟斷利潤的手段極為殘酷——1621 年對班達群島（全球肉荳蔻的唯一產地）的大屠殺，幾乎滅絕了原住民班達人（估計 15,000 人中僅 1,000 人倖存），是早期資本主義與殖民暴力結合的血腥典型案例。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Jan Pieterszoon Coen"
+  nameZh="楊·彼得松·科恩"
+  years="1587-1629"
+  nickname="VOC 的鐵腕帝國建造者"
+  story="科恩是 VOC 的第四任印度總督（Governor-General），被稱為「荷蘭東印度帝國的奠基者」。他在任期間確立了 VOC 在摩鹿加香料群島的軍事壟斷，親自策劃並執行了 1621 年的班達群島大屠殺，消滅原住民、引入荷蘭殖民者和奴隸，將肉荳蔻生產完全置於 VOC 控制之下。科恩同時也是早期「資本主義帝國主義」結合的最典型人物——他在致荷蘭政府的信中寫道：「商業不能沒有戰爭，戰爭不能沒有商業。」"
+/>
+
+<TraderProfile
+  name="Isaac le Maire"
+  nameZh="艾薩克·勒麥爾"
+  years="1558-1624"
+  nickname="歷史上第一個賣空者"
+  story="勒麥爾是 VOC 的初始股東之一，後來因與 VOC 的商業糾紛而被踢出公司。為報復，他在 1609 年組織了一個投資者聯盟，大規模賣空 VOC 股票（借入股票賣出、押注股價下跌），並散佈 VOC 船隻沉沒的謠言以壓低股價。這讓他成為人類歷史上有記載的**第一個賣空者**（Short Seller）。荷蘭當局在 VOC 的壓力下於 1610 年頒布禁止「裸賣空」的法令，這也是人類歷史上第一個金融監管法令之一。"
+/>
+
+<TraderProfile
+  name="Francisco Serrão"
+  nameZh="弗朗西斯科·塞拉昂"
+  years="?-1521"
+  nickname="第一個到達香料群島的歐洲人"
+  story="葡萄牙探險家塞拉昂是麥哲倫的遠房表兄，他在 1511 年成為第一個抵達摩鹿加香料群島（特爾納特島）的歐洲人，並定居於此成為當地蘇丹的顧問和武器供應商。他寫給麥哲倫的信件，描述了香料群島的巨大財富，是直接促使麥哲倫發起環球航行計畫的關鍵動機之一。塞拉昂在麥哲倫抵達香料群島前數週去世（1521 年），但他開拓的香料群島情報，間接促成了人類最偉大的地理探索。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="肉荳蔻換曼哈頓：香料的地緣政治遺產"
+  year="1667"
+  description="1667 年，英荷簽訂《布雷達條約》，荷蘭以北美洲的殖民地「新阿姆斯特丹」（今曼哈頓島）換取了英國手中的班達群島盧恩島（Run）——唯一不在荷蘭控制下的肉荳蔻產地。當時的荷蘭人認為，完整掌控肉荳蔻壟斷比一個遙遠的北美城市更有價值。數百年後的今日，曼哈頓是全球最貴的房地產市場之一，而肉荳蔻不過是超市貨架上幾美元的香料。這個交換成為歷史上最著名的「錯判」之一，也是香料貿易昔日霸主地位的最好腳注。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="胡椒：最民主的奢侈品"
+  year="古至今"
+  description="在中世紀歐洲，胡椒是最廣泛使用的香料，同時也是最重要的商業「貨幣替代品」之一——房租可以用胡椒支付，嫁妝可以包含胡椒，部分城市甚至以胡椒計量財富（「胡椒袋」是富人的別稱）。葡萄牙開闢直接航路後，胡椒的價格大幅下跌，從奢侈品變為家家戶戶都能使用的日常調味料——這是一次由貿易創新推動的商品「民主化」，在某種意義上預示了後來工業革命對眾多奢侈品的大規模平民化。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="VOC 破產：過度擴張的警示"
+  year="1799"
+  description="VOC 在巔峰後的衰落速度幾乎和它的崛起一樣驚人。18 世紀，英國的東印度公司（EIC）逐步侵蝕 VOC 在亞洲的市場份額；同時，VOC 的治理結構滋生了大規模腐敗（荷蘭人諷刺地將 VOC 的縮寫解讀為 Vergaan Onder Corruptie，即「毀於腐敗」）；連年戰爭帶來的巨額債務最終壓垮了這家曾經市值最高的公司。1799 年 12 月 31 日，VOC 正式解散，荷蘭政府接管其所有資產。這個過程是「企業過度擴張與治理失敗」的教科書案例，在現代企業治理課程中仍然被廣泛引用。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="香料群島的血腥歷史"
+  year="1511-1800"
+  description="摩鹿加群島——班達、安汶、特爾納特、蒂多雷等島嶼——是人類有史以來競爭最激烈的商品產地之一。葡萄牙、西班牙、英國、荷蘭先後為控制這片熱帶群島爆發衝突，當地原住民在殖民侵略和強制勞動中大量死亡。香料貿易的利潤建立在殖民暴力的基礎之上，是理解早期全球化「不平等交換」本質的最清晰案例。今日班達群島仍以世界頂級的品質肉荳蔻著稱，但其悲劇性的殖民歷史使它同時成為全球化創傷記憶的象徵。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="現代香料貿易：商品化與品質溢價的並存"
+  year="現代"
+  description="今日，香料早已不再是稀缺的貴重品。全球香料貿易年值超過 150 億美元，胡椒、薑黃、肉桂都是大宗農業商品，在芝加哥或新加坡期貨市場以噸為單位交易。然而，在商品化的主流市場之外，「精品香料」市場正在興起——單一產地的斯里蘭卡錫蘭肉桂、印度馬拉巴爾黑胡椒、印尼班達肉荳蔻，以比大宗商品高出幾十倍的價格，面向消費者販售其產地歷史和稀缺性故事。香料的「稀缺性溢價」邏輯，在精品市場中以新的形式延續。"
+/>
+
+<ArtifactCard
+  type="書籍"
+  title="《香料戰爭》Nathaniel's Nutmeg"
+  year="1999"
+  description="英國作家吉爾斯·米爾頓（Giles Milton）的歷史著作《Nathaniel's Nutmeg》（2000 年中文版《肉荳蔻的詛咒》），生動重現了 17 世紀英荷兩國在摩鹿加香料群島爭奪肉荳蔻壟斷的血腥故事。書中描述了英國探險家納撒尼爾·寇爾索普（Nathaniel Courthope）如何在班達群島上孤守 Run 島四年，以一人之力對抗整個荷蘭艦隊。這本書是了解香料貿易全盛時代地緣政治的最佳入門讀物，也讓「肉荳蔻換曼哈頓」的故事廣為人知。"
+/>
+
+</div>
+
+</SectionCard>

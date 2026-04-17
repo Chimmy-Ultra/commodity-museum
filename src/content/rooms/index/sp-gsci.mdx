@@ -1,0 +1,161 @@
+---
+name: "標普高盛商品指數"
+nameEn: "S&P GSCI"
+slug: "sp-gsci"
+wing: "index"
+exchange: "CME"
+tickerSymbol: "GSCI"
+status: "active"
+icon: "📊"
+accentColor: "#1a5c8a"
+roomNumber: 1
+tagline: "商品市場的溫度計——S&P GSCI 是全球最廣泛引用的商品指數，能源配置超過 70%，是通膨對沖工具，也是批評者眼中的「大宗商品通膨製造機」"
+taglineEn: "The thermometer of commodity markets — S&P GSCI is the world's most cited commodity index, with 70%+ energy weighting, an inflation hedge and a target of commodity inflation critics"
+originRegion: "全球"
+firstFuturesYear: 1991
+firstFuturesExchange: "CME（芝加哥商業交易所）"
+greatestEventName: "2008 年商品超級週期頂峰，GSCI 突破 900 點後在金融危機中暴跌 60%"
+greatestEventYear: 2008
+description: "S&P GSCI展室：探索高盛商品指數如何重新定義機構投資組合的商品配置，以及指數投資的龐大規模如何影響商品市場價格。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+1991 年，高盛集團（Goldman Sachs）的商品研究部門推出了「高盛商品指數」（Goldman Sachs Commodity Index，GSCI）——這是金融史上第一個系統性追蹤全球商品市場整體表現的可投資指數。在此之前，商品投資幾乎完全是個別期貨合約的交易，沒有一個標準化的「商品市場」基準，讓機構投資者無從與股票指數（如標普 500）或債券指數進行平行比較和配置。
+
+GSCI 的設計哲學簡單而有力：以全球各商品的**生產量**（World Production Weight）為基準，按比例配置對應的期貨合約持倉，從而讓指數反映全球實際商品生產結構的加權表現。這個「生產量加權」的設計，使得能源商品（原油、天然氣、汽油等）因其龐大的全球生產量，自然佔據了指數的主導地位——通常在 65-75% 之間。
+
+2007 年，GSCI 被標普集團收購，更名為「標普高盛商品指數」（S&P GSCI）。儘管更名，「GSCI」仍然是業界最常用的稱呼，也是全球最廣泛被養老金、主權財富基金和商品 ETF 用作基準的商品指數。
+
+<Timeline events={[
+  { year: "1991", text: "高盛商品部門推出 GSCI，全球第一個可投資的商品市場基準指數" },
+  { year: "1994", text: "GSCI 在 CME 推出對應的期貨合約，讓機構投資者可以直接交易指數敞口" },
+  { year: "1999-2007", text: "中國工業化推動的大宗商品超級週期，GSCI 從 100 點漲至 850 點以上" },
+  { year: "2006", text: "美國學術研究（Gorton & Rouwenhorst）指出商品期貨有「股票-商品負相關」屬性，推動機構大量增配" },
+  { year: "2008年7月", text: "GSCI 在油價見頂時達到歷史高點 894，隨後在金融危機中崩潰至 300 以下" },
+  { year: "2007", text: "標普集團收購 GSCI，更名為 S&P GSCI" },
+  { year: "2022", text: "俄烏戰爭推動能源和農業商品暴漲，S&P GSCI 錄得 2008 年以來最大年漲幅" },
+]} />
+
+GSCI 的能源超重配置（通常是農業的四倍以上、金屬的三倍以上），意味著追蹤 GSCI 的投資者實質上是在做一個「原油多頭」的大方向押注。這讓 GSCI 成為一個非常優秀的通貨膨脹對沖工具（因為能源價格是通脹的核心驅動力），但同時也讓它在農業和金屬市場的表現代表性不足。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME（芝加哥商業交易所）"
+  year={1994}
+  contractSize="CME GSCI 期貨合約，追蹤 S&P GSCI 現貨指數"
+  deliveryPoint="現金結算"
+  tickerSymbol="GD（CME GSCI 主力合約）"
+/>
+
+S&P GSCI 包含 24 種商品，涵蓋能源（6 種）、農業（11 種）、金屬（7 種，含貴金屬和工業金屬），每年 1 月依最新生產量數據進行成分權重重新平衡。
+
+GSCI 的投資機制有一個獨特的「月度展期」（Monthly Roll）機制：指數合約持有期貨的「近月合約」，每月在特定的「展期視窗」（通常是月中 5 天）將即將到期的近月合約換為下一個月份的合約。由於 GSCI 追蹤資金龐大（高峰期超過 1,000 億美元），這個月度展期形成了可預期的大規模買賣行為——市場稱之為「高盛展期」（Goldman Roll）。精明的交易員會提前押注 Goldman Roll 帶來的近月-次月價差走勢，形成一個規律性的套利機會，也引發了「指數投資者是否傷害了期貨市場定價效率」的學術爭議。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2008 年：商品超級週期頂峰與崩潰
+
+2000-2008 年是全球大宗商品史上最著名的「超級週期」（Supercycle）——以中國的工業化需求為核心驅動力，所有主要商品的價格在八年間同步暴漲：原油從 $20 漲到 $147，銅從 $0.60 漲到 $4.00，農業商品同步走強。S&P GSCI 從 2001 年的 100 點附近，到 2008 年 7 月攀升至 894 點的歷史高點。
+
+2008 年同時也爆發了一場關於「指數投機者是否推動了商品通脹」的激烈政策辯論。美國參議員約瑟夫·利伯曼（Joseph Lieberman）在國會聽證會上指控，GSCI 等商品指數吸引了數千億美元的被動投資資金進入期貨市場，這些「投機資金」推高了石油和農產品價格，導致全球糧食危機和能源通脹。
+
+<QuoteCard
+  quote="商品指數投資者不是對沖者，也不是投機者——他們是一個全新的、永遠做多、不看任何基本面的市場力量。而市場從來沒有見過這樣的力量。"
+  author="Michael Masters，對沖基金經理，2008 年美國國會聽證"
+  year="2008"
+/>
+
+這場辯論至今沒有定論：部分學術研究支持「指數投機者確實推高了商品價格」，另一批研究則認為商品超級週期完全可以由供需基本面解釋。然而，2008 年 8 月後的劇烈崩潰（金融危機爆發、需求急降）讓 GSCI 在半年內從 894 跌至 280，跌幅達 69%，給了兩方論者都說得通的理由。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Goldman Sachs Commodities"
+  nameZh="高盛商品部門"
+  years="1981-"
+  nickname="大宗商品金融化的最大推手"
+  story="高盛商品部門（Goldman Sachs Commodities，前身為 J. Aron & Company）是現代商品金融化的最重要推動者之一。高盛不只創立了 GSCI，還在 1990 年代建立了全球最大的商品自營交易台，在石油、天然氣、金屬和農業期貨市場都有龐大的做市和自營業務。高盛的商品部門在多個年份的利潤超過了許多大型商品公司的全年收益，也多次因操縱市場指控而付出巨額罰款（其中最著名的是 2010 年的鋁倉庫操縱案件）。"
+/>
+
+<TraderProfile
+  name="iShares S&P GSCI ETF / iPath Bloomberg"
+  nameZh="被動商品 ETF 的崛起"
+  years="2006-"
+  nickname="讓散戶也能買「商品指數」的革命"
+  story="2006 年後，以 S&P GSCI 和 Bloomberg Commodity Index 為追蹤標的的 ETF 和 ETN 產品相繼推出，讓普通散戶投資者第一次可以通過證券帳戶輕鬆獲得商品市場的多元化敞口。這些產品的規模在 2006-2008 年間快速成長至數百億美元，也正是在這個時期，「指數投資者影響期貨價格」的爭議最為激烈。被動商品 ETF 的興起，是現代金融商品化浪潮的重要里程碑，也是理解 2008 年商品泡沫的制度背景。"
+/>
+
+<TraderProfile
+  name="China National Development and Reform Commission (NDRC)"
+  nameZh="中國國家發展和改革委員會"
+  years="2000s-"
+  nickname="超級週期的最大驅動力"
+  story="嚴格說來，NDRC 不是期貨交易員，但它代表的「中國工業化需求」是 2000-2008 年商品超級週期最重要的基本面驅動力。中國在 2001 年加入 WTO 後的工業化速度震驚了全球商品市場：鋼鐵廠需要鐵礦石、銅、煤炭；工廠需要石油；快速城鎮化需要糧食和農業商品。這個「超級買家」的出現，是 GSCI 在 2000-2008 年間上漲約 800% 的根本動力。理解 GSCI，必須理解中國需求；理解中國需求，必須理解 NDRC 的五年計畫。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="「高盛展期」（Goldman Roll）：可預測的套利機會"
+  year="1994 至今"
+  description="每個月中旬的五個交易日，GSCI 追蹤基金必須將即將到期的近月合約換到下一個月份。當追蹤資金超過 1,000 億美元時，這個展期操作本身就足以移動期貨市場的近月/次月價差。精明的交易員在展期視窗開始前買入次月合約、賣空近月合約（「交易高盛展期」），形成一個可重複的套利機會。學術研究估計，「高盛展期」效應在某些年份讓 GSCI 追蹤者每年額外損失 1-3%（因展期時以不利價格賣出近月、買入次月），也讓批評者質疑大規模指數投資的效率。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="商品超級週期理論"
+  year="2000 至今"
+  description="「商品超級週期」（Commodity Supercycle）是指持續 10-30 年的大宗商品價格長期上行趨勢，通常由重大的工業化或城鎮化進程驅動。20 世紀有兩個明確的超級週期：1870-1913 年（美國工業化）和 1945-1973 年（二戰後重建）。21 世紀的第一個超級週期（2000-2008 年）以中國工業化為核心。2020 年後，部分分析師指出新一輪超級週期可能由「綠色能源轉型」（銅、鋰、鈷、鎳）驅動，但另一些人認為中國需求放緩意味著傳統商品超級週期的時代可能已結束。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="商品作為通膨對沖資產"
+  year="2003 至今"
+  description="2004 年，Gorton 和 Rouwenhorst 在美國全國經濟研究局（NBER）發表的研究論文指出：商品期貨在過去數十年的平均收益與股票相當，但與股票呈現負相關，且在通脹時期表現優於股票和債券。這篇論文成為機構投資者大量增加商品指數配置的學術依據，推動了 2004-2008 年間超過 2,000 億美元流入 GSCI 等商品指數追蹤工具。後來的研究對這個結論提出了修正，認為在超大規模資金追蹤指數後，商品期貨的超額收益已大幅下降。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="2008 年國會聽證：指數投機者的罪與罰"
+  year="2008"
+  description="2008 年美國國會召開了多場聽證會，探討商品指數投資是否助長了油價和糧食通脹。批評者引用數據指出，指數投資者在 CFTC 報告中的持倉量在 2006-2008 年間急劇增長，與商品價格的上漲高度同步。然而，支持者反駁，指數投資者是「長多（永遠做多）」的被動投資者，他們不主動追高，也不製造短期波動，真正的投機壓力來自對沖基金。這場辯論直接導致了《多德-弗蘭克法案》對期貨市場持倉限制的新規定。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="能源轉型：GSCI 的結構性挑戰"
+  year="2020 至今"
+  description="GSCI 的能源超重配置（通常 65-70%），在化石能源向可再生能源轉型的大背景下面臨長期結構挑戰。如果全球石油需求在 2030 年後進入長期下行，以生產量加權的 GSCI 將繼續高配石油——但這可能正是一個正在萎縮的市場。與此形成對比的是，銅、鋰、鈷等「綠色金屬」在 GSCI 中的權重相對較低，因為它們目前的生產量仍遠小於石油。GSCI 的「過去導向」設計，在能源轉型時代是否仍能代表「未來商品市場」，是指數設計者和機構投資者正在認真面對的問題。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="主權財富基金與商品指數"
+  year="2000 至今"
+  description="中東產油國的主權財富基金（SWF）——沙烏地阿拉伯的 PIF、阿布達比的 ADIA、挪威的 GPFG——是商品指數的重要機構配置者。這些基金本身的財富來自石油出口，理論上已對石油價格高度暴露，卻仍通過 GSCI 等指數追蹤工具進一步增配商品——這在某種意義上是對其自身資源財富的「再投資」。主權財富基金的商品指數配置，體現了全球財富從資源國向金融市場流動的宏觀結構，是理解 21 世紀全球資本流動的重要視角。"
+/>
+
+</div>
+
+</SectionCard>

@@ -1,0 +1,168 @@
+---
+name: "豬腩（已下市）"
+nameEn: "Pork Bellies (Delisted)"
+slug: "pork-bellies"
+wing: "livestock"
+exchange: "CME"
+tickerSymbol: "PB"
+status: "delisted"
+icon: "🥓"
+accentColor: "#c17f5e"
+roomNumber: 4
+tagline: "培根的金融化——世界上第一個牲畜期貨合約，一段關於冷庫倉儲、培根季節性與開放喊價投機文化的傳奇"
+taglineEn: "The financialization of bacon — the world's first livestock futures contract, a legend of cold storage, seasonal demand, and open-outcry speculative culture"
+originRegion: "美國中西部"
+firstFuturesYear: 1961
+firstFuturesExchange: "CME"
+greatestEventName: "1983 年電影《你整我，我整你》令豬腩成為大眾文化的商品投機符號"
+greatestEventYear: 1961
+description: "豬腩展室：探索世界第一個牲畜期貨合約的誕生、開放喊價時代的投機傳奇，以及2011年合約下市的故事。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+豬腩（Pork Belly）是豬的腹部肉，也就是培根的原料。在冷藏技術普及之前，豬腩是一種高度季節性商品：秋冬宰殺季大量生產的豬腩被鹽漬或煙薰後儲存，在春夏季需求旺盛時取出銷售。這種極端的季節性供需結構，讓豬腩成為期貨合約的理想標的。
+
+1961 年，CME 推出豬腩期貨（Pork Belly Futures），這是全球**第一個**牲畜（非儲存性生物商品）期貨合約——比活牛期貨早了三年。豬腩期貨的創新意義不僅在於標的物的特殊性，更在於它首次證明了「生物性商品」可以被設計成標準化的期貨合約，為 1964 年的活牛期貨、1966 年的活豬期貨、1971 年的飼育牛期貨鋪平了道路。
+
+豬腩期貨的交易邏輯非常直觀：夏天美國人吃 BLT 三明治（培根、生菜、番茄），培根需求旺盛；冬天需求下降，豬腩被送進冷藏倉庫。冷藏庫存量（USDA 每週發布）是市場最重要的先行指標——庫存高時期貨價格受壓，庫存低時價格飆升。這種模式讓豬腩期貨在開放喊價時代成為投機者的最愛。
+
+<Timeline events={[
+  { year: "1961", text: "CME 推出豬腩（Pork Belly）期貨，全球第一個牲畜商品期貨合約" },
+  { year: "1966", text: "CME 推出活豬期貨，豬腩期貨的成功提供了重要先例" },
+  { year: "1970-1980s", text: "CME 豬腩期貨坑成為全球最活躍、最投機化的農業期貨交易場所之一" },
+  { year: "1983", text: "電影《你整我，我整你》（Trading Places）以豬腩和 OJ 期貨為核心情節，令其聞名大眾" },
+  { year: "1997", text: "豬腩的消費季節性因冷凍技術普及和全年供貨而大幅減弱，市場流動性開始下降" },
+  { year: "2000s", text: "培根從季節性食品轉型為全年消費商品，豬腩儲存模式的交易邏輯逐漸失效" },
+  { year: "2011", text: "CME 宣布豬腩期貨正式下市，結束了 50 年的傳奇歷史" },
+]} />
+
+豬腩期貨在 1970-1980 年代的 CME 交易坑是一個充滿傳奇故事的地方。極端的波動性和清晰的季節性邏輯，吸引了大量投機者，也讓一批「交易坑傳奇」在這裡誕生。直到 2011 年合約下市，「豬腩」仍是「商品投機」的最形象代名詞。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME（芝加哥商業交易所）"
+  year={1961}
+  contractSize="40,000 磅冷凍豬腩（約 18 公噸）"
+  deliveryPoint="芝加哥及其他認可冷藏倉庫"
+  tickerSymbol="PB（已下市）"
+/>
+
+豬腩期貨採用實物交割機制，交割標的是儲存在認可冷藏倉庫的「常規冷凍豬腩」（Regular Frozen Pork Bellies），每片重量通常在 12-18 磅之間，需符合 USDA 的品質規格。
+
+豬腩合約之所以在交易坑時代特別受歡迎，是因為其交易邏輯極為清晰：
+
+- **冬季**：豬隻屠宰季，豬腩大量進入冷藏倉庫，庫存積累
+- **初春**：交易員開始評估夏季培根需求的強弱，豬腩期貨開始啟動
+- **夏季**：BLT 旺季，培根需求高峰，豬腩從冷庫流出，庫存下降推動價格上漲
+- **秋季**：需求退潮，豬腩重新流入冷庫，等待下一個週期
+
+這個週期規律讓豬腩成為商品期貨史上「最可預測但又最不可預測」的合約——週期框架清晰，但每年的冬季屠宰量、夏季需求強弱、冷庫容量偏差都能讓市場大幅偏離歷史模式。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1961-2011：從誕生到謝幕的五十年傳奇
+
+豬腩期貨沒有一個單一的「最大事件」，它本身的整個存在就是一個事件——世界上第一個牲畜期貨合約，從無到有地建立了農業複合體期貨化的可能性，並在 50 年後因為市場結構的根本改變而優雅謝幕。
+
+它的謝幕原因恰恰是現代農業技術的勝利：冷凍技術的進步和全球供應鏈的整合，讓培根從「夏季食品」變成了「全年食品」。當豬腩不再有季節性的儲存和放出週期，期貨合約的核心存在價值——對沖季節性價格波動——就不復存在了。
+
+<QuoteCard
+  quote="豬腩是我職業生涯學到的最重要一課：任何市場，只要有足夠的季節性和波動性，就能支撐活躍的期貨交易。而當這兩個條件消失，合約也就完成了它的使命。"
+  author="CME 前資深交易員，回憶豬腩交易坑全盛時期"
+  year="2011"
+/>
+
+2011 年 7 月，CME 正式終止豬腩期貨合約，原因是「日益萎縮的流動性和持倉量無法維持一個健康的期貨市場」。這個決定本身成為一個商品期貨史上重要的歷史節點：提醒我們，期貨合約的存廢最終由市場的真實需求決定，而非傳統或情感。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Leo Melamed"
+  nameZh="李奧·梅拉梅德"
+  years="1932-"
+  nickname="現代期貨之父"
+  story="Leo Melamed 是 CME 前主席，他在 1960-1980 年代將 CME 從一個小型農業交易所轉型為全球頂級衍生品中心。Melamed 親眼目睹了豬腩期貨的誕生，也是將 CME 從農業期貨擴展到金融期貨（貨幣期貨 1972 年、利率期貨 1976 年）的核心推手。在他看來，豬腩期貨的成功是 CME 敢於進入金融衍生品領域的重要信心來源。"
+/>
+
+<TraderProfile
+  name="Richard Dennis"
+  nameZh="理查德·丹尼斯"
+  years="1949-"
+  nickname="交易坑的王者"
+  story="理查德·丹尼斯是 CME 開放喊價時代最具傳奇色彩的交易員之一，被稱為「交易坑的王者」（Prince of the Pit）。他以 1,600 美元的本金在幾年內滾雪球至超過 2 億美元的資產，部分交易歷程就發生在豬腩和穀物的交易坑中。1983 年，他發起著名的「海龜交易員」（Turtle Traders）實驗，招募普通人用他的趨勢跟蹤系統進行交易，創造了商品期貨史上最著名的交易實驗。"
+/>
+
+<TraderProfile
+  name="Billy Ray Valentine & Louis Winthorpe III"
+  nameZh="電影角色"
+  years="1983"
+  nickname="《你整我，我整你》的虛構英雄"
+  story="嚴格說來，這兩個角色是 1983 年電影《你整我，我整你》（Trading Places）中的虛構人物。但這部由艾迪·墨菲和丹·艾克洛德主演的喜劇，讓「豬腩和冷凍濃縮橙汁期貨」成為全球大眾理解商品投機的文化入口。電影中兩位主角利用提前獲取 USDA 農業報告（政府機密），在 OJ 期貨市場上反向操縱壞人的陰謀，這個情節精確地描繪了「資訊優勢」在期貨交易中的核心作用。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="《你整我，我整你》Trading Places"
+  year="1983"
+  description="約翰·蘭迪斯執導的喜劇電影，艾迪·墨菲和丹·艾克洛德主演，以 CME 的冷凍濃縮橙汁（OJ）和豬腩期貨為核心情節。電影中的「提前取得農業報告」情節雖然戲劇化，但精確反映了政府數據在農業期貨定價中的決定性作用。這部電影甚至影響了真實政策：2010 年美國《多德-弗蘭克法案》中有一條款被戲稱為「Trading Places 條款」，明確禁止利用政府機密信息進行商品期貨交易。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="CME 開放喊價交易坑的黃金年代"
+  year="1960-2000"
+  description="在電子交易時代到來之前，CME 的農業期貨交易坑（包括豬腩坑）是全球最喧囂、最刺激的金融交易場所之一。交易員穿著彩色夾克，用手勢和喊價（Open Outcry）完成每筆交易。豬腩坑因其極端的波動性，吸引了最激進的投機者，也孕育了一批以「交易坑本能」著稱的傳奇人物。這段歷史已永遠消逝在電子交易的浪潮中。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="USDA 冷凍庫存報告：驅動市場的數字"
+  year="1961-2011"
+  description="在豬腩期貨存續的五十年間，USDA 每週發布的「冷藏庫存報告」（Cold Storage Report）是最重要的定期市場事件。報告公布前後，豬腩期貨往往出現劇烈波動——庫存數字比預期低，代表市場已大量消耗，後續供應緊俏，期貨大漲；高於預期則大跌。這個「庫存驅動」的交易邏輯，是農業期貨最純粹的供需定價機制的體現。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="培根的全球化——豬腩下市後的世界"
+  year="2011 至今"
+  description="豬腩期貨於 2011 年下市，但培根的消費文化在此後達到了歷史高峰。「培根化」（Baconification）成為 2010 年代美國食品文化的流行語——培根冰淇淋、培根伏特加、培根口味薯片層出不窮，「萬物加培根」的網路迷因文化蔚為大觀。豬腩作為培根原料的現貨市場依然活躍，但沒有了期貨合約的加持，它的價格波動只能在現貨市場上被消化。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="季節性失效：市場結構的演變"
+  year="1990-2011"
+  description="豬腩期貨的衰落是商品市場「季節性失效」現象的典型案例。冷凍技術的普及、全球豬肉供應鏈的整合、以及培根從季節性食品到全年消費品的轉變，逐步瓦解了豬腩期貨賴以存在的核心邏輯。這提醒我們：期貨合約的存在依賴於真實的對沖需求，當市場結構改變，合約的命運也隨之改變。今日的許多大宗商品期貨，未來同樣可能面臨相似的結構性挑戰。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="下市合約的博物館意義"
+  year="2011"
+  description="豬腩期貨的下市讓它成為期貨史上最具代表性的「歷史文物」之一。CME 集團在其官方歷史資料中，將豬腩期貨列為「改變農業商品衍生品歷史進程的關鍵創新」。對於研究商品市場的學者而言，豬腩期貨的完整生命週期——從創新誕生、投機繁榮到結構衰退、優雅謝幕——是理解期貨市場演化規律最完美的教科書案例。"
+/>
+
+</div>
+
+</SectionCard>

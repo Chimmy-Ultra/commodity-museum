@@ -1,0 +1,165 @@
+---
+name: "瘦肉豬"
+nameEn: "Lean Hogs"
+slug: "lean-hogs"
+wing: "livestock"
+exchange: "CME"
+tickerSymbol: "HE"
+status: "active"
+icon: "🐷"
+accentColor: "#e8808a"
+roomNumber: 3
+tagline: "從愛荷華州豬圈到中國餐桌——瘦肉豬期貨見證了全球最大蛋白質市場的生產、疫病與地緣政治衝擊"
+taglineEn: "From Iowa pig farms to China's tables — lean hog futures witness production, disease, and geopolitical shocks in the world's largest protein market"
+originRegion: "美國中西部"
+firstFuturesYear: 1966
+firstFuturesExchange: "CME"
+greatestEventName: "2019-2020 年非洲豬瘟重創中國，推動美國豬肉出口創歷史紀錄"
+greatestEventYear: 2019
+description: "瘦肉豬展室：從1998年豬價崩潰到2019年非洲豬瘟，探索全球豬肉市場的供需動態與中美貿易關係。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+豬肉是全球消費量最大的肉類，佔全球肉類消費約 36%，遠高於牛肉（22%）。中國是全球最大的豬肉生產國和消費國，中國每年消費的豬肉約佔全球總量的一半——這讓中國的豬業政策、疫病爆發和消費趨勢，成為影響全球豬肉期貨市場的最重要的單一因素。
+
+CME 在 1966 年推出「活豬期貨」（Live Hog Futures），比活牛期貨晚兩年。1997 年，CME 將合約改為「瘦肉豬期貨」（Lean Hog Futures），並轉為現金結算——這個改革反映了美國豬肉工業從傳統現貨市場向現代加工業的轉型。「瘦肉豬」代表的是屠宰後去骨豬肉的重量，比「活豬」更接近商業採購的實際需求。
+
+美國的豬肉生產高度集中在愛荷華州、北卡羅來納州、明尼蘇達州和伊利諾伊州。史密斯菲爾德食品（Smithfield Foods）長期是全球最大的豬肉加工商，2013 年被中國萬洲國際（原雙匯國際）以 71 億美元收購，成為美國農業史上規模最大的中資收購案。
+
+<Timeline events={[
+  { year: "1966", text: "CME 推出活豬（Live Hog）期貨，美國豬肉期貨市場正式建立" },
+  { year: "1997", text: "CME 將活豬期貨改革為現金結算的瘦肉豬（Lean Hog）期貨，代碼 HE" },
+  { year: "1998", text: "美國生豬產能過剩引發豬價崩潰，CME 瘦肉豬期貨從 $50/cwt 暴跌至 $10/cwt" },
+  { year: "2013", text: "中國萬洲國際以 71 億美元收購史密斯菲爾德食品，中資進入美國豬肉供應鏈核心" },
+  { year: "2018", text: "中美貿易戰爆發，中國對美國豬肉加徵 25% 關稅，衝擊 HE 期貨市場" },
+  { year: "2019", text: "非洲豬瘟（ASF）席捲中國，消滅中國約 40% 的生豬存欄，全球豬肉市場震動" },
+  { year: "2020", text: "中美第一階段貿易協議，中國大量採購美國豬肉，美國豬肉出口創歷史紀錄" },
+]} />
+
+HE 期貨的現金結算基準是 CME 瘦肉豬現貨指數，每日由 USDA 根據實際屠宰交易計算發布。這讓 HE 成為農業期貨中流動性較高、最受金融投資者參與的合約之一——因為現金結算消除了實物交割的複雜性。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME（芝加哥商業交易所）"
+  year={1966}
+  contractSize="40,000 磅瘦肉豬等量（約 190 頭育肥豬）"
+  deliveryPoint="現金結算，參考 CME 瘦肉豬日均現貨指數"
+  tickerSymbol="HE"
+/>
+
+瘦肉豬期貨的核心設計是「瘦肉率」（Lean Value）——以去骨豬肉重量而非活豬重量計算，更接近肉品加工商的實際採購邏輯。每份 HE 合約代表 40,000 磅的瘦肉豬等量，約等於 190-200 頭正常育肥豬。
+
+豬肉的生產週期比牛肉短得多：一頭豬從出生到上市只需 5-6 個月（牛需要 18-24 個月），這使得豬肉供應對市場信號的反應更快，HE 期貨的季節性模式也更加明顯——夏季燒烤季（6-8 月）通常是豬肉需求高峰，對應 HE 的季節性高點；冬季生豬集中出欄（10-12 月）往往是季節性低點。
+
+豬肉生產中最重要的成本因素是飼料（玉米和豆粕），飼料成本通常佔生豬養殖成本的 60-70%。因此 HE 期貨與 ZC（玉米）和 ZM（豆粕）的聯動關係，形成了農業期貨中最重要的跨商品基差結構之一。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2019-2020 年：非洲豬瘟與全球豬肉市場重組
+
+非洲豬瘟（African Swine Fever, ASF）是一種對豬致命的病毒性出血熱，病死率接近 100%，且目前無有效疫苗。2018 年 8 月，ASF 在中國遼寧省首次確認，隨後以驚人速度席捲全國。到 2019 年底，中國因 ASF 損失了約 40% 的生豬存欄量——超過 2 億頭豬消失，相當於歐盟豬隻總數的兩倍。
+
+中國豬肉供應的驟降引發了全球豬肉市場的結構性重組：
+
+<QuoteCard
+  quote="非洲豬瘟對全球豬肉市場的衝擊，相當於從供應端移除了整個歐盟的豬肉生產量。"
+  author="Rabobank 農業分析師"
+  year="2019"
+/>
+
+中國被迫大量進口豬肉，美國成為最大受益者。儘管中美貿易戰仍在持續，中國仍大量採購美國豬肉，2020 年美國對中豬肉出口量同比增長超過 70%。美國 HE 期貨在 2019-2020 年間大幅上漲，全球豬肉出口國（德國、西班牙、巴西、加拿大）也同步受益。
+
+ASF 危機最終促成了 2020 年 1 月中美第一階段貿易協議的部分條款——中國承諾大量採購美國農產品，豬肉是其中最重要的品項之一。這次危機充分展示了動物疾病事件如何在全球農業貿易中造成連鎖反應。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Smithfield Foods / WH Group"
+  nameZh="史密斯菲爾德食品"
+  years="1936-"
+  nickname="全球豬肉帝國"
+  story="史密斯菲爾德食品長期是全球最大的豬肉加工商，在美國有超過 40,000 個家庭農場和多個大型工廠。2013 年被中國萬洲國際（原雙匯）以 71 億美元收購——這是迄今為止中資企業對美國農業企業規模最大的收購。收購後，史密斯菲爾德成為連結中美豬肉供應鏈的關鍵橋梁，其在 HE 期貨市場的套保操作規模龐大，是這個市場最重要的機構參與者之一。"
+/>
+
+<TraderProfile
+  name="Tyson Foods"
+  nameZh="泰森食品"
+  years="1935-"
+  nickname="美國蛋白質巨人"
+  story="泰森食品是美國最大的肉類食品公司，同時涉足牛肉、豬肉和雞肉的生產加工，是農業期貨市場最全方位的套保參與者。泰森在 HE 期貨市場的操作策略特別精細：作為豬肉採購商，它需要買方套保（HE 多頭）鎖定原料成本，但作為豬肉產品的銷售商，它又需要賣方套保（HE 空頭）鎖定銷售利潤，形成複雜的雙向對沖結構。"
+/>
+
+<TraderProfile
+  name="Seaboard Corporation"
+  nameZh="西伯德集團"
+  years="1918-"
+  nickname="豬肉出口與加勒比海版圖"
+  story="西伯德集團是美國最大的豬肉出口商之一，其農業業務橫跨豬肉生產、加工和海運出口，同時在多個加勒比海、非洲、中美洲國家擁有農業加工業務。西伯德在 HE 期貨市場以積極的出口導向套保著稱——當美元強勢、出口競爭力下降時，西伯德會調整其在 HE 遠月合約的空頭套保比例，反映出口訂單的不確定性。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="1998 年豬價崩潰：農民的絕望"
+  year="1998"
+  description="1998 年是美國豬農歷史上最黑暗的一年。由於 1990 年代末期生豬產能大幅擴張，加上亞洲金融危機打壓了出口需求，美國活豬現貨價格從每百磅 $50 暴跌至不足 $10——遠低於生產成本。農業部不得不以 5 億美元購買豬肉分發給食物銀行，以人道方式緩解農民困境。這次崩潰加速了美國養豬業的整合，大量小型家庭農場被迫退出，大型企業農場的市場份額快速上升。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="非洲豬瘟（ASF）：無疫苗的致命威脅"
+  year="2018 至今"
+  description="非洲豬瘟病毒（ASFV）對豬的致死率接近 100%，且目前尚無經商業驗證的有效疫苗，只能依賴撲殺感染豬群和嚴格生物安全措施來控制。ASF 不感染人類，但其在全球豬群中的傳播造成了巨大的農業損失。中國 2018-2020 年的 ASF 疫情是農業史上最大規模的動物疾病事件，直接重組了全球豬肉貿易格局。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="中國豬肉政策：國家戰略性蛋白質"
+  year="2000 至今"
+  description="豬肉在中國不只是食物，更是政治——中央政府將豬肉價格穩定列為民生優先事項，設有「豬肉儲備」制度（類似石油戰略儲備），在豬肉短缺時拋儲平抑物價，在供應過剩時收儲支撐農民收入。這個政策體系讓中國的豬業週期具有特殊的政策扭曲效應，也使得分析中國豬肉進出口的交易員必須同時追蹤農業政策信號。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="豬糞問題與環保爭議"
+  year="1990 至今"
+  description="大規模集中養豬產生的廢水和氣體污染是美國農業環保的重要議題，尤其在北卡羅來納州等養豬密集地區。史密斯菲爾德食品在北卡的豬場污染訴訟曠日持久，2018 年陪審團裁定該公司需向周邊居民賠償。環保壓力推動了豬舍設計和廢物處理技術的升級，也增加了大型豬場的合規成本，間接影響 HE 期貨的長期供應結構。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="植物豬肉（Plant-Based Pork）的挑戰"
+  year="2019 至今"
+  description="隨著 Beyond Meat、Impossible Foods 等植物性肉品在 2019 年的市場爆紅，豬肉的長期需求前景引發了市場討論。雖然植物豬肉在中國和西方市場的滲透率目前仍低，但其背後的資本投入和消費趨勢，使得農業期貨分析師開始在長期供需模型中納入「替代蛋白質」因素。這個議題讓 HE 期貨從純粹的農業商品，轉型為需要考量食品科技競爭的複雜標的。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="豬肉在中國文化中的特殊地位"
+  year="古至今"
+  description="漢字「家」（家庭）由「宀」（屋頂）加「豕」（豬）組成，象徵有豬才有家。豬在中國農業文明中是財富、豐收的象徵，也是最重要的節慶食物。這個文化背景使得豬肉在中國的消費行為高度剛性——即使在非洲豬瘟導致豬肉價格翻倍的 2019-2020 年，中國消費者的豬肉消費降幅遠低於簡單經濟模型的預測。文化偏好，是農業期貨分析中最難量化但最真實的需求因素。"
+/>
+
+</div>
+
+</SectionCard>

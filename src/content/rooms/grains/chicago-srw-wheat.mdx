@@ -1,0 +1,167 @@
+---
+name: "芝加哥軟紅冬小麥"
+nameEn: "Chicago SRW Wheat"
+slug: "chicago-srw-wheat"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZW"
+status: "active"
+icon: "🌾"
+accentColor: "#c8a45a"
+roomNumber: 5
+tagline: "小麥是文明的基石，也是最古老的期貨合約標的——從烏克蘭的黑土地到芝加哥的交易廳，俄烏戰爭讓這條供應鏈變成了地緣政治的戰場"
+taglineEn: "Wheat built civilization and pioneered futures markets — then the Russia-Ukraine war turned the supply chain into a geopolitical battlefield"
+originRegion: "新月沃土（今伊拉克/敘利亞）"
+firstFuturesYear: 1877
+firstFuturesExchange: "CBOT"
+greatestEventName: "2022 年俄烏戰爭——黑海糧食危機與小麥衝至 $13/蒲式耳"
+greatestEventYear: 2022
+description: "芝加哥小麥展室：從人類最早的農業革命到 CBOT ZW 合約，探索「文明的基石」如何在 2022 年成為俄烏戰爭最重要的地緣政治武器之一。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+小麥是人類文明最重要的基石之一。大約 10,000 年前，在今日伊拉克和敘利亞一帶的「新月沃土」(Fertile Crescent)，人類開始馴化野生一粒小麥 (Einkorn) 和二粒小麥 (Emmer)，這標誌著人類農業革命的開端。小麥的馴化讓人類從游牧採集轉變為定居農耕，是城邦、王國和文明得以發展的物質基礎。
+
+古埃及人用小麥釀造啤酒和烤製麵包，稱之為「文明的基本食物」。《聖經》中的「日用的飲食」(Daily Bread) 特指小麥麵包。羅馬帝國的「麵包與馬戲」(Bread and Circuses) 政策中，「麵包」就是小麥製品——羅馬皇帝用廉價小麥麵包維繫羅馬平民的政治忠誠。這個政治邏輯，至今在許多中東和北非政府的麵粉補貼政策中依然可見。
+
+CBOT 的芝加哥軟紅冬小麥 (Soft Red Winter Wheat, SRW) 是一種主要生長在美國中西部東部（伊利諾伊、印第安納、密蘇里、俄亥俄州等地）的小麥品種，適合製作餅乾、糕點和部分麵包。相比之下，硬紅冬小麥 (Hard Red Winter, HRW，主要在堪薩斯城交易) 和硬紅春麥 (Hard Red Spring，主要在明尼阿波利斯交易) 蛋白質含量更高，更適合製作麵包麵粉。
+
+<Timeline events={[
+  { year: "約 10000 BCE", text: "新月沃土地區人類開始馴化野生小麥，農業革命開始" },
+  { year: "約 6000 BCE", text: "小麥種植傳播至歐洲、南亞、埃及" },
+  { year: "1848", text: "芝加哥期貨交易所 (CBOT) 成立，小麥是最重要的交易品種之一" },
+  { year: "1877", text: "CBOT 小麥期貨合約標準化" },
+  { year: "2007-2008", text: "全球糧食危機，CBOT 小麥衝至 $13/蒲式耳，多國爆發食品騷亂" },
+  { year: "2022", text: "俄烏戰爭爆發，烏克蘭和俄羅斯合計佔全球小麥出口約 30%，供應鏈中斷" },
+  { year: "2023", text: "俄羅斯退出黑海糧食協議，全球小麥市場持續波動" },
+]} />
+
+今日，全球小麥年產量約 7.7 億公噸，中國、印度、俄羅斯、美國是最大的生產國。俄羅斯是全球最大的小麥出口國（佔全球出口約 20%），烏克蘭是第五大出口國（約 10%）——兩國加起來控制了全球小麥出口的 30%，這正是 2022 年戰爭引發全球糧食安全危機的根本原因。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1877}
+  contractSize="5,000 蒲式耳 (約 136 公噸)"
+  deliveryPoint="芝加哥或托雷多 (Toledo) 認可倉庫"
+  tickerSymbol="ZW"
+/>
+
+CBOT 小麥期貨是全球歷史最悠久的農業期貨之一，1877 年標準化，此後歷經多次合約升級，但基本框架延續至今。ZW 合約規格 5,000 蒲式耳，以美分/蒲式耳報價，交割月份為 3、5、7、9、12 月。
+
+值得注意的是，美國小麥期貨市場有三個重要的地區合約：CBOT 的 ZW（軟紅冬麥）、CME Kansas City 的 KE（硬紅冬麥，下一展室）和 MGE Minneapolis Grain Exchange 的 MWE（硬紅春麥）。三個合約的價差反映了不同小麥品種的品質溢價，其中春麥蛋白質最高，通常售價最貴。
+
+CBOT 是全球小麥期貨流動性最高的交易所，但俄羅斯、法國、澳洲等主要出口國的小麥現貨通常以 CBOT 為基準加減「基差」(Basis) 定價。每年的全球小麥期末庫存數字（由 USDA WASDE 報告每月更新），是影響 ZW 走勢最重要的基本面數據。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：俄烏戰爭與黑海糧食危機
+
+2022 年 2 月 24 日，俄羅斯入侵烏克蘭。CBOT 小麥期貨在數日內暴漲超過 50%，從約 $8.50/蒲式耳飆升至 **$12.94/蒲式耳**（3 月創下新高），僅次於 2008 年糧食危機的 $13.34 歷史峰值。
+
+烏克蘭被稱為「歐洲的麵包籃」(Breadbasket of Europe)，擁有占全球約三分之一的黑土地 (Chernozem)——世界上肥力最高的農業土壤。烏克蘭的第聶伯河沿岸地區是全球農業生產率最高的區域之一。戰爭不只阻斷了烏克蘭的小麥出口（黑海港口被封鎖），更直接破壞了農業生產：在戰區，農田被炸毀，農民無法播種，農業機械被徵用。
+
+<QuoteCard
+  quote="我們不只是在為烏克蘭打仗，我們也在為每一個依賴烏克蘭小麥和葵花油生活的非洲人和中東人打仗。"
+  author="烏克蘭總統澤倫斯基"
+  year="2022"
+/>
+
+戰爭對全球糧食安全的衝擊尤其集中在中東和非洲：埃及（全球最大的小麥進口國之一，60% 依賴俄烏供應）、黎巴嫩（90% 小麥進口依賴俄烏）、葉門、利比亞等國面臨嚴峻糧食危機。聯合國世界糧食計劃署警告，俄烏戰爭可能讓全球飢餓人口增加 4,700 萬。
+
+2022 年 7 月，在聯合國和土耳其斡旋下，俄烏雙方簽署「黑海糧食協議」(Black Sea Grain Initiative)，允許烏克蘭糧食從奧德薩等港口出口。這個協議在 2022-2023 年間讓逾 3,000 萬公噸的烏克蘭糧食得以出口，小麥期貨從峰值回落至 $8-9/蒲式耳。
+
+2023 年 7 月，俄羅斯宣布退出黑海糧食協議，市場再度緊張，小麥短暫反彈，但由於俄羅斯自身出口放量，整體糧食供需比 2022 年初更為緊繃的局面已緩解。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Benjamin Hutchinson"
+  nameZh="班傑明·哈欽森"
+  years="1829-1899"
+  nickname="Old Hutch（老哈奇）"
+  story="19 世紀 CBOT 最著名的投機者之一，以小麥和玉米的巨型多頭或空頭押注聞名。1888 年，他試圖壟斷 (Corner) CBOT 的小麥市場，大量買入並要求實物交割，試圖控制倉庫中所有可用的小麥，逼迫空頭以高價回購。這次逼空嘗試讓他短暫獲益，但最終未能完全成功。他是 19 世紀「糧食大投機時代」最典型的形象，也是後來交易所強化持倉限制的歷史背景之一。"
+/>
+
+<TraderProfile
+  name="Olam International"
+  nameZh="奧蘭國際"
+  years="1989-"
+  nickname="非洲糧食貿易商"
+  story="新加坡上市的農業貿易商，在非洲和東南亞有廣泛的糧食採購和配送網絡。奧蘭是非洲最重要的小麥進口採購商之一，直接服務埃及、奈及利亞、莫三比克等非洲市場。2022 年俄烏危機期間，奧蘭承受了極大的供應鏈壓力——其在俄烏兩國的採購業務一夕之間陷入不確定，不得不緊急轉向澳洲、阿根廷和加拿大採購。"
+/>
+
+<TraderProfile
+  name="GASC (埃及糧食供應總局)"
+  nameZh="埃及糧食供應總局"
+  years="1957-"
+  nickname="全球最大的單一小麥買家"
+  story="埃及政府機構，全球最大的單一小麥採購機構，每年進口約 1,200-1,300 萬公噸小麥，佔埃及消費量的約 55%。GASC 的採購招標是全球小麥市場每月最受關注的交易事件之一——招標結果直接反映了當下全球小麥現貨的競爭格局（俄羅斯、烏克蘭、美國、法國、澳洲誰最有競爭力），也往往引發 CBOT ZW 的短期波動。埃及政府的小麥補貼是維持社會穩定的政治支柱，失去小麥補貼是 2011 年「阿拉伯之春」的背景因素之一。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="麵包的政治史"
+  year="約 3000 BCE 至今"
+  description="麵包不只是食物，更是政治工具。古羅馬的「麵包與馬戲」(Panem et Circenses) 政策讓皇帝用免費麵包換取平民的政治忠誠；法國大革命的爆發與麵包短缺直接相關；蘇聯的集體化農業導致烏克蘭大饑荒 (1932-33)，數百萬人餓死。小麥的政治意涵，讓它在農業商品中佔有超越純市場邏輯的特殊地位。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《憤怒的葡萄》The Grapes of Wrath"
+  year="1939"
+  description="約翰·史坦貝克 (John Steinbeck) 的普立茲獎小說，描述 1930 年代「塵碗」(Dust Bowl) 時期，俄克拉荷馬州農民因過度耕作和旱災導致土地沙漠化，被迫遷徙加州的故事。塵碗是 20 世紀最嚴重的農業生態災難，波及小麥帶 (Wheat Belt) 中心地帶，讓數十萬農民流離失所。這段歷史讓美國農業政策永久引入了土壤保育和輪作要求。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="烏克蘭的黑土地 Chernozem"
+  year="數億年前形成"
+  description="黑土 (Chernozem) 是世界上最肥沃的土壤類型，形成需要數千年，烏克蘭擁有全球約三分之一的黑土面積。黑土富含腐殖質，農業生產率極高，無需大量施肥即可維持高產。這個地理資源是烏克蘭成為「歐洲麵包籃」的根本原因，也是為什麼每一個征服烏克蘭的帝國都試圖控制其農業產出——從沙皇俄國到蘇聯，再到今日的俄羅斯。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="埃及的麵包補貼政治"
+  year="1952 至今"
+  description="埃及政府每年補貼小麥麵包，讓廉價的圓麵餅 (Baladi Bread) 幾乎每個埃及人都負擔得起。麵包補貼佔埃及政府支出的相當比例，一旦減少，立刻引發社會動亂——1977 年薩達特政府嘗試削減補貼，在三天內引爆全國騷亂，最後被迫恢復。2022 年俄烏戰爭讓埃及小麥進口成本急增，政府面臨是否能繼續維持補貼的財政壓力，折射出全球糧食安全與政治穩定的深層連結。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="麵包小麥與麵條小麥的基因革命"
+  year="1960s"
+  description="墨西哥農業科學家諾曼·布勞格 (Norman Borlaug) 在 1960 年代培育出高產矮桿小麥品種，成功將小麥產量提高了數倍，使發展中國家避免了大規模飢荒——這個成就被稱為「綠色革命」(Green Revolution)。布勞格因此獲得 1970 年諾貝爾和平獎，被稱為「拯救了十億人性命的人」。綠色革命讓全球小麥生產從 1950 年的約 2 億公噸增長到今日的約 7.7 億公噸，從根本上改變了全球糧食安全狀況。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="CBOT 最早的糧食投機傳說"
+  year="1860s"
+  description="芝加哥在 1848 年成立 CBOT 後，很快成為 19 世紀最激烈的投機賭場。農民、商人、投機者在 CBOT 的交易大廳（俗稱「坑」，The Pit）中用手勢和喊叫進行交易，押注小麥、玉米、大豆的未來價格。南北戰爭期間，軍事消息在電報傳到芝加哥前，知情者可以在 CBOT 先行押注——期貨交易的信息優勢，在這個年代已被視為可以大量套取的稀缺資源。"
+/>
+
+</div>
+
+</SectionCard>

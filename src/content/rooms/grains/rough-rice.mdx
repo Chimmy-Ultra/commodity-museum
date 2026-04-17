@@ -1,0 +1,171 @@
+---
+name: "粗米"
+nameEn: "Rough Rice"
+slug: "rough-rice"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZR"
+status: "active"
+icon: "🍚"
+accentColor: "#c8b560"
+roomNumber: 8
+tagline: "養活全球一半人口的主食，卻在美國期貨交易所孤獨地交易著——亞洲的米市在東京、大阪，不在芝加哥"
+taglineEn: "The staple that feeds half of humanity, traded in near-solitude on a US exchange — Asia's rice markets are in Tokyo and Osaka, not Chicago"
+originRegion: "中國長江流域 / 東南亞"
+firstFuturesYear: 1986
+firstFuturesExchange: "CBOT"
+greatestEventName: "2008 年全球糧食危機——米價三個月翻倍，泰國禁止出口"
+greatestEventYear: 2008
+description: "粗米展室：從中國長江流域的最早馴化到 CBOT ZR 合約，探索為什麼世界上最重要的主食之一在期貨市場上卻如此孤獨——以及 2008 年全球米價危機的成因與教訓。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+水稻是人類最重要的糧食作物之一，全球約有 35 億人以稻米為主食。水稻的馴化歷史比小麥更長，最新的基因研究顯示，水稻可能在 10,000 年前同時在中國長江流域和印度阿薩姆邦獨立馴化，其中中國的「粳稻」(Japonica) 和印度的「秈稻」(Indica) 是現代水稻兩大主要系統的祖先。
+
+中國長江下游的河姆渡文化遺址（約 7,000 年前）出土了大量炭化水稻，是目前發現最早的水稻栽培直接證據。從那時起，水稻農業沿著河流和海岸線向南亞、東南亞、東亞傳播，成為亞洲文明的根基。水稻不只是食物，更是制度——從日本江戶時代以石（稻米重量單位）衡量武士俸祿，到泰國的「稻米外交」，稻米在亞洲政治文化中的份量遠超過一種農作物。
+
+「粗米」(Rough Rice) 是收穫後僅去除外稃、尚未碾磨去糠的稻穀，是期貨合約的交割規格。稻米的加工鏈：粗米 → 糙米（去除外稃）→ 白米（碾去糠層）→ 精白米（拋光）。每個加工步驟都降低了重量（糙米比粗米輕約 20%，白米比糙米輕約 10-15%）但提高了食用便利性和市場價格。
+
+<Timeline events={[
+  { year: "約 10000 BCE", text: "中國長江流域和印度阿薩姆邦分別馴化水稻" },
+  { year: "約 5000 BCE", text: "水稻農業擴展至東南亞、日本、韓國" },
+  { year: "1100s", text: "日本江戶幕府建立以稻米為基礎的封建體系，武士薪資以「石」（稻米）計" },
+  { year: "1710", text: "大阪堂島米市場建立世界最早的標準化期貨合約體系（見歷史館）" },
+  { year: "1986", text: "CBOT 推出粗米期貨合約 (ZR)" },
+  { year: "2008", text: "全球糧食危機：米價三個月內翻倍，泰國和越南宣布限制出口，引發全球恐慌" },
+  { year: "2020", text: "COVID-19 疫情引發囤積行為，亞洲米價短暫上漲" },
+]} />
+
+值得注意的是，全球米市的主要定價中心**不在** CBOT，而在亞洲：日本大阪取引所 (OSE)、泰國現貨市場、曼谷米商報價是國際米貿易的主要參考。CBOT 的粗米合約 (ZR) 流動性偏低，主要服務美國南部（阿肯色、路易斯安那等州）的稻米生產者，而非全球米貿易的主要參與方。這讓 CBOT ZR 成為農業期貨市場中一個獨特的「地域性指標」：它反映的是美國長粒米市場的供需，而非亞洲主流的短粒和中粒米市場。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1986}
+  contractSize="2,000 百磅 (cwt, 約 90.7 公噸)"
+  deliveryPoint="美國南部認可倉庫"
+  tickerSymbol="ZR"
+/>
+
+CBOT 粗米期貨 (ZR) 於 1986 年推出，相比玉米（1877 年）和小麥（1877 年）晚了近 110 年。這反映了美國稻米產業的相對晚期發展（美國農業以溫帶穀物為主，稻米是次要作物）以及亞洲米市的自有定價體系。
+
+ZR 合約規格為 2,000 百磅 (cwt)，以美元/百磅報價，最小跳動 $0.005/百磅（$10/合約）。交割月份為 1、3、5、7、9、11 月。ZR 的日均成交量通常只有幾百手，是所有 CME 農業期貨中流動性最低的合約之一。
+
+對大多數國際稻米貿易商而言，CBOT ZR 合約的參考價值有限，他們更依賴泰國曼谷的現貨米價（Thai White Rice 100% Grade B）、越南胡志明市的出口報價，以及印度的 IR 64 米出口價格作為交易基準。這種多元化的現貨定價體系，而非單一期貨市場，是全球稻米貿易有別於其他農業商品的重要特徵。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2008 年全球米價危機：連鎖恐慌的教訓
+
+2008 年初，國際米價開始上漲，然後在短短三個月內翻倍——從 2008 年 1 月的約 $400/公噸，飆升至 4 月的約 $1,000/公噸，創下 20 年來最高價格。米價暴漲在全球多個國家引發了食品危機和社會動盪，菲律賓、海地、孟加拉、喀麥隆相繼爆發米荒抗議。
+
+這場危機的成因極其複雜：
+
+**第一層：基本面因素。** 2006-2007 年，澳洲大旱嚴重影響稻米產量；印度洪水也影響部分地區收成。全球稻米庫存在 2008 年初降至 20 年低點。
+
+**第二層：出口禁令的連鎖效應。** 2008 年 3 月，越南宣布禁止稻米出口，引發鄰近進口國恐慌性搶購。4 月，泰國宣布考慮出口限制（後來未實施完整禁令），印度限制非巴斯馬蒂米出口。出口國禁令帶動了「誰先搶到就先贏」的心理，讓進口商不計成本搶購。
+
+**第三層：投機放大。** 對沖基金和指數基金在 2007-2008 年大規模流入農產品市場，放大了供需緊張的價格信號。
+
+<QuoteCard
+  quote="米價暴漲不是因為沒有米，而是因為沒有人相信有米。恐慌本身是最危險的糧食政策。"
+  author="聯合國糧農組織 (FAO) 高級官員"
+  year="2008"
+/>
+
+6 月，全球協調介入：G8 承諾增加糧食援助，世界銀行和亞洲開發銀行提供緊急糧食融資，多個出口國解除或放鬆禁令，米價逐漸回落。到 2008 年底，米價跌回約 $500/公噸。
+
+這場危機的最重要教訓是：稻米市場的**高政治敏感性**（出口禁令的衝動）和**低市場流動性**（缺乏有效的期貨對沖市場）相結合，在供給衝擊時可以產生遠超基本面的價格放大效應。它推動了聯合國糧農組織建立「糧食農業市場信息系統」(AMIS)，改善全球農業供需信息的透明度。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Noble Group"
+  nameZh="來寶集團"
+  years="1987-"
+  nickname="亞洲大宗商品之王（已沒落）"
+  story="香港創立的大宗商品貿易集團，由理查·艾爾曼 (Richard Elman) 創立，在糧食、農產品、能源、金屬多領域均有業務，亞洲最大的農業貿易商之一。來寶集團在稻米、棕櫚油等亞洲農產品的採購和分發上有獨特優勢。然而 2015 年起，因其會計報表被做空機構 Iceberg Research 質疑，股價崩盤，最終在 2018 年債務重組中瓦解，是亞洲大宗商品貿易公司歷史上最戲劇性的衰落案例之一。"
+/>
+
+<TraderProfile
+  name="Thailand Rice Exporters Association"
+  nameZh="泰國稻米出口商協會"
+  years="1979-"
+  nickname="世界米倉定價者"
+  story="泰國是全球最重要的稻米出口國之一（與印度、越南競爭），曼谷的泰國稻米出口商協會每日公布的「泰國白米 100% B 等」出口報價，是全球最被廣泛參考的稻米現貨基準價格，比 CBOT ZR 更具代表性。這個協會的報價機制類似於一個非正式的稻米期貨定盤，反映了全球現貨市場在缺乏成熟期貨市場時，如何自行建立定價機制。"
+/>
+
+<TraderProfile
+  name="Olam Agri"
+  nameZh="奧蘭農業"
+  years="1989-"
+  nickname="非洲稻米供應鏈"
+  story="新加坡的農業貿易商，是非洲最大的大米進口和分發商之一，在尼日利亞、塞內加爾、加納、象牙海岸等西非國家有廣泛的稻米倉儲和零售網絡。非洲的稻米安全——因氣候、政治和貿易物流的脆弱性——讓奧蘭在這個角色中同時承擔了商業和糧食安全的雙重使命。2022 年米價波動期間，奧蘭是最積極向西非政府提供稻米進口解決方案的私人機構之一。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="文化"
+  title="日本稻米文化：神聖的白米"
+  year="約 2300 年前 至今"
+  description="水稻在日本不只是糧食，而是文化和精神的核心。日本天皇每年親自在皇居種植水稻，秋季舉行「新嘗祭」(Niinamesai)，祭祀神靈並品嘗新米。江戶時代，武士的俸祿以「石」（一石 = 一個人一年的米糧消耗量）計算，日本的政治權力直接以控制稻米為基礎。今日，日本人仍對進口大米設置高額關稅（778%），以保護國內稻米農業和飲食文化。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="泰國香米的全球征服"
+  year="1950 至今"
+  description="泰國茉莉花香米 (Thai Jasmine Rice / Hom Mali) 是全球最著名的優質稻米品種，以其天然花香和軟糯口感聞名。1970 年代以來，泰國香米在全球高端亞洲餐廳和超市中建立了獨特的品質溢價（比普通泰國白米貴 20-40%）。每年的泰國香米品質認證是農業商品「原產地名稱保護」(GI, Geographical Indication) 在稻米市場最重要的應用案例，也是農業商品如何建立品牌附加值的稀有成功故事。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="菲律賓的稻米政治"
+  year="1970 至今"
+  description="菲律賓是一個讓大米政策直接決定政治命運的國家——糧食短缺往往引發街頭抗議，而廉價進口大米可能傷害農民選票。歷屆菲律賓總統都在「進口大米讓消費者便宜」和「保護本地農民」之間艱難平衡。國際米研究所 (IRRI) 總部設在馬尼拉附近的洛斯巴諾斯，是全球最重要的稻米基因研究機構，1960 年代培育的「奇蹟稻」(IR8) 是綠色革命在稻米領域最重要的成就，讓亞洲稻米產量提升了一倍。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="稻米的碳足跡困境"
+  year="現代"
+  description="稻米生產面臨一個環保困境：水稻種植在灌水田中厭氧分解有機物，產生大量甲烷 (CH₄)——全球農業甲烷排放中，稻米生產佔約 12%，是重要的溫室氣體來源。科學家和農業部門正在研究間歇性灌溉 (Alternate Wetting and Drying, AWD) 等技術，可在不顯著降低產量的前提下減少甲烷排放約 30-50%。稻米的碳排放問題，是農業期貨的環境成本在主糧市場中最具挑戰性的議題之一。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《宴饗》Feast — 稻米在文學中的意象"
+  year="古代至今"
+  description="稻米在東亞文學和詩歌中是豐饒、家庭、生命力和勞動的象徵。日本俳句中的「新米」象徵秋天的感恩；中國農諺「食不厭精」(《論語》) 指烹調精米的儀式；印度文學中，稻米種植和收穫是農業文明循環的隱喻。稻米在文化上的豐富象徵意涵，是它作為農業商品在期貨市場上的冰冷數字背後最溫暖的人文底色。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="袁隆平與雜交水稻"
+  year="1964"
+  description="中國農業科學家袁隆平（1930-2021）被稱為「雜交水稻之父」，他在 1964 年發現了天然雄性不育水稻，並在此後十年間成功培育了第一代雜交水稻品種，比傳統品種增產 20-30%。袁隆平的雜交水稻技術讓中國在 1970-80 年代解決了基本糧食問題，並通過農業援助項目向非洲、亞洲其他國家推廣。中國政府授予他「共和國勳章」，普通民眾稱他為「解決了十億人吃飯問題的人」。"
+/>
+
+</div>
+
+</SectionCard>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  year: number;
+}
+
+const { year } = Astro.props;
+---
+
+<span class="inline-flex items-center gap-1.5 rounded-md border border-museum-text-secondary/30 bg-museum-plaque px-3 py-1 text-sm">
+  <svg class="h-3.5 w-3.5 text-museum-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+  <span class="text-museum-text-secondary">已下市 {year}</span>
+</span>

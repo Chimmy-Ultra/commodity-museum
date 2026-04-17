@@ -1,0 +1,176 @@
+---
+name: "白銀"
+nameEn: "Silver"
+slug: "silver"
+wing: "metals"
+exchange: "CME/COMEX"
+tickerSymbol: "SI"
+status: "active"
+icon: "🥈"
+accentColor: "#a8a8b3"
+roomNumber: 2
+tagline: "Hunt 兄弟用 100 億美元試圖壟斷全球白銀，最終在「白銀星期四」引爆史上最大逼空崩潰"
+taglineEn: "The Hunt brothers spent $10 billion trying to corner the world's silver — then came Silver Thursday"
+originRegion: "安納托利亞 / 愛琴海"
+firstFuturesYear: 1963
+firstFuturesExchange: "COMEX"
+greatestEventName: "1980 年白銀逼空崩盤——Hunt 兄弟的滑鐵盧"
+greatestEventYear: 1980
+description: "白銀展室：從古希臘勞里昂礦山到 COMEX SI 合約，探索這個既是貨幣又是工業金屬的雙面商品，以及史上最瘋狂的逼空事件。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+白銀是人類最早開採的金屬之一，其歷史幾乎與黃金一樣悠久。考古學家在安納托利亞（今土耳其）發現了西元前 3000 年前的銀製品，而古希臘的勞里昂 (Laurion) 礦山從西元前 7 世紀開始大規模開採，支撐了雅典帝國的海軍擴張——那支擊敗波斯艦隊的雅典船隊，其資金正是來自勞里昂的銀礦。
+
+白銀的化學符號 Ag 來自拉丁文 *argentum*，意為「閃亮」。它的導電性和導熱性是所有金屬中最高的，這讓它在前現代世界主要充當貨幣，到了工業時代則成為電子、太陽能、醫療等領域不可或缺的工業原料。
+
+白銀真正的「新大陸時代」從 1545 年開始。西班牙征服者在今日玻利維亞的波托西 (Potosí) 發現了人類史上最大的銀礦。在接下來的兩個世紀，波托西出產的白銀占了全球供應量的 50%，透過貿易線路流向明朝中國，成為東西方貿易最重要的媒介。歷史學家稱這段時期為「白銀全球化」——它是人類第一次真正的全球貿易網絡的核心。
+
+美國方面，1859 年在內華達州發現的康斯托克礦脈 (Comstock Lode) 引發了美國的淘銀熱。這個礦脈最終出產了超過 3 億美元的白銀（以 19 世紀幣值計），催生了內華達州建州，並資助了美國內戰後的工業化浪潮。
+
+<Timeline events={[
+  { year: "約 3000 BCE", text: "安納托利亞出現最早的白銀冶煉記錄" },
+  { year: "約 600 BCE", text: "雅典勞里昂礦山大規模開採，支撐雅典海軍擴張" },
+  { year: "1545", text: "西班牙在波托西（玻利維亞）發現史上最大銀礦，白銀貿易全球化開始" },
+  { year: "1792", text: "美國《鑄幣法》確立銀本位，1 美元 = 24.056 克白銀" },
+  { year: "1859", text: "美國內華達州康斯托克礦脈發現，引發美國淘銀熱" },
+  { year: "1873", text: "美國《1873 年鑄幣法》（綽號「1873 年的罪行」）廢除銀本位，引發農民與礦工的政治反彈" },
+  { year: "1963", text: "COMEX 推出白銀期貨合約（SI）" },
+  { year: "1980", text: "Hunt 兄弟逼空崩潰，白銀從 $50 暴跌，「白銀星期四」重創市場" },
+]} />
+
+白銀始終遊走在兩個身份之間：作為貨幣，它被各國政府長期固定價格；作為工業原料，它被電子業、太陽能板、醫療器材大量消耗。這種雙重身份使得白銀的定價機制比黃金更為複雜——它的走勢既跟隨黃金（避險情緒），又反映工業景氣循環（銅的影子）。交易員有一句話：「白銀是窮人的黃金，也是有良心的工業品。」
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="COMEX (Commodity Exchange Inc.)"
+  year={1963}
+  contractSize="5,000 金衡盎司 (約 155.5 公斤)"
+  deliveryPoint="COMEX 認可金庫 (紐約/特拉華州/加州)"
+  tickerSymbol="SI"
+/>
+
+COMEX 白銀期貨 (SI) 於 1963 年推出，比黃金期貨早了整整 11 年。原因在於：白銀當時尚未被禁止私人持有（美國的黃金持有禁令直到 1974 年才解除），期貨市場可以更早發展。
+
+標準 SI 合約為 5,000 金衡盎司（約 155.5 公斤），以美元/盎司報價，最小跳動為 $0.005/盎司（$25/合約）。交割品質要求純度不低於 0.999。CME 後來也推出了 1,000 盎司的小型白銀合約（SIL）以及 1,000 盎司的微型合約（MSI）。
+
+白銀期貨市場與黃金期貨有一個關鍵差異：白銀市場流動性較低、合約數量較少，這使得它更容易受到大型操盤手的影響——1980 年的 Hunt 兄弟事件就是最直接的證明。此後，CFTC（美國商品期貨交易委員會）大幅收緊了單一帳戶的持倉上限規定。
+
+全球白銀定價的另一個重要基準是倫敦銀市 (London Silver Market Fixing)，其歷史可追溯至 1897 年，由數家大型銀行每日定盤。2014 年倫敦金銀市場協會 (LBMA) 改革後，LBMA 白銀價格採用電子拍賣機制，繼續作為實物白銀的全球基準價。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1980 年：Hunt 兄弟的白銀帝國與「白銀星期四」
+
+這是期貨交易史上最著名的逼空案例，一場差點摧毀美國金融體系的賭局。
+
+納爾遜．班克．亨特 (Nelson Bunker Hunt) 與威廉．赫伯特．亨特 (William Herbert Hunt) 兄弟是德克薩斯州石油大亨哈羅德．亨特的兒子，身家數十億。1973 年，納爾遜注意到：鑒於通貨膨脹和美元貶值，持有實物白銀是絕佳的保值手段。他開始大量買入白銀。
+
+到了 1979 年，Hunt 兄弟聯合沙烏地阿拉伯王子和其他投資人，建立了驚人的白銀倉位。他們不只買期貨，還要求實體交割——COMEX 的銀條一車車運走，全球銀市庫存急劇萎縮。他們在高峰期估計持有全球 1/3 的白銀供應，約 2 億盎司。
+
+<QuoteCard
+  quote="我們不是在操縱市場。只是，所有銀礦公司不也是在囤積白銀嗎？"
+  author="Nelson Bunker Hunt"
+  year="1980"
+/>
+
+1980 年 1 月 18 日，白銀觸及歷史峰值 **$50.35/盎司**，相較於 1979 年初的 $6，漲幅超過 700%。全美國的銀器、餐具被熔掉套現，牙醫診所的銀汞合金也被盜竊。
+
+然後，CFTC 和 COMEX 出手了。1980 年 1 月 21 日，COMEX 宣布「緊急規則 7」：禁止新增白銀多頭倉位，只允許平倉。規則立竿見影——沒有新買家，多頭只能賣出。銀價開始崩潰。
+
+**1980 年 3 月 27 日——「白銀星期四」(Silver Thursday)**：Hunt 兄弟的保證金追繳通知金額達 1.35 億美元，他們無力繳交。白銀當日暴跌 50%，至 $10.8/盎司。美國財政部緊急協調，聯合 13 家銀行提供 11 億美元緊急貸款，避免了系統性金融危機。Hunt 兄弟最終申請破產，並向 CFTC 支付了 3,500 萬美元的罰款和解金。
+
+這場危機促使 CFTC 永久修訂了大宗商品持倉限制規定，同時讓「逼空」(Short Squeeze) 這個名詞深入每個交易員的心底。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Nelson Bunker Hunt"
+  nameZh="納爾遜．班克．亨特"
+  years="1926-2014"
+  nickname="白銀之王（自封）"
+  story="德克薩斯石油大亨之子，曾是全球最富有的人之一。在 1970 年代的通膨環境中，他相信白銀是對抗惡性通膨的終極避險資產。他與弟弟威廉聯手，加上沙烏地阿拉伯盟友，試圖買入並控制全球白銀供應。計畫在 1980 年 1 月見頂，隨後因交易所改規則、被迫清倉而崩潰。他的家族財富從估計的 50 億美元跌至幾乎歸零，1988 年宣告破產。他晚年在接受訪問時說：「10 億美元現在算不了什麼。」——這句話折射出他輸掉的財富規模。"
+/>
+
+<TraderProfile
+  name="Eric Sprott"
+  nameZh="艾瑞克．斯普羅特"
+  years="1944-"
+  nickname="白銀先知"
+  story="加拿大對沖基金 Sprott Asset Management 創辦人，21 世紀最著名的白銀多頭之一。他長期認為白銀被嚴重低估，實物白銀需求遠超供給。2010-2011 年，他推出 Sprott Physical Silver Trust，向市場吸收大量實物白銀，被認為是推動 2011 年銀價衝至 $49.50（逼近 1980 年紀錄）的重要力量之一。他也是貴金屬礦業股的重要投資人，旗下基金廣泛持有全球銀礦公司股票。"
+/>
+
+<TraderProfile
+  name="David Morgan"
+  nameZh="大衛．摩根"
+  years="1950-"
+  nickname="白銀傳教士"
+  story="獨立貴金屬分析師，The Morgan Report 創辦人，被稱為白銀界的「傳教士」。他從 1970 年代開始研究白銀，出版了《白銀的機會》(Get the Skinny on Silver Investing) 等書籍，長期向散戶投資者推廣實物白銀作為儲蓄手段。他最著名的論點是「白銀的金銀比」(Gold-Silver Ratio)——即購買一盎司黃金需要多少盎司白銀。當該比率超過 80:1 時，他認為白銀相對被低估。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="文學"
+  title="《綠野仙蹤》The Wonderful Wizard of Oz"
+  year="1900"
+  description="L. Frank Baum 的原著小說中，桃樂絲穿的是銀色鞋子，而非電影版的紅寶石鞋。學者長期爭論此書是一則關於 19 世紀「銀本位 vs. 金本位」政治辯論的寓言：黃磚路 (Yellow Brick Road) 代表金本位，銀鞋代表白銀貨幣，綠色眼鏡城 (Emerald City) 代表美元幻象。無論作者原意如何，這個解讀已成為貨幣史討論的經典注腳。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="孤獨騎士的銀彈 The Lone Ranger's Silver Bullet"
+  year="1933"
+  description="美國西部傳奇英雄孤獨騎士 (The Lone Ranger) 使用銀色子彈，騎著白馬 Silver。銀彈在民間傳說中象徵純潔與正義，用以對抗狼人等惡魔。孤獨騎士的設定強化了白銀在美國文化中「純淨、高貴、昂貴」的象徵地位。「找到銀彈解法」(silver bullet solution) 這個商業慣用語至今仍在使用。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="LBMA 倫敦白銀定盤 Silver Fix"
+  year="1897"
+  description="倫敦銀市定價機制從 1897 年開始，最初由三家銀行在電話中協商每日銀價。這個存在超過一個世紀的定價儀式在 2014 年因 Deutsche Bank 等銀行涉嫌操縱而引發醜聞，最終被改革為電子拍賣機制。歷史上每日的定盤過程反映了實物白銀市場的結構，與 COMEX 期貨定價互相影響。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《華爾街之狼》The Wolf of Wall Street"
+  year="2013"
+  description="馬丁．史柯西斯執導、李奧納多．狄卡皮歐主演，雖然主角喬丹．貝爾福特的詐欺主要針對小型股，但電影還原了 1980-90 年代美國散戶投資熱的瘋狂氛圍——那個時代的散戶投資狂潮與貴金屬投機熱潮同步。Hunt 兄弟的白銀故事正是那個「什麼都能賭」年代的極端表達。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="太陽能板銀漿 Solar Panel Silver Paste"
+  year="1954 至今"
+  description="現代太陽能光伏電池需要用白銀漿料 (Silver Paste) 作為導電層，每片太陽能板約含 20 克白銀。隨著全球能源轉型加速，太陽能裝機量激增，工業用銀需求大幅成長。這使得白銀同時受到金融投機需求（避險）和實際工業需求（綠能）的雙重驅動，形成獨特的供需結構。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《白銀之城》The Silver City — 波托西傳說"
+  year="1545 至今"
+  description="玻利維亞波托西 (Potosí) 在鼎盛時期（17 世紀）是南美最大的城市，人口超過 20 萬，比當時的倫敦還大。整座城市建立在一座銀山 (Cerro Rico) 之上。殖民時期，數十萬原住民和非洲奴隸在此礦山勞作致死，估計達 800 萬人。今日波托西的礦山仍在開採，但礦工仍在極原始的條件下工作。這座城市是人類為白銀付出的終極代價的見證。"
+/>
+
+</div>
+
+</SectionCard>

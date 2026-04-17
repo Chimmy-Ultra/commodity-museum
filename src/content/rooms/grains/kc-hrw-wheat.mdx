@@ -1,0 +1,162 @@
+---
+name: "堪薩斯城硬紅冬小麥"
+nameEn: "KC HRW Wheat"
+slug: "kc-hrw-wheat"
+wing: "grains"
+exchange: "CME/KCBT"
+tickerSymbol: "KE"
+status: "active"
+icon: "🌾"
+accentColor: "#b8860b"
+roomNumber: 6
+tagline: "美國大平原的靈魂——從德克薩斯州到堪薩斯州的黃金麥田，為全球最好的麵包提供蛋白質"
+taglineEn: "The soul of the American Great Plains — from Texas to Kansas wheat fields, providing protein for the world's best bread"
+originRegion: "美國大平原"
+firstFuturesYear: 1876
+firstFuturesExchange: "KCBT"
+greatestEventName: "2022 年俄烏戰爭小麥危機，KE 與 ZW 的品質溢價擴大"
+greatestEventYear: 2022
+description: "堪薩斯城小麥展室：探索硬紅冬小麥的高蛋白特性如何讓它成為全球最佳麵包粉原料，以及堪薩斯城期貨交易所的百年歷史。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+硬紅冬小麥 (Hard Red Winter Wheat, HRW) 是美國最重要的小麥出口品種，主要種植在「大平原小麥帶」(Great Plains Wheat Belt)——從德克薩斯州北部、延伸至俄克拉荷馬、堪薩斯、內布拉斯加和科羅拉多州。堪薩斯州是美國最重要的冬小麥產地，每逢夏季小麥豐收，當地農民稱之為「黃金地毯」鋪滿大地。
+
+「硬紅冬麥」的獨特之處在於其蛋白質含量（通常 11-13%，高於 SRW 的 8-10%），賦予了它更強的麵筋結構，適合製作需要彈性和嚼勁的麵包——從法式長棍 (Baguette) 到美式三明治麵包，高蛋白硬紅冬麥是最理想的原料。這讓 HRW 在全球出口市場享有比 SRW 更高的品質溢價。
+
+堪薩斯城期貨交易所 (Kansas City Board of Trade, KCBT) 成立於 1876 年，比 CBOT 晚 28 年，但因其直接服務大平原小麥農業社區，快速建立起在硬紅冬麥定價上的主導地位。KCBT 在 2012 年被 CME Group 收購，HRW 合約代碼改為 KE，但 KCBT 在堪薩斯城的物理存在和「大平原小麥精神」的象徵意義依然保留。
+
+<Timeline events={[
+  { year: "1860s", text: "門諾教徒移民從俄羅斯帶入土耳其紅小麥（Turkey Red）品種至堪薩斯州，成為美國硬紅冬麥的祖先" },
+  { year: "1876", text: "堪薩斯城期貨交易所 (KCBT) 成立，硬紅冬麥期貨是核心合約" },
+  { year: "1930s", text: "塵碗 (Dust Bowl) 摧毀大平原農業，美國農業政策向土壤保育轉型" },
+  { year: "1970s", text: "綠色革命的高產矮桿品種引入，硬紅冬麥產量大幅提升" },
+  { year: "2012", text: "CME Group 收購 KCBT，HRW 期貨代碼改為 KE，併入 CME Globex 電子交易平台" },
+  { year: "2022", text: "俄烏戰爭引發全球小麥短缺，HRW 高蛋白品質溢價擴大" },
+]} />
+
+KE 與 ZW 的「跨品種價差」是農業期貨交易員常用的策略之一。當全球麵包粉需求強勁（需要高蛋白小麥），KE 通常溢價；當飼料小麥需求更強（蛋白質品質無關緊要），ZW 的相對優勢可能縮小 KE 的溢價。監測兩者的跨品種價差，是判斷全球小麥需求結構的重要信號。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="KCBT (堪薩斯城期貨交易所，現 CME Group)"
+  year={1876}
+  contractSize="5,000 蒲式耳 (約 136 公噸)"
+  deliveryPoint="堪薩斯城認可倉庫"
+  tickerSymbol="KE"
+/>
+
+KCBT HRW 小麥期貨於 1876 年推出，合約規格與 CBOT ZW 相同（5,000 蒲式耳），但代表的是不同品質標準的小麥。交割規格要求蛋白質含量最低 10%（頂級等級），這讓 KE 合約成為全球高蛋白麵包粉小麥的定價基準。
+
+KE 的歷史地位特殊之處在於：KCBT 是全球最早、最重要的區域性農業期貨交易所之一，其存在長達 136 年，是大平原農業社區與期貨市場共存的活歷史。2012 年被 CME 收購，標誌著美國區域性農業期貨交易所整合為全國性平台的時代終結。
+
+KE 與 ZW 的基差（KE 溢價或折價）是小麥品種需求的重要指標，通常 KE 溢價 ZW 約 20-60 美分/蒲式耳，反映高蛋白品質的溢價。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：品質溢價在危機中的角色
+
+2022 年俄烏戰爭引發的全球小麥危機，讓 KE 和 ZW 的相對走勢出現了有趣的分化。俄羅斯和烏克蘭出口的小麥以低蛋白品種為主，進口商在替代採購時需要向澳洲、加拿大、美國尋找高蛋白小麥，這讓 KE 的品質溢價在 2022 年上半年明顯擴大。
+
+<QuoteCard
+  quote="堪薩斯農民種的小麥，最終會出現在埃及的麵包店、巴基斯坦的餅店和印尼的麵條工廠。農業是最全球化的行業。"
+  author="Kansas Wheat 組織農業推廣官員"
+  year="2022"
+/>
+
+美國大平原的乾旱也是 2022-2023 年度的重要事件。俄克拉荷馬和堪薩斯州遭遇嚴重冬季乾旱，硬紅冬小麥的冬季存活率低於正常水平，春季作物條件評估持續低迷。美國農業部多次下調 HRW 產量預測，讓 KE 期貨在 2022 年春季領跑所有小麥合約。
+
+這場危機展示了農業期貨市場最重要的功能之一：在供給衝擊中，通過明確的品質溢價信號，指引全球採購商尋找最適合替代品——哪個地區、哪種品質、哪個價位，期貨市場的價差提供了最快速的信息彙集。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Gavilon (現為丸紅旗下)"
+  nameZh="嘉沃農業"
+  years="2008-"
+  nickname="大平原糧食集散商"
+  story="嘉沃是美國大平原最大的糧食集散公司之一，在堪薩斯、俄克拉荷馬、德克薩斯等州擁有廣泛的糧食收購站和倉儲設施，直接向農民收購硬紅冬小麥。2012 年被日本丸紅集團以 26 億美元收購，成為日本企業進入美國農業供應鏈的重要戰略資產。嘉沃/丸紅在 KE 期貨市場的套保活動，代表了日本糧食安全戰略在衍生品市場上的最前沿操作。"
+/>
+
+<TraderProfile
+  name="Seaboard Corporation"
+  nameZh="西伯德集團"
+  years="1918-"
+  nickname="大平原麵粉帝國"
+  story="美國中部的農業加工集團，旗下的磨粉業務使用大量堪薩斯城硬紅冬小麥。Seaboard 同時在海地、牙買加等加勒比海國家擁有麵粉廠，將美國 HRW 小麥直接加工出口到發展中國家市場——這個商業模式讓它同時是 KE 期貨的買方套保者（鎖定小麥採購成本）和全球糧食安全的重要提供方。"
+/>
+
+<TraderProfile
+  name="Tom Vilsack"
+  nameZh="湯姆·維爾薩克"
+  years="1950-"
+  nickname="美國農業部長"
+  story="愛荷華州前州長，美國農業部長（2009-2017 和 2021-2025）。雖然不是交易員，但農業部長的職位讓他掌握並影響著美國農業政策的核心——包括糧食援助計劃、農場補貼、WASDE 報告的發布策略。USDA 的每月 WASDE 報告是 KE 和 ZW 期貨最重要的定期市場衝擊因素，農業部長對糧食安全政策的立場，直接影響美國農業的出口競爭力。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="門諾教徒帶來的土耳其紅麥"
+  year="1870s"
+  description="堪薩斯州硬紅冬麥農業的起源有一段引人入勝的移民故事。1870 年代，一批門諾教徒 (Mennonites) 從俄羅斯烏克蘭地區移民至堪薩斯州，帶來了他們在黑海沿岸種了幾個世紀的「土耳其紅小麥」(Turkey Red) 種子。這個品種特別適應大平原的冬季乾旱氣候，抗性強、產量高。今日美國大平原種植的硬紅冬麥，基因上多少都有這批門諾移民帶來的土耳其紅麥的遺傳貢獻。"
+/>
+
+<ArtifactCard
+  type="文化"
+  title="堪薩斯州 Breadbasket of America"
+  year="1870 至今"
+  description="堪薩斯州的官方暱稱是「美國的麥倉」(America's Breadbasket)，這個稱號反映了小麥在堪薩斯身份認同中的核心地位。每年六月的小麥收穫節 (Wheat Festival)、農業展覽、農場開放日，都是堪薩斯地方文化的重要組成部分。堪薩斯城的農業遺產，讓 KCBT 不只是一個交易所，而是整個大平原農業社區的金融心臟。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="法式長棍的硬麥依賴"
+  year="1920 至今"
+  description="正宗法式長棍 (Baguette) 需要使用蛋白質含量在 11-13% 之間的高筋麵粉，法國麵粉廠長期採購來自美國大平原和加拿大草原省份的硬紅冬麥（KE）和硬紅春麥（MWE）。2022 年俄烏戰爭後，法國麵包師面臨麵粉成本暴漲的壓力，巴黎長棍的平均售價在一年內從 €0.90 漲至 €1.30 以上——一個農業期貨市場的波動，以最日常的方式呈現在法國消費者的面前。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="俄羅斯黑土地的地緣政治"
+  year="2014 至今"
+  description="烏克蘭克里米亞半島和東部頓巴斯地區的土地，除了戰略位置外，也是農業肥沃地帶。2014 年俄羅斯吞併克里米亞後，全球農業分析師開始追蹤黑海地區農業產能的地緣政治風險溢價。2022 年全面戰爭爆發前，CBOT ZW 和 KE 的地緣政治風險溢價已被廣泛討論，但市場仍低估了全面戰爭的可能性——這是期貨市場在尾部風險定價上的系統性缺陷。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《星際效應》Interstellar"
+  year="2014"
+  description="克里斯托弗·諾蘭執導的科幻電影，故事背景設定在未來的地球農業崩潰時代，主角庫珀是一個在廢棄太空時代種植玉米（而不再是小麥）的農民。電影開頭的「塵碗」景象直接借鑑了 1930 年代大平原的歷史，傳達了農業文明崩潰對人類存亡的終極威脅。《星際效應》把大平原農業的文化意象，投射到了關於人類文明存亡的哲學思考之中。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="小麥蛋白質溢價的貿易機制"
+  year="1970 至今"
+  description="全球小麥貿易中，蛋白質含量是最重要的品質定價依據。高蛋白（12%+）硬紅冬麥通常比低蛋白（9-10%）軟紅冬麥售價高出約 $0.20-0.50/蒲式耳，但在供應緊張時溢價可以更高。麵包廠和麵粉廠在採購合同中通常會規定最低蛋白質含量，並設置品質加減價條款。這個以蛋白質含量為核心的質量定價體系，讓小麥期貨市場比其他穀物期貨更為精細化和複雜。"
+/>
+
+</div>
+
+</SectionCard>

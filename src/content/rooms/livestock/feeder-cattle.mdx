@@ -1,0 +1,160 @@
+---
+name: "飼育牛"
+nameEn: "Feeder Cattle"
+slug: "feeder-cattle"
+wing: "livestock"
+exchange: "CME"
+tickerSymbol: "GF"
+status: "active"
+icon: "🐂"
+accentColor: "#a0522d"
+roomNumber: 2
+tagline: "玉米與牛肉之間的橋樑——飼育牛期貨連結了穀物農場與肉牛飼育場，是理解農業複合體的關鍵合約"
+taglineEn: "The bridge between corn and beef — feeder cattle futures link grain farms to beef feedlots, key to understanding the agricultural complex"
+originRegion: "美國大平原"
+firstFuturesYear: 1971
+firstFuturesExchange: "CME"
+greatestEventName: "2014-2015 年歷史高價，乾旱重建週期推升至 $249/cwt"
+greatestEventYear: 2014
+description: "飼育牛展室：了解飼育牛如何連結玉米期貨與活牛期貨，形成農業複合體的核心價差交易策略。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+飼育牛（Feeder Cattle）是指重量在 600-900 磅之間、尚未達到屠宰標準、即將進入飼育場育肥的小牛。牠們代表牛肉供應鏈的「中間段」——從繁殖牧場（Cow-Calf Operation）出生，經過草場放牧，進入飼育場後再育肥 4-6 個月才能成為可屠宰的活牛。
+
+CME 在 1971 年推出飼育牛期貨，比活牛期貨晚了七年。飼育牛期貨的戰略意義在於，它是農業複合體中最重要的「橋接合約」：飼育牛的採購成本加上育肥期間的玉米飼料成本，共同決定了飼育場業者的利潤空間。當玉米價格（ZC）高漲時，飼育場業者的飼料成本上升，他們願意為飼育牛支付的價格就會下降——這個反向關係是「農業複合體」（Livestock-Grain Complex）中最經典的基差關係。
+
+美國飼育牛的主要來源地是大平原中南部（德克薩斯、俄克拉荷馬、堪薩斯）以及高草原地帶的繁殖牧場。每年秋季（10-11 月）是飼育牛進場育肥的高峰期，對應著 GF 期貨的季節性走勢規律。
+
+<Timeline events={[
+  { year: "1971", text: "CME 推出飼育牛（Feeder Cattle）期貨，完善牛肉供應鏈的全鏈條期貨對沖工具" },
+  { year: "1986", text: "CME 將 GF 合約改為現金結算，以 CME 飼育牛現貨指數為基準，大幅提升合約實用性" },
+  { year: "2012", text: "美國中西部嚴重乾旱推高玉米價格，飼育場大量虧損，飼育牛進場量急跌" },
+  { year: "2014", text: "美國牛隻存欄量降至 1951 年來最低，GF 期貨突破 $230/cwt，開始歷史性上漲" },
+  { year: "2015", text: "GF 期貨在 8 月創下 $249.475/cwt 歷史高點，是 2005 年價格的三倍以上" },
+  { year: "2022", text: "西部持續乾旱加通脹推高飼料成本，GF 期貨再度走強，重新測試歷史高位" },
+]} />
+
+GF 期貨的核心價差交易是「飼育場壓榨利潤」（Feeder-Corn-Live Cattle Complex）：同時監測 GF（飼育牛採購成本）、ZC（玉米飼料成本）、LE（育肥後銷售收入）三個合約的相對價格，計算出「飼育場隱含利潤率」。精明的交易員通過分析這個三角關係的異常，判斷飼育場業者的進場意願和未來活牛供應量趨勢。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME（芝加哥商業交易所）"
+  year={1971}
+  contractSize="50,000 磅（約 55-83 頭飼育牛，每頭 600-900 磅）"
+  deliveryPoint="現金結算，參考 CME 飼育牛現貨指數（七州加權平均）"
+  tickerSymbol="GF"
+/>
+
+飼育牛期貨採用現金結算機制（自 1986 年起），結算基準是 CME 飼育牛現貨指數——由阿肯色、科羅拉多、愛荷華/南達科他、堪薩斯、內布拉斯加、俄克拉荷馬、德克薩斯等七州的現貨成交價加權計算。
+
+GF 合約是農業期貨中少數完全採用現金結算的合約之一，這讓它特別適合沒有實物交割能力的金融投資者使用，也使得套保操作更為精確。飼育場業者通常在購入飼育牛的同時賣出對應月份的 GF 期貨（鎖定採購成本基準），再在賣出育肥牛前後買回 LE 期貨（鎖定銷售收入）——這套「GF+LE 雙邊套保」是美國飼育場業者最常用的風險管理策略。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2014-2015 年：牛隻週期頂峰與歷史高價
+
+美國牛隻存欄量遵循一個大約 8-12 年的「牛隻週期」（Cattle Cycle）：價格上漲時牧場主增加繁殖、擴充存欄，導致未來供應增加、價格下跌；價格低迷時牧場主淘汰母牛、縮減存欄，未來供應萎縮、價格再度回升。
+
+2012 年的大規模乾旱是觸發此輪週期頂峰的關鍵：乾旱摧毀了牧草，迫使牧場主大量提前淘汰母牛，美國牛隻總存欄量跌至 1951 年以來的最低點（約 8,700 萬頭）。存欄量的恢復需要 2-3 年——母牛需要先產犢，小牛再長大到飼育重量，期間 GF 期貨持續上漲。
+
+<QuoteCard
+  quote="我三十年沒見過這種走勢。玉米現在比牛便宜，但你根本買不到牛——牛就是不夠。"
+  author="堪薩斯州大型飼育場業者，接受農業新聞採訪"
+  year="2014"
+/>
+
+2015 年 8 月，GF 期貨在創出 $249.475/cwt（每百磅）的歷史高點後回落。這輪週期清晰展示了農業期貨中「生物週期」（Biological Cycle）與價格週期的交互作用——與穀物的年度種植週期不同，牛肉需要跨越多年的生產週期，讓供需調整更為緩慢且劇烈。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Five Rivers Cattle Feeding (JBS)"
+  nameZh="五河牛肉飼育"
+  years="1990s-"
+  nickname="全球最大飼育場運營商"
+  story="Five Rivers Cattle Feeding 是全球最大的飼育場運營商，在科羅拉多、愛達荷、堪薩斯、德克薩斯、亞利桑那等州擁有多個超大型飼育場，總容量超過 90 萬頭，現為 JBS USA 旗下。在 GF 期貨市場，Five Rivers 代表大型整合業者如何使用 GF+ZC 複合套保策略管理採購成本，其套保規模在 GF 期貨各遠月合約中留有清晰的持倉印跡。"
+/>
+
+<TraderProfile
+  name="Continental Grain / Wayne Farms"
+  nameZh="大陸穀物集團"
+  years="1813-"
+  nickname="農業綜合體的隱形玩家"
+  story="大陸穀物是美國最古老的農業貿易商之一，其多元化農業業務涵蓋穀物貿易、牲畜飼育和禽肉生產。大陸穀物在 GF 和 ZC 期貨市場的複合操作，代表了農業綜合體如何利用跨商品套利消化原料成本波動。2021 年控股 Wayne-Sanderson Farms（全美第三大禽肉加工商）後，其農業供應鏈整合程度更進一步。"
+/>
+
+<TraderProfile
+  name="R-CALF USA"
+  nameZh="美國獨立牧場主聯盟"
+  years="1998-"
+  nickname="小農主的守護者"
+  story="R-CALF USA（Ranchers-Cattlemen Action Legal Fund）是美國獨立牧場主和小型飼育場業者的利益代表組織，長期對抗大型農業集團的壟斷行為。R-CALF 積極倡導強制性牛肉來源標示（COOL）、反對外國農業企業收購美國牧場，並批評大型加工商在活牛現貨市場的操控行為，是 GF 和 LE 期貨市場「現貨-期貨基差操縱」訴訟的重要推動者。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="牛隻週期（Cattle Cycle）：農業的慢時鐘"
+  year="1950 至今"
+  description="牛隻週期是農業經濟學中最知名的「生物週期」現象，大約每 8-12 年完成一個完整的擴張-收縮循環。與穀物一年一度的種植週期不同，牛隻的繁殖、生長和上市需要 2-3 年，讓供需調整極為緩慢。農業經濟學家 Willard Cochrane 在 1950 年代系統性地描述了這個週期，它至今仍是預測 GF 和 LE 期貨長期走勢最重要的分析框架之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="玉米/牛肉比價（Corn-Cattle Ratio）"
+  year="1970 至今"
+  description="「玉米/牛肉比價」是衡量飼育場盈虧的最簡化指標：用飼育牛每百磅價格除以玉米每蒲式耳價格，得出「一百磅飼育牛可換多少蒲式耳玉米」的比率。歷史上，當比率高於 25:1，飼育場通常有利潤；低於 18:1，飼育場大量虧損。這個簡單比率是農業期貨交易員判斷 GF-ZC 套利機會的第一個看盤指標。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="Oklahoma City 牲畜拍賣行"
+  year="1910 至今"
+  description="俄克拉荷馬城家畜交易中心是美國最大的牛隻拍賣市場之一，每週的拍賣成交價格是 CME 飼育牛指數的重要組成部分。在期貨市場出現前，現貨拍賣行是牛隻定價的唯一場所。今日，拍賣行的現貨價格與 GF 期貨的基差，是牧場主決定是否套保的關鍵參考——現貨高於期貨時傾向直接出售，反之則使用期貨鎖定。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="西部大旱與牧草危機"
+  year="2012-2022"
+  description="2012 年、2021-2022 年的美國西部大旱週期性地摧毀大平原牧草資源，迫使牧場主提前減少母牛存欄量。乾旱對飼育牛市場的影響是雙向的：短期大量出售母牛導致現貨供應暫時增加（價格下壓），但 12-18 個月後存欄補充滯後效應顯現，GF 期貨隨即快速上漲。這種「乾旱-補欄週期」是 GF 期貨最重要的季節性交易策略基礎。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="USDA 牛隻存欄報告（Cattle on Feed）"
+  year="1962 至今"
+  description="美國農業部每月發布的《飼育場牛隻報告》是 GF 和 LE 期貨市場最重要的月度數據衝擊因素。報告包含：飼育場牛隻存欄總量（On Feed）、本月新進場量（Placements）、本月出場量（Marketings）。「進場量」是預測未來活牛供應的最關鍵前瞻指標——高於市場預期時 LE 遠月合約往往受壓，低於預期則推升。"
+/>
+
+<ArtifactCard
+  type="書籍"
+  title="《雜食動物的兩難》The Omnivore's Dilemma"
+  year="2006"
+  description="麥可·波倫（Michael Pollan）的暢銷書透過追蹤一頭飼育牛從堪薩斯飼育場到快餐漢堡的旅程，生動呈現了現代農業複合體的運作邏輯。這本書讓「飼育牛」從期貨市場的抽象概念變成了公眾對工業化農業的具體認識，也推動了之後十年「農場到餐桌」（Farm to Table）飲食文化運動的興起。"
+/>
+
+</div>
+
+</SectionCard>

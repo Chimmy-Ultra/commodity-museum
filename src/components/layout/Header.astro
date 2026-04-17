@@ -1,0 +1,68 @@
+---
+import { wings } from '@data/wings';
+---
+
+<header class="sticky top-0 z-50 border-b border-museum-border bg-museum-bg/90 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <a
+      href="/"
+      class="font-display text-xl tracking-wide text-museum-accent transition-opacity hover:opacity-80"
+      transition:name="museum-title"
+    >
+      大宗商品博物館
+    </a>
+
+    <!-- Wing navigation -->
+    <ul class="hidden items-center gap-1 md:flex">
+      {wings.map((wing) => (
+        <li>
+          <a
+            href={`/${wing.slug}/`}
+            class="rounded-lg px-3 py-2 text-sm text-museum-text-secondary transition-colors hover:bg-museum-plaque hover:text-museum-text"
+          >
+            <span class="mr-1">{wing.icon}</span>
+            {wing.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="rounded-lg p-2 text-museum-text-secondary hover:bg-museum-wall md:hidden"
+      aria-label="開啟選單"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-museum-border md:hidden">
+    <ul class="space-y-1 px-4 py-3">
+      {wings.map((wing) => (
+        <li>
+          <a
+            href={`/${wing.slug}/`}
+            class="block rounded-lg px-4 py-2 text-museum-text-secondary transition-colors hover:bg-museum-plaque hover:text-museum-text"
+          >
+            <span class="mr-2">{wing.icon}</span>
+            {wing.name}
+            <span class="ml-2 text-xs opacity-50">{wing.nameEn}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

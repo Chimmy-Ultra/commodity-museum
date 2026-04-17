@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  type: '電影' | '文學' | '藝術' | '音樂' | '紀錄片' | '其他';
+  title: string;
+  year?: string;
+  description: string;
+  image?: ImageMetadata;
+}
+
+const { type, title, year, description, image } = Astro.props;
+
+const typeColors: Record<string, string> = {
+  '電影': 'bg-red-100 text-red-800',
+  '文學': 'bg-blue-100 text-blue-800',
+  '藝術': 'bg-purple-100 text-purple-800',
+  '音樂': 'bg-green-100 text-green-800',
+  '紀錄片': 'bg-amber-100 text-amber-800',
+  '其他': 'bg-gray-100 text-gray-800',
+};
+
+const colorClass = typeColors[type] || typeColors['其他'];
+---
+
+<div class="overflow-hidden rounded-lg border border-museum-border bg-museum-plaque transition-colors hover:border-museum-accent/30">
+  {image && (
+    <Image
+      src={image}
+      alt={title}
+      width={400}
+      class="h-48 w-full object-cover"
+    />
+  )}
+  <div class="p-5">
+    <div class="flex items-center gap-2">
+      <span class={`rounded-md px-2 py-0.5 text-xs font-semibold ${colorClass}`}>
+        {type}
+      </span>
+      {year && (
+        <span class="font-mono text-xs text-museum-text-secondary">{year}</span>
+      )}
+    </div>
+    <h4 class="mt-2 font-display text-base font-bold text-museum-text">{title}</h4>
+    <p class="mt-1 text-sm leading-relaxed text-museum-text-secondary">{description}</p>
+  </div>
+</div>

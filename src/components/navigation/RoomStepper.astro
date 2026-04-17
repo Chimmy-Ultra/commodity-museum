@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  wingSlug: string;
+  prev: string | null;
+  next: string | null;
+}
+
+const { wingSlug, prev, next } = Astro.props;
+
+// Look up room names
+const allRooms = await getCollection('rooms');
+
+function getRoomName(slug: string | null) {
+  if (!slug) return null;
+  const room = allRooms.find((r) => r.data.slug === slug);
+  return room ? { name: room.data.name, icon: room.data.icon, slug } : null;
+}
+
+const prevRoom = getRoomName(prev);
+const nextRoom = getRoomName(next);
+---
+
+<nav class="mt-16 flex items-stretch gap-4 border-t border-museum-border pt-8" aria-label="展室導航">
+  {prevRoom ? (
+    <a
+      href={`/${wingSlug}/${prevRoom.slug}`}
+      class="group flex flex-1 items-center gap-3 rounded-xl border border-museum-border bg-museum-wall p-5 transition-all hover:border-museum-accent/30 hover:bg-museum-plaque"
+    >
+      <svg class="h-5 w-5 shrink-0 text-museum-text-secondary transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+      </svg>
+      <div class="min-w-0">
+        <span class="text-xs text-museum-text-secondary">上一間展室</span>
+        <div class="mt-0.5 truncate font-display text-sm text-museum-text group-hover:text-museum-accent">
+          {prevRoom.icon} {prevRoom.name}
+        </div>
+      </div>
+    </a>
+  ) : (
+    <div class="flex-1" />
+  )}
+
+  {nextRoom ? (
+    <a
+      href={`/${wingSlug}/${nextRoom.slug}`}
+      class="group flex flex-1 items-center justify-end gap-3 rounded-xl border border-museum-border bg-museum-wall p-5 text-right transition-all hover:border-museum-accent/30 hover:bg-museum-plaque"
+    >
+      <div class="min-w-0">
+        <span class="text-xs text-museum-text-secondary">下一間展室</span>
+        <div class="mt-0.5 truncate font-display text-sm text-museum-text group-hover:text-museum-accent">
+          {nextRoom.name} {nextRoom.icon}
+        </div>
+      </div>
+      <svg class="h-5 w-5 shrink-0 text-museum-text-secondary transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  ) : (
+    <div class="flex-1" />
+  )}
+</nav>

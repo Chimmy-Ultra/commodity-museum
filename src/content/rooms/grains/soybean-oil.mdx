@@ -1,0 +1,171 @@
+---
+name: "豆油"
+nameEn: "Soybean Oil"
+slug: "soybean-oil"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZL"
+status: "active"
+icon: "🫙"
+accentColor: "#d4a017"
+roomNumber: 3
+tagline: "從廚房的食用油到生質柴油的能源轉型，豆油是農業商品市場與綠色能源政策相交最深的一個"
+taglineEn: "From kitchen cooking oil to biodiesel feedstock — soybean oil sits at the deepest intersection of agriculture and green energy policy"
+originRegion: "中國"
+firstFuturesYear: 1950
+firstFuturesExchange: "CBOT"
+greatestEventName: "2022 年生質柴油需求爆炸，豆油觸及 80 美分/磅歷史高峰"
+greatestEventYear: 2022
+description: "豆油展室：探索全球最重要的植物油如何在食用油和生質柴油之間游走，以及生質柴油政策如何將農業商品的命運與能源轉型深度綁定。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+豆油是從大豆中壓榨提取的植物油，約佔大豆重量的 18-20%。每 100 公斤大豆壓榨後，可得到約 18-20 公斤豆油和 78-80 公斤豆粕。豆油的壓榨工藝本身相當古老——中國在宋代就有記載用大豆榨油的做法，但大規模工業化壓榨始於 20 世紀初的美國。
+
+在 20 世紀中葉，豆油成為美國最重要的食用植物油，取代了豬油（動物脂肪）在家庭烹飪中的地位。今日，全球每年生產豆油約 6,000 萬公噸，豆油是全球最重要的植物油之一，佔全球植物油產量的約 28%（僅次於棕櫚油的 35%）。
+
+豆油在 21 世紀面臨的最重要的結構性轉變是**生質柴油需求的崛起**。生質柴油 (Biodiesel) 是以植物油或動物脂肪為原料，通過酯交換反應製成的柴油替代品。豆油是美國生質柴油的主要原料，佔美國生質柴油原料的 50-60%。美國的「可再生燃料標準」(RFS) 要求一定比例的生質柴油混入柴油中，歐盟也有類似的生物燃料配比規定，這些政策將豆油的命運與能源市場深度連結。
+
+<Timeline events={[
+  { year: "1908", text: "美國開始工業規模的大豆壓榨，豆油從農業副產品變為主力產品" },
+  { year: "1950", text: "CBOT 推出豆油期貨合約（ZL）" },
+  { year: "1970s", text: "豆油取代豬油和牛油，成為美國家庭最常用的烹飪油" },
+  { year: "1992", text: "美國能源政策法首次提及生物柴油，豆油的能源用途開始受到關注" },
+  { year: "2005", text: "美國可再生燃料標準 (RFS) 通過，生物柴油混入要求增加豆油需求" },
+  { year: "2020", text: "可再生柴油 (HVO) 技術成熟，豆油在 Renewable Diesel 生產中的使用急增" },
+  { year: "2022", text: "全球生質柴油需求爆炸 + 印尼棕櫚油出口禁令，豆油觸及 80 美分/磅歷史高峰" },
+]} />
+
+豆油與棕櫚油、菜籽油、葵花籽油形成全球四大植物油市場，相互競爭食品和能源用途。馬來西亞和印尼的棕櫚油政策（出口稅、出口禁令）對 CBOT 豆油期貨有直接的替代品效應：當棕櫚油供應緊張，食品加工商轉向豆油，推高 ZL。全球植物油市場的「間性效應」(Interchangeability) 讓豆油與其他植物油的相對價格差成為重要的交易變量。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1950}
+  contractSize="60,000 磅 (約 27.2 公噸)"
+  deliveryPoint="芝加哥認可倉庫"
+  tickerSymbol="ZL"
+/>
+
+CBOT 豆油期貨 (ZL) 於 1950 年推出，合約規格為 60,000 磅（約 27.2 公噸），以美分/磅報價，最小跳動 0.01 美分/磅（$6/合約）。豆油期貨在「大豆複合體」中是最接近食品加工市場的合約，其走勢受植物油全球供需、東南亞棕櫚油豐歉和生質柴油政策的共同影響。
+
+「大豆壓榨利潤」(Crush Spread) 是連接大豆 (ZS)、豆油 (ZL) 和豆粕 (ZM) 三個合約的核心套利工具：
+
+**壓榨利潤 = 豆油收益 + 豆粕收益 - 大豆成本**
+
+當壓榨利潤為正且擴大，壓榨廠有動力增加大豆採購和壓榨；當壓榨利潤收窄甚至為負，壓榨廠可能減少生產或進行設備維修。這個機制讓三個合約的相對走勢形成內在的均衡拉力，是農產品市場最精緻的多合約定價關係之一。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：生質柴油爆發與 80 美分的豆油
+
+2022 年，豆油市場發生了三重供給衝擊同時疊加的完美風暴：
+
+**一、印尼棕櫚油出口禁令（2022 年 4-5 月）**：全球最大棕櫚油出口國印尼以應對國內食用油短缺為由，宣布暫停棕櫚油出口長達一個月。棕櫚油是豆油最大的替代品，禁令讓食品加工商緊急轉向豆油，需求暴增。
+
+**二、俄烏戰爭引發葵花籽油短缺**：烏克蘭和俄羅斯合計佔全球葵花籽油出口的約 80%，戰爭切斷了葵花籽油的正常供應，食品加工廠再度轉向豆油替代。
+
+**三、可再生柴油 (Renewable Diesel, RD) 需求爆炸**：不同於傳統生質柴油，可再生柴油的化學成分與化石柴油完全相同，可以不限比例混入使用。美國加州的「低碳燃料標準」(LCFS) 和聯邦「可再生燃料標準」(RFS) 提供了豐厚補貼，讓煉廠競相投資可再生柴油產能，豆油需求大增。
+
+<QuoteCard
+  quote="豆油不再只是廚房裡的食用油了。它現在也是油箱裡的燃料。"
+  author="CBOT 農業分析師"
+  year="2022"
+/>
+
+三重衝擊疊加，CBOT 豆油從 2022 年初的約 55 美分/磅，在 5 月飆至 **80.15 美分/磅**，創歷史高點。隨後印尼解除禁令，供給回升，加上全球衰退擔憂壓制需求，豆油在下半年回落至 55-60 美分範圍。
+
+但可再生柴油的結構性需求已然確立：美國煉廠的豆油消耗量從 2020 年的約 80 億磅增加到 2023 年的 150+ 億磅，成為豆油需求增長的最重要新引擎，徹底改寫了豆油市場的長期供需模型。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Bunge Limited"
+  nameZh="邦吉公司"
+  years="1818-"
+  nickname="植物油帝國"
+  story="荷蘭裔美國農業巨頭，ABCD 四大糧商之一，在大豆壓榨業務中全球規模最大之一。邦吉在巴西、阿根廷等南美主要大豆產區有廣泛的壓榨設施，其豆油和豆粕生產量是全球市場的定價基準之一。邦吉每年在 CBOT 大豆、豆油和豆粕期貨上的套保量是市場最大參與者之一，其套保報告是機構分析師最關注的持倉數據之一。"
+/>
+
+<TraderProfile
+  name="Wilmar International"
+  nameZh="豐益國際"
+  years="1991-"
+  nickname="亞洲植物油之王"
+  story="新加坡上市、由印尼豐益家族控制的農業巨頭，全球最大的棕櫚油和大豆油精煉商和貿易商之一。豐益在中國擁有廣泛的大豆壓榨和食用油品牌（金龍魚），是中國最大的食用豆油供應商。豐益的採購策略直接影響南美大豆的出口流向，也影響 CBOT 豆油期貨的亞洲需求預期。"
+/>
+
+<TraderProfile
+  name="Marathon Petroleum (生質柴油轉型)"
+  nameZh="馬拉松石油（生質柴油）"
+  years="1887-"
+  nickname="最大的豆油能源買家"
+  story="馬拉松石油將其加州科卡爾油廠轉型為全球最大的可再生柴油生產設施，每年消耗超過 10 億磅豆油用於生產可再生柴油。這個商業轉型讓馬拉松成為 CBOT 豆油市場最重要的非農業採購者之一，標誌著豆油從「農業食品」到「能源原料」身份轉換的完成。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="人造奶油的革命"
+  year="1869"
+  description="人造奶油 (Margarine) 由法國化學家梅奇·摩里埃斯 (Hippolyte Mège-Mouriès) 在 1869 年發明，最初以牛脂為原料，後來改用氫化植物油（包括豆油）。20 世紀中葉，人造奶油被大力推廣為「心臟更健康」的奶油替代品，推動了豆油需求的快速增長。然而，氫化過程產生的反式脂肪 (Trans Fat) 後來被科學界認定為心血管疾病的風險因素，美國 FDA 在 2018 年全面禁止部分氫化植物油，引發了植物油加工業的配方大調整。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="棕櫚油的競爭陰影"
+  year="1970 至今"
+  description="馬來西亞和印尼的棕櫚油是豆油最大的市場競爭者，生產成本通常比豆油更低。棕櫚油的全球擴張（1970-2020 年間，東南亞棕櫚種植面積增加了 10 倍以上）以熱帶雨林砍伐為代價，引發了全球環保爭議。歐盟 2019 年通過法規，逐步禁止進口與雨林砍伐相關的棕櫚油生物柴油，這讓豆油的歐洲生物柴油市場份額得以擴張。棕櫚油與豆油的競爭，折射出農業生產力、環境保護和市場政策之間的複雜張力。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="金龍魚與中國食用油市場"
+  year="1991"
+  description="豐益國際旗下的「金龍魚」品牌是中國最知名的食用油品牌，市佔率長期位居中國食用油市場前列。金龍魚的定價策略和採購時程，是中國大豆進口市場的重要風向標。每當大豆和豆油期貨價格上漲，金龍魚等食用油品牌的零售漲價往往在幾個月後反映在消費者物價指數 (CPI) 中，是農業期貨傳導到民生成本的典型路徑。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="可再生柴油的加州夢"
+  year="2020 至今"
+  description="加州的「低碳燃料標準」(LCFS) 是全球最嚴格的生物燃料碳強度規定，對使用可再生柴油（豆油基）的運輸業者提供豐厚的碳積分補貼。這個政策讓加州成為全球豆油能源化需求最旺盛的市場。特斯拉等電動車公司的崛起雖然長期威脅燃油車需求，但在純電化完成之前，可再生柴油在加州的政策支持創造了一個豆油需求的過渡期高峰。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="脂肪的百年政治"
+  year="1900 至今"
+  description="豆油的消費歷史，是 20 世紀美國「脂肪政治」的縮影：豬油被奶油取代，奶油被人造奶油（氫化豆油）取代，人造奶油被標榜「健康」的植物油取代，植物油又因反式脂肪而遭受質疑，然後是「低脂飲食」的興起和衰落，再到「酮飲食」的回歸動物脂肪……每一次飲食風潮的轉向，都在豆油的期貨市場上留下了痕跡，也反映了消費者、食品工業和科學研究之間永恆的博弈。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="大豆油墨的回歸"
+  year="1987"
+  description="1987 年，美國大豆協會推動了「大豆油墨」(Soy Ink) 在印刷業的應用——用豆油替代石油基溶劑型油墨。大豆油墨顏色更鮮豔、更易降解、揮發性有機化合物 (VOC) 排放更低。今日，美國大部分彩色報紙和雜誌使用大豆油墨印刷，你手中的報紙，可能就是用豆油墨印製的。這是農業商品找到全新非食品工業應用的罕見成功案例。"
+/>
+
+</div>
+
+</SectionCard>

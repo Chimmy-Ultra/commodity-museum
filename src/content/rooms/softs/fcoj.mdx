@@ -1,0 +1,163 @@
+---
+name: "冷凍濃縮橙汁"
+nameEn: "FCOJ (Frozen Concentrated Orange Juice)"
+slug: "fcoj"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "OJ"
+status: "active"
+icon: "🍊"
+accentColor: "#e87820"
+roomNumber: 5
+tagline: "佛羅里達的陽光期貨——FCOJ 因一部電影而聞名於世，是最敏感的氣象期貨，每一次冬季霜凍預報都會引發交易員瘋狂搶購"
+taglineEn: "Florida's sunshine futures — FCOJ became world-famous through a film and is the most weather-sensitive commodity, where every freeze forecast triggers frantic trading"
+originRegion: "佛羅里達、巴西"
+firstFuturesYear: 1945
+firstFuturesExchange: "NYCSCE（紐約咖啡糖可可交易所）"
+greatestEventName: "1977 年佛羅里達霜凍，FCOJ 期貨在數日內暴漲 150%"
+greatestEventYear: 1977
+description: "FCOJ展室：探索冷凍濃縮橙汁期貨如何因《你整我，我整你》電影聞名，以及佛羅里達霜凍與巴西崛起如何重塑這個奇特的期貨市場。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+冷凍濃縮橙汁（FCOJ，Frozen Concentrated Orange Juice）是 1945 年由美國農業部科學家與佛羅里達橙汁工業共同研發的技術成果：將新鮮橙汁在低溫下蒸發濃縮至原體積的約 1/6，再急速冷凍儲存。這個技術解決了橙汁容易變質、難以遠距運輸的問題，讓佛羅里達橙汁得以在全國銷售。
+
+FCOJ 技術的誕生，加上二戰後美國消費者對早餐橙汁的強烈喜愛，在 1950-1970 年代創造了一個爆炸性增長的新型食品市場。佛羅里達成為美國橙汁的代名詞，佛羅里達州的柑橘業在 1960 年代達到鼎盛，佔全美橙汁供應量的約 80%。
+
+1945 年，NYCSCE 推出了 FCOJ 期貨，這是全球首個針對「加工食品」而非原農產品的期貨合約，其設計基礎是佛羅里達橙農和橙汁廠商對霜凍風險的切實對沖需求。佛羅里達柑橘帶位於亞熱帶地區，每年 12 月至 2 月的北極寒流（Arctic Blast）是最大的生產威脅——一夜嚴霜就能摧毀整個橙子季的收成。
+
+<Timeline events={[
+  { year: "1945", text: "FCOJ 技術商業化，NYCSCE 推出全球首個加工食品期貨合約" },
+  { year: "1977", text: "佛羅里達史上最嚴重霜凍，FCOJ 期貨在三天內暴漲超過 150%" },
+  { year: "1983", text: "電影《你整我，我整你》（Trading Places）以 OJ 和豬腩期貨為核心情節，FCOJ 因此聞名大眾" },
+  { year: "1985", text: "佛羅里達再次遭受嚴重霜凍，FCOJ 再度暴漲" },
+  { year: "1990s", text: "巴西大規模投入柑橘種植，成為全球最大的橙汁生產和出口國" },
+  { year: "2004", text: "四場颶風（Charley、Frances、Ivan、Jeanne）在同一個颶風季接連襲擊佛羅里達，創農業史上罕見紀錄" },
+  { year: "2007", text: "黃龍病（Citrus Greening, HLB）在佛羅里達柑橘園大規模爆發，引發柑橘業長期衰退危機" },
+]} />
+
+OJ 期貨因為交易量相對較小（與大型農業期貨相比），是期貨市場中「流動性較薄」的合約之一，這讓它特別容易受到大型機構資金流入流出的影響。這個特性，加上其對天氣的極端敏感性，讓 OJ 成為期貨市場中波動性最高、趣味性最強的合約之一。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（洲際交易所，前身 NYCSCE/NYBOT）"
+  year={1945}
+  contractSize="15,000 磅（6.8 公噸）可溶性固體橙汁（62.5° 濃縮）"
+  deliveryPoint="佛羅里達州及新澤西州認可冷藏倉庫"
+  tickerSymbol="OJ"
+/>
+
+OJ 合約的交割品質規格以「美國 A 級或以上、62.5 度白利糖度（Brix）、含糖量 Brix/Acid 比值在規定範圍內」的冷凍濃縮橙汁為基準。這個精確的品質規格，讓 OJ 成為農業期貨中品質要求最細緻的合約之一。
+
+OJ 期貨的交易時間從美東時間早上 8:00 開市，而美國氣象局通常在每日早上發布「佛羅里達柑橘帶天氣預報」，這讓 OJ 的每日開盤往往伴隨著對最新天氣預報的即時解讀。在 12 月至 2 月的霜凍季，天氣預報的微小變化（最低溫度預期從 -2°C 降到 -4°C）就可能讓 OJ 期貨在數分鐘內上漲 3-5%。
+
+USDA 每月發布的「佛羅里達柑橘作物預估」（Florida Citrus Crop Forecast）是 OJ 期貨最重要的月度數據衝擊。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1977 年：佛羅里達大霜凍與 OJ 暴漲
+
+1977 年 1 月，一股強烈北極寒流南下，讓佛羅里達中部柑橘帶的氣溫連續多晚跌至 -5°C 以下。這場霜凍是佛羅里達有史以來最嚴重的農業氣象災害之一，摧毀了當年大約 20-30% 的橙子產量，並永久損壞了數以萬計的柑橘樹。
+
+OJ 期貨在霜凍警報發出後立即反應：從霜凍前的約 $0.60/磅，在短短三個交易日內飆升至超過 $1.50/磅，漲幅超過 150%。這個漲勢不只反映了當季產量損失，更反映了市場對未來 2-3 年橙汁供應萎縮的預期，因為被凍壞的柑橘樹需要多年才能恢復結果。
+
+<QuoteCard
+  quote="當佛羅里達的溫度計顯示低於 28 度華氏（-2°C）的時間超過四個小時，橙農的心就涼了——但交易員的電話卻瘋狂響起。"
+  author="ICE 橙汁期貨前市場主管"
+  year="1977"
+/>
+
+1977 年的霜凍事件，連同 1983 年電影《你整我，我整你》的文化推廣，讓 FCOJ 期貨成為大眾認知中「天氣期貨」的最典型代表。時至今日，每當佛羅里達冬季霜凍預警發出，財經媒體必然會報道 OJ 期貨的大幅波動，這個市場在全球商品投資人心中已具有超越其實際市場規模的象徵意義。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Tropicana Products (PepsiCo)"
+  nameZh="美汁源（百事旗下）"
+  years="1947-"
+  nickname="美國橙汁工業的代名詞"
+  story="Tropicana Products 由安東尼·羅西（Anthony T. Rossi）於 1947 年在佛羅里達創立，是美國銷量第一的橙汁品牌。1998 年被百事可樂收購。作為佛羅里達橙汁工業的最大採購商之一，Tropicana 是 OJ 期貨市場的核心套保參與者——採購橙子和橙汁時使用 OJ 期貨鎖定原料成本，同時通過多元化供應來源（引入巴西橙汁）降低佛羅里達天氣集中風險。Tropicana 轉向巴西橙汁採購的過程，也加速了 OJ 期貨基本面從「佛羅里達天氣主導」向「巴西+佛羅里達雙因素」的轉型。"
+/>
+
+<TraderProfile
+  name="Cutrale Group"
+  nameZh="庫特拉雷集團"
+  years="1928-"
+  nickname="全球最大橙汁加工商"
+  story="巴西的庫特拉雷（Cutrale）集團是全球最大的橙汁加工和出口商，控制著巴西（以及全球）約 30-40% 的橙汁加工能力，旗下品牌包括 Minute Maid（可口可樂授權）在巴西的生產。庫特拉雷在 OJ 期貨市場的套保規模之大，讓其成為影響 OJ 基差最重要的單一機構玩家。2016 年，庫特拉雷和 Safra Group 聯手以 14 億美元收購了 Tropicana 的巴西柑橘農場，進一步鞏固其在全球橙汁供應鏈的核心地位。"
+/>
+
+<TraderProfile
+  name="Citrus Associates of the New York Cotton Exchange"
+  nameZh="紐約棉花交易所柑橘會員"
+  years="1945-1980s"
+  nickname="OJ 期貨的創始守護者"
+  story="1945 年推出 FCOJ 期貨的核心力量，是佛羅里達柑橘行業的大型農業合作社和橙汁廠商，通過「柑橘協會」（Citrus Associates）組織在期貨市場進行集體套保。在 OJ 期貨的早期發展階段，這些農業合作社既是期貨市場的建立者，也是最積極的使用者——他們代表數千個佛羅里達家庭柑橘農場，用期貨工具對沖每年冬季的霜凍風險。隨著巴西的崛起和佛羅里達柑橘業的衰落，這些傳統合作社的影響力大幅減弱。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="《你整我，我整你》Trading Places（1983）"
+  year="1983"
+  description="約翰·蘭迪斯執導的喜劇電影，艾迪·墨菲和丹·艾克洛德主演。電影中，兩位主角提前獲取了 USDA 的橙汁作物預估報告（政府機密），在期貨市場上反向操縱試圖空頭打壓的反派。雖然情節戲劇化，但電影對「資訊優勢」在商品期貨定價中的核心作用，以及政府農業數據對市場的重要性，有著驚人精確的描繪。這部電影間接推動了美國 2010 年《多德-弗蘭克法案》中一條明確禁止利用政府機密信息進行期貨交易的條款，被學者稱為「Trading Places 條款」。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="黃龍病（HLB）：佛羅里達柑橘業的末日"
+  year="2007 至今"
+  description="黃龍病（Citrus Greening, Huanglongbing, HLB）是一種由細菌引起、由亞洲木虱傳播的柑橘樹致命疾病。2005 年在佛羅里達首次發現後，HLB 以不可阻擋的速度在佛羅里達柑橘園蔓延。受感染的柑橘樹無法治癒，最終必須砍除。到 2020 年代，佛羅里達橙汁產量已跌至 1940 年代以前的水平，佛羅里達在全球橙汁供應的份額從 80% 跌至不足 5%。OJ 期貨的基本面已從「天氣風險主導」轉型為「病害長期衰退主導」，這個轉型讓 OJ 合約的交易邏輯發生了根本性改變。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="巴西柑橘帶的興起"
+  year="1990 至今"
+  description="巴西聖保羅州的「新世界柑橘帶」——以阿拉拉夸拉（Araraquara）為中心的聖保羅內陸地區——在 1990-2010 年代快速發展成為全球最大的柑橘生產地。巴西年均橙汁產量約占全球的 60-70%，完全取代了佛羅里達的主導地位。巴西的崛起也讓 OJ 期貨的天氣風險從「佛羅里達霜凍」擴展到「巴西乾旱/霜凍」，使得 OJ 成為一個需要同時追蹤北半球冬季和南半球產季（9-3 月）的複雜市場。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="橙汁消費趨勢的逆轉"
+  year="2000 至今"
+  description="橙汁一度是美國家庭最流行的早餐飲料，但自 2000 年代起，消費趨勢開始逆轉：消費者擔憂橙汁的高含糖量和卡路里，加上咖啡、能量飲料、各種花式飲品的競爭，美國橙汁人均消費量已從 2000 年的峰值下降超過 40%。這個需求結構性下滑是 OJ 期貨長期熊市背景的核心原因，也解釋了為何即使 HLB 造成供應大幅萎縮，OJ 期貨也未能持續上漲——因為需求同樣在萎縮。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="氣象交易員：天氣的賭注"
+  year="1945 至今"
+  description="OJ 期貨養活了一個特殊職業群體——「農業氣象分析師」（Ag Weather Analysts），他們專門研究美國南部和巴西柑橘帶的天氣模式，為 OJ 期貨交易員提供霜凍概率、降雨預測等專業建議。在現代商品交易中，專業農業氣象服務（如 DTN、Maxar、Weather Trends International）的訂閱費用每年可高達數萬美元，是 OJ 和其他農業期貨交易員的標準開支之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="「不含果肉」vs 「含果肉」：橙汁的品質定義"
+  year="現代"
+  description="OJ 期貨的交割品質是「冷凍濃縮橙汁」（FCOJ），但零售市場已大幅轉向「非冷凍、非濃縮」橙汁（NFC, Not from Concentrate），以及各種添加了「風味包」（Flavor Packs）的橙汁。這個消費升級趨勢讓 FCOJ 期貨越來越難以直接代表零售橙汁市場的真實供需。儘管如此，OJ 期貨仍然是佛羅里達柑橘業和巴西橙汁加工商最重要的風險管理工具，其「天氣指標」的獨特屬性也讓它在學術和教育界保持持久的興趣。"
+/>
+
+</div>
+
+</SectionCard>

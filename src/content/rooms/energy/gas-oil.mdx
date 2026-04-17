@@ -1,0 +1,167 @@
+---
+name: "倫敦瓦斯油"
+nameEn: "ICE Gas Oil"
+slug: "gas-oil"
+wing: "energy"
+exchange: "ICE"
+tickerSymbol: "LGO"
+status: "active"
+icon: "🇬🇧"
+accentColor: "#1a3a6b"
+roomNumber: 7
+tagline: "全球柴油貿易的歐洲基準——從北海鑽井平台到鹿特丹港的精煉廠，再到每一輛歐洲卡車的油箱"
+taglineEn: "Europe's diesel benchmark — from North Sea rigs to Rotterdam refineries to every truck on the autobahn"
+originRegion: "英國 / 荷蘭"
+firstFuturesYear: 1986
+firstFuturesExchange: "IPE"
+greatestEventName: "2022 年俄羅斯制裁引爆歐洲瓦斯油短缺，倫敦氣油溢價創歷史新高"
+greatestEventYear: 2022
+description: "ICE 瓦斯油展室：歐洲最重要的中間餾分油期貨，探索歐洲柴油市場的定價機制，以及鹿特丹作為全球石油貿易中心的地位。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+「瓦斯油」(Gas Oil) 這個名字源於 19 世紀的煤氣製造業——早期煤氣廠在製造城市照明用煤氣時，產生的中間餾分油脂被稱為「瓦斯油」，因為它可以進一步分解製造更多煤氣（Gas）。今日，「瓦斯油」在歐洲能源市場指的是柴油和取暖油的中間餾分油，是布蘭特原油的重要精煉產品之一。
+
+歐洲的石油精煉產業集中在幾個主要港口城市，其中最重要的是荷蘭的鹿特丹 (Rotterdam)。鹿特丹港是歐洲最大的港口，也是全球重要的石油中轉和精煉中心。從中東、俄羅斯、北非和美洲進口的原油，在鹿特丹的龐大煉廠系統中被精煉為各種石油產品，再通過管道、油輪和駁船分發到全歐洲。
+
+ICE 氣油期貨（代碼 LGO，前身 GO）源自倫敦國際石油交易所 (IPE) 的瓦斯油合約，1986 年推出，以公噸為計量單位（反映歐洲能源市場慣例），交割地點為阿姆斯特丹/鹿特丹/安特衛普（ARA 地區）——這個「ARA 地區」是全球最重要的石油儲存和中轉樞紐之一。
+
+歐洲的能源市場比美國更多元化：多個來源的原油（北海、中東、俄羅斯、非洲）在鹿特丹匯聚，ICE 氣油合約同時承擔了航空燃油 (Jet Fuel)、取暖用柴油、工業用柴油和海上燃油的定價功能，是比紐約港 ULSD 更廣義的「中間餾分油基準」。
+
+<Timeline events={[
+  { year: "1864", text: "鹿特丹第一座石油精煉廠建立，歐洲石油貿易中心雛形出現" },
+  { year: "1973", text: "第一次石油危機讓歐洲各國意識到能源安全的脆弱性，加速了鹿特丹儲油設施建設" },
+  { year: "1980", text: "倫敦國際石油交易所 (IPE) 成立，開始尋求歐洲石油期貨市場的建立" },
+  { year: "1986", text: "IPE 推出瓦斯油 (Gas Oil) 期貨合約，是 IPE 第一個成功的期貨產品" },
+  { year: "1988", text: "IPE 推出布蘭特原油期貨，使 IPE 成為完整的歐洲能源交易所" },
+  { year: "2001", text: "洲際交易所 (ICE) 收購 IPE，瓦斯油和布蘭特期貨移至電子平台" },
+  { year: "2022", text: "歐盟對俄羅斯能源制裁，俄羅斯柴油出口中斷，ICE 瓦斯油升水創歷史紀錄" },
+]} />
+
+ICE 氣油與 NYMEX ULSD 之間的「大西洋套利」(Trans-Atlantic Arbitrage) 是全球能源市場最重要的套利交易之一：當歐洲柴油比美國柴油貴，貿易商將美國柴油裝船運往歐洲；反之亦然。這個套利機制讓大西洋兩岸的柴油價格通常保持在合理的運費範圍內趨同，但在供給衝擊期間（如 2022 年）可以出現顯著偏離。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE (洲際交易所，前身 IPE 倫敦)"
+  year={1986}
+  contractSize="100 公噸"
+  deliveryPoint="阿姆斯特丹/鹿特丹/安特衛普 (ARA 地區)"
+  tickerSymbol="LGO"
+/>
+
+IPE 瓦斯油期貨（現 ICE Gas Oil，代碼 LGO）於 1986 年推出，是倫敦國際石油交易所最早的成功期貨產品之一。合約以公噸計（100 公噸/合約），以美元/公噸報價，反映歐洲石油市場用公噸計量的習慣。
+
+與 NYMEX 的美元/加侖報價相比，換算為每桶定價時，ICE 氣油和 NYMEX ULSD 的比較需要考慮計量單位差異（1 桶柴油 ≈ 0.136 公噸），這在大西洋套利計算中是基本功。
+
+ICE 氣油期貨同時作為歐洲航空燃油 (Jet Kero) 定價的基準，因為航空燃油是在瓦斯油規格基礎上進一步精製的中間餾分油，兩者價格高度相關。歐洲各航空公司的燃油套保策略，通常以 ICE 氣油為主要工具。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：歐洲柴油之戰
+
+俄羅斯是歐洲最大的柴油出口國，每天向歐洲輸送約 100 萬桶柴油。2022 年俄烏戰爭後，歐盟逐步收緊對俄制裁，最終在 2023 年 2 月對俄羅斯石油產品實施全面禁運——但在此之前的 2022 年，市場已提前消化了這一預期。
+
+ICE 氣油的升水（近月合約相對遠月合約的溢價，即 Backwardation 結構）在 2022 年達到歷史極端水平，反映了現貨柴油的極度緊張。
+
+<QuoteCard
+  quote="鹿特丹沒有柴油。法蘭克福沒有柴油。整個歐洲煉廠開足馬力也補不上俄羅斯缺口。"
+  author="歐洲石油貿易協會 (EUROPIA) 執行董事"
+  year="2022"
+/>
+
+歐洲的應急響應包括：從印度和中東進口更多煉製柴油、美國增加對歐出口、歐洲煉廠加班加點提高柴油生產比例（犧牲汽油產量）、以及部分工業用戶削減柴油消耗。歐洲各國政府也向農業和運輸業提供緊急補貼，防止供應鏈斷裂。
+
+到 2023 年底，歐洲完成了從俄羅斯柴油到多元化來源的供給重組，ICE 氣油升水回歸正常水平，但歐洲能源成本的整體上升使其工業競爭力受到長期損傷。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Vitol"
+  nameZh="維多集團"
+  years="1966-"
+  nickname="全球最大石油貿易商"
+  story="荷蘭創立、日內瓦總部的私人石油貿易巨頭，在鹿特丹 ARA 地區擁有龐大的儲油和混調設施。維多在歐洲瓦斯油和柴油市場的地位無可比擬，其對 ICE 氣油合約的影響力與對 WTI 的影響力同樣重要。在 2022 年歐洲柴油危機中，維多透過跨大西洋套利、從中東和印度進口、重新安排全球柴油流向，成為穩定歐洲市場的重要私人力量。"
+/>
+
+<TraderProfile
+  name="Gunvor"
+  nameZh="恭福集團"
+  years="2000-"
+  nickname="石油中間商"
+  story="瑞士日內瓦的私人石油貿易商，以原油和成品油交易為主。在歐洲瓦斯油市場，Gunvor 是重要的現貨和期貨參與者。其前股東季姆琴科的俄羅斯背景使公司在制裁後不得不大幅重組，但 Gunvor 仍是歐洲石油貿易的重要玩家。"
+/>
+
+<TraderProfile
+  name="Phibro"
+  nameZh="菲布羅能源"
+  years="1960s-"
+  nickname="大宗商品交易的先驅"
+  story="菲布羅是全球最早的現代大宗商品貿易公司之一，在石油解除管制的 1970 年代憑藉現貨交易賺取了巨額利潤。後被花旗集團收購，2009 年因安迪·霍爾的薪酬爭議而被出售。菲布羅在歐洲瓦斯油市場的操作，是現代能源交易策略的早期模板，影響了此後整個行業的交易模式。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="鹿特丹港：歐洲的石油之門"
+  year="1872 至今"
+  description="鹿特丹港是歐洲最大的港口，全球第八大港，擁有超過 80 個石油儲存終端和煉油廠。殼牌、BP、Exxon、Total 等石油巨頭在此均有煉油設施。鹿特丹的「ARA 地區」（阿姆斯特丹/鹿特丹/安特衛普）是全球最重要的石油儲存中心之一，總儲油能力超過 4 億桶，是歐洲石油市場流動性的物理基礎。ICE 氣油合約的交割地點正是 ARA 地區。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="德國高速公路的柴油文化"
+  year="1932 至今"
+  description="德國 Autobahn（德國高速公路網）是全球最著名的無限速公路系統之一，柴油卡車是其骨幹。德國是歐洲最大的柴油車市場，2015 年前柴油轎車市佔率超過 50%（部分拜稅制優惠所賜）。大眾排放門醜聞後，柴油車在歐洲急速萎縮，但柴油在工業和貨運中的地位仍難以短期替代。ICE 氣油期貨的主要需求基礎，在相當程度上就是歐洲貨運卡車的油箱。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="歐洲航空煤油危機"
+  year="2022"
+  description="2022 年歐洲能源危機期間，航空燃油（Jet Kero）隨 ICE 氣油一起飆漲，讓歐洲各大航空公司的燃油成本翻倍。漢莎航空、法航-荷航、IAG 等主要歐洲航空集團均宣布大規模燃油附加費和票價上調。部分未套保的廉航面臨倒閉風險。這次事件讓歐洲航空業更加重視燃油套保策略，也推動了各航空公司對可持續航空燃油 (SAF) 研發的投入。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="倫敦金屬交易所的公開喊價圈"
+  year="1877 至今"
+  description="雖然 ICE 氣油在電子平台交易，但其誕生地倫敦國際石油交易所 (IPE) 的歷史連結到倫敦金屬交易所 (LME) 的傳統——公開喊價圈 (Ring Trading)。IPE 早期也使用人工喊價的交易大廳，倫敦在全球能源和金屬期貨市場的獨特地位，是大英帝國時代建立的全球商品貿易網絡的歷史遺產。今日，倫敦的能源金融業依然是全球最重要的大宗商品衍生品中心之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="農業機械的柴油依賴"
+  year="1920s 至今"
+  description="歐洲的大規模農業生產幾乎完全依賴柴油——拖拉機、聯合收割機、農業車輛均使用柴油引擎。每年春季播種和秋季收穫期間，農業用柴油需求激增，這是 ICE 氣油的季節性需求因素之一。歐洲農民傳統上享有農業柴油的稅收優惠（紅色染色柴油），在 2022 年柴油危機期間，多個歐盟成員國臨時放寬了農業柴油的稅收規定，以保護農業生產。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="生物柴油與可再生柴油"
+  year="2005 至今"
+  description="歐盟的「可再生能源指令」(RED) 要求柴油中混入一定比例的生物柴油（來自植物油或動物脂肪），以降低碳排放。荷蘭、德國等歐洲國家積極發展可再生柴油 (HVO, Hydrotreated Vegetable Oil)，其規格與化石柴油相同，可直接混用。ICE 市場也推出了生物柴油差價合約，讓生物燃料生產商和使用者能夠對沖可再生柴油與化石柴油之間的溢價風險。"
+/>
+
+</div>
+
+</SectionCard>

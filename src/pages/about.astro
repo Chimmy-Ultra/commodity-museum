@@ -1,0 +1,52 @@
+---
+import MuseumLayout from '@components/layout/MuseumLayout.astro';
+import Breadcrumbs from '@components/navigation/Breadcrumbs.astro';
+import { getTotalRoomCount } from '@lib/museum';
+
+const totalRooms = getTotalRoomCount();
+---
+
+<MuseumLayout title="關於博物館">
+  <div class="mx-auto max-w-3xl px-6">
+    <div class="py-4">
+      <Breadcrumbs items={[
+        { label: '博物館', href: '/' },
+        { label: '關於' },
+      ]} />
+    </div>
+
+    <article class="py-12">
+      <h1 class="font-display text-4xl font-bold text-museum-accent md:text-5xl">
+        關於大宗商品博物館
+      </h1>
+      <p class="mt-2 text-lg text-museum-text-secondary">About the Commodity Museum</p>
+
+      <div class="mt-8 space-y-6 text-museum-text-secondary leading-relaxed">
+        <p>
+          大宗商品博物館是一座數位博物館，收藏了 {totalRooms} 種在 CME Group 與 ICE
+          交易所上市（或曾經上市）的大宗商品期貨合約。每一間展室都是一段跨越數百年的故事——
+          從商品的起源、期貨合約的誕生、史上最戲劇化的市場事件，到那些在交易坑中留下傳奇的人物。
+        </p>
+
+        <p>
+          我們相信，要真正理解一份期貨合約，不能只看報價和圖表。你需要知道為什麼芝加哥成為穀物之都、
+          為什麼 Cushing, Oklahoma 是全球油價的定錨點、為什麼 1637 年的荷蘭人願意用一棟房子
+          換一顆鬱金香球莖。
+        </p>
+
+        <p>
+          這座博物館的內容以中文為主，關鍵術語附英文原文，讓華語世界的讀者能夠同時掌握
+          本土語境和國際市場的專業用語。
+        </p>
+
+        <h2 class="!mt-12 font-display text-2xl font-bold text-museum-accent">
+          展館結構
+        </h2>
+        <p>
+          博物館分為七個展館：能源館、金屬館、穀物館、畜產館、軟性商品館、歷史館與指數館。
+          每間展室包含五個固定章節：起源故事、第一張期貨合約、史上最大事件、傳奇交易員、文化文物。
+        </p>
+      </div>
+    </article>
+  </div>
+</MuseumLayout>

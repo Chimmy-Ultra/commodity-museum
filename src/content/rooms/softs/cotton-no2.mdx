@@ -1,0 +1,168 @@
+---
+name: "棉花二號"
+nameEn: "Cotton No. 2"
+slug: "cotton-no2"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "CT"
+status: "active"
+icon: "🌿"
+accentColor: "#e8d9c4"
+roomNumber: 4
+tagline: "從美國南方種植園到中國紡織廠——棉花期貨見證了從奴隸貿易時代到快時尚時代的全球纖維供應鏈演化"
+taglineEn: "From Southern plantations to Chinese textile mills — cotton futures witness the global fiber supply chain from the slave trade era to the fast fashion age"
+originRegion: "美國、中國、印度"
+firstFuturesYear: 1870
+firstFuturesExchange: "NYCE（紐約棉花交易所）"
+greatestEventName: "2011 年棉花危機，CT 期貨飆升至 $2.27/磅，創南北戰爭以來最高紀錄"
+greatestEventYear: 2011
+description: "棉花展室：從南北戰爭時代的棉花交易所到2011年棉花價格危機，探索棉花期貨如何連結農業、紡織與時尚產業。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+棉花是人類最重要的天然纖維，也是工業革命的核心原料。美國南北戰爭前，「棉花是王」（Cotton is King）是美國南方的政治格言，棉花佔美國出口的一半以上，也是維繫奴隸制度的最重要經濟動力。南方各州的大型棉花種植園，完全依賴非洲奴隸的強迫勞動，使得棉花成為美國歷史上「最政治化的商品」。
+
+紐約棉花交易所（New York Cotton Exchange, NYCE）成立於 1870 年，是美國第一個專門針對農業商品的期貨交易所，也是全球棉花市場的最早定價中心。1870 年推出的棉花期貨（即今日 ICE 的 CT 合約前身），是全球現存最古老的農業期貨合約之一。
+
+今日，全球最大的棉花生產國依序是中國（25-30%）、印度（25%）、美國（15%）和巴西（12%）。美國是全球最大的棉花出口國，ICE 的 CT 合約（棉花二號）是全球棉花貿易的基準定價合約，而中國是全球最大的棉花消費國，中國的採購行為是影響 CT 期貨最重要的需求側因素。
+
+<Timeline events={[
+  { year: "1793", text: "伊萊·惠特尼（Eli Whitney）發明軋棉機，大幅提升棉花處理效率，奴隸制種植園快速擴張" },
+  { year: "1861-1865", text: "美國內戰中斷棉花供應，英國和法國紡織廠尋求替代來源（埃及、印度）" },
+  { year: "1870", text: "紐約棉花交易所（NYCE）成立，推出全球首個標準化棉花期貨合約" },
+  { year: "1960s", text: "合成纖維（聚酯、尼龍）興起，對棉花的需求替代效應開始顯現" },
+  { year: "1994", text: "NYCE 與 CSCE 合併為 NYCBOT，2007 年被 ICE 收購，CT 合約延續至今" },
+  { year: "2010", text: "巴基斯坦大洪水摧毀大量棉田，加之中國強勁採購，CT 期貨開始歷史性上漲" },
+  { year: "2011", text: "CT 期貨在 3 月創下 $2.27/磅歷史高點，隨後 6 個月內暴跌超過 50%" },
+]} />
+
+棉花市場的一個長期結構性挑戰是「合成纖維競爭」：聚酯纖維等化學纖維的成本通常比棉花低，且不受農業季節性和天氣風險影響。當油價下跌時，聚酯纖維生產成本降低，CT 期貨面臨替代競爭壓力；反之，油價高漲時，棉花相對合成纖維具有競爭優勢。這使得 CT 期貨與油價之間存在一定的反向聯動關係。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（洲際交易所，前身 NYCE）"
+  year={1870}
+  contractSize="50,000 磅（22.7 公噸）皮棉"
+  deliveryPoint="美國東南部棉花倉庫（南卡羅來納、北卡羅來納、孟菲斯等地）"
+  tickerSymbol="CT"
+/>
+
+棉花二號（CT）合約的交割標準是「美國棉花二級」（US Cotton Grade 2）或等同品質，以「機採棉」（Machine Picked）為主。CT 合約的一個重要特性是其「實物倉儲」機制——ICE 認可的棉花倉庫遍佈美國東南部主要棉花產區，倉庫庫存量（Certificated Stocks）是監測 CT 近月基差的關鍵指標。
+
+CT 合約的報價以美分/磅計，每日波動限制（Limit Move）是一個重要的市場機制：在供應衝擊期間，CT 往往連續觸及漲停或跌停，讓市場在劇烈波動中維持基本秩序。
+
+美國農業部（USDA）每月發布的「棉花供需平衡表」（WASDE 報告中的棉花部分）和每週的「出口銷售報告」（Export Sales Report），是影響 CT 期貨最重要的定期數據衝擊來源。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2010-2011 年：棉花超級週期與史上最高價
+
+2010-2011 年的棉花漲勢被稱為「百年一遇」的行情。觸發因素是多重且同時爆發的：
+
+- **2010 年巴基斯坦大洪水**：該年夏季，史上最嚴重的巴基斯坦洪水摧毀了大約 200 萬噸棉花產量，相當於全球年消費量的約 8%
+- **中國棉花庫存低位**：中國已連續多年消耗棉花儲備，市場庫存降至歷史低位
+- **新興市場需求爆發**：快時尚行業的全球擴張帶動紡織品需求持續增長
+- **美元弱勢**：美元指數走低讓以美元計價的棉花對海外買家更具吸引力
+
+這四個因素共同推動 CT 從 2010 年 6 月的 $0.75/磅，在 9 個月內飆升至 2011 年 3 月的 $2.27/磅——創下了美國南北戰爭以來的最高紀錄。
+
+<QuoteCard
+  quote="我在棉花行業工作了四十年，從未見過這種走勢。這不是正常的週期，這是整個供應鏈同時失去理智。"
+  author="Dunavant Enterprises 前資深交易員"
+  year="2011"
+/>
+
+然而，$2.27 的高位僅維持了數週。中國政府宣布拍賣國家棉花儲備、全球棉農大規模擴種，加上紡織商轉向合成纖維替代，CT 期貨在 6 個月內跌回 $1.00/磅以下，讓大量追高的投機者損失慘重。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Dunavant Enterprises"
+  nameZh="杜那方特企業"
+  years="1960-2010"
+  nickname="曾經的全球棉花貿易之王"
+  story="孟菲斯的 Dunavant Enterprises 曾是全球最大的私人棉花貿易商，由比爾·杜那方特（Bill Dunavant）領導數十年，在美國、非洲、亞洲擁有廣泛的棉花採購和貿易網絡。Dunavant 在 CT 期貨市場的套保操作代表了傳統棉花貿易商的智慧：精細管理基差、優化交割地點、利用資訊優勢套利。2010 年，Dunavant 將主要業務出售給路易達孚，標誌著棉花貿易的「家族商行」時代落幕，農業綜合體大企業的全面主導時代開始。"
+/>
+
+<TraderProfile
+  name="Louis Dreyfus Commodities"
+  nameZh="路易達孚商品"
+  years="1851-"
+  nickname="全球最大棉花貿易商"
+  story="在收購 Dunavant 的棉花業務後，路易達孚成為全球最大的棉花貿易商，在美國、巴西、印度、中亞和非洲擁有廣泛的棉花業務網絡。路易達孚在 CT 期貨市場的操作策略高度整合了現貨採購、倉庫物流和期貨套保，形成複雜的「現貨-期貨一體化」管理模式。作為市場上最重要的套保者之一，路易達孚對 CT 合約各月份的基差有深度影響力。"
+/>
+
+<TraderProfile
+  name="Olam International"
+  nameZh="奧蘭國際"
+  years="1989-"
+  nickname="從奈及利亞到全球：新興市場棉花供應鏈整合者"
+  story="新加坡的奧蘭國際從奈及利亞腰果貿易起家，逐步成長為全球最重要的農業和食品供應鏈管理公司，棉花是其核心業務之一。奧蘭深耕非洲（布基納法索、馬利、坦尚尼亞）和中亞（烏茲別克斯坦）的棉花採購網絡，是連結非傳統棉花產區與全球市場的關鍵橋樑。其在 CT 期貨市場的套保操作以精準的基差管理著稱，結合其在種子、農業投入品和農場管理的垂直整合優勢。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="「棉花是王」與美國南北戰爭"
+  year="1850s-1865"
+  description="在美國內戰前，棉花佔美國出口總額的約 60%，是南方各州的經濟命脈。南方政治家約翰·哈蒙德（James Henry Hammond）1858 年在美國參議院的演講「棉花是王」（King Cotton），論證南方棉花對英國和法國工業的戰略重要性，認為南方可以藉此獲得歐洲的外交承認和支持。然而，英國最終因廢奴主義民心和從印度、埃及的替代採購，拒絕干預美國內戰。棉花的「地緣政治力量」第一次失敗了。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="快時尚：棉花消費的雙刃劍"
+  year="2000 至今"
+  description="H&M、Zara、優衣庫（Uniqlo）等快時尚品牌的全球擴張，推動了全球棉花消費量的持續增長——全球每人每年消耗約 10 公斤棉花，比 1960 年代增加了一倍以上。然而，快時尚的「用完即棄」商業模式也引發了嚴重的環境批評：廢舊棉紡織品已成為全球第二大污染產業。這個矛盾讓棉花既享受了需求增長紅利，又面臨「可持續性」壓力——有機棉、回收棉等替代品的市場份額在快速增長。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="新疆棉花：地緣政治的最新戰線"
+  year="2018 至今"
+  description="新疆是中國最大的棉花產區，佔中國棉花產量約 85%，全球棉花供應約 20%。2018 年起，美國和西方媒體及 NGO 對新疆維吾爾族強迫勞動問題的關注，演變為「新疆棉花抵制」的地緣政治事件。H&M、Nike、優衣庫等品牌的不同立場，引發了中西方消費者的截然相反反應。這場棉花地緣政治風波，讓 CT 期貨交易員不得不在基本面分析之外，加入政治風險和供應鏈重組的維度。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="棉農困境：美國農業補貼 vs 西非小農"
+  year="2000 至今"
+  description="美國政府每年向棉農提供約 20-30 億美元的農業補貼，讓美國棉花得以在低於生產成本的價格出口，嚴重衝擊了西非馬利、布基納法索等國的棉農生計。2004 年，巴西向 WTO 提出訴訟並勝訴，裁定美國棉花補貼違反 WTO 規則。這起訴訟是農業補貼政策中最重要的國際案例之一，也說明了 CT 期貨的「基準價格」背後，隱藏著複雜的政策扭曲和發展不平等問題。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="有機棉與 BCI（棉花可持續發展倡議）"
+  year="2000 至今"
+  description="隨著消費者對可持續時尚的關注提升，有機棉（Organic Cotton）和 BCI（Better Cotton Initiative）認證棉的市場份額快速增長。BCI 是全球最大的棉花可持續發展計畫，涵蓋超過 200 萬棉農，旨在減少農藥使用、改善農民生計、降低水資源消耗。然而，BCI 的「自我認證」模式也引發了關於標準嚴格性和透明度的批評——特別是 H&M 在新疆棉花問題上聲稱採用 BCI 標準時遭到的強烈質疑。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="美國農業部出口銷售報告（Export Sales）"
+  year="每週發布"
+  description="USDA 每週四發布的「出口銷售報告」（Export Sales Report）是美國農產品對外銷售的最重要週度追蹤工具，其中棉花部分是 CT 期貨每週最重要的數據衝擊來源。報告顯示本週新簽的出口合約（其中最重要的是「中國採購量」），當中國採購量大幅超出市場預期時，CT 期貨往往在報告發布後的數分鐘內大幅跳漲；低於預期則反向下跌。"
+/>
+
+</div>
+
+</SectionCard>

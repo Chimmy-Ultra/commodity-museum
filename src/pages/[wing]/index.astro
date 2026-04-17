@@ -1,0 +1,92 @@
+---
+import MuseumLayout from '@components/layout/MuseumLayout.astro';
+import WingNav from '@components/navigation/WingNav.astro';
+import Breadcrumbs from '@components/navigation/Breadcrumbs.astro';
+import { wings, getWing } from '@data/wings';
+import { getRoomsByWing } from '@lib/museum';
+
+export function getStaticPaths() {
+  return wings.map((wing) => ({ params: { wing: wing.slug } }));
+}
+
+const { wing: wingSlug } = Astro.params;
+const wing = getWing(wingSlug!)!;
+const rooms = await getRoomsByWing(wingSlug!);
+---
+
+<MuseumLayout title={wing.name} description={wing.description} accentColor={wing.accentColor}>
+  <div class="mx-auto max-w-7xl px-6">
+    <!-- Breadcrumbs -->
+    <div class="py-4">
+      <Breadcrumbs items={[
+        { label: '博物館', href: '/' },
+        { label: wing.name },
+      ]} />
+    </div>
+
+    <!-- Wing header -->
+    <header class="py-8" transition:name={`wing-${wing.slug}`}>
+      <span class="text-5xl">{wing.icon}</span>
+      <h1 class="mt-4 font-display text-4xl font-bold text-museum-text md:text-5xl">
+        {wing.name}
+      </h1>
+      <p class="mt-1 text-lg text-museum-text-secondary">{wing.nameEn}</p>
+      <p class="mt-3 max-w-2xl text-museum-text-secondary">{wing.description}</p>
+    </header>
+
+    <!-- Wing selector -->
+    <div class="py-4">
+      <WingNav currentWing={wingSlug} />
+    </div>
+
+    <!-- Room grid -->
+    <div class="grid gap-4 py-8 sm:grid-cols-2 lg:grid-cols-3">
+      {rooms.map((room, i) => (
+        <a
+          href={`/${wingSlug}/${room.data.slug}`}
+          class="group relative overflow-hidden rounded-xl border border-museum-border bg-museum-wall p-6 transition-all hover:border-museum-accent/30 hover:shadow-lg hover:shadow-museum-border/50"
+          style={`animation: reveal-up 0.4s ease-out ${i * 0.05}s both;`}
+        >
+          {/* Accent hover gradient */}
+          <div
+            class="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-10"
+            style={`background: radial-gradient(ellipse at bottom right, ${wing.accentColor}, transparent 70%);`}
+          />
+
+          <div class="relative">
+            <div class="flex items-center justify-between">
+              <span class="text-2xl">{room.data.icon}</span>
+              <span class="font-mono text-xs text-museum-text-secondary">
+                {String(room.data.roomNumber).padStart(2, '0')}
+              </span>
+            </div>
+            <h3 class="mt-3 font-display text-lg font-bold text-museum-text group-hover:text-museum-accent">
+              {room.data.name}
+            </h3>
+            <p class="text-xs text-museum-text-secondary">{room.data.nameEn}</p>
+            <p class="mt-2 text-sm text-museum-text-secondary line-clamp-2">
+              {room.data.tagline}
+            </p>
+
+            {/* Exchange + status badges */}
+            <div class="mt-4 flex items-center gap-2">
+              <span class="rounded bg-museum-plaque px-2 py-0.5 text-xs text-museum-text-secondary">
+                {room.data.exchange}
+              </span>
+              {room.data.tickerSymbol && (
+                <span class="rounded bg-museum-plaque px-2 py-0.5 font-mono text-xs text-museum-text-secondary">
+                  {room.data.tickerSymbol}
+                </span>
+              )}
+              {room.data.status === 'delisted' && (
+                <span class="rounded bg-museum-text-secondary/10 px-2 py-0.5 text-xs text-museum-text-secondary">
+                  已下市
+                </span>
+              )}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</MuseumLayout>

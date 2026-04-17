@@ -1,0 +1,44 @@
+---
+import { wings } from '@data/wings';
+import { getWingRoomCount } from '@lib/museum';
+---
+
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  {wings.map((wing) => {
+    const count = getWingRoomCount(wing.slug);
+    return (
+      <a
+        href={`/${wing.slug}/`}
+        class="group relative overflow-hidden rounded-xl border border-museum-border bg-museum-wall p-6 transition-all hover:border-museum-accent/30 hover:shadow-lg hover:shadow-museum-border/50"
+        transition:name={`wing-${wing.slug}`}
+      >
+        {/* Accent gradient */}
+        <div
+          class="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-10"
+          style={`background: radial-gradient(ellipse at top left, ${wing.accentColor}, transparent 70%);`}
+        />
+
+        <div class="relative">
+          <span class="text-3xl">{wing.icon}</span>
+          <h3 class="mt-3 font-display text-xl font-bold text-museum-text group-hover:text-museum-accent">
+            {wing.name}
+          </h3>
+          <p class="mt-0.5 text-xs text-museum-text-secondary">
+            {wing.nameEn}
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-museum-text-secondary">
+            {wing.description}
+          </p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-mono text-sm text-museum-text-secondary">
+              {count} 間展室
+            </span>
+            <svg class="h-4 w-4 text-museum-text-secondary transition-transform group-hover:translate-x-1 group-hover:text-museum-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </a>
+    );
+  })}
+</div>

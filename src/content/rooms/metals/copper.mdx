@@ -1,0 +1,172 @@
+---
+name: "銅"
+nameEn: "Copper"
+slug: "copper"
+wing: "metals"
+exchange: "CME/COMEX"
+tickerSymbol: "HG"
+status: "active"
+icon: "🟤"
+accentColor: "#b87333"
+roomNumber: 3
+tagline: "\"銅博士\" 是最準確的經濟學家——它的漲跌比任何 GDP 數字都更早預示繁榮與衰退"
+taglineEn: "'Dr. Copper' is the market's most accurate economist — its moves predict booms and busts before GDP data arrives"
+originRegion: "賽普勒斯 / 中東"
+firstFuturesYear: 1877
+firstFuturesExchange: "LME"
+greatestEventName: "1996 年住友醜聞——濱中泰男的 260 億銅帝國"
+greatestEventYear: 1996
+description: "銅展室：從青銅時代到 LME 和 COMEX，探索這個既是工業血液又是經濟晴雨表的紅色金屬，以及人類最大規模的單一金屬市場操縱案。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+銅是人類最早大規模使用的金屬，其歷史橫跨整個人類文明史。考古學家在美索不達米亞發現了西元前 9000 年前的銅製品——那是從天然銅礦石直接打磨而成的工具，甚至早於農業的發明。約西元前 5000 年，人類掌握了銅的冶煉技術（加熱礦石提取金屬），開啟了「銅器時代」。
+
+當銅與錫混合，得到青銅 (Bronze)——這種合金比純銅更硬、更耐用，足以製造武器和工具，催生了「青銅時代」(約 3000-1200 BCE)。青銅技術的傳播路線幾乎就是早期文明交流的路線圖：中東、地中海、印度河流域、中國黃河流域幾乎同時期發展出了青銅冶煉。
+
+銅的英文 Copper 與化學符號 Cu 都源自地名——賽普勒斯 (Cyprus)。古羅馬人稱銅為 *aes Cyprium*（賽普勒斯的金屬），後縮短為 *cuprum*。賽普勒斯的銅礦是古代地中海最重要的銅礦來源，讓這個島嶼在古代的地緣政治價值堪比現代中東的石油。
+
+現代銅產業的地理中心在南美洲。智利是全球最大的銅生產國，佔世界產量約 27%；其次是秘魯、剛果民主共和國和中國。智利國家銅業公司 (Codelco) 是全球最大的銅礦企業，其出產的銅為智利政府財政提供了逾三分之一的收入。
+
+<Timeline events={[
+  { year: "約 9000 BCE", text: "美索不達米亞出現最早的天然銅製品，人類進入銅器時代前期" },
+  { year: "約 3000 BCE", text: "青銅（銅+錫）冶煉技術在中東、地中海普及，青銅時代開始" },
+  { year: "約 1200 BCE", text: "鐵器時代開始，但銅的工業用途並未消退，而是轉型為貨幣和飾品材料" },
+  { year: "1877", text: "倫敦金屬交易所 (LME) 成立，銅成為首批上市金屬合約之一" },
+  { year: "1959", text: "COMEX 推出銅期貨合約（HG，代表 High Grade）" },
+  { year: "1996", text: "住友商社的濱中泰男醜聞爆發，揭示長達 10 年的銅市場操縱" },
+  { year: "2011", text: "銅價觸及歷史高峰 $4.63/磅，中國工業化需求達到峰值期" },
+  { year: "2024", text: "能源轉型帶動電動車和電網投資需求，銅再度衝破 $5/磅歷史大關" },
+]} />
+
+今日，銅最重要的身份是**工業晴雨表**——華爾街暱稱它為「銅博士」(Dr. Copper)，因為銅的價格走勢與全球 GDP 成長的相關性極高。製造業擴張需要大量銅（電線、管道、機械），基礎建設投資需要銅，電動車和太陽能電池也需要大量的銅。一位資深大宗商品交易員說：「如果你想知道世界經濟六個月後的走向，不要看央行聲明，看銅價。」
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="LME (London Metal Exchange) — 全球基準; COMEX — 美國基準"
+  year={1877}
+  contractSize="25 公噸 (LME) / 25,000 磅 (COMEX HG)"
+  deliveryPoint="LME 認可倉庫 (全球) / COMEX 認可倉庫 (美國)"
+  tickerSymbol="HG (COMEX) / CA (LME)"
+/>
+
+倫敦金屬交易所 (LME) 成立於 1877 年，銅是其核心合約。LME 銅至今仍是全球最重要的銅定價基準，其獨特之處在於採用「環形交易」(Ring Trading) 機制——交易員圍坐成一個圓圈，以公開喊價方式確定每日官方定價，這個傳統保留至今（儘管電子交易已佔主導）。
+
+COMEX 銅期貨 (HG) 於 1959 年推出，合約規格為 25,000 磅（約 11.34 公噸），以美元/磅報價。HG 的代號源自「高級銅」(High Grade Copper)，要求純度不低於 99.9%。COMEX 和 LME 之間的價差（COMEX 溢價或折價）是全球銅交易員的重要套利指標。
+
+由於銅在工業中的廣泛用途，銅市場的參與者比黃金和白銀更為多元：除了金融投機者，還有大量的實體套保者——銅礦公司、銅線廠、電器製造商。中國企業在銅市場的影響力尤為突出，中國消費全球約 50% 的銅，中國的電網投資、房地產開發、電動車政策，每一個都直接影響 LME 和 COMEX 的銅價走勢。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1996 年住友醜聞：「濱中先生」的秘密銅帝國
+
+1996 年 6 月，日本住友商社 (Sumitomo Corporation) 宣布，其首席銅交易員濱中泰男 (Yasuo Hamanaka) 未經授權進行銅期貨交易長達 10 年，造成公司損失約 **26 億美元**——這是人類歷史上規模最大的單一商品市場操縱案之一。
+
+濱中泰男在業界被稱為「Mr. Copper」（銅先生）或「Mr. 5 percent」（因為他一人控制了全球約 5% 的銅供應），是 LME 舉足輕重的人物。他的交易量之大，讓許多市場參與者不得不與他配合。
+
+<QuoteCard
+  quote="他（濱中泰男）掌控了 LME 銅市場的方式，就像一個國王統治他的王國。每個人都知道，也都怕他。"
+  author="一位匿名 LME 銅交易員"
+  year="1996"
+/>
+
+從 1980 年代末開始，濱中建立了大量銅的多頭倉位。他一方面在期貨市場持有巨型多倉，另一方面通過控制 LME 認可倉庫中的銅庫存，製造「實物短缺」假象，人為壓制倉庫庫存數字，讓市場持續錯估供需。
+
+他的操作實際上長期壓高了全球銅價，讓全球電力公司、建材廠商多付了數十億美元的銅材成本。美國司法部後來的調查顯示，濱中及其住友同僚還與外部交易商密謀，形成全球性的銅價操縱網絡。
+
+1996 年初，美國 CFTC 和英國 SFA（證券及期貨監管局）的調查讓消息外洩。住友被迫在短時間內清倉，銅價應聲暴跌 27%。濱中被判處 8 年有期徒刑，住友除了 26 億損失外，還額外支付了 1.5 億美元的美英監管機構和解金。
+
+這個事件永久改變了 LME 的倉庫透明度規定，並促使全球監管機構加強了對大宗商品持倉的揭露要求。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Yasuo Hamanaka"
+  nameZh="濱中泰男"
+  years="1950-"
+  nickname="Mr. Copper / 銅先生"
+  story="住友商社最著名（也最聲名狼藉）的銅交易員。在被逮捕之前，他是 LME 最有影響力的個人之一，以精準的市場判斷和龐大的交易量聞名。他實際上以「對沖」和「套利」為名，秘密累積了超過市場承受能力的多頭倉位，並長期向住友高層偽造交易記錄。他的案例至今是所有風控教科書的必讀案例，說明了：當一個交易員過於「成功」，反而更難被內部監控察覺。"
+/>
+
+<TraderProfile
+  name="Marc Rich"
+  nameZh="馬克．瑞奇"
+  years="1934-2013"
+  nickname="大宗商品之王"
+  story="被稱為現代大宗商品交易行業的奠基人，Glencore 的精神前身 Marc Rich + Co. 的創辦人。他開創了「現貨大宗商品交易」模式，在金屬、石油和糧食領域建立了全球貿易網絡。他也以「與伊朗做石油生意」在美國被起訴、流亡瑞士二十年，並於 2001 年被柯林頓總統在任期最後一天特赦而聞名。他旗下公司在銅市場的巨大影響力，是今日 Glencore 主導全球金屬貿易的歷史根源。"
+/>
+
+<TraderProfile
+  name="Ivan Glasenberg"
+  nameZh="伊凡．格拉斯伯格"
+  years="1957-"
+  nickname="Glencore 之王"
+  story="Glencore 前 CEO，帶領 Glencore 從一家交易公司轉型為全球最大的資源企業集團。在銅領域，Glencore 透過收購智利、剛果的銅礦，以及控制全球銅精礦的流通，成為定義銅市場結構的力量之一。格拉斯伯格代表了現代大宗商品交易的終極形態：不只做買賣，更要掌握從礦山到下游的整條供應鏈。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="自由女神像 Statue of Liberty"
+  year="1886"
+  description="紐約港的自由女神像外層由 179 噸銅片構成，當初安裝時呈現閃亮的銅本色（橙紅色），但在海風和氧化作用下，花了約 20 年時間逐漸變成今日標誌性的藍綠色（銅綠，Patina）。這座雕像同時是銅的美學特質——歷久彌新、在氧化中找到新生——的完美展示，也是美國工業時代初期的銅需求象徵。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="電話與電力的銅線革命"
+  year="1880s"
+  description="托馬斯·愛迪生和亞歷山大·格拉漢姆·貝爾的發明讓銅成為現代文明不可或缺的材料。電力輸送需要銅線（銅的導電性在常用金屬中最佳），電話通訊需要銅線。19 世紀末到 20 世紀初，「電氣化」浪潮催生了人類史上第一次的銅需求大爆發，也直接推動了 LME 銅合約的交易量增長。今日全球電動車和智慧電網的建設，被稱為「第二次電氣化」。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="Dr. Copper 銅博士的預言"
+  year="1970s 至今"
+  description="「銅博士」這個暱稱最早出現在 1970 年代的商品交易圈，意指銅價的走勢往往比官方經濟數據更早反映全球經濟趨勢。2008 年金融危機前，銅率先從高點下跌；2009 年，銅比股市更早反彈。這個「博士」頭銜在業界廣受認可，是大宗商品市場「自有預測能力」這一信念的最佳象徵。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《資本論》中的銅礦"
+  year="1867"
+  description="卡爾·馬克思在《資本論》中多次以銅礦和金屬冶煉業為例，分析工業資本主義下工人被剝削的機制。他觀察到，礦山工人的勞動條件往往是工業資本主義最殘酷的縮影。150 年後，剛果民主共和國的鈷礦（常與銅共生）仍在重演類似的故事，為電動車電池提供原料。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="智利國家銅業 Codelco"
+  year="1976"
+  description="1976 年，智利皮諾契特軍政府將美資銅礦公司國有化，成立 Codelco（智利國家銅業公司）。Codelco 至今是全球最大的銅礦企業，年產銅約 170 萬公噸，但旗下主力礦山 Chuquicamata 和 El Teniente 都已超過百年歷史、面臨礦石品位下降的問題。Codelco 的財務狀況是智利政府預算的晴雨表，也是全球銅市供給預測的關鍵參數。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《奪命金》No Country for Old Men"
+  year="2007"
+  description="雖然這部柯恩兄弟的傑作以毒品交易為主軸，但它設定在 1980 年代德克薩斯州，那個年代正是美國工業空心化、銅線盜竊案激增的時期。銅價上漲時，各地的廢棄廠房、建築工地都會爆發銅線被盜的案件——這已成為衡量銅價的另類民間指標，也折射出這個金屬在工業社會中的基礎地位。"
+/>
+
+</div>
+
+</SectionCard>

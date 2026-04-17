@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  name: string;
+  nameZh?: string;
+  years: string;
+  nickname?: string;
+  story: string;
+  portrait?: ImageMetadata;
+}
+
+const { name, nameZh, years, nickname, story, portrait } = Astro.props;
+---
+
+<div class="my-4 rounded-lg border border-museum-border bg-museum-plaque p-6 transition-colors hover:border-museum-accent/30">
+  <div class="flex items-start justify-between gap-4">
+    {portrait && (
+      <Image
+        src={portrait}
+        alt={nameZh ? `${name} ${nameZh}` : name}
+        width={80}
+        height={80}
+        class="h-16 w-16 shrink-0 rounded-full border-2 border-museum-border object-cover md:h-20 md:w-20"
+      />
+    )}
+    <div class="flex flex-1 items-start justify-between">
+      <div>
+        <h4 class="font-display text-lg font-bold text-museum-text">
+          {name}
+          {nameZh && <span class="ml-2 text-museum-text-secondary">{nameZh}</span>}
+        </h4>
+        {nickname && (
+          <p class="mt-0.5 text-sm italic text-museum-accent">"{nickname}"</p>
+        )}
+      </div>
+      <span class="shrink-0 rounded-md bg-museum-wall px-2 py-1 font-mono text-xs text-museum-text-secondary">
+        {years}
+      </span>
+    </div>
+  </div>
+  <p class="mt-3 leading-relaxed text-museum-text-secondary">{story}</p>
+</div>

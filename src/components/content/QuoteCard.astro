@@ -1,0 +1,20 @@
+---
+interface Props {
+  quote: string;
+  author: string;
+  year?: string;
+}
+
+const { quote, author, year } = Astro.props;
+---
+
+<blockquote class="relative my-8 rounded-lg border-l-4 border-museum-accent bg-museum-plaque px-6 py-5">
+  <!-- Quote mark -->
+  <span class="absolute -top-4 left-4 font-display text-5xl leading-none text-museum-accent/20">"</span>
+  <p class="relative text-lg italic leading-relaxed text-museum-text">
+    {quote}
+  </p>
+  <footer class="mt-3 text-sm text-museum-text-secondary">
+    — {author}{year && <span class="ml-1 opacity-60">({year})</span>}
+  </footer>
+</blockquote>

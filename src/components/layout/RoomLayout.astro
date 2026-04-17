@@ -1,0 +1,100 @@
+---
+import MuseumLayout from './MuseumLayout.astro';
+import Breadcrumbs from '@components/navigation/Breadcrumbs.astro';
+import SectionNav from '@components/navigation/SectionNav.astro';
+import RoomStepper from '@components/navigation/RoomStepper.astro';
+import RoomHeader from '@components/room/RoomHeader.astro';
+import { getWing } from '@data/wings';
+import { getAdjacentRooms } from '@lib/museum';
+
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  frontmatter: {
+    name: string;
+    nameEn: string;
+    slug: string;
+    wing: string;
+    exchange: string;
+    tickerSymbol?: string;
+    status: string;
+    delistedYear?: number;
+    icon: string;
+    accentColor: string;
+    tagline: string;
+    taglineEn: string;
+    description: string;
+    heroImage?: ImageMetadata;
+    heroImageAlt?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const wing = getWing(frontmatter.wing);
+const { prev, next } = getAdjacentRooms(frontmatter.wing, frontmatter.slug);
+
+const sections = [
+  { id: 'origin', label: '起源故事', labelEn: 'Origin Story' },
+  { id: 'futures', label: '第一張期貨合約', labelEn: 'First Futures' },
+  { id: 'event', label: '史上最大事件', labelEn: 'Greatest Event' },
+  { id: 'traders', label: '傳奇交易員', labelEn: 'Legendary Traders' },
+  { id: 'culture', label: '文化文物', labelEn: 'Cultural Artifacts' },
+];
+---
+
+<MuseumLayout
+  title={`${frontmatter.name} ${frontmatter.nameEn}`}
+  description={frontmatter.description}
+  accentColor={frontmatter.accentColor}
+>
+  <div class="mx-auto max-w-7xl px-6">
+    <!-- Breadcrumbs -->
+    <div class="py-4">
+      <Breadcrumbs
+        items={[
+          { label: '博物館', href: '/' },
+          { label: wing?.name || '', href: `/${frontmatter.wing}/` },
+          { label: frontmatter.name },
+        ]}
+      />
+    </div>
+
+    <!-- Room Header -->
+    <RoomHeader
+      name={frontmatter.name}
+      nameEn={frontmatter.nameEn}
+      icon={frontmatter.icon}
+      exchange={frontmatter.exchange}
+      tickerSymbol={frontmatter.tickerSymbol}
+      status={frontmatter.status}
+      delistedYear={frontmatter.delistedYear}
+      tagline={frontmatter.tagline}
+      taglineEn={frontmatter.taglineEn}
+      accentColor={frontmatter.accentColor}
+      heroImage={frontmatter.heroImage}
+      heroImageAlt={frontmatter.heroImageAlt}
+    />
+
+    <!-- Content area with section nav -->
+    <div class="mt-12 flex gap-8">
+      <!-- Sticky section nav (desktop) -->
+      <aside class="hidden w-56 shrink-0 lg:block">
+        <div class="sticky top-24">
+          <SectionNav sections={sections} />
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <article class="prose-museum min-w-0 max-w-none flex-1">
+        <slot />
+      </article>
+    </div>
+
+    <!-- Room stepper -->
+    <RoomStepper
+      wingSlug={frontmatter.wing}
+      prev={prev}
+      next={next}
+    />
+  </div>
+</MuseumLayout>

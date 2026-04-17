@@ -1,0 +1,172 @@
+---
+name: "無鉛汽油"
+nameEn: "RBOB Gasoline"
+slug: "rbob-gasoline"
+wing: "energy"
+exchange: "CME/NYMEX"
+tickerSymbol: "RB"
+status: "active"
+icon: "⛽"
+accentColor: "#c93c3c"
+roomNumber: 5
+tagline: "每天早晨加油時付的那個價格，背後是一條從德州原油到紐約港煉廠再到期貨交易所的完整定價鏈"
+taglineEn: "The price you pay at the pump every morning is the end of a chain: Texas crude → New York refinery → NYMEX futures"
+originRegion: "美國"
+firstFuturesYear: 1984
+firstFuturesExchange: "NYMEX"
+greatestEventName: "2005 年卡崔娜颶風——墨西哥灣煉油業癱瘓，汽油一週漲 40%"
+greatestEventYear: 2005
+description: "RBOB 汽油展室：從鉛汽油的毒害到 RBOB 無鉛配方的誕生，探索每天在加油站見到的價格背後的期貨市場機制，以及「裂解價差」如何衡量煉油廠的利潤。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+汽油的故事，從一個幾乎是廢物的副產品開始。19 世紀末，石油的主要用途是煤油（用於照明），而汽油（更輕質的石油餾分）是蒸餾煤油後殘餘的「廢棄物」，往往被倒進河裡。直到 1885 年內燃機的發明，汽油才找到了它的歷史性用途。
+
+第一輛真正的汽油驅動汽車由德國工程師卡爾·賓士 (Karl Benz) 在 1885 年製造，使用的「燃料」與今日的汽油相比是一種相當粗糙的石油餾分。隨著汽車工業的爆炸性增長（福特 T 型車 1908 年上市後徹底改變了大眾交通），汽油逐漸從廢物變成了煉廠最重要的主力產品。
+
+20 世紀中，汽油中加入了四乙基鉛 (Tetraethyl Lead) 作為「抗爆劑」，提高引擎效率——但鉛是有毒物質，幾十年後科學家發現，汽油中的含鉛廢氣是全球最大規模的大氣鉛污染源，對兒童智力發育有嚴重傷害。美國從 1970 年代開始立法要求逐步淘汰含鉛汽油，到 1996 年完全禁止，全球其他國家也陸續跟進，最後一個國家阿爾及利亞在 2021 年完成無鉛化。
+
+「RBOB」的全名是「Reformulated Blendstock for Oxygenate Blending」（重組含氧混合基料）——一種未添加含氧劑的汽油基礎料，交割後需在終端加入乙醇等含氧劑。這個複雜的名字反映了美國環保法規要求汽油必須添加含氧劑以降低排放，同時在期貨交割環節保持標準化的設計邏輯。
+
+<Timeline events={[
+  { year: "1885", text: "賓士製造第一輛汽油驅動汽車，汽油從廢品變為戰略物資" },
+  { year: "1921", text: "四乙基鉛抗爆劑發明，此後 50 年間含鉛汽油主導全球市場" },
+  { year: "1970", text: "美國《清潔空氣法》通過，啟動含鉛汽油淘汰計劃，催化轉化器成為必備裝置" },
+  { year: "1984", text: "NYMEX 推出無鉛汽油期貨合約，成為首個石油產品期貨" },
+  { year: "1996", text: "美國完全禁止含鉛汽油，無鉛汽油市場全面確立" },
+  { year: "2005", text: "颶風卡崔娜摧毀墨西哥灣 19% 的美國煉油產能，汽油現貨一週上漲 40%" },
+  { year: "2006", text: "NYMEX 以 RBOB 合約取代舊版無鉛汽油合約，反映美國汽油規格升級" },
+  { year: "2022", text: "俄烏戰爭引發全球能源危機，美國汽油零售價首次突破 $5/加侖" },
+]} />
+
+汽油市場有一個重要的季節性因素：美國在每年夏季（5 月至 9 月，俗稱「開車季」Driving Season）汽油需求大增，春季加油站通常預先備貨，導致 RBOB 春季期貨溢價（春季高於冬季）。另一個季節性因素是「配方」：美國各地出於環保要求使用不同的夏季配方汽油 (Summer Blend) 和冬季配方 (Winter Blend)，春秋兩季的配方轉換往往帶來短期價格波動。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="NYMEX (New York Mercantile Exchange)"
+  year={1984}
+  contractSize="42,000 加侖 (1,000 桶)"
+  deliveryPoint="紐約港 (New York Harbor)"
+  tickerSymbol="RB"
+/>
+
+NYMEX 最初在 1984 年推出的是「無鉛汽油期貨」(Unleaded Gasoline Futures)，代碼 HU，以紐約港為交割點。2006 年，配合美國 EPA 對汽油規格的升級要求，NYMEX 推出新的 RBOB 合約（代碼 RB），取代了原有的 HU 合約。
+
+RB 合約規格為 42,000 加侖（1,000 桶），以美元/加侖報價，最小跳動為 $0.0001/加侖（$4.20/合約）。
+
+「裂解價差」(Crack Spread) 是汽油期貨最重要的行業分析工具，衡量煉油廠從原油提煉汽油的利潤空間。最常用的是「3-2-1 裂解價差」：3 桶原油（WTI 或布蘭特）→ 2 桶汽油 + 1 桶取暖油/柴油。當裂解價差擴大，煉廠利潤增加，鼓勵增加產能；當裂解價差收窄，煉廠可能考慮減產。裂解價差是煉油公司套保、能源交易基金策略的核心參數。
+
+美國的汽油零售價受多重因素影響：原油成本（約佔 50-60%）、煉廠利潤（RBOB 裂解價差）、配送和行銷成本、聯邦和州稅。其中，聯邦汽油稅為 18.4 美分/加侖（自 1993 年起未調整），是全球主要經濟體中最低的汽油稅之一，這也是美國汽油零售價相對低廉的原因。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2005 年颶風卡崔娜：煉油業的噩夢
+
+2005 年 8 月 29 日，五級颶風「卡崔娜」(Hurricane Katrina) 以每小時超過 200 公里的風速正面登陸路易斯安那州，摧毀了紐奧良市，並重創了美國能源業的核心地帶——墨西哥灣沿岸的石油開採和煉油設施。
+
+颶風過後的統計數字令人震驚：約 **19%** 的美國煉油產能受損或停工，墨西哥灣近海約 26 個原油生產平台被摧毀或嚴重受損，近海天然氣產量也驟減 80%。路易斯安那州的 Colonial Pipeline 輸油管道（美國東海岸最重要的汽油輸送管道）被迫停運。
+
+<QuoteCard
+  quote="卡崔娜不只是一場颶風——它是對美國能源基礎設施集中度的一次壓力測試，而我們失敗了。"
+  author="美國能源部長山姆·博德曼 (Sam Bodman)"
+  year="2005"
+/>
+
+市場反應立竿見影。颶風登陸後的一週，NYMEX RBOB 汽油從約 $1.80/加侖飆升至 $3.00 以上，漲幅超過 40%。美國南部各地出現加油站排長龍、汽油短缺的場景，部分地區零售汽油一度超過 $5/加侖。布希政府宣布動用美國戰略石油儲備 (SPR)，並協調國際能源署 (IEA) 成員國釋放儲備，共同緩解市場恐慌。
+
+這次事件的長期後果是：美國開始重新審視煉油設施過度集中在墨西哥灣沿岸的風險，同時加速了推動汽油中混入乙醇（玉米乙醇）的政策——表面上是為了減少石油依賴，實質上也造就了美國玉米產業的政治影響力。
+
+**後記：** 2022 年俄烏戰爭引發全球能源危機，美國汽油零售價 6 月達到歷史高點 $5.01/加侖，拜登政府再度動用戰略石油儲備創紀錄地釋放 1.8 億桶，美國史上最大規模的 SPR 動用行動——但效果依然有限，通膨持續高企。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Andrew Hall"
+  nameZh="安迪·霍爾"
+  years="1954-"
+  nickname="石油之神 / God"
+  story="霍爾是花旗集團旗下 Phibro Energy 的首席石油交易員，以精準的長期宏觀油市判斷聞名。2003 年，他在 WTI 油價約 $30 時建立了大量長期多頭部位，賭油價將在五年內突破 $100。2008 年，這個押注完美兌現，為 Phibro 賺取逾 10 億美元，他個人獲得約 1 億美元分紅，成為美國最受爭議的「銀行家薪酬」案例，最終促使花旗出售 Phibro。霍爾的交易哲學是「石油是一個永遠有政治介入的市場，任何純粹基本面分析都是不完整的」。"
+/>
+
+<TraderProfile
+  name="Fadel Gheit"
+  nameZh="法德爾·蓋特"
+  years="1950s-"
+  nickname="華爾街最坦率的石油分析師"
+  story="Oppenheimer 石油分析師，以直言批評石油公司高管薪酬和不理性資本支出聞名。他的研究報告多次正確預警油市過熱或低估，在機構投資者和媒體中享有極高聲譽。他代表了大宗商品分析師的另一種影響力——不是交易員，而是資訊的提供者和市場謬誤的糾正者。"
+/>
+
+<TraderProfile
+  name="Vitol Group"
+  nameZh="維多集團"
+  years="1966-"
+  nickname="全球最大石油貿易商"
+  story="荷蘭創立、總部日內瓦的石油貿易巨頭，全球最大的石油中間商，年貿易量超過 700 萬桶/天。維多不公開上市，是私人合夥公司，其高度不透明性一直是能源市場監管討論的話題。維多在汽油、柴油、石腦油的全球跨地區套利中扮演核心角色，連接了煉廠、終端倉儲和零售市場。颶風季節，維多的油輪調度是緩解美國東海岸汽油短缺的重要力量之一。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="66 號公路與汽油文化"
+  year="1926"
+  description="美國 66 號公路（Route 66）從芝加哥到洛杉磯，全長 3,940 公里，是美國汽車文化最重要的象徵。它孕育了無數加油站、汽車旅館和路邊餐廳，也讓「在高速公路上填滿油箱、駛向自由」成為 20 世紀美國夢的標誌性圖像。今日的美國人均汽油消耗量仍是全球最高之一（約 420 加侖/年），是德國人的 3 倍，是中國人的 5 倍——這個數字的背後，是汽油期貨市場最深的需求根基。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="四乙基鉛與大眾智力損害"
+  year="1921-2000"
+  description="環境健康研究員賈德·聶德曼 (Herbert Needleman) 在 1970 年代的研究確認，含鉛汽油排放導致都市兒童血液鉛含量升高，對智力發育有永久性損害。估計在美國，1940-1980 年代因含鉛汽油而造成的平均智商損失超過 5 分。一些研究甚至將鉛污染的時代性與犯罪率的歷史走勢（高鉛暴露的嬰兒長大後犯罪率更高）相連結。去鉛化可能是 20 世紀美國公共衛生最重要的單一干預措施。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="玉米乙醇的政治奇蹟"
+  year="2005"
+  description="2005 年美國《能源政策法》授權強制要求汽油中添加可再生燃料（主要是玉米乙醇），美國的乙醇添加量從 2005 年約 40 億加侖，增長至今日的約 150 億加侖/年。玉米乙醇讓愛荷華州（全美最大的玉米生產州）在總統初選中獲得了不成比例的政治影響力，因為任何想在愛荷華贏得選票的總統候選人，都不敢反對乙醇補貼。這是大宗商品市場與民主政治最直接的交點。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="《汽油與上帝》Gas Hole"
+  year="2008"
+  description="記錄了美國汽車工業遊說阻止高油耗汽車規定的歷史，呈現了石油公司、汽車廠、政府如何共同維持美國對汽油的高度依賴。雖然部分內容有陰謀論色彩，但它記錄了一個真實的政治經濟現象：汽油稅過低、燃油效率標準過鬆，是美國政治系統長期無法解決的問題。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="3-2-1 裂解價差 Crack Spread"
+  year="1980s 至今"
+  description="「3-2-1 裂解價差」是煉油業最重要的利潤指標：以 3 桶原油生產 2 桶汽油 + 1 桶柴油的利潤差。當裂解價差擴大（如 2022 年柴油短缺時），煉廠利潤豐厚，吸引增產；當裂解價差收窄，煉廠可能考慮維修停工。煉油公司在原油和石油產品期貨市場上的套保策略，本質上就是管理這個利潤差。2022 年，柴油裂解價差一度超過 $60/桶，創歷史紀錄，讓煉油公司賺取了巨額利潤，也引發了政治人物要求徵收「暴利稅」的呼聲。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="電動車的汽油威脅"
+  year="2020 至今"
+  description="電動車普及率上升意味著汽油需求的長期走弱。IEA 估計，全球汽油需求可能已在 2019 年前後見頂（疫情加速了這一趨勢）。在美國，加州已宣布 2035 年後禁止銷售新的燃油乘用車。這讓 RBOB 汽油期貨面臨長期結構性下行壓力——這是一種「終將消失的商品」，市場如何為這種長期趨勢定價，是能源分析師最重要的長期研究課題之一。"
+/>
+
+</div>
+
+</SectionCard>

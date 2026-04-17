@@ -1,0 +1,55 @@
+---
+interface Section {
+  id: string;
+  label: string;
+  labelEn: string;
+}
+
+interface Props {
+  sections: Section[];
+}
+
+const { sections } = Astro.props;
+---
+
+<nav aria-label="展室章節" class="space-y-1">
+  <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-museum-text-secondary">
+    章節導覽
+  </h3>
+  {sections.map((section, i) => (
+    <a
+      href={`#${section.id}`}
+      class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-museum-text-secondary transition-colors hover:bg-museum-plaque hover:text-museum-text"
+      data-section-link={section.id}
+    >
+      <span class="font-mono text-xs text-museum-border group-hover:text-museum-accent">
+        {String(i + 1).padStart(2, '0')}
+      </span>
+      <div>
+        <div>{section.label}</div>
+        <div class="text-xs opacity-50">{section.labelEn}</div>
+      </div>
+    </a>
+  ))}
+</nav>
+
+<script>
+  // Highlight active section on scroll
+  const links = document.querySelectorAll('[data-section-link]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const link = document.querySelector(`[data-section-link="${entry.target.id}"]`);
+        if (entry.isIntersecting) {
+          links.forEach((l) => l.classList.remove('!text-museum-accent', '!bg-museum-plaque'));
+          link?.classList.add('!text-museum-accent', '!bg-museum-plaque');
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -60% 0px' }
+  );
+
+  document.querySelectorAll('section[id]').forEach((section) => {
+    observer.observe(section);
+  });
+</script>

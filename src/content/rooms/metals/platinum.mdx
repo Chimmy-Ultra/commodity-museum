@@ -1,0 +1,176 @@
+---
+name: "鉑金"
+nameEn: "Platinum"
+slug: "platinum"
+wing: "metals"
+exchange: "CME/NYMEX"
+tickerSymbol: "PL"
+status: "active"
+icon: "⬜"
+accentColor: "#e5e4e2"
+roomNumber: 4
+tagline: "比黃金更稀有、更難開採、卻長期定價更低——鉑金是一個由汽車業和地緣政治共同書寫的金屬故事"
+taglineEn: "Rarer than gold, harder to mine, yet often cheaper — platinum's price is written by the auto industry and geopolitics"
+originRegion: "南美洲 / 南非"
+firstFuturesYear: 1956
+firstFuturesExchange: "NYMEX"
+greatestEventName: "2008 年鉑金衝破 $2,300——超越黃金的歷史頂點"
+greatestEventYear: 2008
+description: "鉑金展室：從印加文明的白色黃金到 NYMEX PL 合約，探索這個由汽車排放法規主宰命運的稀有貴金屬，以及南非礦業的地緣政治風險。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+鉑金是地球上最稀有的天然金屬之一。整個人類歷史上開採的所有鉑金，如果熔成一個立方體，邊長不超過 8 公尺——相較之下，黃金立方體的邊長約 21 公尺。
+
+前哥倫布時代的南美洲文明（尤其是哥倫比亞的辛努族）早已使用鉑金製作裝飾品，他們稱之為「白色黃金」。16 世紀的西班牙征服者在哥倫比亞和厄瓜多的河床中發現了一種白色、沉重、難以熔化的金屬，起初認為是「未成熟的銀」而棄之不用。西班牙文 *platina* 意為「小銀」（带有輕蔑之意），鉑金 (Platinum) 的英文名稱即源於此。
+
+鉑金真正進入歐洲科學視野是在 1735 年，英國冶金學家查爾斯·伍德 (Charles Wood) 從牙買加帶回樣品，引發了科學家的研究興趣。1750 年代，法國化學家弗朗索瓦·沙巴諾 (François Chabaneau) 首次提煉出純鉑金，並在 1786 年為西班牙國王製作了第一個鉑金坩堝。
+
+現代鉑金產業的地理中心在南非。全球鉑金產量的約 **70-75%** 來自南非的布什維爾德雜岩體 (Bushveld Igneous Complex)，特別是林波波省和姆普馬蘭加省。這種高度集中的地理分佈使鉑金市場極易受到南非政治、勞資糾紛和電力危機的衝擊——這是鉑金與黃金、白銀最大的結構性差異。
+
+<Timeline events={[
+  { year: "約 700 CE", text: "哥倫比亞辛努族文明使用鉑金製作裝飾品，稱之為「白色黃金」" },
+  { year: "1557", text: "義大利人文主義學者 Julius Caesar Scaliger 首次在歐洲文獻中描述鉑金" },
+  { year: "1735", text: "英國科學家 Charles Wood 帶回鉑金樣本，正式引入歐洲科學研究" },
+  { year: "1803", text: "英國化學家 William Hyde Wollaston 從鉑礦中分離出鈀（Palladium）和銠（Rhodium）" },
+  { year: "1879", text: "南非布什維爾德地區發現鉑金礦藏，現代鉑金開採業雛形開始" },
+  { year: "1956", text: "NYMEX 推出鉑金期貨合約，成為最早的貴金屬期貨之一" },
+  { year: "1975", text: "美國聯邦政府要求汽車必須安裝催化轉化器，催生了現代鉑金最大的工業需求" },
+  { year: "2008", text: "鉑金觸及 $2,310/盎司歷史高峰，超越黃金，隨後因金融危機暴跌逾 60%" },
+]} />
+
+鉑金的命運從 1970 年代起被汽車業深刻改寫。汽車催化轉化器 (Catalytic Converter) 需要鉑金（汽油車用鉑/鈀，柴油車用鉑/鈀/銠）來將有毒廢氣（CO、NOₓ、碳氫化合物）轉化為無害氣體。今日，汽車催化轉化器消耗了全球鉑金需求的約 40%。全球各地排放法規的收緊或放鬆，直接牽動鉑金的價格走勢。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="NYMEX (New York Mercantile Exchange)"
+  year={1956}
+  contractSize="50 金衡盎司 (約 1.555 公斤)"
+  deliveryPoint="NYMEX 認可金庫 (紐約/特拉華州/加州)"
+  tickerSymbol="PL"
+/>
+
+NYMEX 鉑金期貨 (PL) 是 1956 年推出的，是全球最早期的貴金屬期貨合約之一——甚至早於黃金和白銀期貨。這反映了 1950 年代工業界對鉑金需求的快速增長，尤其是化工和石油煉製業對鉑金催化劑的大量使用。
+
+PL 合約規格為 50 金衡盎司（約 1.555 公斤），以美元/盎司報價。與黃金（100 盎司）和白銀（5,000 盎司）相比，鉑金合約較小，反映了其較低的流動性和較高的單價。
+
+鉑金市場的流動性遠低於黃金和白銀。鉑金的全球年開採量約 180 公噸，相比之下黃金約 3,300 公噸、白銀約 27,000 公噸。這種低流動性使鉑金市場更容易受到供給端衝擊影響，也使大型資金的進出對價格影響更為劇烈。
+
+倫敦鉑鈀市場 (LPPM) 也提供鉑金每日定盤價，作為場外實物交易的參考。LPPM 鉑金與 NYMEX 鉑金期貨之間的價差，是機構套利交易的重要關注點。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2008 年衝破 $2,300——超越黃金的鉑金傳奇
+
+2008 年 3 月，鉑金寫下了一個讓整個貴金屬市場目瞠口呆的歷史：**鉑金價格觸及 $2,310/盎司，首次明顯超越黃金**（當時金價約 $1,000）。這也是鉑金的歷史峰值。
+
+這波上漲有多重推力同時作用：
+
+**一、南非電力危機。** 2008 年初，南非國家電力公司 Eskom 爆發嚴重電力短缺，多次實施輪流停電 (Load Shedding)。南非的鉑金礦山是高耗電設施，停電直接導致多個主要鉑金礦山停工。市場迅速意識到，全球 70% 的鉑金供應受到威脅。
+
+**二、全球催化轉化器需求旺盛。** 2007-2008 年，中國和印度汽車市場高速增長，同時歐洲柴油車市佔率仍在上升（柴油車催化轉化器主要使用鉑金），需求面持續強勁。
+
+**三、基金資金湧入。** 大宗商品超級週期的頂點吸引了大量對沖基金和指數基金資金流入貴金屬，推高了所有金屬的價格。
+
+<QuoteCard
+  quote="鉑金不是黃金的替代品，也不是黃金的影子。它有自己的供需邏輯——那個邏輯叫做南非電網和歐盟排放法規。"
+  author="Johnson Matthey 鉑金分析師"
+  year="2008"
+/>
+
+然而，2008 年 9 月雷曼兄弟倒閉，全球金融危機爆發。汽車業遭受重創，通用、克萊斯勒相繼申請破產保護，催化轉化器需求預期急跌。到了 2008 年 10 月，鉑金已從 $2,310 暴跌至 $750，跌幅高達 **67%**——比黃金的跌幅大三倍以上。
+
+這次暴漲暴跌完美示範了鉑金的雙重性格：供給側極度脆弱（集中在南非），需求側高度依賴汽車業景氣。與黃金不同，鉑金沒有「最後避風港」的地位，在系統性危機中反而會被拋售。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Johnson Matthey"
+  nameZh="莊信萬豐"
+  years="1817-"
+  nickname="鉑族金屬之王"
+  story="英國化工集團 Johnson Matthey 不是一個人，而是鉑金市場最重要的機構參與者之一。創立於 1817 年的這家公司，是全球最主要的鉑族金屬（PGMs）精煉商和催化轉化器製造商，也是倫敦鉑鈀市場 (LPPM) 最重要的定盤參與者之一。每年，Johnson Matthey 都會發布《鉑族金屬年度回顧》，這份報告是全球鉑金分析師和交易員最重要的參考文件。"
+/>
+
+<TraderProfile
+  name="Cyril Ramaphosa"
+  nameZh="西里爾·拉馬福薩"
+  years="1952-"
+  nickname="礦工之友（後成為礦業公司大股東）"
+  story="南非現任總統拉馬福薩在成為政治人物之前，是南非礦工工會 (NUM) 的創始秘書長，代表南非黑人礦工與白人礦業資本談判。1990 年代，他卸下工會職務後，成功轉型為商界精英，入股多家鉑金礦業公司。他的人生軌跡——從礦工代言人到礦業資本參與者——完整體現了南非鉑金政治經濟學的複雜性。馬里卡納大屠殺 (2012) 發生時，他是 Lonmin 礦業公司的董事，這段歷史至今仍在南非政治中留下陰影。"
+/>
+
+<TraderProfile
+  name="Andrew Forrest"
+  nameZh="安德魯·福雷斯特"
+  years="1961-"
+  nickname="澳洲礦業大亨"
+  story="澳大利亞 Fortescue Metals Group 創辦人，主要以鐵礦石聞名，但近年大舉進入鉑族金屬領域，押注其在氫燃料電池中的應用。他認為綠氫 (Green Hydrogen) 是未來能源的核心，而鉑金是氫燃料電池的關鍵催化劑材料。他的押注代表了鉑金市場的新希望：如果氫能取代部分汽油引擎，鉑金的新需求將足以彌補內燃機下滑帶來的缺口。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="白金唱片 Platinum Record"
+  year="1976"
+  description="美國唱片工業協會 (RIAA) 於 1976 年正式設立「白金唱片」認證（銷量超過 100 萬張），成為黃金唱片之上的最高榮譽。鉑金在流行文化中已成為「頂級品質」和「奢華稀有」的代名詞，從信用卡等級（白金卡）到婚戒材質，都以「鉑金」作為最高層級的象徵。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="催化轉化器 Catalytic Converter"
+  year="1975"
+  description="1970 年美國《清潔空氣法》要求到 1975 年大幅削減汽車排放，這直接催生了現代汽車催化轉化器的大規模商業應用。每個催化轉化器含有 2-7 克鉑族金屬，而全球每年生產約 8,000 萬輛汽車。催化轉化器同時創造了鉑金最大的需求（新車裝配）和最大的二次供給（廢舊催化轉化器回收精煉），形成了獨特的循環市場結構。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="馬里卡納礦難 Marikana Massacre"
+  year="2012"
+  description="2012 年 8 月 16 日，南非北西省 Lonmin 鉑金礦，罷工礦工與警察對峙，南非警察開槍射殺 34 名礦工，另有 78 人受傷。這是種族隔離制度結束後南非最嚴重的警察暴力事件，也讓全球投資人重新審視南非鉑金礦業的社會風險。事件發生後，倫敦鉑金價格短暫反彈（因供給擔憂），但也標誌著南非礦業勞資關係的長期惡化。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="鉑金婚戒的崛起"
+  year="1886 至今"
+  description="鉑金首飾的歷史可追溯至 19 世紀末，卡地亞在 1886 年率先使用鉑金作為鑲嵌鑽石的首選金屬，因為它的顏色和硬度比白金（White Gold，黃金與白色金屬的合金）更適合展示鑽石的光澤。二戰期間，各國政府因軍工需求管制鉑金，首飾業不得不改用白金替代，但戰後鉑金重新成為婚戒和高端珠寶的首選材質。日本是全球最大的鉑金首飾消費國。"
+/>
+
+<ArtifactCard
+  type="科學"
+  title="鉑金的計量學標準 Standard Kilogram"
+  year="1889"
+  description="1889 年，國際計量局製作了以 90% 鉑金和 10% 銥組成的「國際千克原器」(International Prototype of the Kilogram, IPK)，作為全球重量標準。這個圓柱體存放在法國塞夫爾，各國複製品以此為基準。直到 2019 年，千克的定義才改為基於普朗克常數的物理定義，鉑金原器的使命告終——但它見證了鉑金作為「人類精度標準」材料的特殊地位。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="氫燃料電池的新希望"
+  year="2020 至今"
+  description="氫燃料電池的核心催化劑是鉑金——每個燃料電池需要約 20-30 克鉑金。豐田 Mirai、現代 NEXO 等氫燃料電池車的推出，以及各國政府的綠氫產業政策，讓市場開始重新評估鉑金的長期需求前景。如果氫能成功普及，鉑金可能從「汽油車零件材料」轉型為「清潔能源關鍵材料」，徹底改寫其需求結構。"
+/>
+
+</div>
+
+</SectionCard>

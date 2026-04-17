@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import RoomLayout from '@components/layout/RoomLayout.astro';
+import SectionCard from '@components/room/SectionCard.astro';
+
+export async function getStaticPaths() {
+  const rooms = await getCollection('rooms');
+  return rooms.map((room) => ({
+    params: { wing: room.data.wing, room: room.data.slug },
+    props: { entry: room },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<RoomLayout frontmatter={entry.data}>
+  <Content
+    components={{
+      // MDX components can be mapped here if needed
+    }}
+  />
+</RoomLayout>

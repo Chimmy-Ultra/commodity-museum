@@ -1,0 +1,165 @@
+---
+name: "阿拉比卡咖啡"
+nameEn: "Coffee (Arabica) C"
+slug: "coffee-arabica"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "KC"
+status: "active"
+icon: "☕"
+accentColor: "#4a2c0a"
+roomNumber: 1
+tagline: "從衣索比亞高地到紐約交易所——阿拉比卡咖啡的期貨價格決定了全球數十億杯咖啡的成本，以及千萬咖啡農的命運"
+taglineEn: "From Ethiopian highlands to New York exchange — arabica coffee futures determine the cost of billions of cups and the fate of millions of smallholder farmers worldwide"
+originRegion: "巴西、哥倫比亞、衣索比亞"
+firstFuturesYear: 1882
+firstFuturesExchange: "NYCC（紐約咖啡交易所）"
+greatestEventName: "1975 年巴西「黑霜」，阿拉比卡咖啡價格飆升至 $3.30/磅歷史高點"
+greatestEventYear: 1975
+description: "阿拉比卡咖啡展室：探索咖啡期貨如何連結巴西農場到全球咖啡館，以及霜害、氣候變遷與小農生計的交織故事。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+咖啡起源於衣索比亞高地，傳說中牧羊人卡爾迪（Kaldi）發現他的山羊在吃了某種紅色漿果後異常活躍，從而發現了咖啡。15 世紀，咖啡傳入葉門並在阿拉伯世界廣泛傳播，「咖啡館」（Qahveh Khaneh）成為伊斯蘭世界的社交與知識中心。17 世紀，咖啡傳入歐洲，咖啡館在倫敦、巴黎、維也納蓬勃興起，成為商業交易、新聞傳播和政治討論的重要場所——倫敦勞埃德咖啡館（Lloyd's Coffee House）甚至演變成了全球最著名的保險市場。
+
+阿拉比卡（Arabica）和羅布斯塔（Robusta）是全球兩大咖啡品種。阿拉比卡風味更精緻，佔全球咖啡消費量的約 60%，主要種植於高海拔地區（巴西、哥倫比亞、衣索比亞、中美洲）。ICE 的 KC 合約是全球阿拉比卡咖啡的基準定價合約，世界各地的咖啡採購都以此為參考。
+
+巴西是全球最大的咖啡生產國，佔全球供應量的約 35-40%。這意味著巴西的天氣——尤其是咖啡花期（9-11 月）和採收期（5-9 月）的降雨和溫度——對 KC 期貨有決定性影響。「巴西天氣市場」是咖啡交易員最重要的季節性交易主題。
+
+<Timeline events={[
+  { year: "1882", text: "紐約咖啡交易所（NYCC）成立，推出全球首個咖啡期貨合約" },
+  { year: "1914", text: "NYCC 與糖和可可交易所合併，逐步演變為現代 ICE 的前身之一" },
+  { year: "1975", text: "巴西「黑霜」（Black Frost）重創咖啡產區，KC 在 18 個月內從 $0.65 飆至 $3.30/磅" },
+  { year: "1989", text: "ICO（國際咖啡組織）配額制度瓦解，咖啡自由市場競爭加劇" },
+  { year: "1994", text: "巴西再度遭受霜凍，KC 短暫飆升至 $3.00/磅後回落" },
+  { year: "2011", text: "供應緊俏加投機資金湧入，KC 達到 $3.09/磅，為 1977 年以來新高" },
+  { year: "2022-2024", text: "巴西極端氣候週期性衝擊供應，疊加通脹和海運成本，KC 持續上行創新高" },
+]} />
+
+咖啡是一個特別「不平等」的商品市場：全球約 1.25 億人依賴咖啡農業維生，其中大多數是發展中國家的小農（擁有 5 公頃以下農地），但定價權完全由紐約和倫敦的期貨市場掌控。KC 期貨的劇烈波動，直接決定了千萬咖啡農家庭的貧富。公平貿易咖啡（Fair Trade Coffee）運動的興起，正是對這種「定價不公平」的市場回應。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（洲際交易所，前身 NYCC/CSCE/NYBOT）"
+  year={1882}
+  contractSize="37,500 磅（約 17 公噸，約 250 袋 60 公斤裝咖啡豆）"
+  deliveryPoint="美國、歐洲、亞洲指定倉庫（多個交割地點）"
+  tickerSymbol="KC"
+/>
+
+KC 咖啡合約的報價單位是美分/磅（Cents per pound），最小變動價位 0.05 美分/磅（即每份合約 $18.75 的最小波動）。KC 合約的交割品質規格以哥倫比亞麥德林（Medellin）為基準品，其他產地的咖啡豆根據品質高低有相應的溢價或折扣。
+
+KC 期貨市場中一個獨特的現象是「可交割供應」（Deliverable Supply）的重要性——由於咖啡豆的倉庫庫存直接決定近月合約的基差，交易員必須密切追蹤 ICE 認可倉庫的認證庫存量（Certified Stocks）。當庫存下降時，近月合約往往相對遠月出現升水（Backwardation），這是咖啡供應緊俏的重要信號。
+
+咖啡的另一個特殊性在於其產量的「隔年效應」（Biennial Effect）——咖啡樹在豐產年後的次年往往產量大減，這個生物規律是咖啡期貨最重要的長期週期性因素之一。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1975 年：巴西「黑霜」與史上最大漲幅
+
+1975 年 7 月 18 日，一場罕見的嚴霜（在巴西咖啡帶被稱為「黑霜」，因霜凍後咖啡樹枯萎變黑而得名）席捲了巴西米納斯吉拉斯州和聖保羅州的咖啡產區。這場霜凍摧毀了巴西南部約 70% 的咖啡樹，震驚了整個市場。
+
+在此之前，全球咖啡市場已因持續多年的供應過剩而處於低價狀態（KC 不足 $0.65/磅）。黑霜事件徹底改變了這個局面：咖啡樹從霜凍損傷中恢復至少需要 2-3 年，意味著全球咖啡供應將在未來數年內大幅收縮。
+
+<QuoteCard
+  quote="黑霜不只是一場農業災難，它是一個轉折點——它告訴全世界，咖啡的供應有多麼集中在一個國家，有多麼脆弱。"
+  author="ICO（國際咖啡組織）前執行主任"
+  year="1975"
+/>
+
+KC 期貨從 1975 年 7 月的 $0.65/磅，在 18 個月內飆升至 1977 年 4 月的歷史高點 $3.357/磅，漲幅超過 400%。這輪漲勢深刻改變了全球咖啡行業的格局：刺激了巴西以外的咖啡生產國（哥倫比亞、中美洲、非洲）大規模擴張種植面積，也讓各大咖啡跨國公司開始更積極使用期貨套保。
+
+1994 年巴西再度遭受霜凍，KC 短暫複製了 1975 年的部分漲幅。每隔幾年，「巴西天氣」就會再次成為咖啡市場的核心命題。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Neumann Gruppe / ECOM Agroindustrial"
+  nameZh="諾伊曼集團 / ECOM"
+  years="1920s-"
+  nickname="咖啡供應鏈的隱形主宰"
+  story="諾伊曼集團（Neumann Gruppe）是全球最大的咖啡生豆貿易商之一，在全球主要咖啡生產國設有採購和加工網絡。ECOM Agroindustrial 是另一家頂級咖啡（及棉花）貿易商。這些大型農業貿易商是 KC 期貨市場最重要的機構套保者——他們在現貨市場採購咖啡豆，同時在 KC 期貨市場賣空對沖，以鎖定採購價格和運輸期間的價格風險。他們對倉庫庫存和全球供應鏈的掌握，使其具有顯著的信息優勢。"
+/>
+
+<TraderProfile
+  name="Starbucks Corporation"
+  nameZh="星巴克"
+  years="1971-"
+  nickname="將咖啡期貨價格變成拿鐵售價的藝術家"
+  story="星巴克是全球最大的咖啡零售商，每年採購超過 5 億磅咖啡豆，是 KC 期貨市場最重要的商業用戶之一。星巴克以「遠期採購」（Forward Purchasing）著稱——提前鎖定 12-18 個月的咖啡豆採購價格，利用 KC 期貨和現貨長期合約管理原料成本風險。2022 年 KC 期貨漲至 $2.50/磅以上時，星巴克的提前套保策略讓其避免了即時漲價壓力，但也延遲了其享受 2023 年回落行情的好處。"
+/>
+
+<TraderProfile
+  name="Luis Alberto Moreno / FNC Colombia"
+  nameZh="哥倫比亞全國咖啡農聯合會"
+  years="1927-"
+  nickname="咖啡農的集體談判力量"
+  story="哥倫比亞全國咖啡農聯合會（Federación Nacional de Cafeteros, FNC）是全球最具影響力的咖啡農業組織，代表哥倫比亞約 50 萬個咖啡家庭農場。FNC 擁有「Juan Valdez」品牌，在全球建立了哥倫比亞咖啡的高品質形象，並積極參與 KC 期貨市場的套保操作，代表旗下農民管理出口價格風險。FNC 的市場干預能力，讓哥倫比亞咖啡農在 KC 期貨波動中相對受到保護。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="「精品咖啡」革命與期貨溢價"
+  year="1990 至今"
+  description="1990 年代興起的「精品咖啡」（Specialty Coffee）運動徹底改變了消費者對咖啡的認知。當消費者願意為「衣索比亞耶加雪菲單一產區水洗日曬豆」支付每杯 $8 時，KC 期貨的基準定價越來越無法反映精品市場的真實價值。精品咖啡的溢價通常比 KC 期貨高 50%-200%，形成了一個平行的「精品溢價」市場，這也讓咖啡從單純的農業大宗商品，逐漸演變為具有明顯品牌和地理標誌特徵的差異化產品。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="公平貿易咖啡（Fair Trade Coffee）"
+  year="1988 至今"
+  description="公平貿易咖啡運動於 1988 年在荷蘭誕生，核心訴求是確保咖啡農獲得「公平」的最低收購價格，不低於 KC 期貨價格加上一定溢價。這個運動直接批判了 KC 期貨市場的「定價不公」——紐約金融市場的投機者決定了千萬發展中國家農民的命運。雖然公平貿易咖啡在全球咖啡市場的佔比仍然有限（不足 5%），但它推動了整個產業對「小農生計」議題的關注。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="氣候變遷：咖啡帶的北移危機"
+  year="2050 預估"
+  description="根據氣候科學研究，到 2050 年，適合種植阿拉比卡咖啡的土地面積可能縮減 50% 以上——因為阿拉比卡對氣溫非常敏感，最適種植溫度在 18-22°C 之間，輕微升溫就會影響品質和產量。巴西咖啡帶的「北移」（向更高海拔遷移）和衣索比亞、肯亞高原種植區的萎縮，是 KC 期貨長期多頭論的重要基本面依據，也是咖啡行業最嚴峻的存亡挑戰。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="咖啡館文化：從阿拉伯世界到矽谷"
+  year="16 世紀至今"
+  description="咖啡館是現代社會最重要的公共空間之一。17 世紀倫敦的咖啡館被稱為「便士大學」（Penny Universities），任何人只要花一便士買一杯咖啡就可以進入討論政治和商業。今日，矽谷的咖啡館文化延續了這個傳統——創業公司在咖啡館誕生，投資人在咖啡館接洽項目，知識工作者在咖啡館完成工作。星巴克的成功，部分在於它販售的不只是咖啡，而是這種「第三空間」的社交價值。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="巴西「隔年效應」與豐歉週期"
+  year="長期規律"
+  description="咖啡樹具有獨特的「隔年效應」（Biennial Bearing）——在一個豐收年之後，咖啡樹會在次年大幅減產，因為結果消耗了樹木大量的養分。巴西是全球最大的咖啡生產國，其豐收年（偶數年）和減產年（奇數年）的週期規律，被稱為巴西咖啡的「大/小年週期」。這個規律是 KC 期貨最重要的基本面週期之一，精明的交易員會在小年（預期減產）提前布局多頭。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="衣索比亞：咖啡的故鄉與定價的邊緣"
+  year="9 世紀至今"
+  description="衣索比亞是咖啡的發源地，也是全球咖啡生物多樣性最豐富的地方——衣索比亞的野生咖啡基因庫被視為應對氣候變遷的珍貴資源。然而，衣索比亞是咖啡領域的諷刺代表：作為咖啡的母國，其咖啡農平均每公斤咖啡的收入不到 $0.50，而在紐約星巴克，同等份量的咖啡售價超過 $30。2007 年，衣索比亞政府試圖為「耶加雪菲」等著名產區品牌申請商標，遭到星巴克的激烈反對，成為農業智慧財產權國際爭議的經典案例。"
+/>
+
+</div>
+
+</SectionCard>

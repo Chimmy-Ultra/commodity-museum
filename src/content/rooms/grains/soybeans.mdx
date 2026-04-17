@@ -1,0 +1,170 @@
+---
+name: "大豆"
+nameEn: "Soybeans"
+slug: "soybeans"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZS"
+status: "active"
+icon: "🫘"
+accentColor: "#7a8c2e"
+roomNumber: 2
+tagline: "美中貿易戰的第一槍打在大豆身上——這個在中國種植了 5,000 年的豆子，成了 21 世紀地緣政治的人質"
+taglineEn: "The first shot of the US-China trade war hit soybeans — a crop China cultivated for 5,000 years became a 21st-century geopolitical hostage"
+originRegion: "中國東北"
+firstFuturesYear: 1936
+firstFuturesExchange: "CBOT"
+greatestEventName: "2018-2020 年美中貿易戰——中國暫停進口美國大豆，巴西漁翁得利"
+greatestEventYear: 2018
+description: "大豆展室：從中國東北的古老作物到全球最重要的蛋白質和油脂原料，探索大豆如何在美中貿易戰中成為地緣政治的棋子，以及巴西如何趁機超越美國成為全球最大大豆出口國。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+大豆（Glycine max）是人類馴化最重要的豆科植物之一，原產於中國東北地區，考古學家在距今約 7,000-9,000 年前的遺址中發現了野生大豆的馴化痕跡。中國古代稱大豆為「菽」，是「五穀」（稻、黍、稷、麥、菽）之一，在中國農業文明中有著不可替代的地位。
+
+大豆進入西方世界，是一段相對晚近的歷史。1765 年，英國外交官薩繆爾·鮑溫 (Samuel Bowen) 從中國帶回大豆種子，在美國喬治亞州試種，這是大豆在北美的最早記錄。然而，大豆在美國的大規模商業種植直到 20 世紀初才開始——第一次世界大戰後的植物油需求，以及 1930 年代大蕭條期間土壤侵蝕問題（大豆可以固定土壤氮素），讓美國農業部開始積極推廣大豆種植。
+
+今日，大豆是全球最重要的油料作物，也是最重要的蛋白質飼料來源之一。每百公斤大豆可以壓榨出約 18-20 公斤豆油和 80 公斤豆粕。豆油主要用於食用油和生質柴油；豆粕含有約 44-48% 的蛋白質，是全球最重要的動物飼料蛋白來源，雞豬牛的養殖幾乎都依賴豆粕。
+
+<Timeline events={[
+  { year: "約 7000 BCE", text: "中國東北的人類開始馴化野生大豆，成為五穀之一" },
+  { year: "約 200 BCE", text: "中國漢代大豆向南亞、東南亞傳播，豆腐、醬油等大豆製品開始出現" },
+  { year: "1765", text: "大豆首次被帶到北美種植（喬治亞州）" },
+  { year: "1904", text: "喬治·華盛頓·卡弗 (George Washington Carver) 推廣大豆作為土壤改良作物" },
+  { year: "1936", text: "CBOT 推出大豆期貨合約，美國大豆商業化進入快車道" },
+  { year: "1970s", text: "巴西開始大規模種植大豆，熱帶大豆品種培育成功，改變全球供給格局" },
+  { year: "2018", text: "美中貿易戰爆發，中國對美國大豆加徵 25% 關稅，CBOT 大豆暴跌" },
+  { year: "2023", text: "巴西大豆出口量首次全面超越美國，成為全球最大大豆出口國" },
+]} />
+
+大豆的「壓榨三角」(Crush Spread) 是農產品期貨最重要的行業分析工具：大豆壓榨成豆油和豆粕後，豆油 + 豆粕的總價值高於大豆原料的成本，這個差額就是「壓榨利潤」(Crush Margin)。當壓榨利潤大，壓榨廠增產；當壓榨利潤小，壓榨廠減少收購。CBOT 的「大豆壓榨套利」(Bean Crush Trade) 是農產品交易員最常操作的策略之一，在大豆 (ZS)、豆油 (ZL) 和豆粕 (ZM) 三個合約之間建立多空組合。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1936}
+  contractSize="5,000 蒲式耳 (約 136 公噸)"
+  deliveryPoint="芝加哥倉庫"
+  tickerSymbol="ZS"
+/>
+
+CBOT 大豆期貨 (ZS) 於 1936 年推出，相比玉米（1877 年）和小麥（1877 年）較晚，反映了大豆在美國商業種植的相對晚期發展。合約規格 5,000 蒲式耳，以美分/蒲式耳報價，交割月份為 1、3、5、7、8、9、11 月，反映了大豆的農業生產週期（美國大豆通常 5 月播種，9-11 月收穫）。
+
+大豆期貨市場與玉米、豆油、豆粕三個期貨市場深度互動，形成了農產品中最複雜的相互定價網絡。CBOT 大豆複合體（大豆+豆油+豆粕）的總交易量超過任何單一農業期貨，是農產品市場流動性的核心。
+
+巴西的興起帶來了大豆市場最重要的地理多元化：巴西大豆在每年 3-4 月上市（南半球秋收），恰好填補了美國舊作消耗後、新作上市前的供給缺口，形成了全球大豆市場的「兩個收穫週期」。今日，CBOT 大豆合約的走勢，在南美豐收季節需要同時關注巴西馬托格羅索州的田間調查報告。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2018-2020 年：美中貿易戰的大豆棋局
+
+2018 年 7 月，美中貿易戰進入高潮。中國宣布對美國大豆加徵 25% 的報復性關稅——這個選擇精心計算過：大豆是美國對中國出口最大的單一農產品，佔美國對華農業出口的約三分之一；中國進口美國大豆的量佔美國大豆出口的 60% 以上。打擊大豆，等於同時打擊美國農業利益集團（尤其是中西部農業州，是特朗普的核心支持者）。
+
+消息宣布後，CBOT 大豆期貨在幾週內從約 $10/蒲式耳暴跌至 $8.60，跌幅超過 14%。
+
+<QuoteCard
+  quote="中國人非常聰明。他們知道大豆是懲罰美國農民最有效的方式，因為農民是特朗普最核心的選民。"
+  author="農業政策分析師"
+  year="2018"
+/>
+
+中國立刻轉向巴西大豆採購，巴西大豆出口量在 2018 年激增——巴西農民抓住機會擴張種植面積，馬托格羅索、帕拉等州大量熱帶雨林被開墾為大豆農田，引發了全球對亞馬遜森林砍伐的嚴峻擔憂。
+
+美國政府則為受損的大豆農戶提供了超過 140 億美元的直接補貼，這筆錢通過「市場促進計畫」(Market Facilitation Program) 發放——本質上是用聯邦預算補貼貿易戰的農業代價。
+
+2020 年 1 月，美中簽署「第一階段貿易協議」，中國承諾增購美國農產品（包括大豆），CBOT 大豆迅速反彈至 $10 以上，並在 2021 年受到強勁需求和不利天氣推動，一度衝破 $16/蒲式耳，創下 2012 年以來新高。
+
+這場貿易戰的深遠影響是：它加速了大豆供給從美國向巴西轉移的長期趨勢。2023 年，巴西年大豆出口量首次全面超越美國。一個農業期貨標的的地緣政治身份轉換，就此完成。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Louis Dreyfus"
+  nameZh="路易達孚"
+  years="1851-"
+  nickname="五大糧商之一"
+  story="法國創立的跨國農業貿易巨頭，ABCD（阿切爾-丹尼爾斯-米德蘭 ADM、邦吉 Bunge、嘉吉 Cargill、路易達孚 Louis Dreyfus）四大糧商之一。路易達孚在巴西大豆採購、加工和出口上有深厚佈局，是中國豆粕進口商的重要供應方。四大糧商合計控制全球大豆、玉米、小麥貿易的約 70-90%，是農業期貨市場最大的套保機構群體。"
+/>
+
+<TraderProfile
+  name="ADM (Archer-Daniels-Midland)"
+  nameZh="阿切爾-丹尼爾斯-米德蘭"
+  years="1902-"
+  nickname="穀物加工帝國"
+  story="全球最大的農業加工和貿易公司之一，總部伊利諾伊州迪凱特。ADM 在大豆壓榨（豆油+豆粕生產）領域是全球最大的參與者之一，每年壓榨大豆超過 4,000 萬公噸。ADM 旗下的期貨交易部門是 CBOT 最大的套保方之一，其套保策略和庫存部位直接影響大豆複合體的定價。1996 年，ADM 在一起標誌性的反托拉斯案中承認共謀固定賴氨酸和玉米糖漿價格，支付了 1 億美元的罰款——被電影《陰謀者》(The Informant!, 2009) 改編。"
+/>
+
+<TraderProfile
+  name="Richard Dennis"
+  nameZh="理查·丹尼斯"
+  years="1949-"
+  nickname="海龜交易員之父"
+  story="CBOT 最傳奇的商品交易員，以大豆和玉米為主要交易市場起家。他在 1970-80 年代以趨勢跟蹤系統（後稱「海龜策略」）積累了超過 2 億美元的財富。他的偉大實驗是 1983 年招募 23 名普通人（海龜交易員），傳授趨勢跟蹤策略，讓他們主要在 CBOT 大豆和玉米合約上交易，最終賺取超過 1 億美元，證明了「交易技巧可以傳授」的命題。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="文化"
+  title="豆腐的東方智慧"
+  year="約 200 BCE"
+  description="豆腐相傳由漢代劉安發明，是大豆最重要的衍生食品，也是東亞飲食文化的核心元素之一。一塊豆腐含有完整的植物蛋白，在肉類蛋白短缺的農耕社會中提供了重要的蛋白質來源。今日，全球豆腐市場規模超過 300 億美元，素食主義和彈性素食 (Flexitarian) 趨勢持續推動豆腐需求增長。大豆從「農業商品」到「健康食品」的身份轉型，是農業期貨市場罕見的文化價值升維現象。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="《大豆與新冠》Soy & COVID"
+  year="2021"
+  description="新冠疫情期間，全球肉類加工廠的大規模感染事件，讓消費者重新審視動物性蛋白質供應鏈的脆弱性，加速了植物性蛋白（Beyond Meat、Impossible Burger）和大豆蛋白製品的消費轉型。Beyond Meat 等公司使用豌豆蛋白而非大豆，但大豆蛋白（豆粕衍生物）仍是全球最主要的植物蛋白原料。這個轉型讓大豆期貨的需求面增添了新的結構性動力。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="亞馬遜大豆的代價"
+  year="1970 至今"
+  description="巴西的大豆擴張主要在馬托格羅索、帕拉、馬拉尼昂等州，這些地區與亞馬遜和塞拉多 (Cerrado) 熱帶草原接壤。大豆田的擴張是亞馬遜森林砍伐的重要驅動因素——雖然直接的大豆種植很少深入原始雨林，但牧場的擴張（為騰出牛隻空間而砍伐）間接被大豆種植所填補，形成了「大豆-牧場-森林」的交替侵蝕模式。非政府組織推動的「大豆暫停令」(Soy Moratorium, 2006) 要求供應鏈上的公司拒絕收購砍伐雨林後種植的大豆，但執法困難。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="奶油替代品的世紀之戰"
+  year="1950s 至今"
+  description="豆油是現代食品工業最重要的植物油之一，廣泛用於人造奶油、烹飪油、加工食品。1950-70 年代，豆油的崛起直接挑戰了乳業（奶油）和動物油脂（豬油）的市場份額，引發了美國農業界的政治爭鬥。至今，美國農業政策中對大豆的補貼政策，部分源於乳業遊說失敗後植物油行業的政治勝利。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="中國的大豆饑渴"
+  year="1990 至今"
+  description="中國從 1990 年代中期起成為大豆淨進口國，此後進口量每十年翻一倍。今日中國每年進口大豆約 1 億公噸，佔全球大豆貿易量的 60% 以上，是全球最大的大豆採購方。中國對大豆的需求反映了飲食結構的升級——更多肉食消費意味著更多豆粕飼料需求。中國的大豆進口量是 CBOT 大豆期貨最重要的需求側變量，每年的中國進口採購時程是 CBOT 最關注的市場事件之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="轉基因大豆的科學與政治"
+  year="1996"
+  description="孟山都 (Monsanto) 的 Roundup Ready 轉基因大豆於 1996 年獲 FDA 批准上市，抗除草劑的特性讓農民可以大量噴灑草甘膦 (Glyphosate) 而不傷害大豆。到今日，超過 94% 的美國大豆是轉基因品種。歐盟對轉基因食品的嚴格限制，導致歐洲必須支付高額檢驗成本來分離非基改大豆，形成了大豆市場的「身份保全」(Identity Preservation) 溢價體系。轉基因大豆的普及是現代農業生產力提升的核心，也是全球農業政策分歧的最大議題之一。"
+/>
+
+</div>
+
+</SectionCard>

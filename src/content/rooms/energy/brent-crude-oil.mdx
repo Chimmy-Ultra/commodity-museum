@@ -1,0 +1,172 @@
+---
+name: "布蘭特原油"
+nameEn: "Brent Crude Oil"
+slug: "brent-crude-oil"
+wing: "energy"
+exchange: "ICE"
+tickerSymbol: "B"
+status: "active"
+icon: "🛢️"
+accentColor: "#8B1A1A"
+roomNumber: 2
+tagline: "全球三分之二的原油以布蘭特定價——一個英國北海油田的名字，成為了全世界石油交易的尺規"
+taglineEn: "Two-thirds of the world's oil is priced against Brent — a name from a North Sea field that became the global benchmark"
+originRegion: "英國北海"
+firstFuturesYear: 1988
+firstFuturesExchange: "IPE"
+greatestEventName: "1990 年海灣戰爭油價飆升——一夜翻倍的地緣政治衝擊"
+greatestEventYear: 1990
+description: "布蘭特原油展室：從北海的殼牌石油鑽井平台到 ICE 的全球基準合約，探索為何這個英國油田成為了比 WTI 更具國際代表性的原油定價基準。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+布蘭特原油的名字來自一隻鳥——黑雁 (Brent Goose)。殼牌石油公司 (Shell) 有一個傳統，以鳥類名稱命名旗下油田。1971 年，殼牌在英國北海發現了一個大型油田，依慣例命名為「布蘭特」(Brent)。沒有人預料到，這個油田的名字將成為全球最重要的石油價格基準。
+
+北海石油開發始於 1960 年代末，在 1973 年第一次石油危機之後加速。當阿拉伯國家實施石油禁運，讓西方國家意識到能源安全的脆弱性，歐洲各國政府積極支持北海開採——這裡的石油不在 OPEC 控制之下。英國和挪威是北海最主要的油氣生產國，布蘭特油田在 1976 年正式投產，成為英國北海最重要的石油產地群之一。
+
+布蘭特原油的物理特性讓它成為理想的基準：輕質（API 重力約 38.3°）、低硫（含硫量約 0.37%），煉製後汽油和柴油產率高，適合生產歐洲和亞洲市場所需的輕質油品。更重要的是，布蘭特原油直接裝船出口，沒有 WTI 的內陸管線和庫欣儲油槽問題，反映的是真實的海上供需，因此更適合作為國際定價基準。
+
+如今，「布蘭特」已不僅僅是一個油田，而是一個由多個北海油田組成的混合基準，包括 Brent、Forties、Oseberg、Ekofisk 和 Troll 五個油田（合稱 BFOET），以確保基準的流動性隨著北海產量下滑仍得以維持。
+
+<Timeline events={[
+  { year: "1959", text: "荷蘭格羅寧根發現天然氣田，確認北海地質構造具有大規模油氣資源潛力" },
+  { year: "1971", text: "殼牌在英國北海發現布蘭特油田，以黑雁命名" },
+  { year: "1973", text: "阿拉伯石油禁運催化北海開發加速，英國和挪威政府提供大量補貼" },
+  { year: "1976", text: "布蘭特油田正式投產，輸油管道連接到蘇格蘭薩洛姆沃 (Sullom Voe) 終端" },
+  { year: "1988", text: "倫敦國際石油交易所 (IPE) 推出布蘭特原油期貨合約" },
+  { year: "2001", text: "洲際交易所 (ICE) 收購 IPE，布蘭特期貨移至電子交易平台" },
+  { year: "2010", text: "布蘭特超越 WTI 成為全球交易量最大的原油期貨，確立國際基準地位" },
+  { year: "2022", text: "俄烏戰爭爆發，歐盟制裁俄羅斯能源，布蘭特衝至 $128/桶" },
+]} />
+
+今日，全球原油貿易約有 **65-70%** 以布蘭特為定價基準——包括絕大多數中東輸往亞洲的原油、非洲和北海原油，以及俄羅斯出售的大部分石油。布蘭特的地位超越了其實際的物理產量（北海產量已大幅下滑），成為了一個幾乎純粹的金融和貿易基準概念。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE (洲際交易所，前身 IPE)"
+  year={1988}
+  contractSize="1,000 桶 (約 159,000 公升)"
+  deliveryPoint="布蘭特油田裝船點 (北海)"
+  tickerSymbol="B"
+/>
+
+倫敦國際石油交易所 (International Petroleum Exchange, IPE) 於 1988 年推出布蘭特原油期貨合約。IPE 成立於 1980 年，最初以取暖油（燃料油）期貨起步，布蘭特合約的推出讓其一躍成為全球最重要的能源交易所之一。
+
+布蘭特期貨有一個與 WTI 截然不同的結算機制：它是**現金結算合約**，而非 WTI 的實物交割。這意味著到期時，多空雙方直接以現金結算差價，無需真正接收或交付石油。這種設計使布蘭特合約更易於金融投資者參與，也是 2020 年 WTI 發生負油價、布蘭特卻未出現類似極端情況的重要原因之一。
+
+2001 年，亞特蘭大的洲際交易所 (ICE) 收購了 IPE，並將布蘭特期貨遷移到全電子交易平台。這是大宗商品交易從人工喊價向電子撮合過渡的重要里程碑之一，交易時間也從倫敦白天延伸為 23 小時電子盤交易。
+
+布蘭特和 WTI 的價差（Brent-WTI Spread）是全球石油分析師最關注的指標之一，反映了北海供需、大西洋航運、歐洲煉廠需求等多重因素。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1990 年：海灣戰爭的石油衝擊
+
+1990 年 8 月 2 日凌晨，伊拉克軍隊越境入侵科威特。這一天，布蘭特原油從約 $18/桶在數週內飆升至 $40 以上——翻了一倍有餘。
+
+科威特和伊拉克合計佔 OPEC 產量約 20%，市場立刻陷入恐慌。更大的擔憂是伊拉克可能進一步進攻沙烏地阿拉伯——那才是真正的末日場景：沙烏地阿拉伯佔全球石油儲量約 25%，如果它的油田落入伊拉克手中，全球能源供給將面臨根本性危機。
+
+<QuoteCard
+  quote="每一次中東緊張局勢，市場都要評估一個問題：這次，沙烏地阿拉伯的油田安全嗎？"
+  author="Daniel Yergin，《石油世紀》作者"
+  year="1990"
+/>
+
+美國迅速組建了由 34 個國家參與的聯合國授權多國部隊。1991 年 1 月 17 日，「沙漠風暴行動」(Operation Desert Storm) 開始，同日油價急劇下跌——市場意識到戰爭可以迅速結束、石油供給不會長期中斷。42 天後，伊拉克軍隊撤出科威特，布蘭特回落至 $20 以下。
+
+海灣戰爭對油市的影響還包括：伊拉克撤退時點火燃燒了科威特 700 多口油井，用了超過 9 個月才全部撲滅，期間每天燒掉約 500 萬桶石油，形成人類史上最嚴重的人為石油火災之一。
+
+**更近的衝擊——2022 年俄烏戰爭：** 2022 年 2 月俄羅斯入侵烏克蘭，布蘭特衝至 $128/桶，創下 2008 年以來最高點。俄羅斯是全球第三大石油生產國，歐盟對俄制裁引發了能源安全的系統性重組，推動了歐洲 LNG 基礎設施的快速擴張。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Marc Rich"
+  nameZh="馬克．瑞奇"
+  years="1934-2013"
+  nickname="現貨石油之父"
+  story="在石油期貨合約推出之前，石油交易是由「七姐妹」大石油公司壟斷的長期合同市場。馬克．瑞奇在 1970 年代開創了「現貨石油交易」模式：繞開長期合同，直接以即期市場價格買賣石油，從微小的價差中套利。他同時與伊朗、利比亞等被美國制裁的國家做生意，因此被美國司法部起訴，1983 年流亡瑞士。他旗下公司 Marc Rich + Co. 後來演變為 Glencore——今日全球最大的石油和礦產貿易商。"
+/>
+
+<TraderProfile
+  name="John Arnold"
+  nameZh="約翰·阿諾德"
+  years="1974-"
+  nickname="能源市場奇才"
+  story="前安然公司 (Enron) 天然氣交易員，在安然倒閉（2001）後以自有資金創立 Centaurus Energy。他以精準的能源市場宏觀判斷聞名，在 2006 年 Amaranth 天然氣崩潰中（見天然氣展室）做對了方向，大獲全勝。他在 38 歲時退休，以 40-50 億美元的淨資產轉型為慈善家，專注教育和公共政策改革。在石油和天然氣市場，他是「現代能源宏觀對沖基金」模式的完美詮釋。"
+/>
+
+<TraderProfile
+  name="Christophe de Margerie"
+  nameZh="克里斯多夫·德馬熱利"
+  years="1951-2014"
+  nickname="大鬍子（TotalEnergies CEO）"
+  story="法國 TotalEnergies（前道達爾）CEO，以其標誌性的大鬍子和直言不諱著稱。他曾公開質疑沙烏地阿拉伯的石油儲量數字，也曾批評美元壟斷石油結算的不合理性，呼籲建立以歐元定價的原油市場。2014 年 10 月，他在莫斯科謝列梅捷沃機場因飛機與一輛醉駕的除雪車相撞而不幸罹難，享年 63 歲。他的突然離世讓國際石油界深感震驚，也讓「油價和貨幣政治化」的辯題就此沉寂多年。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="電影"
+  title="《阿拉伯的勞倫斯》Lawrence of Arabia"
+  year="1962"
+  description="大衛·連執導，彼得·奧圖主演的史詩電影，雖以一戰為背景，卻深刻呈現了中東地緣政治複雜性的根源——部落、宗教、帝國利益的交錯。英法兩國在戰後瓜分中東的《賽克斯-皮科協議》(Sykes-Picot Agreement) 所劃定的邊界，正是今日伊拉克、敘利亞、科威特等石油大國邊界衝突的歷史根源，也是每一次中東石油危機的政治底色。"
+/>
+
+<ArtifactCard
+  type="文學"
+  title="《石油世紀》The Prize"
+  year="1991"
+  description="普立茲獎得獎作品，作者丹尼爾·葉爾金 (Daniel Yergin) 是全球最權威的能源史學者。這本 900 頁的著作追溯了從 1859 年德雷克油井到波斯灣戰爭的石油全球史，詳述了布蘭特和 WTI 如何從物理商品演變為金融工具，以及 OPEC 如何改寫了 20 世紀的地緣政治。葉爾金後來又著有《碎裂》(The Quest) 和《新地圖》(The New Map)，持續追蹤石油政治的演變。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="北海鑽井平台 Piper Alpha 災難"
+  year="1988"
+  description="1988 年 7 月 6 日，北海派珀·阿爾法 (Piper Alpha) 石油平台發生爆炸，造成 167 人罹難，是海上石油史上最嚴重的事故。事故源於安全閥維護期間的溝通失誤，引發連環爆炸，平台在兩小時內沉入海底。此事故直接促使英國和歐盟徹底改革海上石油作業的安全規定。它也提醒了全球，北海石油的取得代價遠不只是金融成本。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="布蘭特-WTI 價差的謎題"
+  year="2010-2014"
+  description="2010-2014 年間，布蘭特原油長期比 WTI 貴 $15-$25/桶，打破了兩者歷史上接近的比價關係。原因在於美國頁岩油革命讓庫欣（WTI 交割地）庫存爆滿，同時出口管制讓多餘的美國原油出不去，壓低了 WTI 的相對價格。2015 年美國廢除長達 40 年的原油出口禁令，布蘭特-WTI 差價迅速回歸正常水平。這個短暫的定價扭曲，創造了一代石油套利交易員的黃金時代。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="薩洛姆沃終端 Sullom Voe"
+  year="1978"
+  description="位於蘇格蘭謝德蘭群島的薩洛姆沃原油終端，是北海石油登陸英國的核心基礎設施。布蘭特、Ninian 和其他北海油田的原油都匯集於此，再裝上油輪輸往全球。薩洛姆沃終端的接收量曾是判斷布蘭特現貨供需最直接的實物指標。隨著北海產量下滑，這個曾日處理 150 萬桶的終端，其吞吐量已不及頂峰時期的一半。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《油炸綠番茄》Syriana"
+  year="2005"
+  description="喬治·克隆尼主演（憑此片獲奧斯卡最佳男配角），由史提芬·加根 (Stephen Gaghan) 執導，以中東石油政治為主題。電影複雜交織了 CIA 特工、石油大亨、移民工人和王室政治的多條故事線，呈現了石油美元政治在中東和華盛頓之間的黑暗運作。它是理解為何布蘭特原油定價不只是供需問題、而是全球政治安排的最佳電影教材。"
+/>
+
+</div>
+
+</SectionCard>

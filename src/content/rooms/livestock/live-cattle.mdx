@@ -1,0 +1,161 @@
+---
+name: "活牛"
+nameEn: "Live Cattle"
+slug: "live-cattle"
+wing: "livestock"
+exchange: "CME"
+tickerSymbol: "LE"
+status: "active"
+icon: "🐄"
+accentColor: "#8B4513"
+roomNumber: 1
+tagline: "美國牛肉工業的定價心臟——從堪薩斯州飼育場到全球漢堡，活牛期貨重新定義了「非儲存性商品」的可交易性"
+taglineEn: "The pricing heart of American beef — from Kansas feedlots to global burgers, live cattle futures redefined the tradability of non-storable commodities"
+originRegion: "美國大平原"
+firstFuturesYear: 1964
+firstFuturesExchange: "CME"
+greatestEventName: "2003 年 BSE 瘋牛病危機，美加邊境封閉重塑北美牛肉貿易"
+greatestEventYear: 2003
+description: "活牛展室：探索 CME 1964 年如何推出史上第一個非儲存性商品期貨，以及瘋牛病危機、美國牛肉工業集中化的故事。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+1964 年，芝加哥商業交易所（CME）推出活牛期貨（Live Cattle Futures），在商品期貨史上是一個革命性的突破。在此之前，所有期貨合約都針對「可儲存商品」——穀物、金屬、咖啡，可以放在倉庫等待交割。活牛不能這樣做：牠們會吃草、生病、老化，無法無限期持倉。
+
+CME 面對的挑戰是：如何為一個活的、有重量增減的生物商品設計標準化合約？解決方案是以「活重」（live weight）為基準，每份合約 40,000 磅（約 18 公噸），代表大約 30-40 頭育肥牛。這個設計打開了牲畜期貨的大門，也讓 CME 從一個相對次要的奶油雞蛋交易所，轉型為美國農業衍生品的重要中心。
+
+美國牛肉生產的核心地帶是大平原「玉米帶」的延伸——內布拉斯加、堪薩斯、德克薩斯和科羅拉多州的大型飼育場（Feedlot），一個飼育場可容納十萬頭以上的牛。這種高度集中化的結構，讓 IBP、Excel Beef（嘉吉旗下）、JBS USA 等少數加工商掌握了美國牛肉供應鏈的定價權。
+
+<Timeline events={[
+  { year: "1960s", text: "美國戰後經濟繁榮，消費者牛肉需求激增，大型飼育場模式在大平原快速擴張" },
+  { year: "1964", text: "CME 推出活牛期貨，史上首個非儲存性商品期貨合約，農業衍生品領域的里程碑" },
+  { year: "1971", text: "CME 推出飼育牛（Feeder Cattle）期貨，形成完整的牛肉供應鏈期貨體系" },
+  { year: "2003", text: "加拿大發現 BSE 病例，美國封閉牛肉進口邊境，同年美國本土亦確認首例 BSE" },
+  { year: "2014", text: "西部乾旱導致牛隻存欄量降至 1951 年來最低，LE 期貨開始歷史性漲勢" },
+  { year: "2015", text: "LE 期貨創下 $1.70/磅歷史高點，美國牛肉零售價同步創歷史新高" },
+  { year: "2020", text: "新冠疫情導致牛肉加工廠關閉，LE 期現貨出現罕見大幅倒掛，揭示供應鏈脆弱性" },
+]} />
+
+活牛期貨的核心交易邏輯與穀物不同——一頭牛從出生到可交割約需 18-24 個月。飼育場業者需要跨越多個期貨月份構建對沖策略，同時考慮飼料成本（玉米/豆粕）、資金成本和市場時機，形成農業期貨中最複雜的套保結構之一。LE 與 GF（飼育牛）、ZC（玉米）、ZM（豆粕）的聯動關係，是分析「飼育場壓榨利潤」的核心框架。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CME（芝加哥商業交易所）"
+  year={1964}
+  contractSize="40,000 磅活重（約 18 公噸，約 30-40 頭育肥牛）"
+  deliveryPoint="德克薩斯、科羅拉多、內布拉斯加等認可飼育場或加工廠"
+  tickerSymbol="LE"
+/>
+
+活牛期貨採用實物交割機制，交割地點是指定的牛肉加工廠或飼育場集散地，交割牛隻須符合 USDA 品質等級標準，活重通常在 1,050-1,500 磅/頭之間。現代市場中，多數業者使用「商品換期貨」（EFP）方式完成交割，直接在現貨市場完成實際牛隻交付。
+
+LE 期貨與玉米（ZC）、大豆粕（ZM）期貨的聯動關係，形成了農業期貨中最重要的跨市場結構之一：飼育場業者同時是 LE 的賣方套保者（鎖定未來賣牛收入）和 ZC/ZM 的買方套保者（鎖定飼料採購成本）。監測這個「投入/產出壓榨利潤」（Crush Margin）的變化，是判斷飼育場進場意願和未來活牛供應量的核心指標。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2003 年：瘋牛病與美加邊境封閉
+
+2003 年 5 月，加拿大阿伯達省發現一頭牛感染 BSE（牛海綿狀腦病，即「瘋牛病」）。美國農業部當天宣布關閉對加拿大牛肉進口的邊境，立即震撼了北美牛肉貿易結構。邊境封閉讓加拿大牛肉業者陷入危機（本地牛肉價格崩潰），同時讓美國失去重要供應來源。
+
+更戲劇性的是，同年 12 月，美國在華盛頓州發現了本土第一頭確診 BSE 病牛——一頭來自加拿大的進口牛。這一發現讓日本、韓國、墨西哥等美國牛肉主要出口市場立即封鎖美國牛肉，LE 期貨在數日內大幅下跌。
+
+<QuoteCard
+  quote="瘋牛病讓我們意識到現代牛肉供應鏈有多脆弱——一頭牛、一個邊境決定，就能撼動整個大陸的肉品工業。"
+  author="美國農業部前首席獸醫官"
+  year="2003"
+/>
+
+2003 年的 BSE 危機深刻改變了美國牛肉行業：加速了可追溯性系統的建立、推動了 RFID 耳標的普及，也讓飼育場和肉品加工商開始更積極使用 LE 期貨進行風險管理。美加邊境直至 2005 年才部分重開，日本市場的全面重開更延遲至 2019 年方才實現。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="IBP Inc. (Iowa Beef Processors)"
+  nameZh="愛荷華牛肉加工公司"
+  years="1960-2001"
+  nickname="美國牛肉革命的發動機"
+  story="IBP 在 1960 年代徹底改革了美國牛肉加工業，引入「箱裝牛肉」（Boxed Beef）模式——不再運送整頭牛屠體，而是在產地直接分切、真空包裝、冷藏運輸。這個創新大幅降低了運輸成本，也讓牛肉定價更標準化，直接推動了 LE 期貨市場的流動性成長。2001 年被泰森食品（Tyson Foods）以 32 億美元收購，成為美國最大牛肉加工商。"
+/>
+
+<TraderProfile
+  name="Cargill / Excel Meats"
+  nameZh="嘉吉牛肉"
+  years="1974-"
+  nickname="大平原無聲的定價者"
+  story="嘉吉（Cargill）是美國最大的私人企業，其牛肉部門 Excel Meats 是美國第二大牛肉加工商。嘉吉同時擁有大平原的大型飼育場設施，並通過 LE 和 GF 期貨進行大規模套期保值。作為上游（穀物）和下游（牛肉）都有龐大利益的企業，嘉吉在 LE 期貨市場的操作代表了農業供應鏈垂直整合的最高境界。"
+/>
+
+<TraderProfile
+  name="JBS USA"
+  nameZh="JBS 美國"
+  years="2007-"
+  nickname="全球最大牛肉帝國"
+  story="巴西 JBS 集團從 2007 年開始大舉收購美國牛肉加工廠，成為全球最大的牛肉加工商。JBS 在美國、澳洲、巴西同時擁有大型加工設施，其在 LE 期貨市場的套保規模足以影響近月合約的基差。2020 年新冠疫情期間，JBS 旗下工廠的感染事件是導致 LE 期現貨大幅分化的主要原因之一。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="飼育場（Feedlot）：工業化農業的縮影"
+  year="1960 至今"
+  description="堪薩斯州、內布拉斯加州的大型飼育場（CAFO）容納了美國 90% 以上的育肥牛。最大的單一飼育場可容納超過 12 萬頭牛，從空中俯瞰如同巨型牛隻停車場。這種高度工業化的養殖模式，既是美國廉價牛肉的基礎，也是環保主義者長期批評的對象——甲烷排放、水污染和動物福利問題始終是爭議焦點。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="箱裝牛肉革命（Boxed Beef）"
+  year="1967 至今"
+  description="1967 年，IBP 引入「箱裝牛肉」概念：在產地附近設立大型屠宰分切廠，將牛屠體直接切割成零售規格的真空包裝肉品，再冷藏運輸到全國各地。這個創新淘汰了傳統的整頭屠體運輸和城市屠宰場，讓定價更精確（以磅計價而非頭計價），直接推動了 LE 期貨標準化合約的可行性和流動性。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="BSE 危機重塑牛肉可追溯體系"
+  year="2003 至今"
+  description="2003 年 BSE 危機之後，美國農業部逐步建立了國家動物識別系統（NAIS）和強制性牛肉來源標示（COOL）法規。雖然 COOL 後來因 WTO 貿易糾紛而被修改，但危機推動的電子耳標（RFID）和屠體可追溯系統已成為現代牛肉供應鏈的標準配備，也改變了 LE 期貨市場對食品安全風險溢價的定價邏輯。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="草飼牛 vs 穀飼牛：溢價市場的興起"
+  year="2000 至今"
+  description="21 世紀初，消費者對「草飼牛肉」（Grass-Fed Beef）的需求快速增長，溢價可達穀飼牛肉的兩到三倍。草飼牛肉的興起讓 LE 期貨的「標準合約」（主要針對穀飼育肥牛）越來越無法反映整個牛肉市場的真實價格結構，也推動了現貨市場更精細的品質分級溢價機制，形成 LE 期貨之外的新型農業金融機會。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="新冠疫情中的加工廠危機"
+  year="2020"
+  description="2020 年 4-5 月，JBS、泰森、史密斯菲爾德等大型牛肉加工廠爆發嚴重疫情被迫停產。這造成了罕見的「農場-餐桌雙向危機」：農場的牛無法屠宰（現貨價格暴跌），而超市牛肉架幾乎空空如也（零售價格飆升）。LE 期貨出現前所未有的期現貨大幅倒掛，揭示了農業供應鏈中間環節的系統性脆弱性。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《食品公司》Food, Inc."
+  year="2008"
+  description="紀錄片《食品公司》深入揭示了美國工業化牛肉生產的現實——從高密度飼育場的牛隻生存條件，到大型加工廠的食品安全隱患，再到少數跨國企業對美國食品供應鏈的壟斷控制。這部電影改變了許多美國消費者對超市牛肉的看法，推動了草飼牛肉、有機牛肉等替代市場的快速成長。"
+/>
+
+</div>
+
+</SectionCard>

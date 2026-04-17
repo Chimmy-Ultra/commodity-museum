@@ -1,0 +1,169 @@
+---
+name: "紐約港超低硫柴油"
+nameEn: "NY Harbor ULSD"
+slug: "ny-harbor-ulsd"
+wing: "energy"
+exchange: "CME/NYMEX"
+tickerSymbol: "HO"
+status: "active"
+icon: "🔵"
+accentColor: "#2060a0"
+roomNumber: 6
+tagline: "從取暖油到超低硫柴油：這個紐約公寓裡每冬天燒的燃料，和全球貨運卡車、貨船使用的柴油，共享同一個定價基準"
+taglineEn: "From heating oil to ultra-low sulfur diesel: New York apartments and global freight ships share the same price benchmark"
+originRegion: "美國東岸"
+firstFuturesYear: 1978
+firstFuturesExchange: "NYMEX"
+greatestEventName: "2022 年柴油裂解價差觸及 $60+——俄羅斯制裁引爆歐洲柴油短缺"
+greatestEventYear: 2022
+description: "ULSD 展室：從 1978 年全球第一個石油產品期貨合約到超低硫柴油時代，探索這個連接取暖市場、全球貨運和柴油汽車的能源期貨，以及 2022 年史上最極端的煉油利潤事件。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+「取暖油」(Heating Oil) 是這個展室最初的名字，它也是紐約商業交易所 (NYMEX) 最早交易的石油產品——在汽油期貨之前，在 WTI 原油期貨之前，取暖油是 NYMEX 的起家業務。這不是偶然的：在 1970 年代，紐約市和美國東北部有數以百萬計的公寓使用取暖油 (Fuel Oil No. 2) 作為冬季暖氣來源，每到冬天，供應商就面臨巨大的庫存和價格風險，急需一種對沖工具。
+
+取暖油與柴油是同一種餾分——它們的主要區別只是添加劑和含稅方式不同，在化學上幾乎完全相同。柴油引擎的效率比汽油引擎高出約 30-40%（相同熱量的行駛距離更長），因此在商業貨運（卡車、火車、貨船）中幾乎是唯一選擇。大型卡車、遠洋貨輪、火車頭，都依賴柴油驅動。
+
+「超低硫柴油」(Ultra-Low Sulfur Diesel, ULSD) 的要求源於環保規範。傳統柴油含硫量較高，燃燒後排放二氧化硫，是城市空氣污染的重要來源。2006 年，美國 EPA 要求所有公路柴油的含硫量降至 15 ppm 以下（之前允許 500 ppm），ULSD 時代正式開始。含硫量的降低讓柴油車可以裝備更有效率的排放控制系統，但也提高了煉製成本，ULSD 期貨合約取代了原有的取暖油合約成為 HO 代碼下的標準合約。
+
+<Timeline events={[
+  { year: "1978", text: "NYMEX 推出取暖油 No.2 期貨合約，是全球第一個石油產品期貨" },
+  { year: "1983", text: "WTI 原油期貨推出，取暖油合約成為石油產品定價的補充工具" },
+  { year: "1973-1979", text: "兩次石油危機讓取暖油成本大增，東北部居民轉換供暖方式，天然氣逐漸取代取暖油" },
+  { year: "2006", text: "美國 EPA 強制要求公路柴油使用 ULSD（含硫量 ≤ 15 ppm）" },
+  { year: "2013", text: "NYMEX HO 合約正式更名為 NY Harbor ULSD，反映市場實際使用" },
+  { year: "2020", text: "全球航運 IMO 2020 規則實施，遠洋輪船必須使用低硫燃油或加裝脫硫裝置" },
+  { year: "2022", text: "俄烏戰爭 + 全球柴油短缺，HO 裂解價差觸及 $60+/桶，創歷史紀錄" },
+]} />
+
+柴油是全球物流的命脈。每一個跨越太平洋的貨輪、每一輛橫跨美國的大卡車、每一輛農用曳引機，都以柴油為動力。當柴油短缺，商品無法流動，整個供應鏈都會感受到壓力。這使得 ULSD 期貨不只是一個「汽車燃料」的合約，而是全球貿易的基礎成本之一。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="NYMEX (New York Mercantile Exchange)"
+  year={1978}
+  contractSize="42,000 加侖 (1,000 桶)"
+  deliveryPoint="紐約港 (New York Harbor)"
+  tickerSymbol="HO"
+/>
+
+NYMEX 取暖油期貨 (HO) 於 1978 年推出，是人類歷史上第一個石油精煉產品期貨合約——比 WTI 原油期貨早了整整五年。推出的背景是 1973 年第一次石油危機後，美國東北部取暖油供應商迫切需要對沖成本的工具。
+
+合約規格為 42,000 加侖（1,000 桶），以美元/加侖報價，最小跳動 $0.0001/加侖（$4.20/合約）。交割地點為紐約港，反映了東北部的傳統取暖油儲油中心。
+
+HO 合約在 2013 年正式更名為「NY Harbor ULSD」，但代碼仍保留 HO，體現了市場對歷史連續性的尊重。今日，雖然紐約市取暖油使用量已大幅下滑（許多公寓轉換為天然氣供暖），HO 合約的影響力卻更廣——因為美國和全球的柴油市場比 1978 年大得多。
+
+HO 與 RBOB 汽油、WTI 原油的「三向裂解價差」(3-2-1 Crack Spread) 是煉油業最重要的利潤指標，也是能源對沖基金最常操作的策略之一。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：史上最極端的柴油短缺
+
+2022 年是 ULSD 市場有史以來最戲劇性的一年。俄羅斯入侵烏克蘭後，歐盟對俄羅斯石油和石油產品實施制裁，而俄羅斯是歐洲最大的柴油出口國之一，每天出口約 100 萬桶柴油到歐洲。
+
+制裁意味著這些柴油必須從其他地方補充：中東、印度（從俄羅斯購買廉價原油後精煉出口）、美國。然而，全球煉油產能在 2020 年 COVID-19 疫情期間有大量退出——需求萎縮時，老舊煉廠直接關閉，沒有動力維護。2022 年需求反彈，加上俄羅斯缺口，讓全球柴油供給嚴重不足。
+
+<QuoteCard
+  quote="我 35 年從未見過這樣的柴油市場。這不是一個價格高的市場——這是一個沒有柴油的市場。"
+  author="一位大型石油貿易公司的資深柴油交易員"
+  year="2022"
+/>
+
+2022 年 5-6 月，NYMEX ULSD 裂解價差（ULSD 對 WTI 的溢價）突破 **$60/桶**，這意味著煉廠每煉一桶原油，光是柴油部分就能賺取 $60 的利潤——創歷史紀錄。以往，$20-30/桶的裂解價差已算相當豐厚。
+
+美國東北部的柴油庫存降至 1990 年以來最低水位，引發了恐慌性囤積。多個州長呼籲聯邦政府動用戰略儲備，拜登政府最終釋放了部分戰略柴油儲備。
+
+這次柴油危機同時在歐洲引發了化工業、農業（拖拉機和農機用柴油）和運輸業的嚴重成本壓力，是 2022 年通貨膨脹的重要推手之一。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Louis Dreyfus Commodities"
+  nameZh="路易達孚集團"
+  years="1851-"
+  nickname="五大穀物巨頭之一（兼做石油）"
+  story="創立於 1851 年的法國貿易商，最初以穀物貿易起家，後來擴展到石油、棉花、咖啡等多種大宗商品。在石油市場，路易達孚是全球最重要的成品油（汽油、柴油、航空煤油）貿易商之一。他們在煉廠、輪船、儲罐的投資讓他們有能力靈活調配全球柴油流向。2022 年柴油危機中，路易達孚等大型貿易商透過繞行印度（從俄羅斯廉價原油購入，印度精煉後出口）的曲線補缺，從中賺取了可觀的套利利潤。"
+/>
+
+<TraderProfile
+  name="Trafigura"
+  nameZh="托克集團"
+  years="1993-"
+  nickname="世界第二大石油貿易商"
+  story="總部日內瓦的私人大宗商品貿易商，全球第二大石油貿易商（僅次於 Vitol）。在柴油和成品油市場，Trafigura 在全球各地擁有儲油設施、煉廠股份和油輪，能夠快速響應地區性供需失衡。2022 年柴油危機中，Trafigura 旗下的油輪隊伍在大西洋兩岸穿梭，成為緩解歐美柴油短缺的重要私人市場力量。Trafigura 的 CEO 理查德·馬修斯 (Richard Mathews) 在 2022 年曾公開預警全球石油和柴油的結構性供給危機，比官方機構早了數個月。"
+/>
+
+<TraderProfile
+  name="Mike Muller"
+  nameZh="麥克·穆勒"
+  years="1970s-"
+  nickname="亞洲成品油套利之王"
+  story="Vitol 亞洲業務負責人，以深刻理解亞洲煉廠和成品油流通而聞名業界。在 2022 年柴油危機期間，亞洲煉廠（尤其是印度、新加坡、韓國）的柴油出口成為填補歐洲俄羅斯缺口的關鍵，而 Vitol 的亞洲業務扮演了重要的中間人角色。穆勒代表了大宗商品交易中「地理套利」能力的最高層次——了解哪裡有多餘的柴油，知道怎麼把它送到需要的地方。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="紐約公寓的取暖油文化"
+  year="1940s-"
+  description="直到 1970 年代，超過一半的紐約市公寓使用取暖油（燃料油 No.2）作為冬季暖氣。每個冬天，公寓管理員（俗稱「油人」）負責向供應商訂購取暖油並儲存在地下室油槽中。石油危機後，取暖油成本大漲，大量公寓轉換為天然氣供暖。今日紐約市仍有約 25,000 棟建築使用取暖油，但越來越多轉用更清潔的 Bioheat（含生物柴油的混合取暖油）。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="全球貨運的柴油依賴"
+  year="1920s 至今"
+  description="現代物流體系幾乎完全依賴柴油。一輛 18 輪大卡車每行駛 100 英里消耗約 20 加侖柴油；一艘大型集裝箱船橫越太平洋每天消耗逾 200 公噸船用燃油（重質燃油，不是 ULSD，但柴油是其精煉前驅）。亞馬遜、沃爾瑪等電商和零售巨頭的物流成本中，柴油佔比超過 30%。每當油價大漲，運費隨之上升，最終以「運費附加費」的形式轉嫁給消費者。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="IMO 2020 低硫革命"
+  year="2020"
+  description="國際海事組織 (IMO) 的 2020 規則要求，遠洋船舶使用的燃油含硫量從 3.5% 降至 0.5%。這個規則影響了全球約 60,000 艘商船，是近年最重大的船運業監管變革。各大航運公司面臨三個選擇：換燃油（更貴的低硫油）、加裝廢氣清洗器（脫硫塔）、或轉用 LNG 動力。IMO 2020 讓低硫柴油和 ULSD 的需求急增，但同時也促進了 LNG 作為船用燃料的發展。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="冬日油荒的歷史記憶"
+  year="1973-1974"
+  description="1973 年阿拉伯石油禁運引發美國第一次能源危機，東北部各州的取暖油供應嚴重短缺，許多家庭在嚴冬中無法取暖。政府實施了奇偶號限油（根據汽車牌照尾數輪流加油）和取暖油配給。這段歷史讓美國政府意識到能源基礎設施的脆弱性，並最終推動了 NYMEX 取暖油期貨（1978 年）的創立——一個應急式的市場解決方案。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="農業用柴油的政治"
+  year="1920s 至今"
+  description="農用曳引機、聯合收割機全部依賴柴油驅動。每當柴油價格大漲，農民的種植成本即上升，農業補貼的政治壓力也隨之增加。美國農業州的議員每次能源危機都是最積極呼籲政府干預油價的群體之一。農用柴油（off-road diesel）通常免徵公路稅，染成紅色以示區別（俗稱「紅油」），未申報使用公路稅豁免的紅油是美國的輕微稅務犯罪，稅務部門每年進行隨機檢查。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="柴油發動機的發明者 Rudolf Diesel"
+  year="1897"
+  description="德國工程師魯道夫·狄塞爾 (Rudolf Diesel) 於 1897 年發明了以他名字命名的壓縮點火發動機。諷刺的是，狄塞爾最初設想的燃料是植物油（花生油），而非石油餾分。他於 1913 年在英吉利海峽的渡船上神秘失蹤（疑似自殺或謀殺，至今未解），從未見證他的發動機如何主宰了 20 世紀的全球貨運。他的遺產是每年逾 15 億公噸的柴油被消耗於全球各地的引擎之中。"
+/>
+
+</div>
+
+</SectionCard>

@@ -1,0 +1,161 @@
+---
+name: "原糖 11 號"
+nameEn: "Sugar No. 11"
+slug: "sugar-no11"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "SB"
+status: "active"
+icon: "🍬"
+accentColor: "#c8522a"
+roomNumber: 3
+tagline: "巴西乙醇革命與全球糖業——原糖 11 號期貨是了解能源農業複合體的入口，也是全球糖農定價權爭奪的最前線"
+taglineEn: "Brazil's ethanol revolution and global sugar — Sugar No. 11 futures are the gateway to the energy-agriculture complex and the frontline of global sugar pricing power"
+originRegion: "巴西、印度、加勒比海"
+firstFuturesYear: 1914
+firstFuturesExchange: "NYCSCE（紐約咖啡糖可可交易所）"
+greatestEventName: "1974 年全球糖業危機，原糖在三個月內從 $0.10 飆至 $0.665/磅"
+greatestEventYear: 1974
+description: "原糖展室：探索1974年糖業危機、巴西乙醇革命如何重塑全球糖價，以及糖業補貼政治對期貨市場的扭曲效應。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+糖是人類最古老的貿易商品之一。甘蔗原產於新幾內亞，約在公元前 6,000 年被馴化。印度在公元前 500 年左右發展出製糖技術，阿拉伯商人將糖帶到了地中海世界。哥倫布在第二次航行（1493 年）時將甘蔗苗帶到了加勒比海，開啟了「新世界糖業」的時代——也開啟了大西洋奴隸貿易：加勒比海和巴西的甘蔗園是奴隸制度最殘酷的體現之一。
+
+「原糖」（Raw Sugar）是指從甘蔗或甜菜中提取、但尚未精製的粗糖，呈金黃褐色，糖分含量約 96-99%。ICE 的「原糖 11 號」（Sugar No. 11）合約是全球最重要的原糖基準定價合約，另有「精製糖 5 號」（Sugar No. 5）在倫敦 ICE 歐洲交易。
+
+全球糖業最重要的特徵是**補貼政治**：美國、歐盟、印度等主要產糖國都對本國糖業提供高額補貼和進口保護，導致「原糖 11 號」合約反映的是「不受補貼保護的自由市場糖」的價格，代表全球約 25-30% 的糖進入「無補貼」自由市場的定價。這種扭曲使得 SB 期貨是商品期貨中政策干預最嚴重的市場之一。
+
+<Timeline events={[
+  { year: "1914", text: "紐約糖交易所推出原糖期貨，標誌著全球糖業進入標準化定價時代" },
+  { year: "1974", text: "石油危機引發能源需求轉向，加上供應不足，原糖在短短數月從 $0.10 飆至 $0.665/磅" },
+  { year: "1975", text: "糖價從高位崩潰，到 1977 年回落至 $0.07/磅，亞歷山大·薩哈羅夫糖業公司破產" },
+  { year: "1975", text: "巴西啟動「甘蔗乙醇計畫」（Proálcool），開始了將甘蔗生物能源與糖業的連結" },
+  { year: "2000s", text: "油價高漲，巴西乙醇成本競爭力提升，SB 與原油期貨的聯動關係明顯加強" },
+  { year: "2010", text: "SB 期貨達到 $0.36/磅，為 1981 年以來新高，印度乾旱和巴西降雨異常是主因" },
+  { year: "2023", text: "印度應對國內通脹限制糖出口，全球供應緊俏，SB 升至 $0.27/磅，十年來最高水平" },
+]} />
+
+巴西是全球原糖最大的出口國，佔全球糖出口量約 40-45%。巴西甘蔗的獨特之處在於它同時用於生產糖和乙醇，而兩者的比例由甘蔗廠根據當前的糖價和油價動態調整——當糖價相對偏高時，廠商傾向多產糖；當乙醇（通過石油比價）更有利可圖時，就多產乙醇。這個「糖/乙醇靈活性」讓 SB 期貨與布蘭特原油期貨（BZ）的聯動關係，成為全球農業期貨中最複雜的跨商品關係之一。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（洲際交易所，前身 NYCSCE）"
+  year={1914}
+  contractSize="112,000 磅（50.8 公噸）原糖"
+  deliveryPoint="全球主要港口（FOB 計算，多個起運港）"
+  tickerSymbol="SB"
+/>
+
+原糖 11 號合約的設計反映了全球糖貿易的特殊性：交割基礎是 FOB（離岸價），在全球多個指定港口均可交割，讓它真正代表了「世界自由市場糖」的價格。對比之下，美國國內糖價受到高額進口關稅保護，通常比 SB 期貨高出 50-100%。
+
+SB 期貨的另一個重要特性是其「季節性複雜度」：全球有南半球（巴西、澳洲，採收期 4-11 月）和北半球（印度、歐洲甜菜，採收期 10-3 月）兩個主要生產週期，使得全年都有新糖進入市場，季節性模式比單一生產週期的商品（如美國玉米）更為複雜。交易員需要同時追蹤兩個半球的天氣、產量和政府出口政策。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 1974 年：全球糖業危機與史上最大漲幅
+
+1974 年是全球糖業歷史上最戲劇性的一年。在此之前，全球糖市已因連續多年的供過於求而陷入低迷（SB 不足 $0.10/磅）。1973-1974 年的一系列衝擊同時爆發：第一次石油危機讓人們意識到化石燃料的脆弱性，各國政府開始積極尋找替代能源，甘蔗乙醇進入戰略視野；同期，蘇聯因國內農業歉收大量採購全球糧食和糖，吸乾了市場庫存；巴西和加勒比海的甘蔗產量也因天氣原因低於預期。
+
+這三重衝擊在 1974 年夏秋之際同時爆發，原糖期貨從 1974 年初的 $0.10/磅，在短短三個月內飆升至 1974 年 11 月的歷史高點 $0.665/磅，漲幅超過 500%。
+
+<QuoteCard
+  quote="1974 年的糖市告訴我們一個永恆的真理：當能源危機與食品危機同時發生，市場的瘋狂程度遠超任何模型預測。"
+  author="Czarnikow 糖業集團前分析師"
+  year="1974"
+/>
+
+然而，高糖價刺激了全球糖業大規模擴張，到 1977 年，原糖已跌回 $0.07/磅，跌幅超過 89%。這輪糖業週期的劇烈起伏，讓許多重仓追高的投機者破產，也讓糖業貿易公司深刻理解了套期保值的重要性。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Louis Dreyfus Group"
+  nameZh="路易達孚集團"
+  years="1851-"
+  nickname="ABCD 糖業的法國旗手"
+  story="路易達孚（Louis Dreyfus Group）是全球四大農業貿易商（ABCD：ADM、邦吉、嘉吉、路易達孚）之一，其糖業部門是全球最大的糖貿易商之一。路易達孚在巴西、澳洲、印度等主要產糖國擁有大型糖廠和運輸基礎設施，在 SB 期貨市場的套保規模龐大。作為整合從農場到港口的全鏈條業者，路易達孚對全球糖業的供應、庫存和物流有深度掌握，是 SB 期貨市場最重要的商業參與者之一。"
+/>
+
+<TraderProfile
+  name="Alvean Sugar (Cargill/COFCO JV)"
+  nameZh="安維恩糖業"
+  years="2014-"
+  nickname="巴西糖業的聯合艦隊"
+  story="Alvean Sugar 是嘉吉（Cargill）和中糧集團（COFCO）的合資糖業貿易公司，成立於 2014 年，迅速成為巴西最大的糖出口商之一。中糧的加入代表了中國戰略性進入全球糖業供應鏈——通過合資形式掌握巴西糖業的採購和出口渠道。Alvean 的成立是農業期貨市場「中國因素」全面滲透各主要軟性商品供應鏈的縮影。"
+/>
+
+<TraderProfile
+  name="Raízen (Shell + Cosan JV)"
+  nameZh="萊森能源"
+  years="2011-"
+  nickname="將甘蔗變成汽油的公司"
+  story="Raízen 是荷蘭皇家殼牌（Shell）和巴西嘉賜集團（Cosan）的合資企業，是全球最大的甘蔗乙醇生產商之一，同時也是巴西最大的糖生產商之一。Raízen 是「糖/乙醇靈活性」的最佳體現——它可以根據每日的糖價和乙醇基準價格（Hydrous Ethanol 和 Anhydrous Ethanol），動態調整每噸甘蔗的糖和乙醇產出比例。這種靈活性讓 Raízen 對 SB 期貨和石油市場的聯動具有精準的實時判斷能力。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="甘蔗乙醇：巴西的能源革命"
+  year="1975 至今"
+  description="1975 年，巴西政府在第一次石油危機後啟動了「全國乙醇計畫」（Proálcool），強制要求汽油中摻入乙醇比例，並補貼甘蔗乙醇生產。今日，巴西超過 70% 的汽車可以使用純乙醇或乙醇-汽油混合燃料，每年生產超過 300 億升甘蔗乙醇。這讓巴西成為全球甘蔗乙醇的標杆，也使得巴西的糖產量和乙醇產量具有高度的連動性，讓 SB 期貨成為事實上的「農業能源期貨」。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="糖業補貼政治：WTO 最大的農業貿易爭端之一"
+  year="1990 至今"
+  description="歐盟、美國和印度的糖業補貼政策長期是 WTO 農業談判中最棘手的議題之一。巴西曾多次在 WTO 就歐盟糖業補貼提出申訴並勝訴，但補貼結構的改革進展緩慢。這種政策扭曲讓 SB「原糖 11 號」期貨只能反映「自由市場糖」的邊際定價，而非全球糖業的真實供需平衡——理解這個扭曲是分析 SB 基本面的前提條件。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="糖與奴隸制：甜蜜的原罪"
+  year="16-19 世紀"
+  description="加勒比海和巴西的甘蔗種植園是大西洋奴隸貿易的主要驅動力之一。從 16 世紀到 19 世紀，超過 1,200 萬非洲人被強迫運往美洲，其中相當大比例被迫在甘蔗田和糖廠從事極端繁重的勞動。「糖的甜蜜」和「奴役的苦難」之間的歷史聯結，至今仍是加勒比海和巴西社會歷史認同的重要組成部分，也是理解全球糖業地理分佈起源的不可回避的歷史背景。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="印度：糖業大國的政策悖論"
+  year="現代"
+  description="印度是全球最大的糖消費國，同時也是最大的生產國之一。但印度的糖業政策充滿矛盾：政府同時需要保護農民收入（支持甘蔗高收購價）和控制消費者糖價（反對糖廠漲價），往往陷入「糖廠欠農民貨款、政府補貼糖廠、補貼最終轉嫁 SB 期貨」的怪圈。每當印度宣布限制糖出口，SB 期貨都會出現大幅波動——印度政策風險是 SB 交易員最重要的政治面監測項目。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="健康意識與糖消費趨勢"
+  year="2010 至今"
+  description="全球對糖與肥胖、糖尿病關係的科學共識日益清晰，多個國家（英國、墨西哥、泰國）已推出「糖稅」政策，消費者對含糖飲料的偏好也在部分市場下降。這個長期需求端趨勢是 SB 期貨多頭的重要反向風險——如果精製糖的全球消費增速放緩，而巴西的乙醇需求能否完全對沖糖需求的下滑，是未來十年 SB 基本面最重要的結構性問題之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="「糖/油聯動」：農業與能源的纏繞"
+  year="2000 至今"
+  description="自 2000 年代油價上漲以來，巴西甘蔗廠的「糖/乙醇靈活性」使得 SB 期貨與原油期貨（BZ/CL）之間出現了顯著的正向相關性。當油價高漲時，乙醇的需求和經濟性提高，巴西廠商傾向減少糖產量轉增乙醇，推高 SB；當油價大跌時（如 2014-2016 年），乙醇吸引力下降，糖產量增加，SB 受壓。這個「農業能源纏繞」邏輯，讓 SB 成為農業期貨中最跨界的定價複雜案例。"
+/>
+
+</div>
+
+</SectionCard>

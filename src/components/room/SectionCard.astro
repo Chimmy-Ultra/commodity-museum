@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  titleEn: string;
+  index: number;
+}
+
+const { id, title, titleEn, index } = Astro.props;
+---
+
+<section id={id} class="reveal scroll-mt-24 py-12" style={`animation-delay: ${index * 0.1}s;`}>
+  <div class="mb-8 flex items-baseline gap-3">
+    <span class="font-mono text-sm text-museum-text-secondary">
+      {String(index + 1).padStart(2, '0')}
+    </span>
+    <div>
+      <h2 class="font-display text-2xl font-bold text-museum-accent md:text-3xl">{title}</h2>
+      <p class="text-sm text-museum-text-secondary">{titleEn}</p>
+    </div>
+  </div>
+  <div class="rounded-xl border border-museum-border bg-museum-wall p-6 md:p-8">
+    <slot />
+  </div>
+</section>

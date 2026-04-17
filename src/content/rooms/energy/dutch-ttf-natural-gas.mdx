@@ -1,0 +1,178 @@
+---
+name: "荷蘭 TTF 天然氣"
+nameEn: "Dutch TTF Natural Gas"
+slug: "dutch-ttf-natural-gas"
+wing: "energy"
+exchange: "ICE"
+tickerSymbol: "TTF"
+status: "active"
+icon: "🇳🇱"
+accentColor: "#f4820a"
+roomNumber: 4
+tagline: "2022 年 8 月，歐洲天然氣價格達到 €342/MWh——相當於每桶石油 $600 的熱量成本，一場能源危機改變了整個大陸"
+taglineEn: "In August 2022, European gas hit €342/MWh — equivalent to $600/barrel oil. A single year rewrote Europe's entire energy strategy"
+originRegion: "荷蘭 / 歐盟"
+firstFuturesYear: 2003
+firstFuturesExchange: "APX-ENDEX"
+greatestEventName: "2022 年俄烏戰爭能源危機——€342/MWh 的歷史高峰"
+greatestEventYear: 2022
+description: "荷蘭 TTF 展室：從格羅寧根大氣田到歐洲最重要的能源定價基準，探索俄羅斯如何把天然氣當作地緣政治武器，以及 2022 年能源危機如何重塑了整個歐洲的能源版圖。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+TTF 是「Title Transfer Facility」的縮寫，字面意思是「產權轉讓設施」。它不是一個實體的地理位置，而是荷蘭天然氣輸送基礎設施管理公司 (Gasunie) 為歐洲天然氣市場設立的虛擬交易點——在這個虛擬節點上，買賣雙方可以完成天然氣所有權的轉移，而不需要指定具體的物理管道或位置。
+
+TTF 的誕生背景是歐盟的能源市場自由化改革。1990 年代末至 2000 年代初，歐盟推動成員國開放電力和天然氣市場，打破國家壟斷，讓市場競爭決定能源價格。荷蘭因其地理位置（歐洲最大的 LNG 接收終端所在地、北海油氣管道樞紐）和能源市場傳統，成為歐洲天然氣定價中心的理想選擇。
+
+荷蘭的天然氣歷史要從 1959 年說起——那一年，殼牌和埃索 (Esso) 在荷蘭北部格羅寧根 (Groningen) 發現了歐洲最大的陸上天然氣田，儲量約 2,800 億立方米。格羅寧根氣田在整個 1960-1990 年代為歐洲提供了大量廉價天然氣，並推動荷蘭建立了廣泛的天然氣分銷網絡——這個網絡後來成為 TTF 虛擬交易系統的物理基礎。
+
+然而，長期開採讓格羅寧根引發了嚴重的地震問題，2018 年後荷蘭政府宣布逐步關閉格羅寧根，並在 2023 年正式停產。荷蘭天然氣生產的衰退，讓 TTF 從一個荷蘭本地市場演變為依賴進口（主要是俄羅斯管道氣和全球 LNG）的歐洲交易中心。
+
+<Timeline events={[
+  { year: "1959", text: "荷蘭格羅寧根發現歐洲最大陸上天然氣田，歐洲天然氣時代開始" },
+  { year: "1998", text: "歐盟《天然氣指令》通過，開始推動成員國天然氣市場自由化" },
+  { year: "2003", text: "荷蘭設立 TTF 虛擬交易點，歐洲天然氣市場化交易正式開始" },
+  { year: "2011", text: "Nord Stream 1 管道投產，俄羅斯-德國直通管道增加了俄氣的歐洲滲透率" },
+  { year: "2018", text: "荷蘭政府宣布逐步停止格羅寧根開採，以應對地震問題" },
+  { year: "2021", text: "疫情後能源需求反彈 + 俄羅斯減少輸氣，TTF 開始上漲" },
+  { year: "2022", text: "俄烏戰爭 + 俄羅斯切斷大部分對歐洲天然氣供應，TTF 衝至 €342/MWh 歷史峰值" },
+  { year: "2023", text: "歐洲完成 LNG 替代俄羅斯管道氣的應急轉型，TTF 逐步回落正常水平" },
+]} />
+
+TTF 在全球能源市場的重要性隨著歐洲對俄羅斯天然氣依賴的增加而上升，在 2022 年危機後達到頂峰。今日，TTF 是全球最具代表性的歐洲能源價格基準，其走勢直接影響歐洲的工業競爭力、電力價格和通貨膨脹。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE Endex (前身 APX-ENDEX)"
+  year={2003}
+  contractSize="1 兆瓦時 (MWh) — 日期前端合約; 或 MW·月 — 遠期合約"
+  deliveryPoint="荷蘭 TTF 虛擬交易點 (虛擬節點)"
+  tickerSymbol="TTF"
+/>
+
+TTF 天然氣最初在荷蘭 APX-ENDEX（後被 ICE 收購，更名 ICE Endex）交易，採用以 €/MWh 計價的歐洲能源標準單位（與美國的 $/MMBtu 不同）。TTF 的流動性在 2010 年代迅速增長，超越英國的 NBP (National Balancing Point) 成為歐洲最具流動性的天然氣基準。
+
+TTF 合約的獨特之處在於其是純粹的**現金結算**虛擬合約——不存在實物管道交割的義務，買賣雙方只需在 TTF 虛擬節點進行帳戶餘額轉讓。這使其操作比北美的亨利樞紐期貨更接近金融衍生品的性質，也讓更廣泛的金融投資者得以參與。
+
+TTF 期貨的曲線形態（不同月份合約的價差）反映了歐洲的天然氣季節性需求（冬季暖氣、夏季儲氣）以及 LNG 船期安排。由於 LNG 可以在全球任何地方卸貨，TTF 與亨利樞紐的跨大西洋套利交易（LNG 套利）成為全球能源市場最重要的套利策略之一。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022 年：俄羅斯的天然氣武器化與歐洲能源危機
+
+2022 年 2 月 24 日，俄羅斯入侵烏克蘭，引爆了二戰以來歐洲最大的地緣政治危機，也是全球能源市場有史以來最重大的供給衝擊之一。
+
+背景是：歐洲多年來高度依賴俄羅斯天然氣。2021 年，俄羅斯提供了歐盟天然氣消費量的約 **40%**，其中德國依賴度更高達 55%。多條管道（Nord Stream、Yamal-Europe、TurkStream）將俄羅斯天然氣輸往歐洲，歐洲許多工業和民用暖氣設施均以俄羅斯天然氣為主要能源。
+
+俄烏戰爭爆發後，歐盟對俄實施系列制裁，俄羅斯也以「技術問題」為由，逐步削減通過 Nord Stream 1 管道的輸氣量，最終在 2022 年夏季幾乎完全切斷。
+
+<QuoteCard
+  quote="我們花了三十年把自己綁在俄羅斯天然氣上。我們花了一年才知道這有多危險。"
+  author="歐盟能源事務執委卡德里·西蒙森 (Kadri Simson)"
+  year="2022"
+/>
+
+TTF 天然氣期貨的走勢反映了這場危機的恐慌程度：
+
+- 2021 年初：約 €20/MWh（歷史正常水平）
+- 2021 年底：約 €70/MWh（供給緊張苗頭）
+- 2022 年 8 月 26 日：觸及 **€342/MWh** 歷史峰值
+
+€342/MWh 折算成石油等值，約相當於每桶 $600 的石油——這是人類歷史上從未見過的能源成本水平。歐洲工業（化工、鋼鐵、陶瓷、玻璃）面臨無法繼續運營的成本壓力，多個德國大型工廠停產，歐洲對於「去工業化」的恐慌達到頂峰。
+
+歐洲的應急反應是多管齊下的：加速建設 LNG 接收終端（德國在 2022-2023 年間緊急建造了 4 個浮動 LNG 終端 FSRU）、從挪威、阿爾及利亞、亞塞拜然增加管道氣進口、重啟部分煤電廠，以及向工業和民用消費者提供天然氣配給和補貼。
+
+到 2023 年，歐洲成功將俄羅斯管道氣依賴從 40% 降至不足 10%，TTF 也回落至 €30-50/MWh 的水平。這場危機永久改變了歐洲的能源戰略，「能源安全」取代「能源效率最大化」成為首要原則。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Alexei Miller"
+  nameZh="阿列克謝·米勒"
+  years="1962-"
+  nickname="俄氣沙皇"
+  story="俄羅斯國家天然氣公司 Gazprom 的 CEO，由普丁親自任命。在他治下，Gazprom 成為全球最大的天然氣生產商，同時也是俄羅斯最重要的地緣政治工具之一——俄羅斯對烏克蘭、白俄羅斯、歐洲的天然氣供應中斷，每一次都是政治信號。米勒本人是普丁的聖彼得堡舊識，代表了俄羅斯「能源武器化」戰略的執行者。在 TTF 市場，Gazprom 的出口量決策是影響價格最大的單一因素，直到 2022 年這個影響力被歐洲的去依賴化行動所消除。"
+/>
+
+<TraderProfile
+  name="Gunvor Group"
+  nameZh="恭福集團"
+  years="2000-"
+  nickname="俄羅斯石油能源的影子交易商"
+  story="Gunvor 是總部位於瑞士日內瓦的大宗商品貿易商，由瑞典商人托比亞斯·布拉格曼 (Torbjörn Törnqvist) 與俄羅斯人根納季·季姆琴科 (Gennady Timchenko) 聯合創立。季姆琴科是普丁的舊識，Gunvor 在 2000 年代快速崛起，成為俄羅斯最大的石油出口貿易商之一。2014 年烏克蘭危機後，季姆琴科被美國制裁，出售了在 Gunvor 的股份。Gunvor 今日仍是全球最重要的 LNG 和天然氣貿易商之一，在歐洲 TTF 市場扮演重要角色。"
+/>
+
+<TraderProfile
+  name="Thierry Bros"
+  nameZh="蒂埃里·布羅斯"
+  years="1970s-"
+  nickname="歐洲天然氣守望人"
+  story="法國能源分析師，曾在 Société Générale 和歐洲大學學院任職，是歐洲最重要的天然氣市場分析師之一。他在 2021 年初，遠早於多數人，就發出了歐洲天然氣儲量不足、俄羅斯可能利用能源依賴施壓的警告，卻未受到足夠重視。2022 年的事件讓他的預警成真，也讓他成為歐洲能源政策辯論中最常被引述的聲音之一。他的案例說明了大宗商品市場對地緣政治訊號的系統性低估傾向。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="格羅寧根地震：能源代價"
+  year="1986 至今"
+  description="荷蘭格羅寧根天然氣田的長期開採導致地層沉降，引發了數百次地震，其中 2012 年的洛波爾特地震 (Huizinge earthquake) 達到 3.6 級，成為荷蘭有史以來最強地震。數千棟建築受損，居民恐慌、健康受損。荷蘭政府最終決定在 2023 年完全停止格羅寧根開採。這個故事是「化石燃料的在地社會成本」最生動的歐洲案例，也讓荷蘭在 TTF 市場上從產氣國轉型為純交易中心。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="Nord Stream 爆炸事件"
+  year="2022"
+  description="2022 年 9 月 26 日，波羅的海海底的 Nord Stream 1 和 Nord Stream 2 兩條管道發生神秘爆炸，三條管線（共四條）被永久破壞。美國、俄羅斯、烏克蘭等多方相互指控，至今無人正式認責。這場爆炸標誌著歐洲對俄羅斯天然氣管道依賴時代的物理終結，也是大宗商品基礎設施遭受蓄意破壞的最嚴重案例，成為能源安全戰略討論的重要里程碑。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="德國能源轉型 Energiewende"
+  year="2000 至今"
+  description="德國的「能源轉型」(Energiewende) 政策旨在同時告別核能和化石燃料，以再生能源替代。然而，在可再生能源尚未完全就緒的過渡期，德國高度依賴俄羅斯天然氣作為「橋梁燃料」。這個策略在 2022 年被證明是嚴重的戰略失誤。德國被迫一邊推進 Energiewende，一邊緊急重啟煤電，並從全球高價 LNG 市場搶購天然氣——同時面臨工業競爭力下滑、電力成本飆升的三重壓力。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="LNG 船的黃金時代"
+  year="2022-"
+  description="2022 年歐洲能源危機引爆了 LNG 船運的超級牛市。LNG 船的日租金從 2021 年的約 $6 萬/天，在 2022 年底飆升至 $40 萬/天以上——6 倍的漲幅。擁有 LNG 船的航運公司（如韓國現代重工旗下的運營商、希臘航運企業）在短時間內賺取了巨額利潤。一艘 LNG 船的建造成本約 2 億美元，但 2022 年的超高租金讓部分船東在不到一年內即可回收建造成本。"
+/>
+
+<ArtifactCard
+  type="電影"
+  title="《烏克蘭火線》Winter on Fire"
+  year="2015"
+  description="奧斯卡最佳紀錄片提名，記錄了 2013-2014 年烏克蘭「廣場革命」(Euromaidan) 的過程——烏克蘭人反抗親俄總統亞努科維奇、要求加入歐盟的大規模示威。這場革命的背後，有深刻的能源政治背景：俄羅斯透過提供廉價天然氣和威脅漲價，試圖讓烏克蘭放棄與歐盟的聯繫協議。這部紀錄片是理解 2022 年俄烏全面戰爭和 TTF 能源危機的歷史前傳。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="阿姆斯特丹能源交易所"
+  year="2003 至今"
+  description="荷蘭阿姆斯特丹（廣義上的低地國家地區）是歐洲能源金融交易的重要中心之一。除了 TTF 天然氣，阿姆斯特丹交易所（ICE Endex）也交易電力、碳排放配額 (EUA)。特別是歐盟碳排放交易體系 (EU-ETS) 的碳配額期貨，成為世界上交易量最大的碳市場。在能源轉型時代，阿姆斯特丹的碳市場、TTF 天然氣和電力期貨三者相互連動，共同定義了歐洲能源的轉型成本。"
+/>
+
+</div>
+
+</SectionCard>

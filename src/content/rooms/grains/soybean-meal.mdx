@@ -1,0 +1,167 @@
+---
+name: "豆粕"
+nameEn: "Soybean Meal"
+slug: "soybean-meal"
+wing: "grains"
+exchange: "CME/CBOT"
+tickerSymbol: "ZM"
+status: "active"
+icon: "🌱"
+accentColor: "#8b6914"
+roomNumber: 4
+tagline: "全球肉食消費的隱形支柱——每一塊雞胸肉、每一根熱狗背後，都有豆粕的無聲貢獻"
+taglineEn: "The invisible pillar of global meat consumption — behind every chicken breast and hot dog is soybean meal's silent contribution"
+originRegion: "中國 / 美國"
+firstFuturesYear: 1951
+firstFuturesExchange: "CBOT"
+greatestEventName: "2022-2023 年全球飼料短缺——俄烏戰爭、乾旱與禽流感的三重夾擊"
+greatestEventYear: 2022
+description: "豆粕展室：探索這個全球最重要的動物蛋白飼料如何連接大豆種植、畜牧業和零售肉品市場，以及飼料短缺如何在食物鏈上引發系統性漲價。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+豆粕 (Soybean Meal) 是大豆壓榨提取豆油後剩餘的固態副產品，含有約 44-48% 的粗蛋白質，是全球最重要的動物蛋白飼料原料。每 100 公斤大豆可得約 78-80 公斤豆粕——在重量上，豆粕其實是大豆壓榨的「主產品」，豆油才是「副產品」。
+
+豆粕的主要用途是動物飼料：它是雞（肉雞和蛋雞）、豬、牛的主要蛋白質補充來源，在水產養殖（魚蝦飼料）中的用量也快速增長。與玉米（提供能量）搭配使用，豆粕+玉米構成了現代工業化畜牧業最基本的飼料配方。沒有豆粕，現代規模化養雞業幾乎不可能存在。
+
+在豆粕成為主流飼料之前，動物蛋白飼料主要依賴魚粉（秘魯鯷魚製成）和肉骨粉。1950 年代後，豆粕的大規模商業化壓榨（美國）讓其成本遠低於魚粉，迅速佔領全球飼料市場。今日，全球每年豆粕產量約 2.5 億公噸，中國、歐盟、美國是最大的消費市場。
+
+<Timeline events={[
+  { year: "1900s 初", text: "美國開始工業化壓榨大豆，豆粕最初作為土壤改良劑和肥料使用" },
+  { year: "1930s", text: "飼料科學確認豆粕的高蛋白飼料價值，動物養殖業開始大量採用" },
+  { year: "1951", text: "CBOT 推出豆粕期貨合約（ZM）" },
+  { year: "1960-70s", text: "全球工業化畜牧業快速發展，豆粕取代魚粉成為最主要的動物蛋白飼料" },
+  { year: "2001", text: "歐洲禁止在動物飼料中使用哺乳動物肉骨粉（BSE/狂牛症因應），豆粕需求大增" },
+  { year: "2018", text: "美中貿易戰，中國限制美國大豆進口，豆粕供應緊張" },
+  { year: "2022", text: "俄烏戰爭、南美乾旱和禽流感三重衝擊，全球飼料成本創歷史高位" },
+]} />
+
+豆粕在飼料市場有兩個主要競爭者：**菜籽粕**（菜籽油壓榨後的副產品，蛋白質含量約 34-38%，低於豆粕）和**棉籽粕**（棉花種子壓榨後的副產品）。豆粕的高蛋白含量讓它在大多數情況下是飼料配方師的首選，但在豆粕價格過高時，其他粕類可以部分替代，形成植物蛋白飼料市場的相互競爭效應。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="CBOT (Chicago Board of Trade)"
+  year={1951}
+  contractSize="100 短噸 (約 90.7 公噸)"
+  deliveryPoint="芝加哥認可倉庫"
+  tickerSymbol="ZM"
+/>
+
+CBOT 豆粕期貨 (ZM) 於 1951 年推出，合約規格 100 短噸（約 90.7 公噸），以美元/短噸報價。豆粕期貨的報價單位（短噸）與豆油（磅）和大豆（蒲式耳）不同，反映了不同時期農產品市場的計量習慣演變。
+
+豆粕期貨在大豆複合體中的重要性往往被低估。論實際商業需求規模，豆粕市場比豆油更大（豆粕重量是豆油的 4 倍），且需求更穩定（動物飼料是剛性需求，不像食用油可以替代）。豆粕價格的走勢更多反映畜牧業的景氣狀況，以及飼料需求的季節性波動（禽流感疫情、節慶前備貨等）。
+
+「大豆壓榨利潤」(Crush Spread) 的豆粕部分通常佔整體壓榨收益的 60-70%（豆油佔 30-40%），因此豆粕期貨往往比豆油期貨對整體壓榨利潤影響更大。在大豆複合體的交易策略中，「正壓榨」(Long Crush, 做多大豆/做空豆粕+豆油) 和「反壓榨」(Short Crush, 做空大豆/做多豆粕+豆油) 是最常見的跨合約策略。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2022-2023 年：全球飼料危機的三重夾擊
+
+2022 年的全球農產品市場在三重衝擊下遭受罕見壓力，豆粕作為畜牧業最核心的飼料原料，首當其衝：
+
+**第一重：俄烏戰爭引發的糧食危機。** 烏克蘭是全球重要的葵花籽油出口國，也是糧食出口大國。戰爭切斷了黑海糧食通道，全球糧食市場陷入恐慌，大豆、豆粕價格隨之被帶動上漲。
+
+**第二重：南美洲持續乾旱。** 2021-2022 年，阿根廷和巴西南部持續遭受拉尼娜 (La Niña) 氣候模式引發的嚴重乾旱，大豆減產幅度超過預期。阿根廷是全球最大的豆粕出口國（佔全球豆粕出口的 50% 以上），其大豆減產直接引發全球豆粕供給緊縮。
+
+**第三重：禽流感疫情。** 2022 年，美國和歐洲爆發了歷史上最嚴重的禽流感疫情，數億隻雞被撲殺，蛋雞和肉雞庫存大幅萎縮。家禽業的重建需求（補充雞群）反而推升了豆粕的中期需求預期，因為新補充的雞群需要大量飼料蛋白。
+
+<QuoteCard
+  quote="你今天吃的一磅雞肉，背後大約需要消耗 0.7 磅豆粕。每當豆粕貴，雞肉最終也會貴——只是有幾個月的時差。"
+  author="USDA 農業經濟學家"
+  year="2022"
+/>
+
+2022 年 4-5 月，CBOT 豆粕觸及 $550/短噸以上，接近歷史高點。隨後南美豐收季到來，加上需求預期因衰退擔憂而降溫，豆粕逐步回落。但整個 2022-2023 年度，全球飼料成本普遍比 2019 年高出 50-100%，這直接傳導到雞蛋、豬肉和雞肉的零售價格，成為全球食品通膨最重要的推手之一。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Cofco International"
+  nameZh="中糧國際"
+  years="1952-"
+  nickname="中國糧食主權的海外長臂"
+  story="中糧集團（中國最大的國有糧食企業）旗下的全球農業貿易部門，通過 2014-2016 年收購荷蘭 Nidera 和香港 Noble Group 農業業務，迅速躋身全球頂級糧食貿易商行列。中糧國際是中國進口大豆和豆粕的主要採購管道之一，其採購時程和倉位對 CBOT 豆粕期貨有直接影響。中糧在南美的港口和倉儲設施佈局，反映了中國確保糧食安全戰略的「走出去」邏輯。"
+/>
+
+<TraderProfile
+  name="ADM"
+  nameZh="阿切爾-丹尼爾斯-米德蘭"
+  years="1902-"
+  nickname="豆粕帝國"
+  story="ADM 是全球最大的大豆壓榨商之一，在美國、歐洲和巴西都有廣泛的壓榨設施。ADM 每年壓榨大豆產生的豆粕，是全球豆粕現貨市場的重要供給來源。ADM 的豆粕銷售合同通常以 CBOT 期貨作為定價基準（即 Basis 定價，現貨 = 期貨 + 基差），讓 ADM 同時是 CBOT 最大的套保者和最大的豆粕供給方。"
+/>
+
+<TraderProfile
+  name="Tyson Foods"
+  nameZh="泰森食品"
+  years="1935-"
+  nickname="全球最大肉類加工商"
+  story="美國最大的肉類加工公司（雞肉、豬肉、牛肉），也是全球豆粕最重要的間接買家——透過與雞農、豬農合簽合同，泰森間接掌控了數億隻動物的飼料採購。當豆粕價格上漲，泰森的飼料成本增加，公司可以選擇壓縮利潤或上調雞肉售價。泰森在 CBOT 豆粕和玉米期貨市場的套保操作，是農業加工業如何使用期貨市場管理成本的教科書案例。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="工業化養雞的奇蹟"
+  year="1950 至今"
+  description="現代肉雞品種從破殼到出欄只需 42 天（1950 年代需要 84 天），體重從 1 公斤增長到 2.7 公斤，飼料轉化率（每公斤增重所需飼料公斤數）從 4:1 提升到 1.9:1。這個「雞肉奇蹟」背後，豆粕提供了不可缺少的蛋白質基礎。今日全球每年消耗約 1,300 億隻雞，是地球上數量最多的鳥類——所有馴養雞的總重量超過了所有野生鳥類總重量的 3 倍。這是農業集約化最驚人的數字之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="BSE 狂牛症與豆粕的崛起"
+  year="1996-2000"
+  description="1996 年英國爆發 BSE（牛海綿狀腦病，俗稱「狂牛症」），科學研究確認其傳播與飼料中含有的哺乳動物肉骨粉有關。歐盟和全球多個市場隨後禁止在反芻動物飼料中使用肉骨粉，2001 年歐盟進一步禁止所有動物飼料使用哺乳動物肉骨粉。這個禁令讓豆粕成為唯一大規模可替代的蛋白質飼料來源，歐洲豆粕進口需求大幅激增，是 CBOT 豆粕 2000 年代大漲的重要結構性推動力之一。"
+/>
+
+<ArtifactCard
+  type="紀錄片"
+  title="《Speed of Life》禽流感紀錄片"
+  year="2022"
+  description="2022 年禽流感（H5N1）疫情席捲美國，超過 5,800 萬隻雞和火雞被撲殺，美國雞蛋價格從 2022 年初的約 $1.5/打飆升至 2023 年初的超過 $4.5/打，漲幅超過 200%。禽流感讓普通消費者第一次如此直接地感受到農業供應鏈的脆弱性，也讓「豆粕需求」這個遙遠的期貨市場概念，以最直白的方式（雞蛋漲價）進入了大眾視野。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="阿根廷的豆粕王國"
+  year="1970 至今"
+  description="阿根廷雖然不是全球最大的大豆生產國（巴西和美國更大），卻是全球最大的豆粕和豆油出口國，佔全球豆粕出口的約 50%。原因在於阿根廷的農業政策：政府對大豆整粒出口徵收高額出口稅，但對豆粕和豆油的稅率較低，鼓勵在境內壓榨後再出口。這種政策形塑了阿根廷作為「世界豆粕工廠」的角色，羅薩里奧 (Rosario) 港附近集中了全球最大密度的大豆壓榨設施群。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="植物基蛋白的挑戰"
+  year="2019 至今"
+  description="Beyond Meat、Impossible Burger 等植物基肉品的興起，以及昆蟲蛋白、微藻蛋白的研發，被視為對豆粕長期需求的潛在挑戰。然而，植物基肉品的市場滲透率在 2022 年後明顯放緩，消費者回歸傳統肉食，加上全球新興市場的肉食需求持續增長，讓豆粕的中長期需求依然相對穩健。「蛋白質轉型」的真正時間表，仍是農業期貨市場最大的長期不確定性之一。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="大豆與亞馬遜的死亡連結"
+  year="2000 至今"
+  description="大豆（及其壓榨後的豆粕）生產是亞馬遜和塞拉多 (Cerrado) 森林砍伐的重要驅動因素。透過直接開墾（小規模）和間接影響牧場擴張（大規模），巴西大豆生產擴張與森林破壞形成了複雜的地理關係。2006 年由 Greenpeace 推動的「大豆暫停令」(Soy Moratorium) 要求主要貿易商拒絕收購近年砍伐雨林種植的大豆，使亞馬遜直接大豆種植的砍伐率有所下降——但塞拉多仍面臨嚴峻壓力，非政府組織正推動類似的保護規範延伸至此。"
+/>
+
+</div>
+
+</SectionCard>

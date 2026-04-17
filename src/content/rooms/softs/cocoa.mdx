@@ -1,0 +1,163 @@
+---
+name: "可可"
+nameEn: "Cocoa"
+slug: "cocoa"
+wing: "softs"
+exchange: "ICE"
+tickerSymbol: "CC"
+status: "active"
+icon: "🍫"
+accentColor: "#3d1c02"
+roomNumber: 2
+tagline: "象牙海岸的黑色黃金——可可期貨連結了西非小農、瑞士巧克力商與對沖基金，是最集中且最具地緣政治風險的軟性商品"
+taglineEn: "Black gold of the Ivory Coast — cocoa futures connect West African smallholders, Swiss chocolatiers, and hedge funds in the world's most concentrated soft commodity market"
+originRegion: "象牙海岸、迦納"
+firstFuturesYear: 1925
+firstFuturesExchange: "NYCSC（紐約可可交易所）"
+greatestEventName: "2010 年 'Chocfinger' 安東尼·沃德壟斷全球 7% 可可供應"
+greatestEventYear: 2010
+description: "可可展室：從象牙海岸的農場到對沖基金的壟斷操縱，探索可可期貨市場的集中風險與巧克力供應鏈的脆弱性。"
+---
+
+import SectionCard from '@components/room/SectionCard.astro';
+import Timeline from '@components/content/Timeline.astro';
+import DataPlaque from '@components/content/DataPlaque.astro';
+import QuoteCard from '@components/content/QuoteCard.astro';
+import TraderProfile from '@components/content/TraderProfile.astro';
+import ArtifactCard from '@components/content/ArtifactCard.astro';
+
+<SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+可可（Theobroma cacao，「眾神的食物」）原產於中美洲熱帶雨林，是馬雅文明和阿茲特克文明的神聖飲料。阿茲特克人以可可豆作為貨幣，並製作成名為「xocolatl」的苦味飲料。16 世紀西班牙征服者將可可帶回歐洲，加入糖和牛奶後的巧克力迅速風靡歐洲宮廷。19 世紀，英國人約瑟夫·弗萊（Joseph Fry）發明了第一塊固體巧克力，可可從宮廷飲料轉型為大眾消費品。
+
+現代可可市場高度集中在西非：象牙海岸（Côte d'Ivoire）佔全球可可產量約 45%，迦納佔約 15%，兩國合計控制全球約 60% 的可可供應。這種極端的供應集中度，使得可可期貨（CC）對西非的政治穩定、氣候條件和政府出口政策高度敏感——任何威脅西非可可生產的事件，都會在紐約和倫敦的期貨市場引發即時反應。
+
+可可的另一個特殊性在於其加工的高度集中：全球可可磨粉（從可可豆到可可脂和可可粉）主要由 Barry Callebaut、Cargill、嘉吉旗下品牌三家企業掌控，這些企業同時是全球最重要的可可期貨套保者。
+
+<Timeline events={[
+  { year: "1585", text: "第一批可可豆從美洲運抵西班牙，可可開始進入歐洲市場" },
+  { year: "1847", text: "英國 Fry & Sons 發明固體巧克力，可可需求從液態飲料擴展至固態食品" },
+  { year: "1925", text: "紐約可可交易所（NYCSC）推出可可期貨，全球可可市場進入標準化定價時代" },
+  { year: "2000", text: "象牙海岸內戰（2002-2004）爆發前夕，可可生產區政治風險急升" },
+  { year: "2010", text: "Armajaro Trading 的安東尼·沃德收購 240,100 噸可可，佔全球年產量約 7%，觸發市場壟斷爭議" },
+  { year: "2017", text: "象牙海岸和迦納建立「差異化」（LID）定價機制，確保農民最低收入" },
+  { year: "2024", text: "西非嚴重乾旱和 CSSV 病毒（可可腫枝病）爆發，CC 期貨突破 $10,000/噸歷史高點" },
+]} />
+
+可可市場有一個特別的「農民悖論」：象牙海岸和迦納的可可農平均每公頃年收入不到 $1,500，其中許多人從未親口嚐過巧克力——他們太窮了，買不起用他們種植的原料製造的產品。這個現象是全球農業貿易不平等的縮影，也是「公平貿易可可」運動的核心訴求。
+
+</SectionCard>
+
+<SectionCard id="futures" title="第一張期貨合約" titleEn="First Futures Contract" index={1}>
+
+<DataPlaque
+  exchange="ICE（洲際交易所，前身 NYCSC/CSCE/NYBOT）"
+  year={1925}
+  contractSize="10 公噸可可豆"
+  deliveryPoint="美國及歐洲指定倉庫（德拉瓦港、漢堡、阿姆斯特丹等）"
+  tickerSymbol="CC"
+/>
+
+可可期貨在 ICE 紐約（CC）和 ICE 倫敦（LCC，以英鎊計價）兩個市場同時交易，紐約合約以美元計價，倫敦合約以英鎊計價，兩者之間的匯率差和基差關係是可可套利交易的重要主題。
+
+CC 合約的交割品質以「可磨粉」（fair fermented）可可豆為基準，分為不同產地的溢貼水。迦納的 Ashanti 可可豆通常享有最高溢價，被視為品質基準。
+
+可可期貨市場的一個特殊機制是象牙海岸和迦納政府的「可可季節性收購」（Cocoa Season）：兩國政府通過國家可可委員會（CCC 和 COCOBOD）在期貨市場預售下一季的可可產量（通常在採收前 6-12 個月），這種「前期銷售」機制將政府的套保行為引入了 CC 期貨市場，使得這個市場的持倉結構比其他農業期貨更為複雜。
+
+</SectionCard>
+
+<SectionCard id="event" title="史上最大事件" titleEn="Greatest Market Event" index={2}>
+
+### 2010 年：「Chocfinger」壟斷 7% 全球可可供應
+
+2010 年 7 月，英國對沖基金 Armajaro Trading 的創始人安東尼·沃德（Anthony Ward），透過 ICE 期貨合約取得了 240,100 噸可可的實物交割——相當於全球可可年產量的 6-7%，以及全球可磨粉可可庫存的約 15%。這批可可的市值約為 6.58 億英鎊，被媒體稱為「自拿破崙時代以來歐洲最大單一可可採購」。
+
+英國媒體立即給沃德冠以「Chocfinger」（巧克力手指，源自詹姆斯·龐德電影中的反派 Goldfinger）的外號，暗示他試圖壟斷可可市場。沃德和 Armajaro 否認操縱市場，聲稱這只是根據基本面分析做出的正常商業判斷——他們相信西非政治局勢不穩定和氣候問題將導致可可供應緊俏。
+
+<QuoteCard
+  quote="我只是做了任何理性的商品投資者在看到供應緊俏信號時都會做的事——在現貨市場建立實物頭寸。"
+  author="Anthony Ward，Armajaro Trading 創始人，回應「Chocfinger」指控"
+  year="2010"
+/>
+
+這起事件在期貨市場引發了關於「商品市場壟斷」的廣泛討論，也直接影響了後來 CFTC 對農業期貨持倉限制的政策辯論。Armajaro 最終在 2010-2011 年間陸續出售了囤積的可可，但由於市場條件變化，據報道盈利有限。
+
+</SectionCard>
+
+<SectionCard id="traders" title="傳奇交易員" titleEn="Legendary Traders" index={3}>
+
+<TraderProfile
+  name="Anthony Ward"
+  nameZh="安東尼·沃德"
+  years="1964-"
+  nickname="Chocfinger——可可市場最著名的壟斷者"
+  story="沃德早年在 Phibro 和 Sucden 等商品貿易公司積累可可交易經驗，1998 年創立 Armajaro Trading。他以對可可基本面的深度研究著稱，曾在 2002 年（象牙海岸內戰前）成功預判可可供應緊俏而大獲其利。2010 年的「Chocfinger」事件讓他成為可可期貨史上最具爭議的人物——支持者認為他是基本面分析的典範，批評者則認為他的操作破壞了市場公平性。Armajaro 後來被嘉吉收購，沃德淡出公眾視野。"
+/>
+
+<TraderProfile
+  name="Barry Callebaut"
+  nameZh="百樂嘉利寶"
+  years="1996-"
+  nickname="全球最大工業巧克力製造商"
+  story="Barry Callebaut 是全球最大的工業巧克力和可可製品製造商，為全球主要食品品牌（包括雀巢、億滋、好時）提供代工服務。作為全球可可加工鏈中最重要的企業之一，Barry Callebaut 在 CC 期貨市場的套保規模龐大——採購可可豆時賣空 CC 期貨鎖定採購成本，同時在可可脂和可可粉的銷售端進行相應的反向操作。其倉庫網絡和信息優勢，使其對 CC 期貨基差的判斷具有顯著準確性。"
+/>
+
+<TraderProfile
+  name="Cargill Cocoa & Chocolate"
+  nameZh="嘉吉可可與巧克力"
+  years="1960s-"
+  nickname="無所不在的農業巨人"
+  story="嘉吉（Cargill）在全球可可供應鏈中同時扮演採購商、磨粉商和貿易商的角色，在象牙海岸、迦納、印度尼西亞、巴西設有大型可可採購和加工網絡。嘉吉在 CC 期貨市場既是最大的套保者之一，也是最重要的套利商——利用其全球倉庫網絡、磨粉能力和市場信息優勢，在紐約和倫敦合約之間、在不同交割地點之間進行複雜的套利操作。"
+/>
+
+</SectionCard>
+
+<SectionCard id="culture" title="文化文物" titleEn="Cultural Artifacts" index={4}>
+
+<div class="grid gap-4 sm:grid-cols-2">
+
+<ArtifactCard
+  type="其他"
+  title="象牙海岸「可可危機」：政治與市場的糾纏"
+  year="2000-2011"
+  description="2002 年爆發的象牙海岸內戰將可可產區（主要在南部）與政治危機（主要在北部）交織在一起，讓全球巧克力行業陷入地緣政治恐慌。可可是象牙海岸的最大出口創匯商品，佔其 GDP 約 15%——「可可資金」是交戰各方的重要財政來源。這場危機讓 CC 期貨的「政治風險溢價」概念深入人心，也推動了巧克力公司加速全球供應鏈多元化佈局。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="童工問題：巧克力的道德陰影"
+  year="1998 至今"
+  description="2001 年，美國媒體和 NGO 揭露了西非可可農場大規模使用童工（包括強迫勞動）的問題，震驚了全球巧克力行業。好時、M&M/瑪氏、雀巢等主要巧克力品牌被迫承諾到 2010 年前消除供應鏈中的童工問題，後來屢次延期（2020 年、2025 年）。這個問題至今未完全解決，成為可可供應鏈中最棘手的道德議題，也對支持「可追溯」和「有機認證」的精品可可市場提供了道德消費的驅動力。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="2024 年：可可超級週期，$10,000/噸"
+  year="2024"
+  description="2024 年，CC 期貨突破 $10,000/噸（歷史高點），成為現代商品市場最戲劇性的漲勢之一——部分合約月份甚至短暫突破 $12,000/噸。觸發因素是西非嚴重乾旱疊加可可腫枝病（CSSV）的大規模蔓延，導致象牙海岸和迦納連續兩個季度大幅減產。這輪超級漲勢讓巧克力製造商的採購成本翻倍，並開始在零售端引發巧克力縮水（Shrinkflation）現象。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="可可的宗教與靈性象徵"
+  year="古至今"
+  description="在馬雅和阿茲特克文明中，可可不只是食物，更是宗教儀式的核心元素。馬雅人在葬禮、婚禮和各種宗教儀式中使用可可飲料，阿茲特克人則將其視為羽蛇神（Quetzalcoatl）的禮物。「Theobroma」（可可的學名）在希臘語中意為「神的食物」，這個稱呼是瑞典植物學家林奈（Carl Linnaeus）在 1753 年命名時刻意選用的，以表達其對可可神聖地位的敬意。"
+/>
+
+<ArtifactCard
+  type="其他"
+  title="豆莢到巧克力：最複雜的農產品加工鏈"
+  year="19 世紀至今"
+  description="可可的加工流程是所有農業商品中最複雜的之一：採收→發酵（3-7 天）→乾燥→運輸→烘焙→研磨（得到可可液塊）→分離（可可脂 + 可可粉）→再加工（調溫巧克力）。這個複雜鏈條意味著「可可豆」（CC 期貨標的）和「巧克力棒」（消費者買到的終端產品）之間，存在巨大的加工溢價空間，以及多個套保節點。可可脂（Cocoa Butter）不只用於巧克力，還是高端化妝品和製藥行業的重要原料。"
+/>
+
+<ArtifactCard
+  type="書籍"
+  title="《巧克力戰爭》The Chocolate War"
+  year="文化廣義"
+  description="可可供應鏈的不公平問題激發了大量關注農業貿易正義的著作，包括卡蘿爾·奧夫（Carol Off）的《苦甜：巧克力的黑暗面》（Bitter Chocolate, 2006）。這本書深入描述了可可供應鏈中的童工剝削、中間商剝削和市場壟斷問題，是理解 CC 期貨背後「非財務風險」的重要讀本，也引發了全球「公平貿易巧克力」消費運動的進一步擴展。"
+/>
+
+</div>
+
+</SectionCard>

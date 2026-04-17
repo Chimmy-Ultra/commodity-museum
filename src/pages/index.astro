@@ -1,0 +1,105 @@
+---
+import MuseumLayout from '@components/layout/MuseumLayout.astro';
+import MuseumMap from '@components/navigation/MuseumMap.astro';
+import { getTotalRoomCount } from '@lib/museum';
+
+const totalRooms = getTotalRoomCount();
+---
+
+<MuseumLayout title="大廳">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    {/* Background texture */}
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-museum-wall)_0%,_var(--color-museum-bg)_70%)]" />
+
+    <div class="relative mx-auto max-w-7xl px-6 py-24 text-center md:py-36">
+      <p class="font-mono text-sm uppercase tracking-[0.3em] text-museum-text-secondary">
+        Commodity Museum
+      </p>
+      <h1 class="mt-4 font-display text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
+        <span class="text-museum-text">大宗商品</span>
+        <br />
+        <span class="text-museum-accent">博物館</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-museum-text-secondary md:text-xl">
+        從鬱金香狂熱到 WTI 負油價，從堂島米市場到芝加哥穀物交易坑——
+        <br class="hidden md:block" />
+        {totalRooms} 間展室，帶你走進大宗商品期貨的傳奇世界。
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/metals/gold"
+          class="rounded-lg bg-museum-accent px-6 py-3 font-display text-sm font-semibold text-white transition-opacity hover:opacity-90"
+        >
+          開始參觀 — 從黃金展室出發
+        </a>
+        <a
+          href="/about"
+          class="rounded-lg border border-museum-border px-6 py-3 text-sm text-museum-text-secondary transition-colors hover:border-museum-accent/30 hover:text-museum-text"
+        >
+          關於博物館
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Museum Map -->
+  <section class="mx-auto max-w-7xl px-6 py-16">
+    <div class="mb-10 text-center">
+      <h2 class="font-display text-3xl font-bold text-museum-accent md:text-4xl">
+        展館導覽
+      </h2>
+      <p class="mt-2 text-museum-text-secondary">
+        Museum Wings
+      </p>
+    </div>
+    <MuseumMap />
+  </section>
+
+  <!-- Stats bar -->
+  <section class="border-y border-museum-border bg-museum-wall">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-museum-border md:grid-cols-4">
+      {[
+        { number: totalRooms, label: '間展室', labelEn: 'Exhibition Rooms' },
+        { number: 7, label: '個展館', labelEn: 'Museum Wings' },
+        { number: 2, label: '大交易所', labelEn: 'CME Group & ICE' },
+        { number: '400+', label: '年期貨歷史', labelEn: 'Years of Futures' },
+      ].map((stat) => (
+        <div class="bg-museum-wall px-6 py-8 text-center">
+          <div class="font-display text-3xl font-bold text-museum-accent md:text-4xl">
+            {stat.number}
+          </div>
+          <div class="mt-1 text-sm text-museum-text">{stat.label}</div>
+          <div class="text-xs text-museum-text-secondary">{stat.labelEn}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured rooms teaser -->
+  <section class="mx-auto max-w-7xl px-6 py-16">
+    <h2 class="mb-8 text-center font-display text-2xl font-bold text-museum-accent">
+      精選展室 Featured Rooms
+    </h2>
+    <div class="grid gap-4 md:grid-cols-3">
+      {[
+        { href: '/metals/gold', icon: '🥇', name: '黃金', nameEn: 'Gold', tagline: '人類六千年來的終極貨幣，從法老到央行' },
+        { href: '/energy/wti-crude-oil', icon: '🛢️', name: '西德州原油', nameEn: 'WTI Crude Oil', tagline: '2020 年 4 月 20 日，期貨價格史上首次跌至負值' },
+        { href: '/historical/tulip-bulbs', icon: '🌷', name: '鬱金香球莖', nameEn: 'Tulip Bulbs', tagline: '1637 年荷蘭，史上第一場投機泡沫' },
+      ].map((room) => (
+        <a
+          href={room.href}
+          class="group rounded-xl border border-museum-border bg-museum-wall p-6 transition-all hover:border-museum-accent/30"
+        >
+          <span class="text-3xl">{room.icon}</span>
+          <h3 class="mt-3 font-display text-lg font-bold text-museum-text group-hover:text-museum-accent">
+            {room.name}
+          </h3>
+          <p class="text-xs text-museum-text-secondary">{room.nameEn}</p>
+          <p class="mt-2 text-sm text-museum-text-secondary">{room.tagline}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</MuseumLayout>

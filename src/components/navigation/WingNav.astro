@@ -1,0 +1,33 @@
+---
+import { wings } from '@data/wings';
+import { getWingRoomCount } from '@lib/museum';
+
+interface Props {
+  currentWing?: string;
+}
+
+const { currentWing } = Astro.props;
+---
+
+<nav class="flex flex-wrap gap-2" aria-label="展館導覽">
+  {wings.map((wing) => {
+    const isActive = wing.slug === currentWing;
+    const count = getWingRoomCount(wing.slug);
+    return (
+      <a
+        href={`/${wing.slug}/`}
+        class:list={[
+          'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm transition-all',
+          isActive
+            ? 'border-museum-accent/50 bg-museum-accent/10 text-museum-accent'
+            : 'border-museum-border bg-museum-wall text-museum-text-secondary hover:border-museum-accent/30 hover:text-museum-text',
+        ]}
+        aria-current={isActive ? 'page' : undefined}
+      >
+        <span>{wing.icon}</span>
+        <span>{wing.name}</span>
+        <span class="rounded-full bg-museum-bg px-2 py-0.5 text-xs">{count}</span>
+      </a>
+    );
+  })}
+</nav>

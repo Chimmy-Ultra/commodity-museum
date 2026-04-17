@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import MemorialBadge from './MemorialBadge.astro';
+
+interface Props {
+  name: string;
+  nameEn: string;
+  icon: string;
+  exchange: string;
+  tickerSymbol?: string;
+  status: string;
+  delistedYear?: number;
+  tagline: string;
+  taglineEn: string;
+  accentColor: string;
+  heroImage?: ImageMetadata;
+  heroImageAlt?: string;
+}
+
+const { name, nameEn, icon, exchange, tickerSymbol, status, delistedYear, tagline, taglineEn, accentColor, heroImage, heroImageAlt } = Astro.props;
+---
+
+<header class="relative overflow-hidden rounded-2xl border border-museum-border bg-museum-wall p-8 md:p-12" transition:name={`room-${nameEn.toLowerCase().replace(/\s+/g, '-')}`}>
+  <!-- Hero photo background -->
+  {heroImage && (
+    <Image
+      src={heroImage}
+      alt={heroImageAlt || name}
+      width={1200}
+      class="absolute inset-0 h-full w-full object-cover opacity-15 museum-sepia"
+    />
+  )}
+  <!-- Accent gradient background -->
+  <div
+    class="absolute inset-0 opacity-10"
+    style={`background: radial-gradient(ellipse at top right, ${accentColor}, transparent 70%);`}
+  />
+
+  <div class="relative">
+    <!-- Icon + badges row -->
+    <div class="flex items-start justify-between">
+      <span class="text-5xl md:text-6xl">{icon}</span>
+      <div class="flex items-center gap-2">
+        {tickerSymbol && (
+          <span class="rounded-md bg-museum-plaque px-3 py-1 font-mono text-sm text-museum-text-secondary">
+            {tickerSymbol}
+          </span>
+        )}
+        <span class="rounded-md bg-museum-plaque px-3 py-1 text-sm text-museum-text-secondary">
+          {exchange}
+        </span>
+        {status === 'delisted' && delistedYear && (
+          <MemorialBadge year={delistedYear} />
+        )}
+        {status === 'historical' && (
+          <span class="rounded-md border border-wing-historical bg-wing-historical/10 px-3 py-1 text-sm text-wing-historical">
+            歷史展品
+          </span>
+        )}
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="mt-6 font-display text-4xl font-bold tracking-tight text-museum-text md:text-5xl lg:text-6xl">
+      {name}
+    </h1>
+    <p class="mt-1 font-display text-xl text-museum-text-secondary md:text-2xl">
+      {nameEn}
+    </p>
+
+    <!-- Tagline -->
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-museum-text-secondary">
+      {tagline}
+    </p>
+    <p class="mt-1 max-w-2xl text-sm italic text-museum-text-secondary/70">
+      {taglineEn}
+    </p>
+  </div>
+</header>
