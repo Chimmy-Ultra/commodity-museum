@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import spiceMarket from '@assets/images/rooms/historical/pepper-spices/spice-market.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={spiceMarket} alt="Historic spice market with colorful piles of exotic spices" caption="香料市場——胡椒、丁香、肉荳蔻在中世紀歐洲比黃金更珍貴，是地理大發現的根本驅動力" captionEn="A historic spice market — pepper, cloves and nutmeg were worth more than gold in medieval Europe, the root driver of the Age of Exploration" credit="AI-generated illustration" />
 
 香料是人類歷史上最早的全球性貿易商品，也是塑造現代世界格局最重要的農業商品。在沒有冷藏技術的前現代世界，香料的價值在於它對食物的防腐和掩蓋腐敗氣味的功能；在醫學上，香料被認為具有治療和保健功效；在宗教儀式和貴族社交中，香料是財富和權勢的展示——胡椒、丁香、肉荳蔻、薑黃、肉桂的稀缺性，讓它們在中世紀歐洲比黃金更為珍貴。
 

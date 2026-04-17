@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import ricePaddy from '@assets/images/rooms/grains/rough-rice/rice-paddy.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={ricePaddy} alt="Lush green terraced rice paddies in Southeast Asia with morning mist" caption="東南亞梯田稻田——水稻在 10,000 年前被馴化，是全球 35 億人的主食，每一塊梯田都是人類與自然協作的農業奇蹟" captionEn="Terraced rice paddies of Southeast Asia — domesticated 10,000 years ago and still the staple for 3.5 billion people, each terrace a testament to millennia of human ingenuity" credit="AI-generated illustration" />
 
 水稻是人類最重要的糧食作物之一，全球約有 35 億人以稻米為主食。水稻的馴化歷史比小麥更長，最新的基因研究顯示，水稻可能在 10,000 年前同時在中國長江流域和印度阿薩姆邦獨立馴化，其中中國的「粳稻」(Japonica) 和印度的「秈稻」(Indica) 是現代水稻兩大主要系統的祖先。
 

@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import canolaField from '@assets/images/rooms/softs/canola-rapeseed/canola-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={canolaField} alt="Vast yellow canola field in full bloom on Canadian prairies" caption="加拿大草原油菜籽花海——「黃色海洋」是加拿大最具代表性的農業景觀，RS 期貨的現貨基礎" captionEn="Canola fields in full bloom on the Canadian prairies — the iconic 'yellow ocean' and physical basis of RS futures" credit="AI-generated illustration" />
 
 「Canola」這個名字本身就是一個商業創新的產物：它是 1979 年由加拿大油菜協會創造的品牌名稱，由「**Can**adian **O**il, **L**ow **A**cid」縮寫而來，以區別於傳統的高芥酸菜籽油（HEAR, High Erucic Acid Rapeseed），後者因芥酸含量高而不適合人類食用。
 

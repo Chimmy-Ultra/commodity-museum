@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import wheatField from '@assets/images/rooms/grains/chicago-srw-wheat/wheat-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={wheatField} alt="Golden wheat field at harvest time" caption="黃金麥田——文明的基石，也是人類最古老期貨合約的標的物" captionEn="Golden wheat fields at harvest — the foundation of civilization and the oldest commodity futures contract" credit="AI-generated illustration" />
 
 小麥是人類文明最重要的基石之一。大約 10,000 年前，在今日伊拉克和敘利亞一帶的「新月沃土」(Fertile Crescent)，人類開始馴化野生一粒小麥 (Einkorn) 和二粒小麥 (Emmer)，這標誌著人類農業革命的開端。小麥的馴化讓人類從游牧採集轉變為定居農耕，是城邦、王國和文明得以發展的物質基礎。
 

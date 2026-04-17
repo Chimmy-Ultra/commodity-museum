@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import oilRefinery from '@assets/images/rooms/energy/gas-oil/oil-refinery.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={oilRefinery} alt="Oil refinery at twilight with illuminated distillation towers" caption="石油精煉廠——汽油從原油的「廢棄物」蛻變為現代文明最重要的液態能源，每天早晨加油站的那個價格，就來自這裡的精煉鏈" captionEn="Oil refinery — where gasoline transformed from crude oil's byproduct into modern civilization's most vital liquid fuel; the pump price you see each morning starts here" credit="AI-generated illustration" />
 
 汽油的故事，從一個幾乎是廢物的副產品開始。19 世紀末，石油的主要用途是煤油（用於照明），而汽油（更輕質的石油餾分）是蒸餾煤油後殘餘的「廢棄物」，往往被倒進河裡。直到 1885 年內燃機的發明，汽油才找到了它的歷史性用途。
 

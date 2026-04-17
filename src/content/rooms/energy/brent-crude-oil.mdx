@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import oilPlatform from '@assets/images/rooms/energy/brent-crude-oil/oil-platform.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={oilPlatform} alt="North Sea oil platform at sunset" caption="北海石油平台——布蘭特原油的誕生地，殼牌公司在此發現了以黑雁命名的油田，如今成為全球最重要的原油定價基準" captionEn="North Sea oil platform — birthplace of Brent crude, named after the Brent Goose, now the benchmark for two-thirds of global oil trade" credit="AI-generated illustration" />
 
 布蘭特原油的名字來自一隻鳥——黑雁 (Brent Goose)。殼牌石油公司 (Shell) 有一個傳統，以鳥類名稱命名旗下油田。1971 年，殼牌在英國北海發現了一個大型油田，依慣例命名為「布蘭特」(Brent)。沒有人預料到，這個油田的名字將成為全球最重要的石油價格基準。
 

@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import tradingFloor from '@assets/images/rooms/index/sp-gsci/trading-floor.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={tradingFloor} alt="Chicago Mercantile Exchange open-outcry trading floor" caption="商品期貨交易坑——彭博商品指數的底層，是這些交易坑裡數千個期貨合約的價格；BCOM 的誕生，讓機構投資者得以用一個指數追蹤整個商品世界" captionEn="Commodity futures trading pits — the foundation of the Bloomberg Commodity Index; BCOM's creation let institutional investors track the entire commodity universe through a single benchmark" credit="AI-generated illustration" />
 
 彭博商品指數（Bloomberg Commodity Index，BCOM）的前身是 1998 年由道瓊斯（Dow Jones）和美國國際集團（AIG）共同創立的「道瓊斯-AIG 商品指數」（DJ-AIG CI）。這個指數在設計理念上刻意與同期的 GSCI 形成差異：GSCI 以生產量加權，天然導致能源超重；DJ-AIG 則採用「生產量 + 流動性」雙重加權，並設置嚴格的上限——任何單一商品不超過指數的 15%，任何行業板塊不超過 33%。這讓 DJ-AIG 的能源配置通常在 30-35% 之間，遠低於 GSCI 的 65-75%，農業和金屬的比重相應提高。
 

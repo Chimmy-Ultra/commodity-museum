@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import gasPipeline from '@assets/images/rooms/energy/dutch-ttf-natural-gas/gas-pipeline.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={gasPipeline} alt="Natural gas pipeline infrastructure and LNG terminal in the Netherlands" caption="荷蘭天然氣管道基礎設施——TTF 不是一個地方，而是一個虛擬交易點；但支撐它的，是這張覆蓋整個歐洲大陸的龐大管道網絡" captionEn="Dutch natural gas pipeline infrastructure — TTF is not a place but a virtual trading point, yet behind it lies this vast pipeline network stretching across the European continent" credit="AI-generated illustration" />
 
 TTF 是「Title Transfer Facility」的縮寫，字面意思是「產權轉讓設施」。它不是一個實體的地理位置，而是荷蘭天然氣輸送基礎設施管理公司 (Gasunie) 為歐洲天然氣市場設立的虛擬交易點——在這個虛擬節點上，買賣雙方可以完成天然氣所有權的轉移，而不需要指定具體的物理管道或位置。
 

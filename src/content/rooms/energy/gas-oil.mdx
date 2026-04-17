@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import oilRefinery from '@assets/images/rooms/energy/gas-oil/oil-refinery.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={oilRefinery} alt="Rotterdam oil refinery with distillation towers at twilight" caption="鹿特丹石油精煉廠——歐洲最大的石油中轉與精煉中心，從這裡生產的中間餾分油分發到全歐洲每一輛柴油卡車的油箱" captionEn="Rotterdam oil refinery — Europe's largest oil transit and refining hub, where middle distillates fan out to diesel trucks across the continent" credit="AI-generated illustration" />
 
 「瓦斯油」(Gas Oil) 這個名字源於 19 世紀的煤氣製造業——早期煤氣廠在製造城市照明用煤氣時，產生的中間餾分油脂被稱為「瓦斯油」，因為它可以進一步分解製造更多煤氣（Gas）。今日，「瓦斯油」在歐洲能源市場指的是柴油和取暖油的中間餾分油，是布蘭特原油的重要精煉產品之一。
 

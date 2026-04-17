@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import tradingFloor from '@assets/images/rooms/index/sp-gsci/trading-floor.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={tradingFloor} alt="Chicago Mercantile Exchange open-outcry trading floor with traders in colorful jackets" caption="芝加哥商業交易所的開放喊價交易坑——1991 年，高盛在這個世界裡創立了第一個可投資的全球商品指數，把期貨市場帶入了每個機構投資組合" captionEn="Chicago Mercantile Exchange open-outcry trading floor — in 1991, Goldman Sachs created the world's first investable global commodity index in this world, bringing futures into every institutional portfolio" credit="AI-generated illustration" />
 
 1991 年，高盛集團（Goldman Sachs）的商品研究部門推出了「高盛商品指數」（Goldman Sachs Commodity Index，GSCI）——這是金融史上第一個系統性追蹤全球商品市場整體表現的可投資指數。在此之前，商品投資幾乎完全是個別期貨合約的交易，沒有一個標準化的「商品市場」基準，讓機構投資者無從與股票指數（如標普 500）或債券指數進行平行比較和配置。
 

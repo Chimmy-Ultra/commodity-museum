@@ -26,9 +26,13 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
 import melamedPortrait from '@assets/images/rooms/livestock/pork-bellies/melamed-portrait.jpg';
+import pigFarm from '@assets/images/rooms/livestock/pork-bellies/pig-farm.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={pigFarm} alt="Commercial pig farm in the American Midwest with rows of hogs" caption="美國中西部的商業養豬場——豬腩是從這裡通往芝加哥冷藏倉庫、再到 CME 交易坑的完整產業鏈的起點，1961 年成為全球第一個牲畜期貨合約的標的" captionEn="Commercial hog farm in the American Midwest — pork bellies start here, traveling to Chicago cold storage and then the CME trading pit, becoming history's first livestock futures contract in 1961" credit="AI-generated illustration" />
 
 豬腩（Pork Belly）是豬的腹部肉，也就是培根的原料。在冷藏技術普及之前，豬腩是一種高度季節性商品：秋冬宰殺季大量生產的豬腩被鹽漬或煙薰後儲存，在春夏季需求旺盛時取出銷售。這種極端的季節性供需結構，讓豬腩成為期貨合約的理想標的。
 

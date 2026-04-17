@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import soybeanField from '@assets/images/rooms/grains/soybeans/soybean-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={soybeanField} alt="Soybean field at harvest — source of both soybean meal and oil" caption="大豆田——每 100 公斤大豆壓榨後得到 78-80 公斤豆粕，是全球最重要的動物蛋白飼料來源" captionEn="Soybeans at harvest — 100kg of beans yield ~80kg of meal, the world's most important animal protein feed" credit="AI-generated illustration" />
 
 豆粕 (Soybean Meal) 是大豆壓榨提取豆油後剩餘的固態副產品，含有約 44-48% 的粗蛋白質，是全球最重要的動物蛋白飼料原料。每 100 公斤大豆可得約 78-80 公斤豆粕——在重量上，豆粕其實是大豆壓榨的「主產品」，豆油才是「副產品」。
 

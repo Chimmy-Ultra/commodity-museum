@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import soybeanField from '@assets/images/rooms/grains/soybeans/soybean-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={soybeanField} alt="Soybean field — source of soybean oil for food and biodiesel" caption="大豆田——每 100 公斤大豆可榨取 18-20 公斤豆油，從食用油到生質柴油的核心原料" captionEn="Soybean field — 100kg of beans yield ~19kg of oil, the cornerstone of both food and biodiesel markets" credit="AI-generated illustration" />
 
 豆油是從大豆中壓榨提取的植物油，約佔大豆重量的 18-20%。每 100 公斤大豆壓榨後，可得到約 18-20 公斤豆油和 78-80 公斤豆粕。豆油的壓榨工藝本身相當古老——中國在宋代就有記載用大豆榨油的做法，但大規模工業化壓榨始於 20 世紀初的美國。
 

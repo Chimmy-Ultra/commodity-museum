@@ -26,9 +26,13 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
 import glasenbergPortrait from '@assets/images/rooms/metals/copper/glasenberg-portrait.jpg';
+import copperMine from '@assets/images/rooms/metals/copper/copper-mine.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={copperMine} alt="Aerial view of a massive open-pit copper mine in Chile" caption="智利埃斯康迪達銅礦——全球最大的露天銅礦，超過 1 公里深的巨大階梯形礦坑，採礦卡車如螞蟻般穿行其間，為全球提供 5% 的銅產量" captionEn="Escondida copper mine in Chile — the world's largest open-pit copper mine, over 1km deep, with giant mining trucks threading through terraced walls supplying 5% of global copper" credit="AI-generated illustration" />
 
 銅是人類最早大規模使用的金屬，其歷史橫跨整個人類文明史。考古學家在美索不達米亞發現了西元前 9000 年前的銅製品——那是從天然銅礦石直接打磨而成的工具，甚至早於農業的發明。約西元前 5000 年，人類掌握了銅的冶煉技術（加熱礦石提取金屬），開啟了「銅器時代」。
 

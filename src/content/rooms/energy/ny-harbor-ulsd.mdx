@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import oilRefinery from '@assets/images/rooms/energy/gas-oil/oil-refinery.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={oilRefinery} alt="Oil refinery distillation towers at twilight" caption="石油精煉廠的蒸餾塔——原油在這裡被分餾為汽油、柴油、取暖油和航空燃油，從德州原油到紐約港的超低硫柴油，一條完整的精煉鏈" captionEn="Oil refinery distillation towers — where crude oil is fractioned into gasoline, diesel, heating oil and jet fuel, from Texas crude to NY Harbor ULSD" credit="AI-generated illustration" />
 
 「取暖油」(Heating Oil) 是這個展室最初的名字，它也是紐約商業交易所 (NYMEX) 最早交易的石油產品——在汽油期貨之前，在 WTI 原油期貨之前，取暖油是 NYMEX 的起家業務。這不是偶然的：在 1970 年代，紐約市和美國東北部有數以百萬計的公寓使用取暖油 (Fuel Oil No. 2) 作為冬季暖氣來源，每到冬天，供應商就面臨巨大的庫存和價格風險，急需一種對沖工具。
 

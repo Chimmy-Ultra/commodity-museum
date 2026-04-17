@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import wheatField from '@assets/images/rooms/grains/chicago-srw-wheat/wheat-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={wheatField} alt="Golden wheat field at harvest in the Great Plains" caption="美國大平原黃金麥田——「黃金地毯」每年夏季鋪滿堪薩斯州，KE 期貨的現貨基礎" captionEn="Golden wheat fields across the American Great Plains — Kansas's annual 'golden carpet' and the physical basis of KE futures" credit="AI-generated illustration" />
 
 硬紅冬小麥 (Hard Red Winter Wheat, HRW) 是美國最重要的小麥出口品種，主要種植在「大平原小麥帶」(Great Plains Wheat Belt)——從德克薩斯州北部、延伸至俄克拉荷馬、堪薩斯、內布拉斯加和科羅拉多州。堪薩斯州是美國最重要的冬小麥產地，每逢夏季小麥豐收，當地農民稱之為「黃金地毯」鋪滿大地。
 

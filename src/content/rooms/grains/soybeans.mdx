@@ -26,8 +26,12 @@ import DataPlaque from '@components/content/DataPlaque.astro';
 import QuoteCard from '@components/content/QuoteCard.astro';
 import TraderProfile from '@components/content/TraderProfile.astro';
 import ArtifactCard from '@components/content/ArtifactCard.astro';
+import ExhibitPhoto from '@components/content/ExhibitPhoto.astro';
+import soybeanField from '@assets/images/rooms/grains/soybeans/soybean-field.jpg';
 
 <SectionCard id="origin" title="起源故事" titleEn="Origin Story" index={0}>
+
+<ExhibitPhoto src={soybeanField} alt="Vast soybean field at harvest time in the American Midwest" caption="美國中西部大豆田收穫季節——全球最重要的蛋白質作物，ZS 期貨的現貨基礎" captionEn="Soybean field at harvest in the American Midwest — the world's most important protein crop and physical basis of ZS futures" credit="AI-generated illustration" />
 
 大豆（Glycine max）是人類馴化最重要的豆科植物之一，原產於中國東北地區，考古學家在距今約 7,000-9,000 年前的遺址中發現了野生大豆的馴化痕跡。中國古代稱大豆為「菽」，是「五穀」（稻、黍、稷、麥、菽）之一，在中國農業文明中有著不可替代的地位。
 
